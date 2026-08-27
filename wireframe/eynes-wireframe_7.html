@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Eynes — Wireframe de sitio web (propuesta)</title>
+<style>
+  :root{
+    --ink:#1a1a1a;
+    --line:#8a8a8a;
+    --line-soft:#c7c7c7;
+    --paper:#f6f6f4;
+    --box:#eceae4;
+    --box2:#e2dfd6;
+    --accent:#3d5a80;
+    --accent-soft:#dbe3ec;
+    --note:#b5432f;
+    --mono: 'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
+    --sans: 'Inter', -apple-system, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.4;
+  }
+  .topbar{
+    position:sticky; top:0; z-index:50;
+    background:var(--ink); color:#fff;
+    padding:14px 24px; display:flex; align-items:center; justify-content:space-between;
+    font-family:var(--mono); font-size:12px; letter-spacing:.04em;
+  }
+  .topbar .brand{ font-weight:700; text-transform:uppercase; }
+  .topbar nav a{
+    color:#cfcfcf; text-decoration:none; margin-left:18px; text-transform:uppercase;
+    border-bottom:1px solid transparent;
+  }
+  .topbar nav a:hover{ color:#fff; border-bottom:1px solid #fff; }
+
+  .legend{
+    max-width:900px; margin:36px auto 10px; padding:0 24px;
+    font-family:var(--mono); font-size:12px; color:#555;
+  }
+  .legend .row{ display:flex; gap:10px; align-items:center; margin-bottom:6px;}
+  .swatch{ width:14px; height:14px; border:1px solid var(--line); flex-shrink:0;}
+  .swatch.box{ background:var(--box); }
+  .swatch.box2{ background:var(--box2); }
+  .swatch.acc{ background:var(--accent-soft); border-color:var(--accent);}
+  .swatch.note{ border:1px dashed var(--note); background:none;}
+
+  .page-frame{
+    max-width:1080px; margin:24px auto 80px; background:#fff;
+    border:1px solid var(--line);
+  }
+  .page-label{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase;
+    letter-spacing:.08em; color:#fff; background:var(--ink);
+    padding:8px 16px; display:flex; justify-content:space-between;
+  }
+  .section{
+    border-bottom:1px dashed var(--line-soft);
+    padding:22px 28px;
+    position:relative;
+  }
+  .section:last-child{ border-bottom:none; }
+  .tag{
+    font-family:var(--mono); font-size:10px; text-transform:uppercase;
+    letter-spacing:.06em; color:var(--accent); margin-bottom:8px; display:block;
+  }
+  .note{
+    font-family:var(--mono); font-size:11px; color:var(--note);
+    border:1px dashed var(--note); background:#fdf3f1;
+    padding:8px 10px; margin-top:10px; line-height:1.45;
+  }
+  .note b{ text-transform:uppercase; font-size:10px; letter-spacing:.05em; display:block; margin-bottom:3px;}
+
+  .block{
+    background:var(--box); border:1px solid var(--line-soft);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--mono); font-size:12px; color:#666;
+    min-height:60px; text-align:center; padding:10px;
+  }
+  .block.alt{ background:var(--box2); }
+  .block.accent{ background:var(--accent-soft); border-color:var(--accent); color:var(--accent); font-weight:600;}
+  .block.img{
+    background:repeating-linear-gradient(45deg, #e6e4de, #e6e4de 10px, #ecebe6 10px, #ecebe6 20px);
+    color:#888;
+  }
+
+  .row-flex{ display:flex; gap:14px; flex-wrap:wrap; }
+  .row-flex > *{ flex:1; min-width:140px; }
+
+  .grid-4{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  .grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .grid-2{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+
+  h2.mock{ font-size:15px; margin:0; font-family:var(--mono); font-weight:700;}
+  p.mock{ font-size:11px; margin:4px 0 0; font-family:var(--mono); color:#777;}
+
+  .nav-mock{ display:flex; justify-content:space-between; align-items:center; }
+  .nav-mock .logo{ width:70px; height:24px; }
+  .nav-mock .links{ display:flex; gap:16px; }
+  .nav-mock .links .block{ width:60px; height:20px; font-size:9px; }
+  .cta-pill{ padding:8px 18px; }
+
+  .divider-label{
+    text-align:center; font-family:var(--mono); font-size:11px; color:#999;
+    margin:60px 0 -6px; text-transform:uppercase; letter-spacing:.1em;
+  }
+
+  .form-mock label{ display:block; font-family:var(--mono); font-size:10px; color:#777; margin:8px 0 3px;}
+  .form-field{ background:#fff; border:1px solid var(--line-soft); height:30px; }
+
+  footer.credits{
+    max-width:1080px; margin:0 auto 100px; padding:0 28px;
+    font-family:var(--mono); font-size:11px; color:#999;
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">Eynes / Wireframe v0.1</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#vertical">Vertical</a>
+    <a href="#modulo">Módulo</a>
+    <a href="#localizacion">Localización</a>
+    <a href="#casos">Casos</a>
+    <a href="#blog">Blog</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</div>
+
+<div class="legend">
+  <div class="row"><span class="swatch box"></span> Bloque de contenido / imagen placeholder</div>
+  <div class="row"><span class="swatch acc"></span> Call to action / elemento interactivo</div>
+  <div class="row"><span class="swatch note"></span> Nota de razonamiento (por qué está esa sección, qué objetivo cumple)</div>
+  <div class="row" style="margin-top:8px; color:#333;"><b>Nota:</b> esto es un wireframe de <u>estructura</u>, no de diseño visual final. Colores, tipografías y estilo se definen en la siguiente etapa.</div>
+</div>
+
+<!-- ============ HOME ============ -->
+<div class="page-frame" id="home">
+  <div class="page-label"><span>PÁGINA 01 — HOME</span><span>eynes.com.ar</span></div>
+
+  <div class="section">
+    <span class="tag">Nav</span>
+    <div class="nav-mock">
+      <div class="block logo">LOGO EYNES</div>
+      <div class="block accent" style="flex:none; width:auto; padding:2px 8px; font-size:9px; min-height:20px;">🛡 SILVER PARTNER</div>
+      <div class="links">
+        <div class="block">Verticales</div>
+        <div class="block">Módulos</div>
+        <div class="block">Localización</div>
+        <div class="block">Casos</div>
+        <div class="block">Blog</div>
+        <div class="block">Nosotros</div>
+      </div>
+      <div class="block accent cta-pill">Agendar demo</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <span class="tag">01 — Hero</span>
+    <div class="row-flex">
+      <div class="block" style="min-height:160px; text-align:left; align-items:flex-start; flex-direction:column;">
+        <div class="block accent" style="flex:none; min-height:24px; padding:4px 10px; font-size:10px; margin-bottom:10px;">🛡 SILVER PARTNER OFICIAL DE ODOO</div>
+        <div>H1 — Propuesta de valor centrada en el PROBLEMA<br>(no "implementamos Odoo", sino qué dolor resolvés)</div>
+        <div style="margin-top:10px;">Subtítulo — a quién ayuda y cómo (rápido, sin fricción, soporte real)</div>
+        <div style="margin-top:14px; display:flex; gap:10px;">
+          <div class="block accent" style="min-height:34px; flex:none; padding:6px 14px;">Agendar demo</div>
+          <div class="block" style="min-height:34px; flex:none; padding:6px 14px;">Ver módulos</div>
+        </div>
+      </div>
+      <div class="block img" style="min-height:160px;">Imagen / animación producto<br>(dashboard real de Odoo, no stock photo)</div>
+    </div>
+    <div class="note"><b>Por qué</b>El hero de Adhoc vende "el sistema que integra todo". Nosotros diferenciamos por el problema + el soporte humano, que es la ventaja competitiva real de Eynes frente a jugadores más grandes. El badge de Silver Partner se agrega arriba del H1 — es la señal de confianza más rápida de leer para alguien que no sabe distinguir un partner serio de uno improvisado.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">02 — Prueba social inmediata</span>
+    <div class="block">+150 EMPRESAS · 20 AÑOS · 5 PAÍSES — logos de clientes en fila (marquee o grilla estática)</div>
+    <div class="note"><b>Por qué</b>Reduce la fricción de entrada del visitante frío. Va justo debajo del hero, antes de pedir cualquier esfuerzo de lectura.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">03 — Selector de verticales</span>
+    <h2 class="mock">"Elegí tu rubro" / "Trabajamos con empresas como la tuya"</h2>
+    <div class="grid-4" style="margin-top:10px;">
+      <div class="block">Distribución<br>y mayoristas</div>
+      <div class="block">Materiales eléctricos<br>y ferreterías</div>
+      <div class="block">Servicios /<br>consultoría / IT</div>
+      <div class="block">+ Ver todos<br>los rubros →</div>
+    </div>
+    <div class="note"><b>Por qué</b>Es el patrón central de Adhoc y funciona porque el visitante se identifica con su industria antes que con un módulo técnico. Cada card lleva a la página de vertical (ver PÁGINA 02).</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">04 — Problemas → Solución (en vez de lista fría de módulos)</span>
+    <div class="grid-3" style="margin-top:6px;">
+      <div class="block" style="min-height:100px; flex-direction:column;">"Facturo en un sistema y vendo en otro"<br><small>→ Ventas + Facturación AFIP integradas</small></div>
+      <div class="block" style="min-height:100px; flex-direction:column;">"No sé qué stock tengo en tiempo real"<br><small>→ Inventario centralizado</small></div>
+      <div class="block" style="min-height:100px; flex-direction:column;">"Mis reportes tardan días"<br><small>→ Reporting en vivo</small></div>
+    </div>
+    <div class="note"><b>Por qué</b>Vende dolor → alivio, no feature → feature. Cada tarjeta puede linkear a la página de módulo correspondiente.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">04b — Localización Argentina (destacado, nuevo)</span>
+    <div class="block accent" style="min-height:70px;">"La localización argentina más completa del mercado: ARCA, IIBB, percepciones y más →" (banner destacado, no una card más entre los módulos)</div>
+    <div class="note"><b>Por qué</b>Como es "un gran módulo en sí mismo" y tiene página propia con jerarquía de nav, en el Home no puede quedar como una card chiquita igual a Ventas o Compras — necesita un banner propio que la distinga del resto antes de entrar a la grilla genérica.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">05 — Grilla completa de módulos (resumen)</span>
+    <div class="grid-4" style="margin-top:6px;">
+      <div class="block">Ventas y CRM</div>
+      <div class="block">Contabilidad</div>
+      <div class="block">Compras</div>
+      <div class="block">Marketing</div>
+      <div class="block">Manufactura</div>
+      <div class="block">Inventario</div>
+      <div class="block">Punto de venta</div>
+      <div class="block">RRHH</div>
+    </div>
+    <div class="note"><b>Por qué</b>Mantenemos esto (ya existe hoy en el sitio) pero como resumen visual, no como el contenido principal — cada card linkea a su página de módulo propia. Localización queda afuera de esta grilla porque ya tiene su banner propio arriba.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">06 — Caso de éxito destacado</span>
+    <div class="row-flex">
+      <div class="block img" style="min-height:120px;">Foto / logo cliente</div>
+      <div class="block" style="min-height:120px; text-align:left; align-items:flex-start; flex-direction:column;">
+        "Distribuidor de insumos — 27 usuarios — Argentina"<br>
+        Resultado cuantificado (ej: -40% tiempo de facturación)<br>
+        <span style="margin-top:8px; color:var(--accent);">→ Ver caso completo</span>
+      </div>
+    </div>
+    <div class="note"><b>Por qué</b>Un caso real con números vale más que 10 features listadas. Formato tomado de Adhoc (país, usuarios, módulos, resultado).</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">07 — Por qué Eynes (diferenciación)</span>
+    <div class="grid-3">
+      <div class="block">20+ años de experiencia</div>
+      <div class="block">Soporte humano, no ticket genérico</div>
+      <div class="block">Equipo local en 5 ubicaciones</div>
+    </div>
+    <div class="note"><b>Por qué</b>Sección explícita de objeciones: "¿por qué Eynes y no otro partner de Odoo?". Adhoc no la tiene tan clara — es una oportunidad de diferenciarnos.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">08 — CTA final calificador</span>
+    <div class="row-flex">
+      <div class="block" style="min-height:90px;">"Contanos tu proyecto" — texto + beneficios de la demo (sin compromiso, 1 hora, te llevás un presupuesto)</div>
+      <div class="block accent" style="min-height:90px;">Botón: Agendar demo<br>+ WhatsApp directo</div>
+    </div>
+    <div class="note"><b>Por qué</b>Doble canal: el formulario calificador alimenta al CRM con datos de segmentación (rubro, cantidad de usuarios); WhatsApp para el que quiere resolver ya, típico en Argentina.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">08b — Teaser de blog</span>
+    <h2 class="mock">"Últimas notas" / "Recursos para tu empresa"</h2>
+    <div class="grid-3" style="margin-top:10px;">
+      <div class="block img" style="min-height:90px; text-align:left; align-items:flex-start; flex-direction:column;">Odoo y ARCA: qué cambia en la facturación electrónica<br><small style="color:#999;">5 min de lectura</small></div>
+      <div class="block img" style="min-height:90px; text-align:left; align-items:flex-start; flex-direction:column;">Odoo vs SAP: qué conviene para una pyme argentina<br><small style="color:#999;">6 min de lectura</small></div>
+      <div class="block img" style="min-height:90px; text-align:left; align-items:flex-start; flex-direction:column;">Cuánto cuesta implementar Odoo en Argentina: qué factores lo definen<br><small style="color:#999;">4 min de lectura</small></div>
+    </div>
+    <div class="note"><b>Por qué</b>Mantiene el home "vivo" para Google (contenido que se actualiza seguido) y le da a las notas del blog una segunda puerta de entrada además del buscador y LinkedIn.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">Footer</span>
+    <div class="grid-4">
+      <div class="block">Oficinas (5 ciudades)</div>
+      <div class="block">Enlaces rápidos</div>
+      <div class="block">Redes / LinkedIn</div>
+      <div class="block">Legal / privacidad</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider-label">↓ Plantilla de página interior ↓</div>
+
+<div class="divider-label">↓ Página de listado (hub) ↓</div>
+
+<!-- ============ VERTICALES HUB ============ -->
+<div class="page-frame">
+  <div class="page-label"><span>PÁGINA 02 — VERTICALES (hub / listado)</span><span>eynes.com.ar/verticales</span></div>
+
+  <div class="section">
+    <span class="tag">01 — Encabezado</span>
+    <div class="block" style="min-height:60px;">"Soluciones por rubro" + intro corta explicando que Odoo se adapta a cada industria</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">02 — Grilla de rubros (v1: 3-4 verticales)</span>
+    <div class="grid-4">
+      <div class="block">Distribución<br>y mayoristas</div>
+      <div class="block">Materiales eléctricos<br>y ferreterías</div>
+      <div class="block">Servicios /<br>consultoría / IT</div>
+      <div class="block alt">+ próximamente<br>(placeholder, no link roto)</div>
+    </div>
+    <div class="note"><b>Por qué</b>Arrancamos con 3-4 rubros donde ya hay casos reales documentados — cada página nueva necesita contenido único y sustancial para rankear, así que menos páginas sólidas ganan más que muchas genéricas. El resto de los rubros que ya atiende Eynes puede sumarse una vez armado el research y los casos de cada uno.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">03 — CTA</span>
+    <div class="block accent" style="min-height:50px;">"¿No encontrás tu rubro? Contanos tu caso igual"</div>
+    <div class="note"><b>Por qué</b>Evita perder al visitante cuyo rubro todavía no tiene página propia.</div>
+  </div>
+</div>
+
+<div class="divider-label">↓ Plantilla de página interior ↓</div>
+
+<!-- ============ VERTICAL ============ -->
+<div class="page-frame" id="vertical">
+  <div class="page-label"><span>PÁGINA 03 — VERTICAL (plantilla, ej: "Distribución y mayoristas")</span><span>eynes.com.ar/verticales/[rubro]</span></div>
+
+  <div class="section">
+    <span class="tag">01 — Hero de rubro</span>
+    <div class="block accent" style="flex:none; min-height:22px; padding:4px 10px; font-size:10px; margin-bottom:8px; display:inline-block; width:auto;">🛡 SILVER PARTNER OFICIAL DE ODOO</div>
+    <div class="block" style="min-height:90px;">"Software de gestión para [rubro]" + subtítulo con el problema #1 del sector</div>
+    <div class="note"><b>Por qué</b>Cambié el H1 de "Odoo para [rubro]" a "Software de gestión para [rubro]": en el research vimos que quien busca por rubro específico casi nunca menciona "Odoo" — compite ahí Tango, Bejerman, Flexxus. Mencionamos Odoo en el cuerpo, no en el título. El badge de partner se repite acá (igual que en el home) porque es una página de entrada frecuente vía búsqueda directa, no todos pasan primero por el home.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">02 — Problemas específicos del rubro</span>
+    <div class="grid-3">
+      <div class="block">Problema típico 1</div>
+      <div class="block">Problema típico 2</div>
+      <div class="block">Problema típico 3</div>
+    </div>
+    <div class="note"><b>Por qué</b>Este es el contenido que más convierte: el visitante se ve reflejado en su propio dolor, no en features genéricas.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">02b — Comparador directo (nuevo)</span>
+    <h2 class="mock">"Odoo vs. Tango / Bejerman para [rubro]"</h2>
+    <div class="row-flex" style="margin-top:10px; align-items:stretch;">
+      <div class="block alt" style="min-height:130px; flex-direction:column; align-items:flex-start; text-align:left;">
+        <b style="font-size:11px;">Con Tango / Bejerman / similar</b>
+        Reportes manuales o exportados a Excel<br>
+        Facturación y stock en sistemas separados<br>
+        Actualizaciones y soporte por ticket genérico
+      </div>
+      <div class="block accent" style="min-height:130px; flex-direction:column; align-items:flex-start; text-align:left;">
+        <b style="font-size:11px;">Con Odoo (Eynes)</b>
+        Reportes en tiempo real, sin exportar nada<br>
+        Ventas, stock y facturación en un solo lugar<br>
+        Soporte humano directo con tu equipo
+      </div>
+    </div>
+    <div class="note"><b>Por qué</b>Se decidió nombrar competidores directos (Tango, Bejerman) porque son las marcas que la audiencia de este rubro ya conoce y usa — nombrarlas ayuda a que el salto se entienda de inmediato, en vez de comparar contra un "sistema genérico" abstracto. Va específico por vertical: los puntos de comparación cambian según qué usa realmente cada rubro (ej: para ferreterías puede ser distinto que para servicios). Ojo con el tono: se compara por hechos observables, no con adjetivos negativos hacia la competencia.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">03 — Módulos relevantes para este rubro</span>
+    <div class="grid-4">
+      <div class="block">Módulo A</div>
+      <div class="block">Módulo B</div>
+      <div class="block">Módulo C</div>
+      <div class="block">Módulo D</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <span class="tag">03a — Se integra con lo que ya usás (nuevo)</span>
+    <h2 class="mock">"No tenés que abandonar tus herramientas"</h2>
+    <div class="row-flex" style="margin-top:10px;">
+      <div class="block img" style="min-height:70px;">Logo<br>Mercado Libre</div>
+      <div class="block img" style="min-height:70px;">Logo<br>Mercado Pago</div>
+      <div class="block img" style="min-height:70px;">Logo<br>ARCA / AFIP</div>
+      <div class="block img" style="min-height:70px;">Logo<br>[según rubro]</div>
+    </div>
+    <div class="note"><b>Por qué</b>Responde a la objeción tácita de "¿voy a tener que dejar de usar lo que ya tengo?" con prueba concreta, no una promesa. Son integraciones reales y probadas de Eynes, así que pesa mucho más que una lista de features — el set de logos varía según el rubro (ej: para servicios, calendarios/facturación de horas en vez de Mercado Libre).</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">04 — Casos de éxito del rubro (1-2)</span>
+    <div class="grid-2">
+      <div class="block img" style="min-height:100px;">Caso 1 — logo + métricas</div>
+      <div class="block img" style="min-height:100px;">Caso 2 — logo + métricas</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <span class="tag">05 — Testimonio</span>
+    <div class="block" style="min-height:70px;">Cita textual del cliente + nombre / cargo / empresa</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">05b — Preguntas frecuentes del rubro (nuevo, específicas)</span>
+    <div class="block" style="min-height:120px; flex-direction:column; align-items:flex-start; text-align:left;">
+      Ej: "¿Se integra con Mercado Libre/Mercado Pago?" · "¿Cumple con la facturación ARCA para [rubro]?" · "¿Qué pasa si crecemos y necesitamos más usuarios?" · "¿Puedo migrar mi lista de proveedores/clientes actual?"
+    </div>
+    <div class="note"><b>Por qué</b>3-5 preguntas específicas del rubro (no genéricas reciclables entre páginas) — resuelven la objeción justo antes de que el visitante decida, y con schema FAQPage suman a "la gente también pregunta" en Google. Como se definió que sean específicas por página, esto implica escribir contenido único para cada vertical y módulo, no una FAQ base reutilizada.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">06 — CTA calificador (mismo form que home, pre-cargado con el rubro)</span>
+    <div class="block accent" style="min-height:60px;">Agendar demo para [rubro]</div>
+    <div class="note"><b>Por qué</b>Al venir de una página de rubro, el formulario ya "sabe" el rubro — menos fricción, mejor calificación del lead para el equipo de ventas.</div>
+  </div>
+</div>
+
+<div class="divider-label">↓ Plantilla de página interior ↓</div>
+
+<div class="divider-label">↓ Página de listado (hub) ↓</div>
+
+<!-- ============ MODULOS HUB ============ -->
+<div class="page-frame">
+  <div class="page-label"><span>PÁGINA 04 — MÓDULOS (hub / listado)</span><span>eynes.com.ar/modulos</span></div>
+
+  <div class="section">
+    <span class="tag">01 — Encabezado</span>
+    <div class="block" style="min-height:60px;">"Todo lo que podés gestionar con Odoo" + intro breve</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">02 — Grilla de módulos (v1: 4-5 módulos)</span>
+    <div class="grid-4">
+      <div class="block">Ventas y CRM</div>
+      <div class="block">Contabilidad<br>y finanzas</div>
+      <div class="block">Inventario</div>
+      <div class="block">Compras</div>
+      <div class="block alt">+ próximamente<br>(RRHH, Manufactura, POS, Marketing)</div>
+    </div>
+    <div class="note"><b>Por qué</b>Arrancamos con los módulos más pedidos / con más casos documentados para escribir contenido con sustancia real. Los otros 3-4 módulos quedan en el resumen de la home pero sin página propia hasta tener contenido único para cada uno.</div>
+  </div>
+</div>
+
+<div class="divider-label">↓ Plantilla de página interior ↓</div>
+
+<!-- ============ MODULO ============ -->
+<div class="page-frame" id="modulo">
+  <div class="page-label"><span>PÁGINA 05 — MÓDULO (plantilla, ej: "Contabilidad y finanzas")</span><span>eynes.com.ar/modulos/[modulo]</span></div>
+
+  <div class="section">
+    <span class="tag">01 — Hero de módulo</span>
+    <div class="block accent" style="flex:none; min-height:22px; padding:4px 10px; font-size:10px; margin-bottom:8px; display:inline-block; width:auto;">🛡 SILVER PARTNER OFICIAL DE ODOO</div>
+    <div class="block" style="min-height:80px;">Nombre del módulo + qué resuelve en una frase</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">02 — Features con impacto, no solo nombre técnico</span>
+    <div class="grid-3">
+      <div class="block" style="min-height:100px; flex-direction:column;">Integración ARCA/AFIP<br><small>→ Facturás sin planillas paralelas ni carga manual</small></div>
+      <div class="block" style="min-height:100px; flex-direction:column;">Conciliación bancaria<br><small>→ Cerrás el mes sin cruzar extractos a mano</small></div>
+      <div class="block" style="min-height:100px; flex-direction:column;">Reportes en tiempo real<br><small>→ Decidís con datos de hoy, no del mes pasado</small></div>
+    </div>
+    <div class="block accent" style="margin-top:10px; min-height:36px;">"Mirá el resultado real de [Cliente X] con este módulo →" (link a caso de éxito)</div>
+    <div class="note"><b>Por qué</b>No hay métricas propias por feature todavía, así que en vez de inventar un número acá, cada feature se describe por el beneficio cualitativo (qué deja de ser un problema) y el número real y verificable vive en la página del caso de éxito correspondiente, con el link directo. Así el dato duro no se inventa nunca, pero el visitante igual llega a él en un clic.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">03 — Captura / demo visual</span>
+    <div class="block img" style="min-height:140px;">Screenshot real del módulo funcionando (no ilustración genérica)</div>
+    <div class="note"><b>Por qué</b>El visitante técnico (gerente de sistemas, contador) quiere ver el producto real, no una promesa abstracta.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">04 — Integraciones relacionadas</span>
+    <div class="row-flex">
+      <div class="block">Se integra con: Ventas</div>
+      <div class="block">Se integra con: Inventario</div>
+      <div class="block">Se integra con: Punto de venta</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <span class="tag">04b — Preguntas frecuentes del módulo (nuevo, específicas)</span>
+    <div class="block" style="min-height:100px; flex-direction:column; align-items:flex-start; text-align:left;">
+      Ej: "¿Necesito otro módulo para que esto funcione?" · "¿Cuánto tarda el equipo en aprender a usarlo?" · "¿Se puede personalizar a mi flujo actual?"
+    </div>
+    <div class="note"><b>Por qué</b>Mismo criterio que en vertical: preguntas específicas del módulo, no genéricas — resuelven la duda técnica puntual justo antes del CTA.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">05 — CTA</span>
+    <div class="block accent" style="min-height:50px;">Quiero ver este módulo en acción</div>
+  </div>
+</div>
+
+<div class="divider-label">↓ Página propia (no es plantilla, es única) ↓</div>
+
+<!-- ============ LOCALIZACIÓN ============ -->
+<div class="page-frame" id="localizacion">
+  <div class="page-label"><span>PÁGINA 06 — LOCALIZACIÓN ARGENTINA (página única, no plantilla)</span><span>eynes.com.ar/localizacion-argentina</span></div>
+
+  <div class="section">
+    <span class="tag">01 — Hero</span>
+    <div class="block accent" style="flex:none; min-height:22px; padding:4px 10px; font-size:10px; margin-bottom:8px; display:inline-block; width:auto;">🛡 SILVER PARTNER OFICIAL DE ODOO</div>
+    <div class="block" style="min-height:90px; text-align:left; align-items:flex-start; flex-direction:column;">
+      H1 — "Odoo con la localización argentina más completa del mercado"<br>
+      <small style="color:#666; margin-top:6px;">Subtítulo: ARCA, IVA, percepciones/retenciones, IIBB multijurisdicción — todo nativo, sin parches de terceros</small>
+    </div>
+    <div class="note"><b>Por qué</b>Esta página no es una plantilla de módulo más — es un proyecto en sí mismo, así que tiene entidad propia en el nav y en la URL (fuera de /modulos/). El H1 lleva la keyword "localización argentina", que es el término paraguas bajo el que caen ARCA, IIBB, percepciones, etc. — todos términos con oportunidad real que vimos en el research.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">02 — El problema real (por qué esto importa tanto en Argentina)</span>
+    <div class="block" style="min-height:80px; text-align:left; align-items:flex-start; flex-direction:column;">
+      Contexto: normativa que cambia seguido (AFIP → ARCA), múltiples jurisdicciones de IIBB, regímenes de percepción/retención que varían por provincia y rubro — un ERP genérico o mal localizado obliga a parchar con planillas o desarrollos a medida frágiles.
+    </div>
+  </div>
+
+  <div class="section">
+    <span class="tag">03 — Todo lo que resuelve, en un solo lugar</span>
+    <div class="grid-4" style="margin-top:6px;">
+      <div class="block" style="min-height:80px; flex-direction:column;">Facturación electrónica ARCA/AFIP<br><small>emisión y validación nativa</small></div>
+      <div class="block" style="min-height:80px; flex-direction:column;">Percepciones y retenciones<br><small>IVA, IIBB, Ganancias</small></div>
+      <div class="block" style="min-height:80px; flex-direction:column;">IIBB multijurisdicción<br><small>Convenio Multilateral</small></div>
+      <div class="block" style="min-height:80px; flex-direction:column;">Libro IVA digital<br><small>y libros contables locales</small></div>
+      <div class="block" style="min-height:80px; flex-direction:column;">Padrón de contribuyentes<br><small>validación automática</small></div>
+      <div class="block" style="min-height:80px; flex-direction:column;">Plan de cuentas AR<br><small>y balances según normativa local</small></div>
+      <div class="block" style="min-height:80px; flex-direction:column;">Moneda dual<br><small>pesos / dólar, ajuste por inflación</small></div>
+      <div class="block" style="min-height:80px; flex-direction:column;">Actualizaciones normativas<br><small>incluidas, sin desarrollo a medida</small></div>
+    </div>
+    <div class="note"><b>Por qué</b>Esta grilla es el corazón de la página — cada ítem es candidato a convertirse en su propia sub-sección con más detalle (o incluso anclas internas) si el contenido lo justifica, dado que "GRAN módulo" implica que probablemente esta lista crezca.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">04 — Por qué esto no es "un módulo más"</span>
+    <div class="block" style="min-height:70px;">Mensaje: mientras otros ERPs internacionales tratan la localización como un plug-in de terceros, en Odoo con Eynes es parte central del producto — mantenida y actualizada activamente ante cada cambio normativo.</div>
+    <div class="note"><b>Por qué</b>Esto es diferenciación directa frente a competidores que localizan Odoo con desarrollos parche — vale la pena ser explícitos si es verdad, porque es un argumento fuerte contra ERPs importados sin buena localización local.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">05 — Captura / demo visual</span>
+    <div class="block img" style="min-height:130px;">Screenshot real: factura ARCA emitida desde Odoo, o pantalla de percepciones automáticas</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">06 — Notas del blog sobre localización (cruce con el pilar "Localización AR")</span>
+    <div class="grid-3">
+      <div class="block img" style="min-height:70px;">Odoo y ARCA: qué cambia</div>
+      <div class="block img" style="min-height:70px;">Percepciones de IIBB explicadas</div>
+      <div class="block img" style="min-height:70px;">Ver todas las notas →</div>
+    </div>
+    <div class="note"><b>Por qué</b>Esta página funciona como el hub natural del pilar de blog "Localización AR" que ya definimos — cada nota nueva sobre ARCA/AFIP/IIBB linkea para acá, y esta página linkea hacia las notas. Refuerza la autoridad temática de ambas partes del sitio en simultáneo.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">07 — FAQ específica de localización</span>
+    <div class="block" style="min-height:100px; flex-direction:column; align-items:flex-start; text-align:left;">
+      Ej: "¿Qué pasa cuando cambia una alícuota o un régimen de ARCA?" · "¿Cubre todas las provincias para IIBB?" · "¿Cómo se maneja el ajuste por inflación contable?"
+    </div>
+    <div class="note"><b>Por qué</b>Temas normativos generan mucha ansiedad de "¿esto se rompe con el próximo cambio de ley?" — resolverlo acá reduce fricción y suma a "la gente también pregunta".</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">08 — CTA</span>
+    <div class="block accent" style="min-height:50px;">"Quiero ver la localización argentina de Odoo en acción" → demo</div>
+  </div>
+</div>
+
+<div class="divider-label">↓ Plantilla de página interior ↓</div>
+
+<!-- ============ CASOS ============ -->
+<div class="page-frame" id="casos">
+  <div class="page-label"><span>PÁGINA 07 — CASOS DE ÉXITO (listado)</span><span>eynes.com.ar/casos</span></div>
+
+  <div class="section">
+    <span class="tag">01 — Filtro por rubro / tamaño de empresa</span>
+    <div class="row-flex">
+      <div class="block">Filtro: rubro</div>
+      <div class="block">Filtro: cantidad de usuarios</div>
+      <div class="block">Filtro: país</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <span class="tag">02 — Grilla de casos</span>
+    <div class="grid-3">
+      <div class="block img" style="min-height:110px;">Caso A — rubro, país, usuarios, resultado</div>
+      <div class="block img" style="min-height:110px;">Caso B — rubro, país, usuarios, resultado</div>
+      <div class="block img" style="min-height:110px;">Caso C — rubro, país, usuarios, resultado</div>
+    </div>
+    <div class="note"><b>Por qué</b>Formato ficha (no párrafo largo): rubro, país, usuarios, módulos y UN resultado numérico. Escaneable en 3 segundos, igual que hace Adhoc.</div>
+  </div>
+</div>
+
+<div class="divider-label">↓ Plantilla de página interior ↓</div>
+
+<!-- ============ CASO INDIVIDUAL ============ -->
+<div class="page-frame">
+  <div class="page-label"><span>PÁGINA 08 — CASO DE ÉXITO (plantilla individual)</span><span>eynes.com.ar/casos/[cliente]</span></div>
+
+  <div class="section">
+    <span class="tag">01 — Hero del caso</span>
+    <div class="block" style="min-height:80px;">Logo del cliente + una frase con el resultado principal (ej: "-40% en tiempo de facturación")</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">02 — Ficha rápida</span>
+    <div class="grid-4">
+      <div class="block">Rubro</div>
+      <div class="block">País</div>
+      <div class="block">Cantidad de usuarios</div>
+      <div class="block">Módulos implementados</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <span class="tag">03 — El problema</span>
+    <div class="block" style="min-height:90px;">Situación antes de Odoo/Eynes — en palabras del cliente si es posible</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">04 — La solución</span>
+    <div class="block" style="min-height:90px;">Qué se implementó, cómo, en cuánto tiempo — con enlaces internos a los módulos usados</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">05 — El resultado</span>
+    <div class="block" style="min-height:70px;">Números concretos + cita textual del cliente</div>
+    <div class="note"><b>Por qué</b>Cada caso individual es una URL propia indexable — suma para SEO de marca ("Eynes" + nombre del cliente o rubro) y es la prueba social más fuerte para cerrar una venta dudosa.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">06 — CTA</span>
+    <div class="block accent" style="min-height:50px;">"Quiero un resultado similar en mi empresa" → demo</div>
+  </div>
+</div>
+
+<div class="divider-label">↓ Plantilla de página interior ↓</div>
+
+<!-- ============ BLOG HUB ============ -->
+<div class="page-frame" id="blog">
+  <div class="page-label"><span>PÁGINA 09 — BLOG (hub / listado)</span><span>eynes.com.ar/blog</span></div>
+
+  <div class="section">
+    <span class="tag">01 — Encabezado + buscador</span>
+    <div class="block" style="min-height:60px;">"Recursos y novedades" — buscador interno + filtro por categoría</div>
+    <div class="note"><b>Por qué</b>El buscador interno ayuda a SEO on-site (reduce rebote) y a que el propio equipo encuentre notas viejas para reciclar en LinkedIn.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">02 — Categorías / pilares de contenido</span>
+    <div class="grid-4">
+      <div class="block">Localización AR<br><small>(ARCA, AFIP, IIBB)</small></div>
+      <div class="block">Comparativas<br><small>(Odoo vs SAP/Tango)</small></div>
+      <div class="block">Por rubro<br><small>(casos y guías)</small></div>
+      <div class="block">Guías de uso<br><small>(cómo hacer X en Odoo)</small></div>
+    </div>
+    <div class="note"><b>Por qué</b>Categorías = arquitectura de silos para SEO: cada pilar agrupa notas relacionadas y se linkean entre sí, lo que ayuda a rankear el conjunto, no solo notas sueltas. <u>Ojo:</u> mantener esto en 4-5 categorías fijas, sin agregar un sistema de etiquetas (tags) libres — con pocas notas al arrancar, cada tag genera una página casi vacía que Google lee como contenido delgado/duplicado y puede afectar la percepción de calidad de todo el sitio. Si el CMS genera tags automáticamente, se marcan como <code>noindex</code>.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">03 — Nota destacada + grilla</span>
+    <div class="block img" style="min-height:100px; margin-bottom:12px;">Nota destacada (la más nueva o la de mejor performance)</div>
+    <div class="grid-3">
+      <div class="block img" style="min-height:90px;">Nota — título, categoría, fecha, tiempo de lectura</div>
+      <div class="block img" style="min-height:90px;">Nota — título, categoría, fecha, tiempo de lectura</div>
+      <div class="block img" style="min-height:90px;">Nota — título, categoría, fecha, tiempo de lectura</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <span class="tag">04 — CTA lateral / de cierre</span>
+    <div class="block accent" style="min-height:50px;">"¿Querés ver esto funcionando en tu empresa? Agendá una demo"</div>
+    <div class="note"><b>Por qué</b>El blog trae tráfico frío; sin un CTA constante ese tráfico se lee la nota y se va. Cada nota individual también debe repetir este CTA (ver plantilla de nota, sección 05).</div>
+  </div>
+</div>
+
+<div class="divider-label">↓ Plantilla de página interior ↓</div>
+
+<!-- ============ BLOG POST ============ -->
+<div class="page-frame">
+  <div class="page-label"><span>PÁGINA 10 — NOTA DE BLOG (plantilla)</span><span>eynes.com.ar/blog/[slug-de-la-nota]</span></div>
+
+  <div class="section">
+    <span class="tag">01 — Encabezado de la nota</span>
+    <div class="block" style="min-height:80px; text-align:left; align-items:flex-start; flex-direction:column;">
+      Breadcrumb: Blog / Localización AR / [Título] <small style="color:#999;">(solo categoría-pilar, sin tags en la URL)</small><br>
+      H1 — título de la nota (una sola vez, con el término que buscamos rankear)<br>
+      <small style="color:#999; margin-top:6px;">Autor · fecha de publicación · fecha de última actualización · tiempo de lectura</small>
+    </div>
+    <div class="note"><b>Por qué</b>La fecha de "última actualización" visible importa: Google prioriza contenido vigente, sobre todo en temas normativos como ARCA que cambian seguido. Actualizar la nota es más barato que escribir una nueva.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">02 — Imagen destacada + índice de contenidos</span>
+    <div class="row-flex">
+      <div class="block img" style="min-height:100px;">Imagen destacada (no genérica de banco de imágenes si se puede evitar)</div>
+      <div class="block" style="min-height:100px; text-align:left; align-items:flex-start; flex-direction:column;">Índice ("En esta nota") con anclas a cada subtítulo — mejora tiempo en página y puede generar "sitelinks" en el resultado de Google</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <span class="tag">03 — Cuerpo de la nota</span>
+    <div class="block" style="min-height:140px; flex-direction:column; align-items:flex-start; text-align:left;">
+      H2, H3 con subtemas reales (no solo para "meter keywords")<br>
+      Ejemplos concretos / capturas de Odoo cuando aplique<br>
+      Enlaces internos hacia página de módulo o vertical relacionada
+    </div>
+    <div class="note"><b>Por qué</b>Cada nota debe linkear hacia adentro (a un módulo, vertical o caso de éxito) — así el tráfico frío del blog "cae" en páginas que sí venden, no se queda aislado.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">04 — Compartir / origen LinkedIn</span>
+    <div class="row-flex">
+      <div class="block">Botones de compartir (LinkedIn primero, dado el canal actual)</div>
+      <div class="block">"Publicado originalmente como hilo en LinkedIn" (si aplica) + link al post</div>
+    </div>
+    <div class="note"><b>Por qué</b>Esto conecta directo con el pipeline de LinkedIn que ya estás armando: la nota larga vive en el blog (indexable), y LinkedIn funciona como versión corta + distribución — cada post de LinkedIn linkea a la nota completa para traer esa audiencia al sitio.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">05 — CTA de cierre + notas relacionadas</span>
+    <div class="block accent" style="min-height:50px; margin-bottom:10px;">CTA repetido: agendar demo / ver módulo relacionado</div>
+    <div class="grid-3">
+      <div class="block">Nota relacionada 1</div>
+      <div class="block">Nota relacionada 2</div>
+      <div class="block">Nota relacionada 3</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <span class="tag">Técnico (no visual, pero define SEO)</span>
+    <div class="block" style="min-height:70px; flex-direction:column; align-items:flex-start; text-align:left; font-size:11px;">
+      Title tag y meta description únicos · URL con slug corto y legible · Schema.org <code>Article</code> con autor y fecha · Canonical apuntando a la propia nota · Imagen con alt text descriptivo · Velocidad de carga (imágenes optimizadas, sin scripts pesados)
+    </div>
+  </div>
+</div>
+
+<div class="divider-label">↓ Plantilla de página interior ↓</div>
+
+<div class="divider-label">↓ Plantilla de página interior ↓</div>
+
+<!-- ============ NOSOTROS ============ -->
+<div class="page-frame" id="nosotros">
+  <div class="page-label"><span>PÁGINA 11 — NOSOTROS</span><span>eynes.com.ar/nosotros</span></div>
+
+  <div class="section">
+    <span class="tag">01 — Hero</span>
+    <div class="block" style="min-height:70px;">"20+ años implementando Odoo en Argentina, Uruguay y España" + foto real del equipo (no stock)</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">02 — Historia / hitos</span>
+    <div class="block" style="min-height:70px;">Línea de tiempo breve: fundación, primeros clientes, expansión regional, hito reciente</div>
+    <div class="note"><b>Por qué</b>Una historia con fechas reales da señales de confianza (antigüedad, continuidad) que Google y las personas leen como legitimidad — algo que Adhoc comunica poco en su sitio.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">03 — Equipo</span>
+    <div class="grid-4">
+      <div class="block img" style="min-height:90px;">Foto + nombre + rol</div>
+      <div class="block img" style="min-height:90px;">Foto + nombre + rol</div>
+      <div class="block img" style="min-height:90px;">Foto + nombre + rol</div>
+      <div class="block img" style="min-height:90px;">Foto + nombre + rol</div>
+    </div>
+    <div class="note"><b>Por qué</b>Mostrar caras reales (no un ícono genérico de "equipo de 100 personas" como hace Adhoc) refuerza el diferencial de soporte humano que ya identificamos como ventaja competitiva.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">04 — Oficinas</span>
+    <div class="grid-4">
+      <div class="block">Buenos Aires</div>
+      <div class="block">Santa Fe</div>
+      <div class="block">Mendoza</div>
+      <div class="block">Montevideo</div>
+    </div>
+    <div class="note"><b>Por qué</b>Cada oficina con dirección real habilita Google Business Profile por ubicación — abre SEO local ("Odoo Mendoza", "implementación Odoo Uruguay") que vimos que la competencia no explota.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">05 — CTA</span>
+    <div class="block accent" style="min-height:50px;">"Conocé cómo trabajamos" → demo</div>
+  </div>
+</div>
+
+<div class="divider-label">↓ Plantilla de página interior ↓</div>
+
+<!-- ============ CONTACTO ============ -->
+<div class="page-frame" id="contacto">
+  <div class="page-label"><span>PÁGINA 12 — CONTACTO / SOLICITUD DE DEMO</span><span>eynes.com.ar/demo</span></div>
+
+  <div class="section">
+    <span class="tag">01 — Qué va a pasar (reduce ansiedad del lead)</span>
+    <div class="grid-3">
+      <div class="block">1. Nos contás tus problemas</div>
+      <div class="block">2. Te mostramos cómo resolverlos</div>
+      <div class="block">3. Te llevás un presupuesto</div>
+    </div>
+    <div class="note"><b>Por qué</b>Directamente inspirado en el "¿Qué veremos?" de Adhoc — funciona porque le sacan el misterio (y el miedo a un llamado de ventas invasivo) a la demo.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">01b — Qué define el costo (sin publicar precio)</span>
+    <h2 class="mock">"¿Cuánto cuesta implementar Odoo?"</h2>
+    <div class="grid-4" style="margin-top:10px;">
+      <div class="block">Cantidad de usuarios</div>
+      <div class="block">Módulos necesarios</div>
+      <div class="block">Complejidad de la migración</div>
+      <div class="block">Integraciones a medida</div>
+    </div>
+    <div class="block accent" style="margin-top:10px; min-height:40px;">"Cotización personalizada en 48hs, sin compromiso"</div>
+    <div class="note"><b>Por qué</b>Como decidieron no publicar precios ni rangos, esto reemplaza el ancla numérica: le mostramos al visitante qué mueve el costo (para que entienda que no es un número fijo) y le damos una promesa de respuesta rápida en vez de una cifra. Captura la búsqueda "cuánto cuesta Odoo Argentina" sin comprometer un número que después no se pueda sostener.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">02 — Formulario calificador</span>
+    <div class="row-flex">
+      <div style="flex:1;">
+        <div class="form-mock">
+          <label>Nombre y apellido</label><div class="form-field"></div>
+          <label>Email corporativo</label><div class="form-field"></div>
+          <label>Empresa</label><div class="form-field"></div>
+          <label>Rubro</label><div class="form-field"></div>
+          <label>Cantidad de usuarios</label><div class="form-field"></div>
+          <label>¿Cómo gestionan hoy la empresa?</label><div class="form-field"></div>
+        </div>
+      </div>
+      <div class="block accent" style="flex:none; width:160px;">Enviar / Agendar horario</div>
+    </div>
+    <div class="note"><b>Por qué</b>Cada campo califica al lead para ventas (tamaño de oportunidad, sistema actual = punto de dolor de migración). Mismo patrón que usa Adhoc.</div>
+  </div>
+
+  <div class="section">
+    <span class="tag">03 — Canal alternativo directo</span>
+    <div class="block">Botón grande: "Escribinos por WhatsApp" — para el lead que no quiere completar formulario</div>
+  </div>
+</div>
+
+<footer class="credits">
+  Wireframe generado como material de presentación interna — Eynes · v0.1 · estructura sujeta a revisión de contenido y diseño visual.
+</footer>
+
+</body>
+</html>
