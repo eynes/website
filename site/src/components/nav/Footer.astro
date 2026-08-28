@@ -1,6 +1,7 @@
 ---
 import { getEntry } from 'astro:content';
 import PartnerBadge from '../shared/PartnerBadge.astro';
+import { withBase } from '../../lib/url';
 
 const nav = await getEntry('navConfig', 'navegacion');
 const site = await getEntry('siteConfig', 'site');
@@ -48,7 +49,7 @@ const year = new Date().getFullYear();
           {col.links && (
             <ul class="mt-4 space-y-2 text-sm">
               {col.links.map((link) => (
-                <li><a href={link.url} class="hover:text-white">{link.etiqueta}</a></li>
+                <li><a href={withBase(link.url)} class="hover:text-white">{link.etiqueta}</a></li>
               ))}
             </ul>
           )}
@@ -61,7 +62,7 @@ const year = new Date().getFullYear();
     <div class="container-page flex flex-col gap-2 py-6 font-mono text-xs text-paper/50 sm:flex-row sm:items-center sm:justify-between">
       <p>&copy; {year} {site?.data.razon_social}</p>
       <p class="inline-flex items-center gap-2">
-        <img src="/brand/odoo_logo_inverted.svg" alt="Odoo" class="h-4 w-auto opacity-80" width="919" height="495" />
+        <img src={withBase('/brand/odoo_logo_inverted.svg')} alt="Odoo" class="h-4 w-auto opacity-80" width="919" height="495" />
         Silver Partner Oficial de Odoo — Argentina · Uruguay · España
       </p>
     </div>

@@ -8,6 +8,7 @@ import CTASection from '../../components/cta/CTASection.astro';
 import { getPublished } from '../../lib/content';
 import { resolvePublishedRelated } from '../../lib/related';
 import { articleSchema, faqPageSchema, breadcrumbListSchema, isRealDate } from '../../lib/schema';
+import { withBase } from '../../lib/url';
 
 export async function getStaticPaths() {
   const posts = await getPublished('blog');
@@ -80,7 +81,7 @@ const jsonLd = [
               <h2 class="text-xl font-semibold text-ink">Notas relacionadas</h2>
               <div class="mt-4 grid gap-4 sm:grid-cols-2">
                 {relacionados.map((post) => (
-                  <a href={`/blog/${post!.data.slug}`} class="card block">
+                  <a href={withBase(`/blog/${post!.data.slug}`)} class="card block">
                     <p class="font-medium text-ink">{post!.data.title}</p>
                   </a>
                 ))}

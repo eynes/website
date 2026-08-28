@@ -1,5 +1,6 @@
 ---
 import { getPublished } from '../../lib/content';
+import { withBase } from '../../lib/url';
 
 const verticales = await getPublished('verticales');
 const accessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY ?? '';
@@ -17,7 +18,7 @@ const labelClass = 'mb-1.5 block font-mono text-xs font-semibold uppercase track
 >
   <input type="hidden" name="access_key" value={accessKey} />
   <input type="hidden" name="subject" value="Nueva consulta desde eynes.com.ar" />
-  <input type="hidden" name="redirect" value="/gracias" />
+  <input type="hidden" name="redirect" value={withBase('/gracias')} />
   <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
 
   <div class="sm:col-span-2">
@@ -86,7 +87,8 @@ const labelClass = 'mb-1.5 block font-mono text-xs font-semibold uppercase track
       });
       const result = await response.json();
       if (result.success) {
-        window.location.href = '/gracias';
+        const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+        window.location.href = `${base}/gracias`;
       } else {
         status.textContent = 'Hubo un problema al enviar. Probá de nuevo o escribinos por WhatsApp.';
       }

@@ -2,6 +2,8 @@
 // content/06-seo/schema-org-referencia.md's mapping table. Each returns a
 // plain object (no "@context"; BaseLayout adds that once per script tag).
 
+import { withBase } from './url';
+
 export interface Crumb {
   name: string;
   url: string;
@@ -159,7 +161,7 @@ export function breadcrumbListSchema(crumbs: Crumb[]) {
       '@type': 'ListItem',
       position: i + 1,
       name: c.name,
-      item: c.url,
+      item: withBase(c.url),
     })),
   };
 }

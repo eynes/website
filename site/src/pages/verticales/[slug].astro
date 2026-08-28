@@ -9,6 +9,7 @@ import { getPublished } from '../../lib/content';
 import { splitSections, renderSection, renderFragment, extractLabeled, stripLabeledLine } from '../../lib/sections';
 import { resolvePublishedRelated } from '../../lib/related';
 import { serviceSchema, faqPageSchema, breadcrumbListSchema } from '../../lib/schema';
+import { withBase } from '../../lib/url';
 
 export async function getStaticPaths() {
   const verticales = await getPublished('verticales');
@@ -63,7 +64,7 @@ const jsonLd = [
           <h2 class="mt-2 text-2xl sm:text-3xl">Módulos relevantes para este rubro</h2>
           <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {modulos.map((m) => (
-              <a href={`/modulos/${m!.data.slug}`} class="card block">
+              <a href={withBase(`/modulos/${m!.data.slug}`)} class="card block">
                 <p class="font-semibold text-ink">{m!.data.title}</p>
               </a>
             ))}
@@ -97,7 +98,7 @@ const jsonLd = [
           <h2 class="mt-2 text-2xl sm:text-3xl">Casos de éxito del rubro</h2>
           <div class="mt-8 grid gap-5 sm:grid-cols-2">
             {casos.map((c) => (
-              <a href={`/casos/${c!.data.slug}`} class="card block">
+              <a href={withBase(`/casos/${c!.data.slug}`)} class="card block">
                 <p class="font-semibold text-ink">{c!.data.cliente}</p>
                 <p class="mt-1 font-mono text-xs uppercase tracking-wide text-ink-faint">{c!.data.usuarios} usuarios · {c!.data.pais}</p>
                 <p class="mt-3 text-sm text-ink-soft">{c!.data.resultado_clave}</p>

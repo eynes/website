@@ -1,5 +1,6 @@
 ---
 import PartnerBadge from '../shared/PartnerBadge.astro';
+import { withBase } from '../../lib/url';
 
 interface CtaLink {
   label: string;
@@ -60,12 +61,12 @@ const {
         (primaryCta || secondaryCta) && (
           <div class="enter enter-4 mt-9 flex flex-wrap gap-3">
             {primaryCta && (
-              <a href={primaryCta.href} class="btn-primary">
+              <a href={withBase(primaryCta.href)} class="btn-primary">
                 {primaryCta.label}
               </a>
             )}
             {secondaryCta && (
-              <a href={secondaryCta.href} class="btn-outline">
+              <a href={withBase(secondaryCta.href)} class="btn-outline">
                 {secondaryCta.label}
               </a>
             )}

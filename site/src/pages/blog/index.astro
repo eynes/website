@@ -7,6 +7,7 @@ import FilterBar from '../../components/blog/FilterBar.astro';
 import CTASection from '../../components/cta/CTASection.astro';
 import { getPublished } from '../../lib/content';
 import { blogSchema, breadcrumbListSchema } from '../../lib/schema';
+import { withBase } from '../../lib/url';
 
 const hub = await getEntry('blogHub', 'blog');
 const posts = (await getPublished('blog')).sort((a, b) =>
@@ -42,7 +43,7 @@ const jsonLd = hub
         posts.length === 0 && (
           <p class="rounded-md border border-dashed border-line p-10 text-center text-ink-faint">
             Ya estamos preparando las primeras notas. Mientras tanto, {' '}
-            <a href="/demo" class="font-medium text-teal hover:underline">agendá una demo</a>.
+            <a href={withBase('/demo')} class="font-medium text-teal hover:underline">agendá una demo</a>.
           </p>
         )
       }
@@ -51,7 +52,7 @@ const jsonLd = hub
         {
           posts.map((post) => (
             <a
-              href={`/blog/${post.data.slug}`}
+              href={withBase(`/blog/${post.data.slug}`)}
               class="card block"
               data-post-card
               data-category={post.data.categoria}

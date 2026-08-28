@@ -6,6 +6,7 @@ import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
 import CTASection from '../../components/cta/CTASection.astro';
 import { getPublished } from '../../lib/content';
 import { collectionPageSchema, breadcrumbListSchema } from '../../lib/schema';
+import { withBase } from '../../lib/url';
 
 const hub = await getEntry('casosHub', 'casos');
 const casos = await getPublished('casosDeExito');
@@ -35,7 +36,7 @@ const jsonLd = hub
     <div class="container-page reveal grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {
         casos.map((c) => (
-          <a href={`/casos/${c.data.slug}`} class="card block">
+          <a href={withBase(`/casos/${c.data.slug}`)} class="card block">
             <p class="font-semibold text-ink">{c.data.cliente}</p>
             <p class="mt-1 font-mono text-xs uppercase tracking-wide text-ink-faint">{c.data.rubro.replace(/-/g, ' ')} · {c.data.pais} · {c.data.usuarios} usuarios</p>
             <p class="mt-3 text-sm text-ink-soft">{c.data.resultado_clave}</p>

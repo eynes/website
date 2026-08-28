@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import WhatsAppButton from '../components/forms/WhatsAppButton.astro';
+import { withBase } from '../lib/url';
 ---
 
 <BaseLayout title="¡Gracias! | Eynes" description="Gracias por tu consulta, te contactaremos a la brevedad." noindex jsonLd={[]}>
@@ -9,7 +10,7 @@ import WhatsAppButton from '../components/forms/WhatsAppButton.astro';
       <h1 class="text-3xl">¡Gracias por tu consulta!</h1>
       <p class="mt-4 text-ink-soft">Recibimos tu mensaje y te vamos a contactar a la brevedad para coordinar tu demo.</p>
       <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
-        <a href="/" class="btn-secondary">Volver al inicio</a>
+        <a href={withBase('/')} class="btn-secondary">Volver al inicio</a>
         <WhatsAppButton variant="inline" message="Hola, acabo de completar el formulario de la web." />
       </div>
     </div>

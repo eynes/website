@@ -9,6 +9,7 @@ import { getPublished } from '../../lib/content';
 import { splitSections, renderSection, extractLabeled } from '../../lib/sections';
 import { resolvePublishedRelated } from '../../lib/related';
 import { productSchema, faqPageSchema, breadcrumbListSchema } from '../../lib/schema';
+import { withBase } from '../../lib/url';
 
 export async function getStaticPaths() {
   const modulos = await getPublished('modulos');
@@ -61,7 +62,7 @@ const jsonLd = [
               <h2 class="text-xl font-semibold text-ink">Se integra con</h2>
               <div class="mt-4 flex flex-wrap gap-3">
                 {integrados.map((m) => (
-                  <a href={`/modulos/${m!.data.slug}`} class="rounded-full border border-line bg-paper px-4 py-2 text-sm font-medium text-ink-soft hover:border-purple">
+                  <a href={withBase(`/modulos/${m!.data.slug}`)} class="rounded-full border border-line bg-paper px-4 py-2 text-sm font-medium text-ink-soft hover:border-purple">
                     {m!.data.title}
                   </a>
                 ))}
@@ -71,7 +72,7 @@ const jsonLd = [
           {casoRelacionado && (
             <div>
               <h2 class="text-xl font-semibold text-ink">Resultado real</h2>
-              <a href={`/casos/${casoRelacionado.data.slug}`} class="card mt-4 block bg-paper">
+              <a href={withBase(`/casos/${casoRelacionado.data.slug}`)} class="card mt-4 block bg-paper">
                 <p class="font-semibold text-ink">{casoRelacionado.data.cliente}</p>
                 <p class="mt-2 text-sm text-ink-soft">{entry.data.caso_relacionado?.resultado}</p>
               </a>

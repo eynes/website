@@ -1,9 +1,12 @@
 ---
 import { getEntry } from 'astro:content';
+import { withBase } from '../../lib/url';
 
 const nav = await getEntry('navConfig', 'navegacion');
 const site = await getEntry('siteConfig', 'site');
-const currentPath = Astro.url.pathname;
+const base = import.meta.env.BASE_URL;
+const baseNoTrailingSlash = base.endsWith('/') ? base.slice(0, -1) : base;
+const currentPath = Astro.url.pathname.slice(baseNoTrailingSlash.length) || '/';
 
 function isActive(url: string) {
   return url !== '/' && currentPath.startsWith(url);
@@ -12,7 +15,7 @@ function isActive(url: string) {
 
 <header class="sticky top-0 z-40 border-b bg-paper" style="border-color: var(--color-line)">
   <div class="container-page flex items-center justify-between gap-4 py-4">
-    <a href="/" class="flex shrink-0 items-baseline gap-2">
+    <a href={withBase('/')} class="flex shrink-0 items-baseline gap-2">
       <span class="text-2xl font-bold text-ink">{site?.data.nombre_comercial}</span>
       <span class="hidden font-mono text-[0.65rem] uppercase tracking-[0.14em] text-ink-faint sm:inline">Odoo Partner</span>
     </a>
@@ -21,7 +24,7 @@ function isActive(url: string) {
       {
         nav?.data.nav_principal.map((item) => (
           <a
-            href={item.url}
+            href={withBase(item.url)}
             class:list={[
               'font-mono text-xs font-medium uppercase tracking-[0.1em] text-ink-soft hover:text-purple',
               { 'text-purple': isActive(item.url) },
@@ -34,7 +37,7 @@ function isActive(url: string) {
     </nav>
 
     <div class="flex items-center gap-3">
-      {nav && <a href={nav.data.cta_nav.url} class="btn-primary hidden sm:inline-flex">{nav.data.cta_nav.etiqueta}</a>}
+      {nav && <a href={withBase(nav.data.cta_nav.url)} class="btn-primary hidden sm:inline-flex">{nav.data.cta_nav.etiqueta}</a>}
       <button
         type="button"
         id="nav-toggle"
@@ -57,12 +60,12 @@ function isActive(url: string) {
     <div class="container-page flex flex-col gap-1 py-3">
       {
         nav?.data.nav_principal.map((item) => (
-          <a href={item.url} class="px-2 py-2 font-mono text-xs font-medium uppercase tracking-[0.1em] text-ink-soft hover:text-purple">
+          <a href={withBase(item.url)} class="px-2 py-2 font-mono text-xs font-medium uppercase tracking-[0.1em] text-ink-soft hover:text-purple">
             {item.etiqueta}
           </a>
         ))
       }
-      {nav && <a href={nav.data.cta_nav.url} class="btn-primary mt-2 justify-center">{nav.data.cta_nav.etiqueta}</a>}
+      {nav && <a href={withBase(nav.data.cta_nav.url)} class="btn-primary mt-2 justify-center">{nav.data.cta_nav.etiqueta}</a>}
     </div>
   </nav>
 </header>

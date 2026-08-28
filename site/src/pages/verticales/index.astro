@@ -6,6 +6,7 @@ import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
 import CTASection from '../../components/cta/CTASection.astro';
 import { getPublished } from '../../lib/content';
 import { collectionPageSchema, breadcrumbListSchema } from '../../lib/schema';
+import { withBase } from '../../lib/url';
 
 const hub = await getEntry('verticalesHub', 'verticales');
 const verticales = await getPublished('verticales');
@@ -35,7 +36,7 @@ const jsonLd = hub
     <div class="container-page reveal grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
       {
         verticales.map((v) => (
-          <a href={`/verticales/${v.data.slug}`} class="card block">
+          <a href={withBase(`/verticales/${v.data.slug}`)} class="card block">
             <p class="font-semibold text-ink">{v.data.title}</p>
             <p class="mt-2 text-sm text-ink-soft">{v.data.meta_description}</p>
             <span class="mt-4 inline-block text-sm font-medium text-teal">Ver solución <span class="arrow">→</span></span>

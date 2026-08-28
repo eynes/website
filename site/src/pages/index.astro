@@ -5,6 +5,7 @@ import Hero from '../components/hero/Hero.astro';
 import CTASection from '../components/cta/CTASection.astro';
 import { getPublished } from '../lib/content';
 import { organizationSchema, websiteSchema } from '../lib/schema';
+import { withBase } from '../lib/url';
 
 const page = await getEntry('paginasUnicas', 'home');
 const site = await getEntry('siteConfig', 'site');
@@ -65,12 +66,12 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
       <h2 class="mt-2 text-2xl sm:text-3xl">Trabajamos con empresas como la tuya</h2>
       <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {verticales.map((v) => (
-          <a href={`/verticales/${v.data.slug}`} class="card block">
+          <a href={withBase(`/verticales/${v.data.slug}`)} class="card block">
             <p class="font-semibold text-ink">{v.data.title}</p>
             <span class="mt-2 inline-block text-sm font-medium text-teal">Ver solución <span class="arrow">→</span></span>
           </a>
         ))}
-        <a href="/verticales" class="card flex flex-col items-center justify-center border-dashed text-center text-sm font-medium text-ink-faint hover:text-purple">
+        <a href={withBase('/verticales')} class="card flex flex-col items-center justify-center border-dashed text-center text-sm font-medium text-ink-faint hover:text-purple">
           Ver todos los rubros <span class="arrow">→</span>
         </a>
       </div>
@@ -96,7 +97,7 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
                 <td class="border-b border-line px-5 py-4 text-ink-soft">{row.dolor}</td>
                 <td class="border-b border-line px-5 py-4 font-medium text-ink">{row.alivio}</td>
                 <td class="border-b border-line px-5 py-4 text-right">
-                  <a href={row.href} class="font-medium text-teal hover:underline">Ver módulo <span class="arrow">→</span></a>
+                  <a href={withBase(row.href)} class="font-medium text-teal hover:underline">Ver módulo <span class="arrow">→</span></a>
                 </td>
               </tr>
             ))}
@@ -108,7 +109,7 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
 
   <section class="section">
     <div class="container-page reveal">
-      <a href="/localizacion-argentina" class="card block bg-dark text-paper hover:border-silver">
+      <a href={withBase('/localizacion-argentina')} class="card block bg-dark text-paper hover:border-silver">
         <span class="kicker">Módulo insignia</span>
         <h2 class="mt-3 text-2xl text-paper sm:text-3xl">La localización argentina más completa del mercado</h2>
         <p class="mt-2 max-w-2xl text-paper/70">ARCA, IIBB, percepciones y retenciones — nativo, sin parches de terceros.</p>
@@ -123,7 +124,7 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
       <h2 class="mt-2 text-2xl sm:text-3xl">Todo lo que podés gestionar con Odoo</h2>
       <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {modulos.map((m) => (
-          <a href={`/modulos/${m.data.slug}`} class="card block bg-paper text-center font-medium">{m.data.title}</a>
+          <a href={withBase(`/modulos/${m.data.slug}`)} class="card block bg-paper text-center font-medium">{m.data.title}</a>
         ))}
       </div>
     </div>
@@ -135,7 +136,7 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
         <div class="container-page reveal">
           <span class="kicker">05 — Prueba</span>
           <h2 class="mt-2 text-2xl sm:text-3xl">Caso de éxito destacado</h2>
-          <a href={`/casos/${featuredCase.data.slug}`} class="card mt-6 block sm:flex sm:items-center sm:justify-between sm:gap-6">
+          <a href={withBase(`/casos/${featuredCase.data.slug}`)} class="card mt-6 block sm:flex sm:items-center sm:justify-between sm:gap-6">
             <div>
               <p class="font-semibold text-ink">{featuredCase.data.cliente}</p>
               <p class="mt-1 font-mono text-xs uppercase tracking-wide text-ink-faint">
@@ -185,7 +186,7 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
           <h2 class="mt-2 text-2xl sm:text-3xl">Últimas notas</h2>
           <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {recentPosts.map((post) => (
-              <a href={`/blog/${post.data.slug}`} class="card block">
+              <a href={withBase(`/blog/${post.data.slug}`)} class="card block">
                 <p class="font-mono text-xs font-semibold uppercase tracking-wide text-teal">{post.data.categoria.replace(/-/g, ' ')}</p>
                 <p class="mt-2 font-semibold text-ink">{post.data.title}</p>
               </a>

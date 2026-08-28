@@ -8,6 +8,7 @@ import CTASection from '../components/cta/CTASection.astro';
 import { splitSections, renderSection } from '../lib/sections';
 import { getPublished } from '../lib/content';
 import { serviceSchema, faqPageSchema, breadcrumbListSchema } from '../lib/schema';
+import { withBase } from '../lib/url';
 
 const page = await getEntry('paginasUnicas', 'localizacion-argentina');
 const sections = page ? splitSections(page.body ?? '') : {};
@@ -64,7 +65,7 @@ const jsonLd = page
           <h2 class="mt-2 text-2xl sm:text-3xl">Notas sobre localización argentina</h2>
           <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {relatedPosts.map((post) => (
-              <a href={`/blog/${post.data.slug}`} class="card block">
+              <a href={withBase(`/blog/${post.data.slug}`)} class="card block">
                 <p class="font-semibold text-ink">{post.data.title}</p>
               </a>
             ))}

@@ -1,5 +1,6 @@
 ---
 import type { Crumb } from '../../lib/schema';
+import { withBase } from '../../lib/url';
 
 interface Props {
   crumbs: Crumb[];
@@ -16,7 +17,7 @@ const { crumbs } = Astro.props;
           {i === crumbs.length - 1 ? (
             <span class="font-semibold text-ink">{crumb.name}</span>
           ) : (
-            <a href={crumb.url} class="hover:text-purple hover:underline">
+            <a href={withBase(crumb.url)} class="hover:text-purple hover:underline">
               {crumb.name}
             </a>
           )}

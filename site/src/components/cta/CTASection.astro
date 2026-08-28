@@ -1,5 +1,6 @@
 ---
 import WhatsAppButton from '../forms/WhatsAppButton.astro';
+import { withBase } from '../../lib/url';
 
 interface Props {
   heading: string;
@@ -26,7 +27,7 @@ const {
     <h2 class:list={['max-w-2xl text-3xl sm:text-4xl', tone === 'dark' && 'text-paper']}>{heading}</h2>
     {body && <p class:list={['max-w-xl text-base', tone === 'dark' ? 'text-paper/70' : 'text-ink-soft']}>{body}</p>}
     <div class="mt-2 flex flex-wrap items-center justify-center gap-3">
-      <a href={primaryHref} class="btn-primary">{primaryLabel}</a>
+      <a href={withBase(primaryHref)} class="btn-primary">{primaryLabel}</a>
       <WhatsAppButton variant="inline" message={whatsappMessage} />
     </div>
   </div>
