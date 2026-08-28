@@ -1,0 +1,27 @@
+---
+interface Props {
+  title?: string;
+  number?: string;
+  html: string;
+  tone?: 'light' | 'muted';
+  narrow?: boolean;
+}
+
+const { title, number, html, tone = 'light', narrow = false } = Astro.props;
+---
+
+{
+  html && (
+    <section class:list={['section', tone === 'muted' && 'bg-paper-dim']}>
+      <div class:list={['container-page prose-content', narrow && 'max-w-3xl']}>
+        {title && (
+          <div class="mb-4 flex items-baseline gap-3">
+            {number && <span class="font-mono text-sm text-teal">{number}</span>}
+            <h2 class="text-2xl sm:text-3xl">{title}</h2>
+          </div>
+        )}
+        <div set:html={html} />
+      </div>
+    </section>
+  )
+}

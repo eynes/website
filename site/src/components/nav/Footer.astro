@@ -1,0 +1,69 @@
+---
+import { getEntry } from 'astro:content';
+import PartnerBadge from '../shared/PartnerBadge.astro';
+
+const nav = await getEntry('navConfig', 'navegacion');
+const site = await getEntry('siteConfig', 'site');
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-dark text-paper/70">
+  <div class="container-page grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="lg:col-span-1">
+      <p class="text-2xl font-semibold text-paper">{site?.data.nombre_comercial}</p>
+      <p class="mt-2 text-sm">{site?.data.tagline_corto}</p>
+      <div class="mt-5 inline-flex rounded-md bg-paper p-3">
+        <PartnerBadge size="sm" />
+      </div>
+    </div>
+
+    {
+      nav?.data.footer_columnas.map((col) => (
+        <div>
+          <p class="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-paper">{col.titulo}</p>
+          {col.tipo === 'dinamico_oficinas' && site && (
+            <ul class="mt-4 space-y-4 text-sm">
+              {site.data.oficinas.map((office) => (
+                <li>
+                  <p class="font-medium text-paper">{office.ciudad}, {office.pais}</p>
+                  <p class="text-paper/60">{office.direccion}</p>
+                  <p class="text-paper/60">{office.telefono}</p>
+                </li>
+              ))}
+              {site.data.zonas_de_cobertura.map((zona) => (
+                <li>
+                  <p class="font-medium text-paper">{zona.ciudad}, {zona.pais} <span class="font-normal text-paper/50">(remota)</span></p>
+                  <p class="text-paper/60">{zona.telefono}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+          {col.tipo === 'dinamico_redes' && site && (
+            <ul class="mt-4 space-y-2 text-sm">
+              <li><a href={site.data.redes.linkedin} target="_blank" rel="noopener noreferrer" class="hover:text-white">LinkedIn</a></li>
+              <li><a href={site.data.redes.instagram} target="_blank" rel="noopener noreferrer" class="hover:text-white">Instagram</a></li>
+              <li><a href={`mailto:${site.data.contacto_general.email_comercial}`} class="hover:text-white">{site.data.contacto_general.email_comercial}</a></li>
+            </ul>
+          )}
+          {col.links && (
+            <ul class="mt-4 space-y-2 text-sm">
+              {col.links.map((link) => (
+                <li><a href={link.url} class="hover:text-white">{link.etiqueta}</a></li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="border-t" style="border-color: var(--color-dark-line)">
+    <div class="container-page flex flex-col gap-2 py-6 font-mono text-xs text-paper/50 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; {year} {site?.data.razon_social}</p>
+      <p class="inline-flex items-center gap-2">
+        <img src="/brand/odoo_logo_inverted.svg" alt="Odoo" class="h-4 w-auto opacity-80" width="919" height="495" />
+        Silver Partner Oficial de Odoo — Argentina · Uruguay · España
+      </p>
+    </div>
+  </div>
+</footer>

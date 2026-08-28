@@ -1,0 +1,83 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/hero/Hero.astro';
+import Breadcrumbs from '../components/seo/Breadcrumbs.astro';
+import FAQAccordion from '../components/shared/FAQAccordion.astro';
+import CTASection from '../components/cta/CTASection.astro';
+import { splitSections, renderSection } from '../lib/sections';
+import { getPublished } from '../lib/content';
+import { serviceSchema, faqPageSchema, breadcrumbListSchema } from '../lib/schema';
+
+const page = await getEntry('paginasUnicas', 'localizacion-argentina');
+const sections = page ? splitSections(page.body ?? '') : {};
+
+const problemHtml = await renderSection(sections, '02');
+const solvesHtml = await renderSection(sections, '03');
+const differentiationHtml = await renderSection(sections, '04');
+
+const relatedPosts = (await getPublished('blog')).filter((p) => p.data.categoria === 'localizacion-ar');
+
+const crumbs = [
+  { name: 'Inicio', url: '/' },
+  { name: 'Localización Argentina', url: '/localizacion-argentina' },
+];
+
+const jsonLd = page
+  ? [
+      serviceSchema({
+        name: page.data.title,
+        description: page.data.meta_description,
+        url: 'https://eynes.com.ar/localizacion-argentina',
+      }),
+      faqPageSchema(page.data.faqs),
+      breadcrumbListSchema(crumbs),
+    ].filter(Boolean)
+  : [];
+---
+
+<BaseLayout title={page?.data.seo_title ?? ''} description={page?.data.meta_description ?? ''} jsonLd={jsonLd as Record<string, unknown>[]}>
+  <Breadcrumbs crumbs={crumbs} />
+  <Hero
+    title={page?.data.title ?? ''}
+    subtitle="ARCA, IVA, percepciones/retenciones, IIBB multijurisdicción — todo nativo, sin parches de terceros."
+    primaryCta={{ label: 'Agendar demo', href: '/demo' }}
+  />
+
+  <section class="section">
+    <div class="container-page reveal prose-content max-w-3xl" set:html={problemHtml} />
+  </section>
+
+  <section class="section bg-paper-dim">
+    <div class="container-page reveal prose-content" set:html={solvesHtml} />
+  </section>
+
+  <section class="section">
+    <div class="container-page reveal prose-content max-w-3xl" set:html={differentiationHtml} />
+  </section>
+
+  {
+    relatedPosts.length > 0 && (
+      <section class="section bg-paper-dim">
+        <div class="container-page reveal">
+          <span class="kicker">Blog</span>
+          <h2 class="mt-2 text-2xl sm:text-3xl">Notas sobre localización argentina</h2>
+          <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {relatedPosts.map((post) => (
+              <a href={`/blog/${post.data.slug}`} class="card block">
+                <p class="font-semibold text-ink">{post.data.title}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <FAQAccordion faqs={page?.data.faqs ?? []} />
+
+  <CTASection
+    heading="Quiero ver la localización argentina de Odoo en acción"
+    whatsappMessage="Hola, quiero ver la localización argentina de Odoo en acción."
+  />
+</BaseLayout>

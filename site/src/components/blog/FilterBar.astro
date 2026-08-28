@@ -1,0 +1,57 @@
+---
+interface Categoria {
+  slug: string;
+  nombre: string;
+}
+
+interface Props {
+  categorias: Categoria[];
+}
+
+const { categorias } = Astro.props;
+const chipBase =
+  'rounded-full border px-3.5 py-1.5 font-mono text-xs font-medium uppercase tracking-wide transition-colors border-line text-ink-soft hover:border-purple';
+const chipActive = 'border-purple! bg-purple text-paper!';
+---
+
+<div class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+  <div class="flex flex-wrap gap-2" id="blog-filters">
+    <button type="button" data-filter="all" class={`${chipBase} ${chipActive}`}>Todas</button>
+    {categorias.map((cat) => (
+      <button type="button" data-filter={cat.slug} class={chipBase}>{cat.nombre}</button>
+    ))}
+  </div>
+  <input
+    type="search"
+    id="blog-search"
+    placeholder="Buscar en el blog..."
+    class="w-full max-w-xs rounded-md border border-line px-3 py-2 text-sm focus:border-purple focus:outline-none focus:ring-1 focus:ring-purple"
+  />
+</div>
+
+<script define:vars={{ chipBase, chipActive }} is:inline>
+  const buttons = document.querySelectorAll('#blog-filters button');
+  const search = document.getElementById('blog-search');
+  const cards = document.querySelectorAll('[data-post-card]');
+
+  let activeFilter = 'all';
+
+  function applyFilters() {
+    const query = (search?.value ?? '').trim().toLowerCase();
+    cards.forEach((card) => {
+      const matchesCategory = activeFilter === 'all' || card.dataset.category === activeFilter;
+      const matchesQuery = !query || card.dataset.title?.toLowerCase().includes(query);
+      card.classList.toggle('hidden', !(matchesCategory && matchesQuery));
+    });
+  }
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      activeFilter = button.dataset.filter ?? 'all';
+      buttons.forEach((b) => (b.className = b === button ? `${chipBase} ${chipActive}` : chipBase));
+      applyFilters();
+    });
+  });
+
+  search?.addEventListener('input', applyFilters);
+</script>

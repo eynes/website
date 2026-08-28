@@ -1,0 +1,49 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/hero/Hero.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import CTASection from '../../components/cta/CTASection.astro';
+import { getPublished } from '../../lib/content';
+import { collectionPageSchema, breadcrumbListSchema } from '../../lib/schema';
+
+const hub = await getEntry('casosHub', 'casos');
+const casos = await getPublished('casosDeExito');
+
+const crumbs = [
+  { name: 'Inicio', url: '/' },
+  { name: 'Casos de éxito', url: '/casos' },
+];
+
+const jsonLd = hub
+  ? [
+      collectionPageSchema(
+        hub.data.title,
+        hub.data.meta_description,
+        casos.map((c) => `https://eynes.com.ar/casos/${c.data.slug}`)
+      ),
+      breadcrumbListSchema(crumbs),
+    ]
+  : [];
+---
+
+<BaseLayout title={hub?.data.seo_title ?? ''} description={hub?.data.meta_description ?? ''} jsonLd={jsonLd}>
+  <Breadcrumbs crumbs={crumbs} />
+  <Hero title={hub?.data.title ?? ''} subtitle="Empresas reales, resultados reales — sin cifras inventadas." showPartnerBadge={false} compact />
+
+  <section class="section">
+    <div class="container-page reveal grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        casos.map((c) => (
+          <a href={`/casos/${c.data.slug}`} class="card block">
+            <p class="font-semibold text-ink">{c.data.cliente}</p>
+            <p class="mt-1 font-mono text-xs uppercase tracking-wide text-ink-faint">{c.data.rubro.replace(/-/g, ' ')} · {c.data.pais} · {c.data.usuarios} usuarios</p>
+            <p class="mt-3 text-sm text-ink-soft">{c.data.resultado_clave}</p>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <CTASection heading="¿Querés un resultado similar en tu empresa?" />
+</BaseLayout>

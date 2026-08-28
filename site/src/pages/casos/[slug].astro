@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/hero/Hero.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import ContentSection from '../../components/shared/ContentSection.astro';
+import CaseFactsTable from '../../components/casos/CaseFactsTable.astro';
+import CTASection from '../../components/cta/CTASection.astro';
+import { getPublished } from '../../lib/content';
+import { splitSections, renderSection } from '../../lib/sections';
+import { articleSchema, breadcrumbListSchema } from '../../lib/schema';
+
+export async function getStaticPaths() {
+  const casos = await getPublished('casosDeExito');
+  return casos.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const sections = splitSections(entry.body ?? '');
+
+const problemHtml = await renderSection(sections, '03');
+const solutionHtml = await renderSection(sections, '04');
+const resultHtml = await renderSection(sections, '05');
+
+const crumbs = [
+  { name: 'Inicio', url: '/' },
+  { name: 'Casos de éxito', url: '/casos' },
+  { name: entry.data.cliente, url: `/casos/${entry.data.slug}` },
+];
+
+const jsonLd = [
+  articleSchema({
+    headline: entry.data.title,
+    description: entry.data.meta_description,
+    url: `https://eynes.com.ar/casos/${entry.data.slug}`,
+  }),
+  breadcrumbListSchema(crumbs),
+];
+---
+
+<BaseLayout title={entry.data.seo_title} description={entry.data.meta_description} jsonLd={jsonLd}>
+  <Breadcrumbs crumbs={crumbs} />
+  <Hero title={entry.data.title} showPartnerBadge={false} />
+
+  <section class="-mt-4">
+    <div class="container-page reveal">
+      <CaseFactsTable
+        rubro={entry.data.rubro}
+        pais={entry.data.pais}
+        usuarios={entry.data.usuarios}
+        modulos={entry.data.modulos_implementados}
+      />
+    </div>
+  </section>
+
+  <ContentSection number="03" title="El problema" html={problemHtml} narrow />
+  <ContentSection number="04" title="La solución" html={solutionHtml} narrow tone="muted" />
+  <ContentSection number="05" title="El resultado" html={resultHtml} narrow />
+
+  <CTASection heading="Quiero un resultado similar en mi empresa" />
+</BaseLayout>

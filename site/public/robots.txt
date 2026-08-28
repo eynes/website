@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /gracias
+Disallow: /tags/
+
+Sitemap: https://eynes.com.ar/sitemap-index.xml

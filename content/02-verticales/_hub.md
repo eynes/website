@@ -1,11 +1,11 @@
 ---
 title: "Soluciones por rubro"
-seo_title: "[COMPLETAR ~60 caracteres, ej: 'Odoo por Rubro: Soluciones para tu Industria | Eynes']"
-meta_description: "[COMPLETAR ~155 caracteres]"
+seo_title: "Odoo por Rubro: Soluciones para tu Industria | Eynes"
+meta_description: "Descubrí cómo Odoo se adapta a distribución, ferretería, servicios e IT y otros rubros, con casos reales de implementación de Eynes."
 slug: "verticales"
 url: "eynes.com.ar/verticales"
 schema_type: "CollectionPage"
-estado: "borrador"
+estado: "publicado"
 ---
 
 <!-- GUÍA: esta es la página de listado (hub) de todos los rubros. Lista

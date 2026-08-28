@@ -1,0 +1,83 @@
+---
+import { getEntry } from 'astro:content';
+
+const nav = await getEntry('navConfig', 'navegacion');
+const site = await getEntry('siteConfig', 'site');
+const currentPath = Astro.url.pathname;
+
+function isActive(url: string) {
+  return url !== '/' && currentPath.startsWith(url);
+}
+---
+
+<header class="sticky top-0 z-40 border-b bg-paper" style="border-color: var(--color-line)">
+  <div class="container-page flex items-center justify-between gap-4 py-4">
+    <a href="/" class="flex shrink-0 items-baseline gap-2">
+      <span class="text-2xl font-bold text-ink">{site?.data.nombre_comercial}</span>
+      <span class="hidden font-mono text-[0.65rem] uppercase tracking-[0.14em] text-ink-faint sm:inline">Odoo Partner</span>
+    </a>
+
+    <nav class="hidden items-center gap-7 md:flex" aria-label="Principal">
+      {
+        nav?.data.nav_principal.map((item) => (
+          <a
+            href={item.url}
+            class:list={[
+              'font-mono text-xs font-medium uppercase tracking-[0.1em] text-ink-soft hover:text-purple',
+              { 'text-purple': isActive(item.url) },
+            ]}
+          >
+            {item.etiqueta}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-3">
+      {nav && <a href={nav.data.cta_nav.url} class="btn-primary hidden sm:inline-flex">{nav.data.cta_nav.etiqueta}</a>}
+      <button
+        type="button"
+        id="nav-toggle"
+        class="inline-flex items-center justify-center p-2 text-ink md:hidden"
+        aria-expanded="false"
+        aria-controls="nav-mobile"
+        aria-label="Abrir menú"
+      >
+        <svg id="nav-icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="nav-icon-close" xmlns="http://www.w3.org/2000/svg" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <nav id="nav-mobile" class="hidden border-t md:hidden" style="border-color: var(--color-line)" aria-label="Principal (móvil)">
+    <div class="container-page flex flex-col gap-1 py-3">
+      {
+        nav?.data.nav_principal.map((item) => (
+          <a href={item.url} class="px-2 py-2 font-mono text-xs font-medium uppercase tracking-[0.1em] text-ink-soft hover:text-purple">
+            {item.etiqueta}
+          </a>
+        ))
+      }
+      {nav && <a href={nav.data.cta_nav.url} class="btn-primary mt-2 justify-center">{nav.data.cta_nav.etiqueta}</a>}
+    </div>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-mobile');
+  const iconOpen = document.getElementById('nav-icon-open');
+  const iconClose = document.getElementById('nav-icon-close');
+
+  toggle?.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    menu?.classList.toggle('hidden');
+    iconOpen?.classList.toggle('hidden');
+    iconClose?.classList.toggle('hidden');
+  });
+</script>

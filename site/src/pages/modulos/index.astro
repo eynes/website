@@ -1,0 +1,49 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/hero/Hero.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import CTASection from '../../components/cta/CTASection.astro';
+import { getPublished } from '../../lib/content';
+import { collectionPageSchema, breadcrumbListSchema } from '../../lib/schema';
+
+const hub = await getEntry('modulosHub', 'modulos');
+const modulos = await getPublished('modulos');
+
+const crumbs = [
+  { name: 'Inicio', url: '/' },
+  { name: 'Módulos', url: '/modulos' },
+];
+
+const jsonLd = hub
+  ? [
+      collectionPageSchema(
+        hub.data.title,
+        hub.data.meta_description,
+        modulos.map((m) => `https://eynes.com.ar/modulos/${m.data.slug}`)
+      ),
+      breadcrumbListSchema(crumbs),
+    ]
+  : [];
+---
+
+<BaseLayout title={hub?.data.seo_title ?? ''} description={hub?.data.meta_description ?? ''} jsonLd={jsonLd}>
+  <Breadcrumbs crumbs={crumbs} />
+  <Hero title={hub?.data.title ?? ''} subtitle="Cada módulo se implementa a medida, integrado con el resto de tu operación." showPartnerBadge={false} compact />
+
+  <section class="section">
+    <div class="container-page reveal grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        modulos.map((m) => (
+          <a href={`/modulos/${m.data.slug}`} class="card block">
+            <p class="font-semibold text-ink">{m.data.title}</p>
+            <p class="mt-2 text-sm text-ink-soft">{m.data.meta_description}</p>
+            <span class="mt-4 inline-block text-sm font-medium text-teal">Ver módulo <span class="arrow">→</span></span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <CTASection heading="¿No ves el módulo que necesitás? Contanos igual" />
+</BaseLayout>

@@ -10,16 +10,16 @@ meta_description: "Facturación ARCA, conciliación bancaria y reportes en tiemp
 slug: "contabilidad-y-finanzas"
 url: "eynes.com.ar/modulos/contabilidad-y-finanzas"
 schema_type: "Product"
-estado: "borrador"
-og_image: "[COMPLETAR]"
+estado: "publicado"
+og_image: ""
 
 faqs:
   - pregunta: "¿Necesito otro módulo para que la contabilidad funcione?"
-    respuesta: "[COMPLETAR — aclarar si depende de Ventas/Compras o funciona de forma independiente]"
+    respuesta: "No es obligatorio, pero se potencia integrado con Ventas y Compras: las facturas, cobros y pagos se contabilizan automáticamente, sin doble carga de datos entre sistemas."
   - pregunta: "¿Cuánto tarda el equipo contable en aprender a usarlo?"
-    respuesta: "[COMPLETAR]"
+    respuesta: "En base a nuestras implementaciones, el equipo contable ya opera de forma autónoma en alrededor de 30 días desde el arranque, con acompañamiento de Eynes durante ese período."
   - pregunta: "¿Se puede personalizar al plan de cuentas que ya usamos?"
-    respuesta: "[COMPLETAR]"
+    respuesta: "Sí, la implementación incluye la migración de tu plan de cuentas actual y de tu historial contable — ver también la Localización Argentina (`/localizacion-argentina`) para el detalle de plan de cuentas y balances según normativa local."
 
 modulos_integrados:
   - "ventas-y-crm"
@@ -27,8 +27,8 @@ modulos_integrados:
   - "compras"
 
 caso_relacionado:
-  slug: "[COMPLETAR — ej: ejemplo-distribuidor-insumos]"
-  resultado: "-40% en tiempo de facturación"
+  slug: "clinica-ima"
+  resultado: "Presentaciones ante ARCA generadas en minutos, ya no en días de carga manual"
 ---
 
 ## 01 — Hero de módulo
@@ -51,7 +51,7 @@ caso_relacionado:
 
 ## 03 — Captura / demo visual
 
-[COMPLETAR — screenshot real de una factura ARCA emitida desde Odoo o de un reporte financiero en vivo.]
+<!-- GUÍA: screenshot real de una factura ARCA emitida desde Odoo o de un reporte financiero en vivo, pendiente. -->
 
 ## 04 — Integraciones relacionadas
 

@@ -18,7 +18,7 @@ autor: "[COMPLETAR nombre del autor real]"
 fecha_publicacion: "[COMPLETAR AAAA-MM-DD]"
 fecha_actualizacion: "[COMPLETAR AAAA-MM-DD]"
 tiempo_lectura_min: 5
-og_image: "[COMPLETAR]"
+og_image: ""
 og_image_alt: "[COMPLETAR, ej: 'Pantalla de facturación electrónica ARCA en Odoo']"
 
 origen_linkedin: "[COMPLETAR URL o null]"

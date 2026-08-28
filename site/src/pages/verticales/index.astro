@@ -1,0 +1,49 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/hero/Hero.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import CTASection from '../../components/cta/CTASection.astro';
+import { getPublished } from '../../lib/content';
+import { collectionPageSchema, breadcrumbListSchema } from '../../lib/schema';
+
+const hub = await getEntry('verticalesHub', 'verticales');
+const verticales = await getPublished('verticales');
+
+const crumbs = [
+  { name: 'Inicio', url: '/' },
+  { name: 'Verticales', url: '/verticales' },
+];
+
+const jsonLd = hub
+  ? [
+      collectionPageSchema(
+        hub.data.title,
+        hub.data.meta_description,
+        verticales.map((v) => `https://eynes.com.ar/verticales/${v.data.slug}`)
+      ),
+      breadcrumbListSchema(crumbs),
+    ]
+  : [];
+---
+
+<BaseLayout title={hub?.data.seo_title ?? ''} description={hub?.data.meta_description ?? ''} jsonLd={jsonLd}>
+  <Breadcrumbs crumbs={crumbs} />
+  <Hero title={hub?.data.title ?? ''} subtitle="Odoo se adapta a cada industria — cada rubro tiene sus propios problemas y su propia solución." showPartnerBadge={false} compact />
+
+  <section class="section">
+    <div class="container-page reveal grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        verticales.map((v) => (
+          <a href={`/verticales/${v.data.slug}`} class="card block">
+            <p class="font-semibold text-ink">{v.data.title}</p>
+            <p class="mt-2 text-sm text-ink-soft">{v.data.meta_description}</p>
+            <span class="mt-4 inline-block text-sm font-medium text-teal">Ver solución <span class="arrow">→</span></span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <CTASection heading="¿No encontrás tu rubro? Contanos tu caso igual" />
+</BaseLayout>

@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/hero/Hero.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import ContentSection from '../../components/shared/ContentSection.astro';
+import FAQAccordion from '../../components/shared/FAQAccordion.astro';
+import CTASection from '../../components/cta/CTASection.astro';
+import { getPublished } from '../../lib/content';
+import { splitSections, renderSection, renderFragment, extractLabeled, stripLabeledLine } from '../../lib/sections';
+import { resolvePublishedRelated } from '../../lib/related';
+import { serviceSchema, faqPageSchema, breadcrumbListSchema } from '../../lib/schema';
+
+export async function getStaticPaths() {
+  const verticales = await getPublished('verticales');
+  return verticales.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const sections = splitSections(entry.body ?? '');
+
+const subtitle = extractLabeled(sections['01']?.body, 'Subtítulo');
+const problemsHtml = await renderSection(sections, '02');
+const comparisonHtml = await renderFragment(stripLabeledLine(sections['02b']?.body, 'Título'));
+const testimonialHtml = await renderSection(sections, '05');
+
+const modulos = (
+  await Promise.all(entry.data.modulos_relevantes.map((slug: string) => resolvePublishedRelated('modulos', slug)))
+).filter(Boolean);
+
+const casos = (
+  await Promise.all(entry.data.casos_relacionados.map((slug: string) => resolvePublishedRelated('casosDeExito', slug)))
+).filter(Boolean);
+
+const crumbs = [
+  { name: 'Inicio', url: '/' },
+  { name: 'Verticales', url: '/verticales' },
+  { name: entry.data.title, url: `/verticales/${entry.data.slug}` },
+];
+
+const jsonLd = [
+  serviceSchema({
+    name: entry.data.title,
+    description: entry.data.meta_description,
+    url: `https://eynes.com.ar/verticales/${entry.data.slug}`,
+  }),
+  faqPageSchema(entry.data.faqs),
+  breadcrumbListSchema(crumbs),
+].filter(Boolean) as Record<string, unknown>[];
+---
+
+<BaseLayout title={entry.data.seo_title} description={entry.data.meta_description} jsonLd={jsonLd}>
+  <Breadcrumbs crumbs={crumbs} />
+  <Hero title={entry.data.title} subtitle={subtitle} primaryCta={{ label: `Agendar demo para ${entry.data.title}`, href: `/demo?rubro=${entry.data.slug}` }} />
+
+  <ContentSection number="02" title="Problemas específicos del rubro" html={problemsHtml} narrow />
+  <ContentSection number="02b" title="Odoo vs. las alternativas" html={comparisonHtml} tone="muted" />
+
+  {
+    modulos.length > 0 && (
+      <section class="section">
+        <div class="container-page reveal">
+          <span class="kicker">03</span>
+          <h2 class="mt-2 text-2xl sm:text-3xl">Módulos relevantes para este rubro</h2>
+          <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {modulos.map((m) => (
+              <a href={`/modulos/${m!.data.slug}`} class="card block">
+                <p class="font-semibold text-ink">{m!.data.title}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    entry.data.integraciones_destacadas.length > 0 && (
+      <section class="section bg-paper-dim">
+        <div class="container-page reveal">
+          <span class="kicker">03a</span>
+          <h2 class="mt-2 text-2xl sm:text-3xl">No tenés que abandonar tus herramientas</h2>
+          <div class="mt-6 flex flex-wrap gap-3">
+            {entry.data.integraciones_destacadas.map((i: string) => (
+              <span class="rounded-full border border-line bg-paper px-4 py-2 text-sm font-medium text-ink-soft">{i}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    casos.length > 0 && (
+      <section class="section">
+        <div class="container-page reveal">
+          <span class="kicker">04</span>
+          <h2 class="mt-2 text-2xl sm:text-3xl">Casos de éxito del rubro</h2>
+          <div class="mt-8 grid gap-5 sm:grid-cols-2">
+            {casos.map((c) => (
+              <a href={`/casos/${c!.data.slug}`} class="card block">
+                <p class="font-semibold text-ink">{c!.data.cliente}</p>
+                <p class="mt-1 font-mono text-xs uppercase tracking-wide text-ink-faint">{c!.data.usuarios} usuarios · {c!.data.pais}</p>
+                <p class="mt-3 text-sm text-ink-soft">{c!.data.resultado_clave}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <ContentSection html={testimonialHtml} tone="muted" narrow />
+
+  <FAQAccordion faqs={entry.data.faqs} title="Preguntas frecuentes del rubro" />
+
+  <CTASection
+    heading={`Agendar demo para ${entry.data.title}`}
+    primaryHref={`/demo?rubro=${entry.data.slug}`}
+    whatsappMessage={`Hola, quiero info sobre implementación de Odoo para ${entry.data.title}.`}
+  />
+</BaseLayout>

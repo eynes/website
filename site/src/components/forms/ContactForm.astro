@@ -1,0 +1,97 @@
+---
+import { getPublished } from '../../lib/content';
+
+const verticales = await getPublished('verticales');
+const accessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY ?? '';
+
+const inputClass =
+  'w-full rounded-md border border-line px-3 py-2.5 text-ink focus:border-purple focus:outline-none focus:ring-1 focus:ring-purple';
+const labelClass = 'mb-1.5 block font-mono text-xs font-semibold uppercase tracking-wide text-ink-soft';
+---
+
+<form
+  id="contact-form"
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  class="card grid gap-5 sm:grid-cols-2"
+>
+  <input type="hidden" name="access_key" value={accessKey} />
+  <input type="hidden" name="subject" value="Nueva consulta desde eynes.com.ar" />
+  <input type="hidden" name="redirect" value="/gracias" />
+  <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
+
+  <div class="sm:col-span-2">
+    <label for="nombre" class={labelClass}>Nombre y apellido</label>
+    <input id="nombre" name="nombre" type="text" required class={inputClass} />
+  </div>
+
+  <div>
+    <label for="email" class={labelClass}>Email corporativo</label>
+    <input id="email" name="email" type="email" required class={inputClass} />
+  </div>
+
+  <div>
+    <label for="empresa" class={labelClass}>Empresa</label>
+    <input id="empresa" name="empresa" type="text" required class={inputClass} />
+  </div>
+
+  <div>
+    <label for="rubro" class={labelClass}>Rubro</label>
+    <select id="rubro" name="rubro" class={`${inputClass} bg-paper`}>
+      <option value="">Seleccioná tu rubro</option>
+      {verticales.map((v) => <option value={v.data.slug}>{v.data.title}</option>)}
+      <option value="otro">Otro</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="usuarios" class={labelClass}>Cantidad de usuarios</label>
+    <input id="usuarios" name="cantidad_usuarios" type="text" inputmode="numeric" class={inputClass} />
+  </div>
+
+  <div class="sm:col-span-2">
+    <label for="sistema_actual" class={labelClass}>¿Cómo gestionan hoy la empresa?</label>
+    <textarea id="sistema_actual" name="sistema_actual" rows="3" class={inputClass} />
+  </div>
+
+  <div class="sm:col-span-2">
+    <button type="submit" class="btn-primary w-full sm:w-auto">Enviar / Agendar horario</button>
+    <p id="form-status" class="mt-3 text-sm text-ink-soft" role="status"></p>
+  </div>
+</form>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const status = document.getElementById('form-status');
+  const rubroSelect = document.getElementById('rubro') as HTMLSelectElement | null;
+
+  const params = new URLSearchParams(window.location.search);
+  const rubro = params.get('rubro');
+  if (rubro && rubroSelect) {
+    const match = [...rubroSelect.options].find((o) => o.value === rubro);
+    if (match) rubroSelect.value = rubro;
+  }
+
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!status) return;
+    status.textContent = 'Enviando...';
+
+    const formData = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: formData,
+      });
+      const result = await response.json();
+      if (result.success) {
+        window.location.href = '/gracias';
+      } else {
+        status.textContent = 'Hubo un problema al enviar. Probá de nuevo o escribinos por WhatsApp.';
+      }
+    } catch {
+      status.textContent = 'Hubo un problema al enviar. Probá de nuevo o escribinos por WhatsApp.';
+    }
+  });
+</script>

@@ -1,11 +1,11 @@
 ---
 title: "Todo lo que podés gestionar con Odoo"
-seo_title: "[COMPLETAR ~60 caracteres, ej: 'Módulos de Odoo: Ventas, Contabilidad, Inventario | Eynes']"
-meta_description: "[COMPLETAR ~155 caracteres]"
+seo_title: "Módulos de Odoo: Ventas, Contabilidad, Inventario | Eynes"
+meta_description: "Conocé los módulos de Odoo que implementamos: Ventas y CRM, Contabilidad, Inventario y Compras, con casos reales de clientes argentinos."
 slug: "modulos"
 url: "eynes.com.ar/modulos"
 schema_type: "CollectionPage"
-estado: "borrador"
+estado: "publicado"
 ---
 
 <!-- GUÍA: arrancamos con los módulos más pedidos / con más casos

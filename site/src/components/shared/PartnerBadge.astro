@@ -1,0 +1,31 @@
+---
+import { getEntry } from 'astro:content';
+
+interface Props {
+  size?: 'sm' | 'md';
+}
+
+const { size = 'md' } = Astro.props;
+const site = await getEntry('siteConfig', 'site');
+---
+
+{
+  site && (
+    <a
+      href={site.data.badge_partner.link_verificacion}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 opacity-95 transition-opacity hover:opacity-100"
+      aria-label={site.data.badge_partner.texto}
+    >
+      <img
+        src="/brand/odoo_silver_partner_rgb.svg"
+        alt="Silver Partner Oficial de Odoo"
+        class:list={[size === 'sm' ? 'h-8' : 'h-10', 'w-auto']}
+        width="600"
+        height="300"
+        loading="eager"
+      />
+    </a>
+  )
+}

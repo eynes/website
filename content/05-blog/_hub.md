@@ -1,11 +1,11 @@
 ---
 title: "Recursos y novedades"
-seo_title: "[COMPLETAR ~60 caracteres, ej: 'Blog de Odoo Argentina: Guías y Novedades | Eynes']"
-meta_description: "[COMPLETAR ~155 caracteres]"
+seo_title: "Blog de Odoo Argentina: Guías y Novedades | Eynes"
+meta_description: "Guías prácticas, comparativas y novedades sobre Odoo en Argentina: facturación ARCA, localización, y gestión por rubro, escritas por el equipo de Eynes."
 slug: "blog"
 url: "eynes.com.ar/blog"
 schema_type: "Blog"
-estado: "borrador"
+estado: "publicado"
 
 categorias:
   # ============================================================
@@ -46,8 +46,9 @@ Ver `categorias` en el frontmatter — son las 4 fijas, no agregar más sin revi
 
 ## 03 — Nota destacada + grilla
 
-- Nota destacada: [COMPLETAR — la más nueva o la de mejor performance]
-- Grilla de notas recientes: listar cada post publicado en `05-blog/posts/` con título, categoría, fecha y tiempo de lectura.
+<!-- GUÍA: el sitio arma esta sección automáticamente a partir de los
+posts publicados en 05-blog/posts/ (título, categoría, fecha, tiempo de
+lectura) — no hace falta elegir una nota destacada a mano. -->
 
 ## 04 — CTA lateral / de cierre
 

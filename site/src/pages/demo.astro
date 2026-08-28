@@ -1,0 +1,72 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/hero/Hero.astro';
+import Breadcrumbs from '../components/seo/Breadcrumbs.astro';
+import ContactForm from '../components/forms/ContactForm.astro';
+import WhatsAppButton from '../components/forms/WhatsAppButton.astro';
+import { contactPageSchema, breadcrumbListSchema } from '../lib/schema';
+
+const page = await getEntry('paginasUnicas', 'demo');
+
+const steps = [
+  'Nos contás tus problemas.',
+  'Te mostramos cómo resolverlos.',
+  'Te llevás un presupuesto.',
+];
+
+const costDrivers = [
+  'Cantidad de usuarios',
+  'Módulos necesarios',
+  'Complejidad de la migración',
+  'Integraciones a medida',
+];
+
+const crumbs = [
+  { name: 'Inicio', url: '/' },
+  { name: 'Contacto', url: '/demo' },
+];
+
+const jsonLd = [contactPageSchema(), breadcrumbListSchema(crumbs)];
+---
+
+<BaseLayout title={page?.data.seo_title ?? ''} description={page?.data.meta_description ?? ''} jsonLd={jsonLd}>
+  <Breadcrumbs crumbs={crumbs} />
+  <Hero title={page?.data.title ?? ''} showPartnerBadge={false} compact />
+
+  <section class="section">
+    <div class="container-page reveal grid gap-12 lg:grid-cols-2">
+      <div>
+        <span class="kicker">Cómo sigue</span>
+        <h2 class="mt-2 text-2xl sm:text-3xl">Qué va a pasar</h2>
+        <ol class="mt-6 space-y-4">
+          {steps.map((step, i) => (
+            <li class="flex gap-3">
+              <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ink font-mono text-sm font-bold text-paper">{i + 1}</span>
+              <span class="pt-1 text-ink-soft">{step}</span>
+            </li>
+          ))}
+        </ol>
+
+        <div class="mt-10">
+          <span class="kicker">Costo</span>
+        </div>
+        <h2 class="mt-2 text-2xl sm:text-3xl">¿Cuánto cuesta implementar Odoo?</h2>
+        <p class="mt-2 text-ink-soft">No publicamos un precio fijo porque no existe — depende de:</p>
+        <ul class="mt-4 ml-5 list-disc space-y-2 text-ink-soft">
+          {costDrivers.map((d) => <li>{d}</li>)}
+        </ul>
+        <p class="mt-4 font-semibold text-teal">Cotización personalizada en 48hs, sin compromiso.</p>
+
+        <div class="mt-8">
+          <p class="mb-3 font-medium text-ink">¿Preferís resolverlo ya?</p>
+          <WhatsAppButton variant="inline" message="Hola, quiero agendar una demo de Odoo con Eynes." />
+        </div>
+      </div>
+
+      <div>
+        <ContactForm />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

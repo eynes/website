@@ -1,0 +1,65 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+
+const site = await getEntry('siteConfig', 'site');
+const comercial = site?.data.contacto_general.email_comercial ?? 'info@eynes.com.ar';
+const soporte = site?.data.contacto_general.email_soporte ?? 'soporte@eynes.com.ar';
+const razonSocial = site?.data.razon_social ?? 'Eynes S.R.L.';
+
+const crumbs = [
+  { name: 'Inicio', url: '/' },
+  { name: 'Política de privacidad', url: '/legal/privacidad' },
+];
+---
+
+<BaseLayout
+  title="Política de privacidad | Eynes"
+  description="Cómo Eynes recolecta, usa y protege los datos que dejás en este sitio."
+  noindex
+  jsonLd={[]}
+>
+  <Breadcrumbs crumbs={crumbs} />
+  <section class="section">
+    <div class="container-page prose-content max-w-2xl">
+      <h1 class="text-3xl">Política de privacidad</h1>
+      <p>Última actualización: agosto de 2026.</p>
+
+      <h2>Qué datos recolectamos</h2>
+      <p>
+        Cuando completás el formulario de contacto o agendás una demo, recolectamos nombre y
+        apellido, email corporativo, empresa, rubro, cantidad de usuarios y una descripción de
+        tu sistema actual. Si nos escribís por WhatsApp, recolectamos lo que nos compartas en
+        esa conversación. No usamos cookies de seguimiento ni herramientas de analítica de
+        terceros en este sitio.
+      </p>
+
+      <h2>Para qué los usamos</h2>
+      <p>
+        Usamos estos datos exclusivamente para responder tu consulta, coordinar una demo y, si
+        avanza la conversación, preparar una propuesta comercial. No vendemos ni cedemos tus
+        datos a terceros con fines comerciales.
+      </p>
+
+      <h2>Cómo se procesan</h2>
+      <p>
+        El formulario de contacto usa Web3Forms como proveedor técnico para reenviarnos el
+        mensaje por email — no almacena tus datos más allá de ese envío. El resto de la
+        comunicación (email, WhatsApp) queda en nuestros propios canales.
+      </p>
+
+      <h2>Tus derechos</h2>
+      <p>
+        Conforme a la Ley 25.326 de Protección de Datos Personales, tenés derecho a acceder,
+        rectificar o solicitar la eliminación de tus datos. Escribinos a{' '}
+        <a href={`mailto:${soporte}`}>{soporte}</a> y lo resolvemos directamente.
+      </p>
+
+      <h2>Contacto</h2>
+      <p>
+        {razonSocial} — <a href={`mailto:${comercial}`}>{comercial}</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

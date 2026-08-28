@@ -1,0 +1,33 @@
+---
+import WhatsAppButton from '../forms/WhatsAppButton.astro';
+
+interface Props {
+  heading: string;
+  body?: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  whatsappMessage?: string;
+  tone?: 'light' | 'dark';
+}
+
+const {
+  heading,
+  body,
+  primaryLabel = 'Agendar demo',
+  primaryHref = '/demo',
+  whatsappMessage = 'Hola, quiero agendar una demo de Odoo con Eynes.',
+  tone = 'dark',
+} = Astro.props;
+---
+
+<section class:list={['section relative overflow-hidden', tone === 'dark' ? 'bg-dark text-paper' : 'bg-paper-dim']}>
+  <div class="container-page flex flex-col items-center gap-5 text-center">
+    <span class="kicker">Próximo paso</span>
+    <h2 class:list={['max-w-2xl text-3xl sm:text-4xl', tone === 'dark' && 'text-paper']}>{heading}</h2>
+    {body && <p class:list={['max-w-xl text-base', tone === 'dark' ? 'text-paper/70' : 'text-ink-soft']}>{body}</p>}
+    <div class="mt-2 flex flex-wrap items-center justify-center gap-3">
+      <a href={primaryHref} class="btn-primary">{primaryLabel}</a>
+      <WhatsAppButton variant="inline" message={whatsappMessage} />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,57 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+
+const site = await getEntry('siteConfig', 'site');
+const comercial = site?.data.contacto_general.email_comercial ?? 'info@eynes.com.ar';
+const razonSocial = site?.data.razon_social ?? 'Eynes S.R.L.';
+
+const crumbs = [
+  { name: 'Inicio', url: '/' },
+  { name: 'Términos y condiciones', url: '/legal/terminos' },
+];
+---
+
+<BaseLayout
+  title="Términos y condiciones | Eynes"
+  description="Condiciones de uso de este sitio web de Eynes."
+  noindex
+  jsonLd={[]}
+>
+  <Breadcrumbs crumbs={crumbs} />
+  <section class="section">
+    <div class="container-page prose-content max-w-2xl">
+      <h1 class="text-3xl">Términos y condiciones</h1>
+      <p>Última actualización: agosto de 2026.</p>
+
+      <h2>Alcance</h2>
+      <p>
+        Estos términos regulan el uso de este sitio web ({razonSocial}). No constituyen un
+        contrato de servicios: la implementación de Odoo y cualquier otro trabajo se acuerda por
+        separado, en una propuesta comercial firmada entre las partes.
+      </p>
+
+      <h2>Contenido del sitio</h2>
+      <p>
+        El contenido de este sitio (textos, marca, capturas de producto) es propiedad de{' '}
+        {razonSocial} o se usa con autorización de sus titulares, y se ofrece con fines
+        informativos. Odoo es una marca de Odoo S.A.; su uso aquí refiere a nuestra condición de
+        partner oficial, no a una afiliación societaria.
+      </p>
+
+      <h2>Sin garantías sobre resultados</h2>
+      <p>
+        Los casos de éxito y ejemplos publicados describen resultados reales de esos clientes en
+        su contexto particular — no son una garantía de resultados equivalentes para otra
+        empresa.
+      </p>
+
+      <h2>Consultas</h2>
+      <p>
+        Ante cualquier duda sobre estos términos, escribinos a{' '}
+        <a href={`mailto:${comercial}`}>{comercial}</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

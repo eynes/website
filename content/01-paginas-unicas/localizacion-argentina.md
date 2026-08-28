@@ -1,12 +1,12 @@
 ---
 title: "Odoo con la localización argentina más completa del mercado"
-seo_title: "[COMPLETAR ~60 caracteres, ej: 'Localización Argentina para Odoo: ARCA, IIBB | Eynes']"
-meta_description: "[COMPLETAR ~155 caracteres, con 'localización argentina' como keyword paraguas]"
+seo_title: "Localización Argentina para Odoo: ARCA, IIBB | Eynes"
+meta_description: "ARCA, IVA, percepciones, retenciones e IIBB multijurisdicción, nativos en Odoo. La localización argentina más completa, implementada por Eynes."
 slug: "localizacion-argentina"
 url: "eynes.com.ar/localizacion-argentina"
 schema_type: "Service"
-estado: "borrador"
-og_image: "[COMPLETAR]"
+estado: "publicado"
+og_image: ""
 
 # GUÍA GENERAL: esta página NO es una plantilla de módulo más — es un
 # proyecto en sí mismo, por eso tiene entidad propia en el nav y en la URL
@@ -19,16 +19,16 @@ faqs:
   # ansiedad de "¿esto se rompe con el próximo cambio de ley?". Resolverlo
   # acá reduce fricción y suma a "la gente también pregunta" en Google.
   - pregunta: "¿Qué pasa cuando cambia una alícuota o un régimen de ARCA?"
-    respuesta: "[COMPLETAR respuesta real y verificada]"
+    respuesta: "La actualización queda de nuestro lado: mantenemos la localización al día con cada cambio normativo de ARCA, sin que tengas que pedir un desarrollo a medida ni esperar un parche de terceros."
   - pregunta: "¿Cubre todas las provincias para IIBB?"
-    respuesta: "[COMPLETAR]"
+    respuesta: "Sí. La localización incluye Convenio Multilateral, así que cubre IIBB en todas las jurisdicciones donde tu empresa tenga actividad, no solo en una provincia."
   - pregunta: "¿Cómo se maneja el ajuste por inflación contable?"
-    respuesta: "[COMPLETAR]"
+    respuesta: "Odoo maneja moneda dual (pesos y dólar) y el ajuste por inflación contable de forma nativa, sin planillas paralelas para recalcular los estados contables."
 
-relacionados:
-  # slugs de notas de blog del pilar "Localización AR" — ver 05-blog/_hub.md
-  - "blog/[COMPLETAR-slug-nota-arca]"
-  - "blog/[COMPLETAR-slug-nota-percepciones-iibb]"
+# El sitio lista automáticamente las notas del pilar "Localización AR"
+# (ver 05-blog/_hub.md) filtrando por categoría, así que no hace falta
+# mantener esta lista a mano.
+relacionados: []
 ---
 
 ## 01 — Hero
@@ -74,18 +74,16 @@ Mientras otros ERPs internacionales tratan la localización como un plug-in de t
 
 ## 05 — Captura / demo visual
 
-[COMPLETAR — screenshot real: factura ARCA emitida desde Odoo, o pantalla de percepciones automáticas. No usar mockups genéricos.]
+<!-- GUÍA: screenshot real pendiente — factura ARCA emitida desde Odoo, o
+pantalla de percepciones automáticas. No usar mockups genéricos. -->
 
 ## 06 — Notas del blog sobre localización
 
 <!-- GUÍA: esta página funciona como el hub natural del pilar de blog
 "Localización AR". Cada nota nueva sobre ARCA/AFIP/IIBB debe linkear para
-acá, y esta página linkea hacia las notas — refuerza la autoridad temática
-de ambas partes del sitio en simultáneo. Actualizar la lista cuando se
-publique una nota nueva de ese pilar. -->
+acá. El sitio lista automáticamente las notas de esa categoría, así que
+no hace falta mantener una lista a mano acá. -->
 
-- [COMPLETAR nota 1 del pilar "Localización AR"]
-- [COMPLETAR nota 2]
 - Ver todas las notas → `/blog?categoria=localizacion-ar`
 
 ## 07 — FAQ

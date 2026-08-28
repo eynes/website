@@ -1,0 +1,117 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/hero/Hero.astro';
+import Breadcrumbs from '../components/seo/Breadcrumbs.astro';
+import CTASection from '../components/cta/CTASection.astro';
+import {
+  aboutPageSchema,
+  organizationSchema,
+  localBusinessSchema,
+  breadcrumbListSchema,
+} from '../lib/schema';
+
+const page = await getEntry('paginasUnicas', 'nosotros');
+const site = await getEntry('siteConfig', 'site');
+
+const timeline = [
+  { year: '2006', label: 'Fundación de Eynes' },
+  { year: '2007', label: 'Primeros clientes' },
+  { year: '2016', label: 'Expansión regional (Uruguay / España)' },
+  { year: '2020', label: 'YPF se suma como cliente' },
+];
+
+const team = [
+  { name: 'Laureano Kloss', role: 'Director Ejecutivo' },
+  { name: 'Analía Gómez Benítez', role: 'Directora de Administración' },
+  { name: 'Santiago Said', role: 'Director Técnico' },
+  { name: 'Cristian Davico', role: 'Director de Proyectos' },
+];
+
+const crumbs = [
+  { name: 'Inicio', url: '/' },
+  { name: 'Nosotros', url: '/nosotros' },
+];
+
+const jsonLd = site
+  ? [
+      aboutPageSchema(),
+      organizationSchema(site.data),
+      ...site.data.oficinas.map((office) => localBusinessSchema(office)),
+      breadcrumbListSchema(crumbs),
+    ]
+  : [];
+---
+
+<BaseLayout title={page?.data.seo_title ?? ''} description={page?.data.meta_description ?? ''} jsonLd={jsonLd}>
+  <Breadcrumbs crumbs={crumbs} />
+  <Hero
+    title={page?.data.title ?? ''}
+    subtitle="Equipo propio, presencia local real y dos décadas implementando Odoo en la región."
+    showPartnerBadge={false}
+    compact
+  />
+
+  <section class="section">
+    <div class="container-page reveal">
+      <span class="kicker">Nuestra historia</span>
+      <h2 class="mt-2 text-2xl sm:text-3xl">Dos décadas en la región</h2>
+      <ol class="mt-8 space-y-6 border-l-2 pl-6" style="border-color: var(--color-purple)">
+        {timeline.map((item) => (
+          <li>
+            <p class="font-mono text-sm font-bold text-purple">{item.year}</p>
+            <p class="text-ink">{item.label}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section bg-paper-dim">
+    <div class="container-page reveal">
+      <span class="kicker">Equipo</span>
+      <h2 class="mt-2 text-2xl sm:text-3xl">Caras reales, no un ícono genérico</h2>
+      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {team.map((person) => (
+          <div class="card bg-paper text-center">
+            <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full text-2xl font-bold text-paper" style="background-color: var(--color-purple)">
+              {person.name.split(' ').map((n) => n[0]).slice(0, 2).join('')}
+            </div>
+            <p class="mt-4 font-semibold text-ink">{person.name}</p>
+            <p class="text-sm text-ink-faint">{person.role}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {
+    site && (
+      <section class="section">
+        <div class="container-page reveal">
+          <span class="kicker">Presencia</span>
+          <h2 class="mt-2 text-2xl sm:text-3xl">Oficinas y zonas de cobertura</h2>
+          <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {site.data.oficinas.map((office) => (
+              <div class="card">
+                <p class="font-mono text-xs font-semibold uppercase tracking-wide text-teal">Sede</p>
+                <p class="mt-3 font-semibold text-ink">{office.ciudad}, {office.pais}</p>
+                <p class="mt-1 text-sm text-ink-soft">{office.direccion}</p>
+                <p class="mt-1 text-sm text-ink-soft">{office.telefono}</p>
+              </div>
+            ))}
+            {site.data.zonas_de_cobertura.map((zona) => (
+              <div class="card">
+                <p class="font-mono text-xs font-semibold uppercase tracking-wide text-ink-faint">Atención remota</p>
+                <p class="mt-3 font-semibold text-ink">{zona.ciudad}, {zona.pais}</p>
+                <p class="mt-1 text-sm text-ink-soft">{zona.telefono}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <CTASection heading="Conocé cómo trabajamos" primaryLabel="Agendar demo" primaryHref="/demo" />
+</BaseLayout>

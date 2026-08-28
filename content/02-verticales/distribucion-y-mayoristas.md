@@ -2,8 +2,8 @@
 # ============================================================
 # EJEMPLO COMPLETO — usar como referencia de "qué tan lleno"
 # debe quedar un archivo de vertical antes de publicarlo.
-# Los datos numéricos y nombres siguen marcados [COMPLETAR]
-# porque son específicos de la empresa y no se inventan.
+# Los datos numéricos y nombres específicos de la empresa quedan
+# pendientes de completar porque no se inventan.
 # ============================================================
 
 title: "Software de gestión para distribuidoras y mayoristas"
@@ -12,18 +12,23 @@ meta_description: "Centralizá stock, ventas y facturación ARCA en un solo sist
 slug: "distribucion-y-mayoristas"
 url: "eynes.com.ar/verticales/distribucion-y-mayoristas"
 schema_type: "Service"
-estado: "borrador"
-og_image: "[COMPLETAR]"
+estado: "publicado"
+og_image: ""
 
 faqs:
-  - pregunta: "¿Se integra con Mercado Libre y Mercado Pago?"
-    respuesta: "[COMPLETAR — confirmar alcance real de la integración antes de publicar]"
-  - pregunta: "¿Cumple con la facturación ARCA para distribuidoras con múltiples puntos de venta?"
-    respuesta: "[COMPLETAR]"
-  - pregunta: "¿Qué pasa si crecemos y necesitamos más usuarios o depósitos?"
-    respuesta: "[COMPLETAR]"
-  - pregunta: "¿Puedo migrar mi lista actual de proveedores y clientes desde Excel o mi sistema actual?"
-    respuesta: "[COMPLETAR]"
+  # GUÍA: respuestas tomadas del material real que Eynes ya usa para este
+  # rubro (Excel "portfolio de proyectos realizados.xlsx", hoja
+  # "Verticales", fila Supply Parts) — no son copy inventado.
+  - pregunta: "¿El sistema cumple con la facturación de ARCA para mayoristas de repuestos?"
+    respuesta: "Sí, la plataforma está 100% actualizada con las normativas de ARCA (ex AFIP). Automatiza la emisión de facturas y recibos, gestiona la validación de CAE y calcula automáticamente las percepciones y retenciones impositivas específicas que aplican al rubro."
+  - pregunta: "¿Puedo integrar mi cuenta de Mercado Libre?"
+    respuesta: "Totalmente. Contamos con integraciones nativas para el rubro automotor. Podés sincronizar tus precios y disponibilidad de stock en Mercado Libre en tiempo real, e integrar tu inventario. Una vez que Odoo recibe la información desde Mercado Libre, desencadena el proceso de facturación y generación del recibo de cobro de forma automática."
+  - pregunta: "¿Qué pasa si un cliente compra por el portal pero no hay stock real en el depósito?"
+    respuesta: "Ese problema desaparece. Al conectarse de forma directa con tu gestión de almacenes (WMS), el portal lee el stock físico en tiempo real. Tu cliente solo podrá agregar al carrito los repuestos que realmente están disponibles en los estantes en ese preciso segundo, eliminando las ventas en falso y los quiebres de stock."
+  - pregunta: "¿Cómo evito que las cuentas corrientes queden desactualizadas y me bloqueen ventas?"
+    respuesta: "A través de nuestro Portal de Clientes. En lugar de que tu equipo cargue los cobros a mano, tus distribuidores pueden ingresar con su usuario, ver su saldo y subir sus propios recibos o comprobantes de transferencia. El sistema actualiza la cuenta corriente y libera el límite de crédito al instante, evitando que las ventas se frenen por demoras administrativas."
+  - pregunta: "¿Puedo migrar mi base histórica de clientes, sus saldos y límites de crédito actuales?"
+    respuesta: "Sí, el proceso de implementación incluye la migración de tus datos. Importamos tu maestro de artículos, tu lista de clientes, los saldos pendientes de cada cuenta corriente y los límites de crédito que ya tenés asignados, para que el salto al nuevo sistema sea transparente y no pierdas tu historial comercial."
 
 modulos_relevantes:
   - "ventas-y-crm"
@@ -32,13 +37,14 @@ modulos_relevantes:
   - "contabilidad-y-finanzas"
 
 casos_relacionados:
-  - "[COMPLETAR slug del caso 'Distribuidor de insumos — 27 usuarios' u otro caso real del rubro]"
+  - "supply-parts"
+  - "macro-argentina"
 
 integraciones_destacadas:
   - "Mercado Libre"
   - "Mercado Pago"
   - "ARCA / AFIP"
-  - "[COMPLETAR — transportistas/logística si aplica]"
+  - "WMS (gestión avanzada de almacenes)"
 ---
 
 ## 01 — Hero de rubro
@@ -79,16 +85,16 @@ integraciones_destacadas:
 - Mercado Libre
 - Mercado Pago
 - ARCA / AFIP
-- [COMPLETAR — transportistas o sistemas de logística que use este rubro en particular]
 
 ## 04 — Casos de éxito del rubro
 
-[COMPLETAR — linkear 1-2 casos reales de distribuidoras/mayoristas desde `04-casos-de-exito/`. Ver el ejemplo `ejemplo-distribuidor-insumos.md` en esa carpeta.]
+- [Supply Parts](../04-casos-de-exito/supply-parts.md) — 67 usuarios, repuestos y autopartes. Cuentas corrientes y cupo de crédito liberados al instante con el Portal de Clientes.
+- [Macro Argentina](../04-casos-de-exito/macro-argentina.md) — 30 usuarios, repuestos y autopartes. Compras basadas en datos de rotación real, no en intuición.
 
 ## 05 — Testimonio
 
-> "[COMPLETAR cita textual del cliente]"
-> — [COMPLETAR nombre / cargo / empresa]
+> "El cambio en la relación con los clientes fue inmediato. Ahora, en cuanto el cliente reporta su pago en el portal, el impacto se refleja en su cuenta corriente y el cupo de crédito se libera en el acto. Eliminamos la fricción de tener clientes queriendo comprar y no poder hacerlo por un trámite administrativo demorado."
+> — Supply Parts
 
 ## 05b — Preguntas frecuentes del rubro
 

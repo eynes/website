@@ -34,53 +34,62 @@ paises_operacion:
 prueba_social_home:
   # GUÍA: banda de confianza que va justo debajo del hero del Home
   # (sección "02 — Prueba social inmediata" del wireframe).
-  empresas_clientes: "+100 empresas"
+  # Cifra actualizada según el dato publicado hoy en eynes.com.ar ("+150 clientes").
+  empresas_clientes: "+150 empresas"
   anios_experiencia: "+20 años"
   paises: "6 países"
   logos_clientes_destacados:
     - "YPF"
     - "Lario (Rafaela Alimentos)"
     - "Ivess (El Jumillano)"
+    - "La Guitarrita"
 
 oficinas:
   # GUÍA: cada oficina con dirección real habilita un Google Business Profile
   # propio → abre SEO local ("Odoo Mendoza", "implementación Odoo Uruguay").
-  # Completar una entrada por ciudad. No dejar oficinas "de relleno": si no
-  # hay dirección real y atención en esa ciudad, no se lista como oficina.
+  # No dejar oficinas "de relleno": si no hay dirección real y atención en
+  # esa ciudad, no se lista acá como oficina — va en `zonas_de_cobertura`
+  # más abajo. Confirmado con el equipo (27/08/2026): la única sede física
+  # de Eynes es Buenos Aires; Santa Fe, Mendoza, Montevideo y España son
+  # zonas de atención telefónica/remota, sin oficina propia.
   - ciudad: "Buenos Aires"
     pais: "Argentina"
-    direccion: "[COMPLETAR dirección completa]"
-    telefono: "[COMPLETAR]"
-    email: "[COMPLETAR]"
+    direccion: "Lima 131, Piso 1, CABA (C1073)"
+    telefono: "+54 9 11 4528-1900"
+    email: "info@eynes.com.ar"
     es_sede_principal: true
+
+zonas_de_cobertura:
+  # GUÍA: ciudades/países donde Eynes atiende clientes y tiene un teléfono
+  # dedicado, pero sin oficina física propia — no habilitan Google Business
+  # Profile por sí solas. Se muestran igual en Nosotros/Contacto para dejar
+  # claro que hay atención local, pero no se les arma SEO local de
+  # "oficina" (ver checklist-seo-por-pagina.md).
   - ciudad: "Santa Fe"
     pais: "Argentina"
-    direccion: "[COMPLETAR]"
-    telefono: "[COMPLETAR]"
-    email: "[COMPLETAR]"
-    es_sede_principal: false
+    telefono: "+54 9 3492 56-2199"
+    email: "info@eynes.com.ar"
   - ciudad: "Mendoza"
     pais: "Argentina"
-    direccion: "[COMPLETAR]"
-    telefono: "[COMPLETAR]"
-    email: "[COMPLETAR]"
-    es_sede_principal: false
+    telefono: "+54 9 2615 12-1045"
+    email: "info@eynes.com.ar"
   - ciudad: "Montevideo"
     pais: "Uruguay"
-    direccion: "[COMPLETAR]"
-    telefono: "[COMPLETAR]"
-    email: "[COMPLETAR]"
-    es_sede_principal: false
-  # [COMPLETAR: agregar oficina de España si corresponde a "paises_operacion"]
+    telefono: "+54 9 11 4528-1900"
+    email: "info@eynes.com.ar"
+  - ciudad: "Valencia / Castellón"
+    pais: "España"
+    telefono: "+34 622 65 99 89"
+    email: "info@eynes.com.ar"
 
 contacto_general:
-  email_comercial: "info@eynes.com.ar]"
+  email_comercial: "info@eynes.com.ar"
   email_soporte: "soporte@eynes.com.ar"
   whatsapp_comercial: "+54 9 11 4528-1900"
 
 redes:
   linkedin: "https://www.linkedin.com/company/eynes-odoo-argentina"
-  instagram: ""
+  instagram: "https://www.instagram.com/eynesarg/"
 
 legal:
   politica_privacidad_url: "/legal/privacidad"

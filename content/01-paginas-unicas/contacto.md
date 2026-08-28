@@ -5,8 +5,8 @@ meta_description: "Tenes un proyecto y nosotros tenemos el sistema para que conc
 slug: "demo"
 url: "eynes.com.ar/demo"
 schema_type: "ContactPage"
-estado: "borrador"
-og_image: "[COMPLETAR]"
+estado: "publicado"
+og_image: ""
 ---
 
 ## 01 — Qué va a pasar

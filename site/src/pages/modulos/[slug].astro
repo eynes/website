@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/hero/Hero.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import ContentSection from '../../components/shared/ContentSection.astro';
+import FAQAccordion from '../../components/shared/FAQAccordion.astro';
+import CTASection from '../../components/cta/CTASection.astro';
+import { getPublished } from '../../lib/content';
+import { splitSections, renderSection, extractLabeled } from '../../lib/sections';
+import { resolvePublishedRelated } from '../../lib/related';
+import { productSchema, faqPageSchema, breadcrumbListSchema } from '../../lib/schema';
+
+export async function getStaticPaths() {
+  const modulos = await getPublished('modulos');
+  return modulos.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const sections = splitSections(entry.body ?? '');
+
+const subtitle = extractLabeled(sections['01']?.body, 'Subtítulo');
+const featuresHtml = await renderSection(sections, '02');
+
+const integrados = (
+  await Promise.all(entry.data.modulos_integrados.map((slug: string) => resolvePublishedRelated('modulos', slug)))
+).filter(Boolean);
+
+const casoRelacionado = entry.data.caso_relacionado?.slug
+  ? await resolvePublishedRelated('casosDeExito', entry.data.caso_relacionado.slug)
+  : null;
+
+const crumbs = [
+  { name: 'Inicio', url: '/' },
+  { name: 'Módulos', url: '/modulos' },
+  { name: entry.data.title, url: `/modulos/${entry.data.slug}` },
+];
+
+const jsonLd = [
+  productSchema({
+    name: entry.data.title,
+    description: entry.data.meta_description,
+    url: `https://eynes.com.ar/modulos/${entry.data.slug}`,
+  }),
+  faqPageSchema(entry.data.faqs),
+  breadcrumbListSchema(crumbs),
+].filter(Boolean) as Record<string, unknown>[];
+---
+
+<BaseLayout title={entry.data.seo_title} description={entry.data.meta_description} jsonLd={jsonLd}>
+  <Breadcrumbs crumbs={crumbs} />
+  <Hero title={entry.data.title} subtitle={subtitle} primaryCta={{ label: 'Agendar demo', href: '/demo' }} />
+
+  <ContentSection number="02" title="Features con impacto" html={featuresHtml} />
+
+  {
+    (integrados.length > 0 || casoRelacionado) && (
+      <section class="section bg-paper-dim">
+        <div class="container-page reveal grid gap-8 sm:grid-cols-2">
+          {integrados.length > 0 && (
+            <div>
+              <h2 class="text-xl font-semibold text-ink">Se integra con</h2>
+              <div class="mt-4 flex flex-wrap gap-3">
+                {integrados.map((m) => (
+                  <a href={`/modulos/${m!.data.slug}`} class="rounded-full border border-line bg-paper px-4 py-2 text-sm font-medium text-ink-soft hover:border-purple">
+                    {m!.data.title}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+          {casoRelacionado && (
+            <div>
+              <h2 class="text-xl font-semibold text-ink">Resultado real</h2>
+              <a href={`/casos/${casoRelacionado.data.slug}`} class="card mt-4 block bg-paper">
+                <p class="font-semibold text-ink">{casoRelacionado.data.cliente}</p>
+                <p class="mt-2 text-sm text-ink-soft">{entry.data.caso_relacionado?.resultado}</p>
+              </a>
+            </div>
+          )}
+        </div>
+      </section>
+    )
+  }
+
+  <FAQAccordion faqs={entry.data.faqs} title="Preguntas frecuentes del módulo" />
+
+  <CTASection heading="Quiero ver este módulo en acción" />
+</BaseLayout>

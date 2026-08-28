@@ -1,12 +1,12 @@
 ---
-title: "[COMPLETAR H1 — propuesta de valor centrada en el PROBLEMA, no en 'implementamos Odoo']"
-seo_title: "[COMPLETAR ~60 caracteres, ej: 'Odoo en Argentina | Implementación y soporte — Eynes']"
-meta_description: "[COMPLETAR ~155 caracteres. Beneficio + señal de confianza + CTA implícito]"
+title: "¿Facturás en un sistema y vendés en otro?"
+seo_title: "Odoo en Argentina | Implementación y Soporte Local — Eynes"
+meta_description: "Centralizá ventas, stock y facturación ARCA en un solo sistema. Implementación de Odoo con soporte humano real: +150 clientes, +20 años, 6 países."
 slug: "home"
 url: "eynes.com.ar"
 schema_type: "Organization"
-estado: "borrador"
-og_image: "[COMPLETAR ruta a imagen social 1200x630]"
+estado: "publicado"
+og_image: ""
 ---
 
 <!-- GUÍA GENERAL: esta es la página con más tráfico y más peso de conversión
@@ -23,11 +23,19 @@ rápida de leer para alguien que no distingue un partner serio de uno
 improvisado (badge centralizado en 00-config/site.md). -->
 
 - **Badge:** (tomado de `00-config/site.md → badge_partner`)
-- **H1:** [COMPLETAR — propuesta de valor centrada en el problema]
-- **Subtítulo:** [COMPLETAR — a quién ayuda y cómo: rápido, sin fricción, soporte real]
+- **H1:** ¿Facturás en un sistema y vendés en otro?
+<!-- GUÍA copy: H1 reformulado como pregunta retórica que usa la frase
+textual del banco de "dolor" ya validado en 00-config/ctas-reutilizables.md
+→ "Dolor → alivio". Lenguaje del cliente, no de la empresa: es más
+específico que una afirmación abstracta tipo "centralizá tu información". -->
+- **Subtítulo:** Con Odoo, vendés, facturás con ARCA y controlás el stock desde un solo sistema — implementado por un equipo con 20+ años y soporte humano real, no un ticket genérico.
 - **CTA primario:** Agendar demo → `/demo`
 - **CTA secundario:** Ver módulos → `/modulos`
-- **Imagen/animación:** [COMPLETAR — dashboard real de Odoo en uso, nunca foto de stock]
+<!-- GUÍA: imagen/animación pendiente — dashboard real de Odoo en uso,
+nunca foto de stock. Candidatos reales: pantalla de Portal de Clientes
+(caso Supply Parts) o de facturación ARCA (caso Clínica IMA). Hasta
+tener esa captura, el hero del sitio queda a una columna, sin placeholder
+visual que parezca "en construcción". -->
 
 ## 02 — Prueba social inmediata
 
@@ -98,10 +106,15 @@ Formato tomado de Adhoc (país, usuarios, módulos, resultado). Elegir acá
 el caso de 04-casos-de-exito/ con mejor resultado cuantificado y
 mantenerlo actualizado; no dejar siempre el mismo caso "para siempre". -->
 
-- **Cliente destacado:** [COMPLETAR — referenciar slug de `04-casos-de-exito/`]
-- **Resumen:** "[rubro] — [usuarios] usuarios — [país]"
-- **Resultado cuantificado:** [COMPLETAR ej. "-40% tiempo de facturación"]
+- **Cliente destacado:** Supply Parts (`04-casos-de-exito/supply-parts`)
+- **Resumen:** "Repuestos y autopartes — 67 usuarios (Community) — Argentina"
+- **Resultado cuantificado:** Sin cifra porcentual verificada por el cliente — el resultado real y documentado es cualitativo: "las cuentas corrientes y el cupo de crédito se liberan al instante cuando el distribuidor reporta su pago, sin carga manual" (antes tardaba días). Ver nota en `voz-y-tono.md` regla 3 — no inventamos un % que el cliente no dijo.
 - Link: → Ver caso completo
+
+<!-- GUÍA cumplida: de los 7 casos con relato completo en el Excel, ninguno
+trae un porcentaje de mejora dicho por el cliente — todos son resultados
+cualitativos verificados. Si en el futuro se consigue una cifra real
+(ej. "reducimos X días a Y horas"), reemplazar acá y en el caso completo. -->
 
 ## 07 — Por qué Eynes
 
@@ -110,9 +123,9 @@ partner de Odoo?"). La competencia no la tiene tan clara — es una
 oportunidad de diferenciación real, siempre que los tres puntos sean
 verificables (no marketing vacío). -->
 
-- [COMPLETAR — confirmar "20+ años de experiencia" contra `00-config/site.md → antiguedad`]
-- Soporte humano, no ticket genérico
-- Equipo local en [COMPLETAR cantidad] ubicaciones
+- **20+ años y +150 clientes.** Fundada en 2006, Silver Partner Oficial de Odoo — no un revendedor de un mes.
+- **Soporte humano, no ticket genérico.** Hablás con la misma gente que te implementó el sistema.
+- **Presencia real en 5 ciudades.** Oficina en Buenos Aires y atención local con teléfono dedicado en Santa Fe, Mendoza, Montevideo y Valencia/Castellón.
 
 ## 08 — CTA final calificador
 
@@ -132,9 +145,11 @@ recientes o de mejor performance de 05-blog/posts/. -->
 
 **Título de sección:** "Últimas notas" / "Recursos para tu empresa"
 
-- [COMPLETAR — nota 1, título + tiempo de lectura]
-- [COMPLETAR — nota 2]
-- [COMPLETAR — nota 3]
+- Odoo y ARCA: qué cambia en la facturación electrónica → `05-blog/posts/odoo-y-arca-que-cambia-en-la-facturacion-electronica.md`
+
+<!-- GUÍA: sumar acá la 2da y 3ra nota en cuanto se publiquen en
+05-blog/posts/ — el sitio ya lista automáticamente las últimas 3 notas
+publicadas, así que no hace falta tocar esta página para que aparezcan. -->
 
 ## Footer
 

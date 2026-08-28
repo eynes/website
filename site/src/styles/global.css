@@ -1,0 +1,264 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Odoo brand type spec: Inter for headings (500-700) and body (400) */
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, 'SFMono-Regular', monospace;
+
+  /* Paper */
+  --color-paper: #ffffff;
+  --color-paper-dim: #f6f4f6;
+  --color-paper-deep: #ece7eb;
+
+  /* Ink */
+  --color-ink: #1c1a1e;
+  --color-ink-soft: #4a454a;
+  --color-ink-faint: #8f8f8f; /* = Odoo's documented neutral gray */
+
+  /* Dark band (derived from the Odoo purple at low lightness) */
+  --color-dark: #241a21;
+  --color-dark-soft: #34252e;
+  --color-dark-line: #4a3a44;
+
+  /* Odoo brand colors, verbatim from odoo.com/page/brand-assets */
+  --color-purple: #714b67;
+  --color-purple-dark: #573a50;
+  --color-purple-light: #9c7c92;
+  --color-teal: #017e84;
+  --color-teal-dark: #015d61;
+
+  /* Silver Partner tier color — Eynes's actual certification color */
+  --color-silver: #5b899e;
+
+  --color-line: #e2dee1;
+  --color-whatsapp: #25d366;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    background-image: radial-gradient(color-mix(in srgb, var(--color-ink) 10%, transparent) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .reveal,
+    .enter {
+      opacity: 1 !important;
+      transform: none !important;
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  a {
+    text-underline-offset: 3px;
+  }
+
+  ::selection {
+    background-color: var(--color-purple);
+    color: var(--color-paper);
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .section {
+    @apply py-16 sm:py-24;
+  }
+
+  /* Small mono all-caps label used as an eyebrow over headings */
+  .kicker {
+    @apply inline-flex items-center gap-2 font-mono text-xs font-medium uppercase tracking-[0.16em] text-teal;
+  }
+
+  .kicker::before {
+    content: '';
+    @apply block h-px w-5 bg-teal;
+  }
+
+  /* Ghost numeral echoing the content's own "01 —" section numbering */
+  .ledger-number {
+    font-family: var(--font-mono);
+    color: transparent;
+    -webkit-text-stroke: 1px color-mix(in srgb, var(--color-purple) 20%, transparent);
+    line-height: 1;
+    user-select: none;
+  }
+
+  .btn,
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline,
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple;
+  }
+
+  .btn-primary {
+    @apply bg-purple text-paper hover:bg-purple-dark;
+  }
+
+  .btn-secondary {
+    @apply bg-ink text-paper hover:bg-dark;
+  }
+
+  .btn-outline {
+    @apply border text-ink hover:border-purple hover:text-purple;
+    border-color: var(--color-line);
+    border-width: 1.5px;
+  }
+
+  .btn-whatsapp {
+    @apply text-white;
+    background-color: var(--color-whatsapp);
+  }
+
+  .btn-whatsapp:hover {
+    filter: brightness(0.92);
+  }
+
+  /* Hairline-bordered card — precise, not soft/bubbly */
+  .card {
+    @apply relative rounded-md border bg-paper p-6 transition-all duration-200;
+    border-color: var(--color-line);
+  }
+
+  a.card:hover,
+  .card.is-hoverable:hover {
+    border-color: var(--color-purple);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px -12px color-mix(in srgb, var(--color-ink) 22%, transparent);
+  }
+
+  /* "Ver más →" style affordances: the arrow glyph nudges forward on hover */
+  .arrow {
+    @apply inline-block transition-transform duration-200;
+  }
+
+  a:hover .arrow,
+  .card:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  .prose-content {
+    @apply max-w-none text-ink-soft;
+  }
+
+  .prose-content :is(h2, h3) {
+    @apply mt-8 mb-3 text-ink;
+  }
+
+  .prose-content p {
+    @apply my-4 leading-relaxed;
+  }
+
+  .prose-content ul {
+    @apply my-4 ml-5 list-none space-y-2;
+  }
+
+  .prose-content ul li {
+    @apply relative pl-5;
+  }
+
+  .prose-content ul li::before {
+    content: '—';
+    @apply absolute left-0 text-teal;
+  }
+
+  .prose-content blockquote {
+    @apply my-6 rounded-r-md border-l-4 bg-paper-dim py-3 pl-5 pr-4 italic text-ink;
+    border-color: var(--color-purple);
+  }
+
+  .prose-content table {
+    @apply my-6 w-full border-collapse overflow-hidden rounded-md border text-sm;
+    border-color: var(--color-line);
+  }
+
+  .prose-content th {
+    @apply border-b bg-paper-dim px-4 py-3 text-left font-mono text-xs font-semibold uppercase tracking-wide text-ink-soft;
+    border-color: var(--color-line);
+  }
+
+  .prose-content td {
+    @apply border-b px-4 py-3 align-top;
+    border-color: var(--color-line);
+  }
+
+  .skip-link {
+    @apply absolute left-4 top-[-100px] z-50 rounded-md bg-ink px-4 py-2 text-paper transition-all focus:top-4;
+  }
+
+  /* Scroll-reveal: JS adds .is-visible when the element enters the viewport */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+      transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* One-shot entrance for above-the-fold content (hero) — runs on load,
+     no observer needed since it's already in the viewport. Stagger with
+     .enter-1..4 (120ms apart). */
+  .enter {
+    animation: enter-up 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .enter-1 {
+    animation-delay: 0ms;
+  }
+  .enter-2 {
+    animation-delay: 120ms;
+  }
+  .enter-3 {
+    animation-delay: 240ms;
+  }
+  .enter-4 {
+    animation-delay: 360ms;
+  }
+
+  @keyframes enter-up {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
