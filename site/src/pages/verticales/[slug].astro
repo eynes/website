@@ -56,6 +56,9 @@ const jsonLd = [
   <ContentSection number="02" title="Problemas específicos del rubro" html={problemsHtml} narrow />
   <ContentSection number="02b" title="Odoo vs. las alternativas" html={comparisonHtml} tone="muted" />
 
+  <ContentSection number="03" title="Módulos relevantes para este rubro" html={await renderSection(sections, '03')} narrow />
+  <ContentSection number="03a" title="Integraciones del rubro" html={await renderSection(sections, '03a')} tone="muted" narrow />
+
   {
     modulos.length > 0 && (
       <section class="section">
@@ -100,7 +103,7 @@ const jsonLd = [
             {casos.map((c) => (
               <a href={withBase(`/casos/${c!.data.slug}`)} class="card block">
                 <p class="font-semibold text-ink">{c!.data.cliente}</p>
-                <p class="mt-1 font-mono text-xs uppercase tracking-wide text-ink-faint">{c!.data.usuarios} usuarios · {c!.data.pais}</p>
+                <p class="mt-1 font-mono text-xs uppercase tracking-wide text-ink-faint">{[c!.data.usuarios && `${c!.data.usuarios} usuarios`, c!.data.pais].filter(Boolean).join(' · ')}</p>
                 <p class="mt-3 text-sm text-ink-soft">{c!.data.resultado_clave}</p>
               </a>
             ))}

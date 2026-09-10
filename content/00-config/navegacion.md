@@ -14,8 +14,6 @@ nav_principal:
     # es una página única, no una plantilla más — así lo definimos en el wireframe.
   - etiqueta: "Casos"
     url: "/casos"
-  - etiqueta: "Blog"
-    url: "/blog"
   - etiqueta: "Nosotros"
     url: "/nosotros"
 
@@ -34,7 +32,6 @@ footer_columnas:
       - { etiqueta: "Módulos", url: "/modulos" }
       - { etiqueta: "Localización Argentina", url: "/localizacion-argentina" }
       - { etiqueta: "Casos de éxito", url: "/casos" }
-      - { etiqueta: "Blog", url: "/blog" }
       - { etiqueta: "Nosotros", url: "/nosotros" }
       - { etiqueta: "Agendar demo", url: "/demo" }
   - titulo: "Redes"

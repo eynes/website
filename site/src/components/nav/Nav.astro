@@ -13,14 +13,14 @@ function isActive(url: string) {
 }
 ---
 
-<header class="sticky top-0 z-40 border-b bg-paper" style="border-color: var(--color-line)">
+<header class="site-nav sticky top-0 z-40 border-b bg-paper" style="border-color: var(--color-line)">
   <div class="container-page flex items-center justify-between gap-4 py-4">
-    <a href={withBase('/')} class="flex shrink-0 items-baseline gap-2">
+    <a href={withBase('/')} class="site-brand flex shrink-0 items-baseline gap-2">
       <span class="text-2xl font-bold text-ink">{site?.data.nombre_comercial}</span>
       <span class="hidden font-mono text-[0.65rem] uppercase tracking-[0.14em] text-ink-faint sm:inline">Odoo Partner</span>
     </a>
 
-    <nav class="hidden items-center gap-7 md:flex" aria-label="Principal">
+    <nav class="hidden items-center gap-7 lg:flex" aria-label="Principal">
       {
         nav?.data.nav_principal.map((item) => (
           <a
@@ -41,7 +41,7 @@ function isActive(url: string) {
       <button
         type="button"
         id="nav-toggle"
-        class="inline-flex items-center justify-center p-2 text-ink md:hidden"
+        class="inline-flex items-center justify-center p-2 text-ink lg:hidden"
         aria-expanded="false"
         aria-controls="nav-mobile"
         aria-label="Abrir menú"
@@ -56,7 +56,7 @@ function isActive(url: string) {
     </div>
   </div>
 
-  <nav id="nav-mobile" class="hidden border-t md:hidden" style="border-color: var(--color-line)" aria-label="Principal (móvil)">
+  <nav id="nav-mobile" class="hidden border-t lg:hidden" style="border-color: var(--color-line)" aria-label="Principal (móvil)">
     <div class="container-page flex flex-col gap-1 py-3">
       {
         nav?.data.nav_principal.map((item) => (

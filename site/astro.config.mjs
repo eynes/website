@@ -11,6 +11,12 @@ export default defineConfig({
   base: '/website',
   output: 'static',
   trailingSlash: 'never',
+  redirects: {
+    '/verticales/distribucion-y-mayoristas': '/verticales/repuestos-y-autopartes',
+    '/verticales/servicios-consultoria-it': '/verticales/tecnologia-ti',
+    '/verticales/materiales-electricos-y-ferreterias': '/verticales/mayorista-de-ferreteria-y-buloneria',
+    '/casos/clinica-ima': '/casos/clinica-ima-s-a',
+  },
   integrations: [
     sitemap({
       filter: (page) => !page.includes('/gracias') && !page.includes('/legal/'),

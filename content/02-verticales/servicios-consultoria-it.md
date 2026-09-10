@@ -8,7 +8,7 @@ meta_description: "Controlá horas facturables, SLA y facturación de abonos rec
 slug: "servicios-consultoria-it"
 url: "eynes.com.ar/verticales/servicios-consultoria-it"
 schema_type: "Service"
-estado: "publicado"
+estado: "borrador"
 og_image: ""
 
 # GUÍA: rubro sin caso con relato completo en el Excel fuente todavía —

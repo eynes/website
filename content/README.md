@@ -12,12 +12,11 @@ Está armada 1:1 sobre el wireframe `eynes-wireframe_7.html` (12 páginas). Cada
 02-verticales/        → hub de verticales + una página por rubro (plantilla repetible)
 03-modulos/           → hub de módulos + una página por módulo (plantilla repetible)
 04-casos-de-exito/    → hub de casos + una página por cliente (plantilla repetible)
-05-blog/              → hub de blog + una nota por post (plantilla repetible)
 06-seo/               → mapa de keywords, referencia de schema.org, checklist técnico
 07-media/             → convenciones de nombres de archivo y alt text para imágenes
 ```
 
-Las carpetas `02` a `05` son las que vas a tocar más seguido: para agregar un rubro, un módulo, un caso de éxito o una nota de blog nuevos, copiás el archivo `_PLANTILLA.md` de esa carpeta, lo renombrás con el slug correspondiente, y completás los campos. Para dar de baja una página, borrás el archivo (o le poné `estado: borrador` / `publicar: false` en el frontmatter si preferís no publicarla pero conservar el trabajo).
+Las carpetas `02` a `04` son las que vas a tocar más seguido: para agregar un rubro, un módulo o un caso de éxito nuevos, copiás el archivo `_PLANTILLA.md` de esa carpeta, lo renombrás con el slug correspondiente, y completás los campos. Para dar de baja una página, borrás el archivo (o le poné `estado: borrador` / `publicar: false` en el frontmatter si preferís no publicarla pero conservar el trabajo).
 
 ## Cómo se completa cada archivo
 
@@ -46,7 +45,6 @@ Estas decisiones ya se tomaron durante el research de SEO/marketing y aplican a 
 1. **Tono:** rioplatense, con "vos", directo, cero jerga corporativa vacía. Ver `00-config/voz-y-tono.md`.
 2. **Vender el problema, no la feature.** Cada beneficio se redacta como "dolor → alivio", nunca como lista fría de funcionalidades.
 3. **FAQs específicas por página, nunca genéricas ni recicladas.** Cada vertical, módulo y la página de Localización tienen su propia FAQ con 3-5 preguntas reales de ese tema puntual. Esto es intencional para SEO ("la gente también pregunta") y para schema FAQPage — una FAQ copada y pegada en todas las páginas no suma.
-4. **Sin tags libres en el blog.** Solo 4 categorías/pilares fijos (ver `05-blog/_hub.md`). Si el CMS que se elija genera tags automáticos, se marcan `noindex`.
 5. **Nunca inventar números.** Todo dato cuantitativo (ej. "-40% en tiempo de facturación") tiene que salir de un caso de éxito real y documentado en `04-casos-de-exito/`. Si una página de módulo quiere mostrar una métrica, linkea al caso real en vez de inventar una cifra propia.
 6. **No publicar precios.** La página de contacto explica qué variables definen el costo, nunca un número o rango.
 7. **Comparación por hechos, no por adjetivos.** Cuando se compara con competidores (Tango, Bejerman, SAP), se listan diferencias observables, nunca calificativos negativos hacia la competencia.
@@ -80,3 +78,17 @@ Cada plantilla trae además sus propios campos específicos (ej. `rubro`, `usuar
 - Todo en minúsculas, con guiones medios, sin tildes ni ñ: `localizacion-argentina.md`, `distribucion-y-mayoristas.md`.
 - El nombre del archivo (sin `.md`) es el `slug` por convención — si no coinciden, gana el campo `slug` del frontmatter.
 - Los archivos que empiezan con `_` (como `_hub.md` o `_PLANTILLA.md`) son estructurales/de referencia, no páginas de contenido — un build correcto los debe ignorar como página individual.
+
+## Portfolio actualizado: fuente de verdad
+
+`eynes_portfolio_rubros_consolidado.xlsx` es la fuente de verdad para las empresas y los rubros. Desde `site/`, `npm run sync:portfolio` regenera las fichas de `02-verticales` y `04-casos-de-exito`; también se ejecuta al iniciar desarrollo y antes de cada build. Requiere Python 3, sin paquetes adicionales.
+
+Las fichas con `portfolio: true` son generadas: sus correcciones deben hacerse en el Excel. Cada empresa conserva su problemática, caso propio, caso complementario, testimonio, módulos, integraciones y preguntas frecuentes. Los rubros reúnen sus empresas sin descartar variantes del contenido. Las páginas anteriores que no corresponden al nuevo portfolio quedan como borradores.
+
+`portfolio-fuente.json` conserva los valores originales de las 19 columnas. `portfolio-revision.json` reúne las instrucciones `[REVISAR]`, que se excluyen de las páginas públicas hasta que se completen en el Excel. No se deducen métricas, países ni cantidades de usuarios ausentes de la fuente. Estos JSON son archivos editoriales y no se copian a la web pública.
+
+## Documentación específica de localización argentina
+
+La carpeta [08-localizacion-argentina](08-localizacion-argentina/README.md) reúne el relevamiento de `temas localización.xlsx` y de las ramas 15.0, 17.0 y 19.0 del proyecto de localización. Contiene fichas funcionales, propuesta de página principal, matriz de los 124 temas, módulos por versión y evidencia técnica reproducible.
+
+Es la base documental para ampliar esta sección del sitio. Sus fichas están en revisión y no generan páginas automáticamente; la página pública actual sigue leyendo `01-paginas-unicas/localizacion-argentina.md`. La carpeta documenta las diferencias que deben resolverse al integrar el nuevo contenido.

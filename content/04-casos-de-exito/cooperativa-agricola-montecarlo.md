@@ -1,62 +1,68 @@
 ---
-# Fuente de todos los datos de este caso: Excel "portfolio de proyectos
-# realizados.xlsx", hojas "Casos" y "Verticales" (fila Cooperativa Agrícola
-# Montecarlo).
-
-cliente: "Cooperativa Agrícola Montecarlo"
-logo: ""
-rubro: "agroindustria"
-# GUÍA: "agroindustria" todavía no tiene página de vertical propia en
-# 02-verticales/ — campo de referencia, no link válido todavía.
-pais: "Argentina"
-usuarios: 15
-modulos_implementados:
-  - "inventario"
-  - "compras"
-  # GUÍA: el cliente usa además Fabricación, que hoy no tiene módulo
-  # propio en 03-modulos/.
-resultado_clave: "Peso neto de camiones ingresado automáticamente al sistema desde las básculas, sin intervención humana ni errores de tipeo. (Sin cifra porcentual dicha por el cliente; ver voz-y-tono.md regla 3.)"
-
-title: "Cómo la Cooperativa Agrícola Montecarlo eliminó los errores de pesaje conectando sus básculas a Odoo"
-seo_title: "Caso Coop. Agrícola Montecarlo — Odoo Agro | Eynes"
-meta_description: "La Cooperativa Agrícola Montecarlo integró básculas de camiones y liquidación a productores con Odoo y Eynes, sin errores de tipeo."
+title: "Cooperativa Agrícola Montecarlo: Odoo para Agroindustria"
+seo_title: "Cooperativa Agrícola Montecarlo | Casos de Odoo | Eynes"
+meta_description: "Dispositivos perifericos no conectados al sistema de gestión, basculas y balanzas industriales"
 slug: "cooperativa-agricola-montecarlo"
-url: "eynes.com.ar/casos/cooperativa-agricola-montecarlo"
-schema_type: "Article"
 estado: "publicado"
-og_image: ""
+schema_type: "Article"
+cliente: "Cooperativa Agrícola Montecarlo"
+rubro: "Agroindustria"
+pais: ""
+usuarios: ""
+modulos_implementados: []
+resultado_clave: "Hoy, el camión sube a la báscula, se presiona un botón y el peso neto ingresa directamente al sistema sin intervención humana. El margen de error es cero. Al automatizar este paso, podemos emitir las liquidaciones a nuestros socios productores de forma periódica, mejorando drásticamente nuestra relación con ellos."
+agrupador: "AGROINDUSTRIA Y MANUFACTURA"
+portfolio: true
+faqs: [{"pregunta": "¿Es posible conectar las básculas de camiones y tolvas directamente al sistema?", "respuesta": "Sí. Desarrollamos integraciones para que el peso de tus básculas industriales o balanzas de planta impacten automáticamente en el documento correspondiente, eliminando el uso de papel y los errores de transcripción."}, {"pregunta": "¿Cómo gestionan el pago a los productores que entregan materia prima?", "respuesta": "El sistema permite automatizar la \"Liquidación a Productores\". Una vez que el sistema registra el peso neto recibido en un período de tiempo y los descuentos por calidad (merma/humedad), calcula automáticamente el importe a pagar según las tarifas vigentes, agilizando el flujo de cuentas por pagar."}, {"pregunta": "¿El sistema permite registrar controles de calidad al momento de la recepción?", "respuesta": "Absolutamente. Podés crear flujos de control de calidad obligatorios. Antes de aprobar el ingreso de la mercadería al silo o depósito, el sistema exigirá que se registren los parámetros del laboratorio (humedad, zaranda, pureza, etc.), lo que determinará la categoría del inventario y los descuentos aplicables al proveedor."}]
 ---
-
-## 01 — Hero del caso
-
-Logo del cliente + "El camión sube a la báscula y el peso neto ingresa al sistema sin intervención humana"
-
-## 02 — Ficha rápida
-
-| Rubro | País | Usuarios | Módulos implementados |
-|---|---|---|---|
-| Agroindustria (acopio y molienda de yerba mate, fécula de mandioca) | Argentina | 15 (Odoo Community, 250 empleados) | Inventario, Fabricación, Compras (Liquidación a productores) |
-
-Entidad cooperativa de Misiones, reconocida nacionalmente por las marcas de yerba mate Aguantadora y Pampa, integrada por productores locales.
 
 ## 03 — El problema
 
-> "El corazón de nuestra cooperativa es el cultivo y almacenamiento de productos primarios —yerba, mandioca, leña— pero teníamos un cuello de botella en la integración de los distintos periféricos con el sistema de gestión. El peso de los camiones salía impreso de la balanza, un operario lo anotaba en un papel y horas después alguien lo pasaba al sistema. Los errores de tipeo generaban diferencias muy grandes en kilos, y los productores se quejaban por las demoras para recibir sus liquidaciones de pago."
+Dispositivos perifericos no conectados al sistema de gestión, basculas y balanzas industriales
 
-Además, había una desconexión total entre el control de calidad en la recepción (por ejemplo, nivel de humedad) y la clasificación del inventario en los almacenes.
+## 04 — La implementación
 
-## 04 — La solución
+COOPERATIVA AGRÍCOLA MONTECARLO. Situación inicial: dispositivos periféricos no conectados al sistema de gestión, en particular básculas y balanzas industriales. El pesaje de los camiones con materia prima (principalmente yerba) se anotaba a mano en tickets de báscula y un administrativo lo transcribía después al sistema, con errores de tipeo que generaban diferencias importantes en kilos; las demoras administrativas en validar los tickets retrasaban la liquidación de pagos a los socios productores; y no había conexión entre el control de calidad en recepción (nivel de humedad) y la clasificación del inventario en los almacenes. Qué se hizo: integración directa del hardware con el software, conectando básculas industriales de camiones y sensores de calidad para que se comuniquen en tiempo real con los módulos de inventario y producción. Resultado: el camión sube a la báscula, se presiona un botón y el peso neto ingresa directamente al sistema, con margen de error cero; al automatizar ese paso, las liquidaciones a los socios productores se emiten de forma periódica.
 
-> "Decidimos conectar el hardware directamente al software. Integramos las básculas industriales de camiones y los sensores de calidad (humedad) para que se comuniquen en tiempo real con el módulo de inventario y producción del ERP."
+## 05 — Testimonio
 
-Se integraron básculas electrónicas de camiones (puerto serie/TCP), periféricos de laboratorio (humedímetros), ARCA (liquidación primaria) y un portal de autogestión para socios/productores. Módulos relacionados: [Inventario](../03-modulos/inventario.md), [Compras](../03-modulos/compras.md).
+EL DESAFÍO
+"El corazón de nuestra cooperativa es el cultivo y almacenamiento de productos primarios, yerba, mandioca, leña, pero teníamos un cuello de botella en la integración de los distintos periféricos con el sistema de gestión. El peso de los camiones salía impreso de la balanza, un operario lo anotaba en un papel y horas después alguien lo pasaba al sistema. Los errores de tipeo generaban diferencias muy grandes en kilos, y los productores se quejaban por las demoras para recibir sus liquidaciones de pago."
 
-## 05 — El resultado
+LA SOLUCIÓN
+"Decidimos conectar el hardware directamente al software. Integramos las básculas industriales de camiones y los sensores de calidad (humedad) para que se comuniquen en tiempo real con el módulo de inventario y producción del ERP."
 
-> "Hoy, el camión sube a la báscula, se presiona un botón y el peso neto ingresa directamente al sistema sin intervención humana. El margen de error es cero. Al automatizar este paso, podemos emitir las liquidaciones a nuestros socios productores de forma periódica, mejorando drásticamente nuestra relación con ellos."
->
-> — Cooperativa Agrícola Montecarlo
+EL RESULTADO
+"Hoy, el camión sube a la báscula, se presiona un botón y el peso neto ingresa directamente al sistema sin intervención humana. El margen de error es cero. Al automatizar este paso, podemos emitir las liquidaciones a nuestros socios productores de forma periódica, mejorando drásticamente nuestra relación con ellos."
 
-## 06 — CTA
+## 06 — Módulos relevantes para el rubro
 
-"Quiero un resultado similar en mi empresa" → Agendar demo (`/demo`)
+Inventario · Fabricación · Compras con liquidación a productores. El diseño se apoya en la conexión directa del hardware de planta con el sistema: las básculas y los sensores de calidad alimentan el documento de recepción, que a su vez determina la categoría del inventario y el importe a liquidar al socio productor.
+
+## 07 — Integraciones del rubro
+
+Básculas electrónicas de camiones (Puerto Serie/TCP). Básculas electrónicas de camiones conectadas por puerto serie o TCP: el peso neto ingresa al sistema sin intervención humana.
+
+ARCA (Liquidación Primaria). Facturación electrónica y liquidación primaria.
+
+Periféricos de laboratorio (Humedímetros). Periféricos de laboratorio (humedímetros) que registran los parámetros de calidad en la recepción y determinan la clasificación del inventario y los descuentos aplicables.
+
+Portal de autogestión para socios/productores. Portal de autogestión para socios y productores.
+
+## 08 — Otros casos del rubro
+
+ARGENSUN S.A. (ver su ficha en este mismo portfolio). Mismo agrupador AGROINDUSTRIA Y MANUFACTURA, con el foco en la consolidación de múltiples unidades de negocio y la trazabilidad del campo a la góndola con logística de exportación.
+
+## 09 — Problemas específicos del rubro
+
+### Pesaje de camiones transcripto a mano desde el ticket de báscula
+
+El ticket de báscula impreso y transcripto a mano es el punto donde una operación de acopio pierde precisión de forma irreversible: un error de tipeo en kilos no se puede detectar después, porque el camión ya se fue y el único respaldo es el papel.
+
+### Liquidación a productores demorada por validaciones administrativas
+
+La liquidación al socio productor depende de que el peso esté validado. Cada demora administrativa en esa validación se traduce en un pago que llega tarde, y en una cooperativa eso no es un problema de proceso: es un problema de relación con el dueño del negocio.
+
+### Control de calidad en recepción desconectado del inventario
+
+El parámetro de calidad medido en recepción (humedad, zaranda, pureza) es el que debería determinar la categoría del inventario y el descuento al productor. Si el laboratorio y el almacén no están conectados, la mercadería entra sin clasificar y el descuento se calcula aparte, sin respaldo trazable.

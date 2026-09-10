@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/hero/Hero.astro';
 import Breadcrumbs from '../components/seo/Breadcrumbs.astro';
 import CTASection from '../components/cta/CTASection.astro';
+import CollaboratorMap from '../components/shared/CollaboratorMap.astro';
 import {
   aboutPageSchema,
   organizationSchema,
@@ -13,6 +14,7 @@ import {
 
 const page = await getEntry('paginasUnicas', 'nosotros');
 const site = await getEntry('siteConfig', 'site');
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
 
 const timeline = [
   { year: '2006', label: 'Fundación de Eynes' },
@@ -22,11 +24,43 @@ const timeline = [
 ];
 
 const team = [
-  { name: 'Laureano Kloss', role: 'Director Ejecutivo' },
-  { name: 'Analía Gómez Benítez', role: 'Directora de Administración' },
-  { name: 'Santiago Said', role: 'Director Técnico' },
-  { name: 'Cristian Davico', role: 'Director de Proyectos' },
+  { name: 'Laureano Kloss', role: 'Director Ejecutivo', image: `${base}images/equipo/laureano.webp` },
+  { name: 'Analía Gómez Benítez', role: 'Directora de Administración', image: `${base}images/equipo/analia.webp` },
+  { name: 'Santiago Said', role: 'Director Técnico', image: `${base}images/equipo/santiago.webp` },
+  { name: 'Patricia Avendaño', role: 'Directora de Proyectos', image: `${base}images/equipo/patricia.webp` },
 ];
+
+// Fuente: content/Colaboradores Provincias.xlsx. La columna H contiene el
+// resumen de control del Excel (27 colaboradores); el mapa usa las filas 2–28.
+const collaborators = [
+  ['Agustin Horacio Bordon', 'Buenos Aires'],
+  ['Analia Gomez Benitez', 'Buenos Aires'],
+  ['Gisela Edith Hoffman', 'Buenos Aires'],
+  ['Gonzalo Argañaraz', 'Buenos Aires'],
+  ['Gonzalo Martin Ajuria', 'Buenos Aires'],
+  ['Ivan Nahuel Suarez', 'Buenos Aires'],
+  ['Juan Ignacio Estevez', 'Buenos Aires'],
+  ['Laureano Kloss', 'Buenos Aires'],
+  ['Lorena Jimena Alibertti', 'Buenos Aires'],
+  ['Nicolas Alberto Canepa', 'Buenos Aires'],
+  ['Nicolas Emanuel Russo', 'Buenos Aires'],
+  ['Patricia Rose Avendaño López', 'Buenos Aires'],
+  ['Rocio Beascochea', 'Buenos Aires'],
+  ['Romina Graciela Asunción', 'Buenos Aires'],
+  ['Santiago Javier Said', 'Buenos Aires'],
+  ['Sergio Ezequiel Rozic', 'Buenos Aires'],
+  ['Joel Waldemar Maglioni', 'Chaco'],
+  ['Pedro Luque Castaño', 'La Rioja'],
+  ['Leonardo Alejandro Fossati', 'Mendoza'],
+  ['Nicolas Luciano Carrasco', 'Mendoza'],
+  ['Agustin Emanuel de Almeida', 'Misiones'],
+  ['Javier Milton Andres Maidana', 'Misiones'],
+  ['Danila Soledad Escalante', 'Santa Fe'],
+  ['Diego Martin Barreto', 'Santa Fe'],
+  ['Facundo Gaston Barral', 'Santa Fe'],
+  ['Jose Luis Zanotti', 'Santa Fe'],
+  ['Tomas Augusto Ramirez', 'Santa Fe'],
+].map(([name, province]) => ({ name, province }));
 
 const crumbs = [
   { name: 'Inicio', url: '/' },
@@ -71,12 +105,10 @@ const jsonLd = site
     <div class="container-page reveal">
       <span class="kicker">Equipo</span>
       <h2 class="mt-2 text-2xl sm:text-3xl">Caras reales, no un ícono genérico</h2>
-      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="team-grid mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {team.map((person) => (
           <div class="card bg-paper text-center">
-            <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full text-2xl font-bold text-paper" style="background-color: var(--color-purple)">
-              {person.name.split(' ').map((n) => n[0]).slice(0, 2).join('')}
-            </div>
+            <img src={person.image} alt={`Foto de ${person.name}`} class="mx-auto h-20 w-20 rounded-full object-cover" width="80" height="80" loading="lazy" />
             <p class="mt-4 font-semibold text-ink">{person.name}</p>
             <p class="text-sm text-ink-faint">{person.role}</p>
           </div>
@@ -112,6 +144,18 @@ const jsonLd = site
       </section>
     )
   }
+
+  <section class="section bg-paper-dim">
+    <div class="container-page reveal">
+      <span class="kicker">Dónde estamos</span>
+      <h2 class="mt-2 text-2xl sm:text-3xl">Un equipo distribuido por Argentina</h2>
+      <p class="mt-3 max-w-2xl text-ink-soft">La implementación y el soporte se construyen con personas que trabajan desde distintas provincias. Explorá el mapa para conocer nuestra red.</p>
+      <div class="mt-8">
+        <CollaboratorMap collaborators={collaborators} />
+      </div>
+      <p class="mt-4 text-xs text-ink-faint">Datos de colaboradores según el archivo interno actualizado. El mapa muestra provincia y ciudad; no publica domicilios particulares.</p>
+    </div>
+  </section>
 
   <CTASection heading="Conocé cómo trabajamos" primaryLabel="Agendar demo" primaryHref="/demo" />
 </BaseLayout>

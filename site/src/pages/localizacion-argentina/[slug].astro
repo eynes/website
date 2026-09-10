@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/hero/Hero.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import ContentSection from '../../components/shared/ContentSection.astro';
+import FAQAccordion from '../../components/shared/FAQAccordion.astro';
+import CTASection from '../../components/cta/CTASection.astro';
+import { getPublished } from '../../lib/content';
+import { splitSections, renderSection } from '../../lib/sections';
+import { serviceSchema, faqPageSchema, breadcrumbListSchema } from '../../lib/schema';
+import { withBase } from '../../lib/url';
+
+export async function getStaticPaths() {
+  const fichas = await getPublished('localizacionArgentina');
+  return fichas.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const sections = splitSections(entry.body ?? '');
+
+const intro = sections['01']?.body?.trim() ?? '';
+const problemHtml = await renderSection(sections, '02');
+const scopeHtml = await renderSection(sections, '03');
+
+const crumbs = [
+  { name: 'Inicio', url: '/' },
+  { name: 'Localización Argentina', url: '/localizacion-argentina' },
+  { name: entry.data.title, url: `/localizacion-argentina/${entry.data.slug}` },
+];
+
+const jsonLd = [
+  serviceSchema({
+    name: entry.data.title,
+    description: entry.data.meta_description,
+    url: `https://eynes.com.ar/localizacion-argentina/${entry.data.slug}`,
+  }),
+  faqPageSchema(entry.data.faqs),
+  breadcrumbListSchema(crumbs),
+].filter(Boolean) as Record<string, unknown>[];
+---
+
+<BaseLayout title={entry.data.seo_title} description={entry.data.meta_description} jsonLd={jsonLd}>
+  <Breadcrumbs crumbs={crumbs} />
+  <Hero
+    title={entry.data.title}
+    subtitle={intro}
+    primaryCta={{ label: 'Agendar demo', href: `/demo?tema=${entry.data.slug}` }}
+    showPartnerBadge={false}
+    compact
+  />
+
+  <ContentSection number="02" title="El problema que resuelve" html={problemHtml} narrow />
+  <ContentSection number="03" title="Alcance funcional" html={scopeHtml} tone="muted" />
+
+  <FAQAccordion faqs={entry.data.faqs} title="Preguntas frecuentes" />
+
+  <CTASection
+    heading={`Quiero ver ${entry.data.title.toLowerCase()} en acción`}
+    primaryHref={`/demo?tema=${entry.data.slug}`}
+    whatsappMessage={`Hola, quiero ver "${entry.data.title}" en Odoo con la localización argentina de Eynes.`}
+  />
+
+  <div class="container-page pb-16 text-center">
+    <a href={withBase('/localizacion-argentina')} class="text-sm font-medium text-teal hover:underline">
+      ← Volver a Localización Argentina
+    </a>
+  </div>
+</BaseLayout>

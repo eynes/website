@@ -38,7 +38,7 @@ const jsonLd = hub
         casos.map((c) => (
           <a href={withBase(`/casos/${c.data.slug}`)} class="card block">
             <p class="font-semibold text-ink">{c.data.cliente}</p>
-            <p class="mt-1 font-mono text-xs uppercase tracking-wide text-ink-faint">{c.data.rubro.replace(/-/g, ' ')} · {c.data.pais} · {c.data.usuarios} usuarios</p>
+            <p class="mt-1 font-mono text-xs uppercase tracking-wide text-ink-faint">{[c.data.rubro, c.data.pais, c.data.usuarios && `${c.data.usuarios} usuarios`].filter(Boolean).join(' · ')}</p>
             <p class="mt-3 text-sm text-ink-soft">{c.data.resultado_clave}</p>
           </a>
         ))

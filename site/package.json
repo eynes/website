@@ -13,8 +13,10 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "prebuild": "node scripts/check-published-content.mjs",
-    "check:content": "node scripts/check-published-content.mjs"
+    "prebuild": "npm run sync:portfolio && node scripts/check-published-content.mjs",
+    "check:content": "node scripts/check-published-content.mjs",
+    "sync:portfolio": "python3 scripts/sync-portfolio.py",
+    "predev": "npm run sync:portfolio"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.2.4",

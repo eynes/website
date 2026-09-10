@@ -6,8 +6,7 @@
 //   - Singletons that always render regardless of `estado` — the 4
 //     01-paginas-unicas/*.md files, every `_hub.md`, and the always-loaded
 //     00-config/{site,navegacion}.md — are checked unconditionally.
-//   - Repeatable collection items (verticales/modulos/casosDeExito/blog
-//     posts) only ever render once `estado: "publicado"`, so those are
+//   - Repeatable collection items (verticales/modulos/casosDeExito) only ever render once `estado: "publicado"`, so those are
 //     only checked in that state.
 // `_PLANTILLA*.md` files and the editorial-only 00-config docs
 // (ctas-reutilizables.md, voz-y-tono.md) are never loaded by the build at
@@ -50,7 +49,7 @@ for (const relativePath of files) {
   const { data } = matter(raw);
 
   const mustCheck = alwaysRenders(relativePath) || data.estado === 'publicado';
-  if (mustCheck && raw.includes('[COMPLETAR')) {
+  if (mustCheck && /\[(?:COMPLETAR|REVISAR)/.test(raw)) {
     failures.push({ relativePath, alwaysRenders: alwaysRenders(relativePath) });
   }
 }

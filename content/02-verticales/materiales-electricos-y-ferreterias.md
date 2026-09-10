@@ -2,7 +2,7 @@
 # Página pendiente de completar. Estructura igual a la plantilla
 # (_PLANTILLA.md) y al ejemplo completo (distribucion-y-mayoristas.md).
 # Ya viene con el slug y algunos campos pre-cargados para ahorrar el
-# armado inicial — completar el resto antes de publicar (estado: "borrador").
+# armado inicial — completar el resto antes de publicar.
 
 title: "Software de gestión para materiales eléctricos y ferreterías"
 seo_title: "Software para Ferreterías y Materiales Eléctricos | Eynes"
@@ -10,7 +10,7 @@ meta_description: "Centralizá catálogo, stock y facturación ARCA para tu ferr
 slug: "materiales-electricos-y-ferreterias"
 url: "eynes.com.ar/verticales/materiales-electricos-y-ferreterias"
 schema_type: "Service"
-estado: "publicado"
+estado: "borrador"
 og_image: ""
 
 # GUÍA: a diferencia de distribucion-y-mayoristas.md, esta vertical todavía

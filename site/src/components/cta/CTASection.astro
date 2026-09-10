@@ -21,7 +21,7 @@ const {
 } = Astro.props;
 ---
 
-<section class:list={['section relative overflow-hidden', tone === 'dark' ? 'bg-dark text-paper' : 'bg-paper-dim']}>
+<section class:list={['section relative overflow-hidden', tone === 'dark' && 'contact-cta', tone === 'dark' ? 'bg-dark text-paper' : 'bg-paper-dim']}>
   <div class="container-page flex flex-col items-center gap-5 text-center">
     <span class="kicker">Próximo paso</span>
     <h2 class:list={['max-w-2xl text-3xl sm:text-4xl', tone === 'dark' && 'text-paper']}>{heading}</h2>

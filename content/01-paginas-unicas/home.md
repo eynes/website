@@ -136,21 +136,6 @@ quiere resolver ya, típico en Argentina. Copy centralizado en
 
 "Contanos tu proyecto" + beneficios de la demo (sin compromiso, 1 hora, te llevás un presupuesto) → botón **Agendar demo** + **WhatsApp directo**.
 
-## 08b — Teaser de blog
-
-<!-- GUÍA: mantiene el Home "vivo" para Google (contenido que se actualiza
-seguido) y le da a las notas del blog una segunda puerta de entrada además
-del buscador y LinkedIn. Actualizar manualmente con las 3 notas más
-recientes o de mejor performance de 05-blog/posts/. -->
-
-**Título de sección:** "Últimas notas" / "Recursos para tu empresa"
-
-- Odoo y ARCA: qué cambia en la facturación electrónica → `05-blog/posts/odoo-y-arca-que-cambia-en-la-facturacion-electronica.md`
-
-<!-- GUÍA: sumar acá la 2da y 3ra nota en cuanto se publiquen en
-05-blog/posts/ — el sitio ya lista automáticamente las últimas 3 notas
-publicadas, así que no hace falta tocar esta página para que aparezcan. -->
-
 ## Footer
 
 Contenido dinámico desde `00-config/navegacion.md` y `00-config/site.md` (oficinas, enlaces rápidos, redes, legal). No duplicar acá.

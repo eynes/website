@@ -22,7 +22,7 @@ meta_description: "Clínica IMA centralizó compras, consumos de cocina y presen
 slug: "clinica-ima"
 url: "eynes.com.ar/casos/clinica-ima"
 schema_type: "Article"
-estado: "publicado"
+estado: "borrador"
 og_image: ""
 ---
 

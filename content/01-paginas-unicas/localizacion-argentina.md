@@ -1,7 +1,7 @@
 ---
-title: "Odoo con la localización argentina más completa del mercado"
-seo_title: "Localización Argentina para Odoo: ARCA, IIBB | Eynes"
-meta_description: "ARCA, IVA, percepciones, retenciones e IIBB multijurisdicción, nativos en Odoo. La localización argentina más completa, implementada por Eynes."
+title: "La operación argentina de tu empresa, integrada en Odoo"
+seo_title: "Localización argentina para Odoo | Eynes"
+meta_description: "Facturación ARCA, cobros, pagos, impuestos, cheques y reportes argentinos dentro de Odoo. Conocé el alcance de la localización de Eynes."
 slug: "localizacion-argentina"
 url: "eynes.com.ar/localizacion-argentina"
 schema_type: "Service"
@@ -11,85 +11,54 @@ og_image: ""
 # GUÍA GENERAL: esta página NO es una plantilla de módulo más — es un
 # proyecto en sí mismo, por eso tiene entidad propia en el nav y en la URL
 # (fuera de /modulos/). El H1 lleva la keyword "localización argentina",
-# el término paraguas bajo el que caen ARCA, IIBB, percepciones, etc. —
-# todos términos con oportunidad real confirmada en research de SEO.
+# el término paraguas bajo el que caen ARCA, IIBB, percepciones, etc.
+#
+# Fuente editorial: content/08-localizacion-argentina/_hub.md, relevada a
+# partir de temas localización.xlsx y las ramas 15.0/17.0/19.0. Ese Excel
+# y ese código siguen siendo la fuente para el detalle de cada circuito
+# (ver 08-localizacion-argentina/facturacion-y-comprobantes.md, etc.).
+# Esta página es el resumen público; la sección 03 de abajo se genera en
+# el template a partir de esa colección, no del Markdown de esta sección.
 
 faqs:
-  # GUÍA: FAQ específica de este tema — los temas normativos generan mucha
-  # ansiedad de "¿esto se rompe con el próximo cambio de ley?". Resolverlo
-  # acá reduce fricción y suma a "la gente también pregunta" en Google.
-  - pregunta: "¿Qué pasa cuando cambia una alícuota o un régimen de ARCA?"
-    respuesta: "La actualización queda de nuestro lado: mantenemos la localización al día con cada cambio normativo de ARCA, sin que tengas que pedir un desarrollo a medida ni esperar un parche de terceros."
-  - pregunta: "¿Cubre todas las provincias para IIBB?"
-    respuesta: "Sí. La localización incluye Convenio Multilateral, así que cubre IIBB en todas las jurisdicciones donde tu empresa tenga actividad, no solo en una provincia."
-  - pregunta: "¿Cómo se maneja el ajuste por inflación contable?"
-    respuesta: "Odoo maneja moneda dual (pesos y dólar) y el ajuste por inflación contable de forma nativa, sin planillas paralelas para recalcular los estados contables."
+  - pregunta: "¿La localización incluye más que facturación electrónica?"
+    respuesta: "Sí. El alcance documentado abarca datos fiscales, recibos, órdenes de pago, retenciones, percepciones, cheques, remitos, reportes, exportadores y cierre contable, con diferencias por versión y módulos instalados."
+  - pregunta: "¿Se puede adaptar a cómo paga y cobra mi empresa?"
+    respuesta: "Los comprobantes de pago y cobro admiten varias facturas, medios y cheques. El relevamiento define cómo se configuran las cuentas, los conceptos, las retenciones y los documentos de tu operación."
+  - pregunta: "¿Es igual en Odoo 15, 17 y 19?"
+    respuesta: "No. Hay un núcleo común y componentes que cambian entre ramas. La propuesta se detalla para la versión que usa tu empresa."
+  - pregunta: "¿Los padrones se actualizan automáticamente?"
+    respuesta: "El consumidor de padrones dispone de una tarea programada. Hay que configurar el servicio, las jurisdicciones y la frecuencia de actualización; no queda activado por el solo hecho de instalarlo."
+  - pregunta: "¿Podemos ver nuestro circuito antes de implementarlo?"
+    respuesta: "La demo puede organizarse sobre los comprobantes y procesos que necesitás: una venta, un pago con retenciones, una cartera de cheques o un cierre. El alcance de la demostración se define con la configuración disponible."
 
-# El sitio lista automáticamente las notas del pilar "Localización AR"
-# (ver 05-blog/_hub.md) filtrando por categoría, así que no hace falta
-# mantener esta lista a mano.
 relacionados: []
 ---
 
 ## 01 — Hero
 
-**H1:** Odoo con la localización argentina más completa del mercado
+**H1:** La operación argentina de tu empresa, integrada en Odoo
 
-**Subtítulo:** ARCA, IVA, percepciones/retenciones, IIBB multijurisdicción — todo nativo, sin parches de terceros.
+**Subtítulo:** Facturación electrónica, retenciones, percepciones, cobros, pagos y cheques conectados con tu contabilidad. Una localización desarrollada por Eynes para acompañar los circuitos de tu empresa.
 
-**Badge:** (tomado de `00-config/site.md → badge_partner`)
+**CTA principal:** Ver la localización en una demo → `/demo`
 
-## 02 — El problema real
+**CTA secundario:** Explorar funcionalidades → sección de capacidades de esta página.
 
-<!-- GUÍA: contexto de por qué esto importa tanto en Argentina. -->
+## 02 — El problema
 
-Normativa que cambia seguido (AFIP → ARCA), múltiples jurisdicciones de IIBB, regímenes de percepción/retención que varían por provincia y rubro — un ERP genérico o mal localizado obliga a parchar con planillas o desarrollos a medida frágiles.
+Facturar es una parte de la operación. Después hay que cobrar, registrar los cheques, aplicar retenciones, pagar proveedores, emitir certificados y preparar la información del cierre.
 
-## 03 — Todo lo que resuelve, en un solo lugar
+Cuando cada paso depende de otra herramienta, los datos se vuelven a cargar y el seguimiento queda repartido. La localización de Eynes incorpora esos circuitos en Odoo, con los datos fiscales del contacto, los comprobantes y sus movimientos contables relacionados.
 
-<!-- GUÍA: esta grilla es el corazón de la página — cada ítem es candidato
-a convertirse en su propia sub-sección con más detalle (o incluso anclas
-internas) si el contenido lo justifica. Al ser "un gran módulo", es
-esperable que esta lista crezca con el tiempo; agregar filas nuevas acá
-mismo cuando corresponda. -->
+## 04 — Un circuito para entenderlo
 
-| Qué resuelve | Detalle |
-|---|---|
-| Facturación electrónica ARCA/AFIP | Emisión y validación nativa |
-| Percepciones y retenciones | IVA, IIBB, Ganancias |
-| IIBB multijurisdicción | Convenio Multilateral |
-| Libro IVA digital | Y libros contables locales |
-| Padrón de contribuyentes | Validación automática |
-| Plan de cuentas AR | Y balances según normativa local |
-| Moneda dual | Pesos / dólar, ajuste por inflación |
-| Actualizaciones normativas | Incluidas, sin desarrollo a medida |
+Un proveedor tiene su identificación fiscal, situación de IIBB y reglas de retención. Administración registra sus facturas. Al preparar la orden de pago, selecciona cuáles cancelar, combina los medios y revisa las retenciones calculadas. La orden conserva el detalle y permite generar los certificados. Esa información alimenta la consulta contable y los exportadores correspondientes.
 
-## 04 — Por qué esto no es "un módulo más"
+**Demostración:** factura de proveedor → orden de pago → medios y retenciones → certificados → reporte. Elegimos una versión y compañía configuradas para mostrar el recorrido completo.
 
-<!-- GUÍA: diferenciación directa frente a competidores que localizan Odoo
-con desarrollos parche — vale la pena ser explícitos porque es un
-argumento fuerte contra ERPs importados sin buena localización local. -->
+## 05 — Alcance por versión
 
-Mientras otros ERPs internacionales tratan la localización como un plug-in de terceros, en Odoo con Eynes es parte central del producto — mantenida y actualizada activamente ante cada cambio normativo.
+El proyecto tiene ramas para Odoo 15, 17 y 19. El núcleo comparte grandes áreas de operación, pero los módulos adicionales y algunos circuitos varían.
 
-## 05 — Captura / demo visual
-
-<!-- GUÍA: screenshot real pendiente — factura ARCA emitida desde Odoo, o
-pantalla de percepciones automáticas. No usar mockups genéricos. -->
-
-## 06 — Notas del blog sobre localización
-
-<!-- GUÍA: esta página funciona como el hub natural del pilar de blog
-"Localización AR". Cada nota nueva sobre ARCA/AFIP/IIBB debe linkear para
-acá. El sitio lista automáticamente las notas de esa categoría, así que
-no hace falta mantener una lista a mano acá. -->
-
-- Ver todas las notas → `/blog?categoria=localizacion-ar`
-
-## 07 — FAQ
-
-Ver `faqs` en el frontmatter de este archivo (se renderiza automáticamente con schema FAQPage).
-
-## 08 — CTA
-
-"Quiero ver la localización argentina de Odoo en acción" → Agendar demo (`/demo`)
+La implementación se define a partir de tu versión, tus puntos de venta, las jurisdicciones en las que operás y los procesos que necesitás.

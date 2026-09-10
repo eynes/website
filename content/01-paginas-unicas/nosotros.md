@@ -44,7 +44,7 @@ Fotos reales pendientes — no usar stock. -->
 | Laureano Kloss | Director Ejecutivo |
 | Analía Gómez Benítez | Directora de Administración |
 | Santiago Said | Director Técnico |
-| Cristian Davico | Director de Proyectos |
+| Patricia Avendaño | Directora de Proyectos |
 
 <!-- GUÍA: fotos reales pendientes — no usar stock. Hasta tenerlas, el
 sitio muestra un monograma con las iniciales de cada persona en vez de

@@ -28,19 +28,11 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative overflow-hidden border-b bg-paper" style="border-color: var(--color-line)">
-  <div
-    class="pointer-events-none absolute inset-0 opacity-70"
-    style="background: radial-gradient(ellipse 60% 50% at 85% 0%, color-mix(in srgb, var(--color-teal) 16%, transparent), transparent 70%), radial-gradient(ellipse 50% 45% at 15% 100%, color-mix(in srgb, var(--color-purple) 14%, transparent), transparent 70%);"
-    aria-hidden="true"
-  />
-  <span class="ledger-number pointer-events-none absolute -right-6 -top-10 text-[13rem] sm:text-[16rem]" aria-hidden="true">01</span>
-
+<section class:list={['hero relative border-b border-line', compact && 'hero-compact']}>
   <div
     class:list={[
-      'container-page relative grid items-end gap-10',
+      'hero-layout container-page relative grid items-end gap-10',
       imagePlaceholder ? 'lg:grid-cols-[1.1fr_0.9fr]' : '',
-      compact ? 'py-14 sm:py-20' : 'py-20 sm:py-28',
     ]}
   >
     <div>
@@ -49,30 +41,32 @@ const {
           <PartnerBadge />
         </div>
       )}
-      <h1 class:list={['enter enter-2 max-w-2xl text-4xl leading-[1.05] sm:text-5xl lg:text-6xl', showPartnerBadge && 'mt-6']}>
+      <h1 class:list={['hero-title enter enter-2', showPartnerBadge && 'mt-8']}>
         {title}
       </h1>
-      {subtitle && (
-        <p class="enter enter-3 mt-6 max-w-xl border-l-2 pl-4 text-lg text-ink-soft" style="border-color: var(--color-teal)">
-          {subtitle}
-        </p>
-      )}
-      {
-        (primaryCta || secondaryCta) && (
-          <div class="enter enter-4 mt-9 flex flex-wrap gap-3">
-            {primaryCta && (
-              <a href={withBase(primaryCta.href)} class="btn-primary">
-                {primaryCta.label}
-              </a>
-            )}
-            {secondaryCta && (
-              <a href={withBase(secondaryCta.href)} class="btn-outline">
-                {secondaryCta.label}
-              </a>
-            )}
-          </div>
-        )
-      }
+      <div class="hero-bottom">
+        {subtitle && (
+          <p class="hero-description enter enter-3 text-ink-soft">
+            {subtitle}
+          </p>
+        )}
+        {
+          (primaryCta || secondaryCta) && (
+            <div class="hero-actions enter enter-4 flex flex-wrap gap-3">
+              {primaryCta && (
+                <a href={withBase(primaryCta.href)} class="btn-primary">
+                  {primaryCta.label}
+                </a>
+              )}
+              {secondaryCta && (
+                <a href={withBase(secondaryCta.href)} class="btn-outline">
+                  {secondaryCta.label}
+                </a>
+              )}
+            </div>
+          )
+        }
+      </div>
     </div>
     {
       imagePlaceholder && (

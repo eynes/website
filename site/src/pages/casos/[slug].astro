@@ -1,4 +1,6 @@
 ---
+import FAQAccordion from '../../components/shared/FAQAccordion.astro';
+import { withBase } from '../../lib/url';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/hero/Hero.astro';
 import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
@@ -54,7 +56,13 @@ const jsonLd = [
 
   <ContentSection number="03" title="El problema" html={problemHtml} narrow />
   <ContentSection number="04" title="La solución" html={solutionHtml} narrow tone="muted" />
-  <ContentSection number="05" title="El resultado" html={resultHtml} narrow />
+  <ContentSection number="05" title={entry.data.portfolio ? "Testimonio" : "El resultado"} html={resultHtml} narrow />
+
+  {['06', '07', '08', '09'].map(async (key) => (
+    <ContentSection title={sections[key]?.title} html={await renderSection(sections, key)} narrow />
+  ))}
+  <FAQAccordion faqs={entry.data.faqs} title="Preguntas frecuentes del rubro" />
+  <div class="container-page pb-8"><a class="text-teal underline" href={withBase('/verticales')}>Explorá todos los rubros →</a></div>
 
   <CTASection heading="Quiero un resultado similar en mi empresa" />
 </BaseLayout>

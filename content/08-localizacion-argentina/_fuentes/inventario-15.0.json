@@ -1,0 +1,9691 @@
+[
+  {
+    "archivo": "l10n_ar_eynes/__init__.py",
+    "simbolos": [
+      {
+        "nombre": "_install_language",
+        "linea": 10
+      },
+      {
+        "nombre": "_switch_users_language",
+        "linea": 17
+      },
+      {
+        "nombre": "_switch_partners_language",
+        "linea": 23
+      },
+      {
+        "nombre": "post_init_hook",
+        "linea": 29
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/__manifest__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/controllers/__init__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/controllers/main.py",
+    "simbolos": [
+      {
+        "nombre": "MyController",
+        "linea": 23
+      },
+      {
+        "nombre": "Binary",
+        "linea": 35
+      },
+      {
+        "nombre": "ReportController",
+        "linea": 64
+      },
+      {
+        "nombre": "PortalAccount",
+        "linea": 82
+      },
+      {
+        "nombre": "handler",
+        "linea": 25
+      },
+      {
+        "nombre": "download_document",
+        "linea": 38
+      },
+      {
+        "nombre": "report_routes",
+        "linea": 66
+      },
+      {
+        "nombre": "portal_my_invoice_detail",
+        "linea": 89
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/__init__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/account.py",
+    "simbolos": [
+      {
+        "nombre": "AccountAccount",
+        "linea": 15
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "recpam_type",
+        "linea": 18
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/account_check.py",
+    "simbolos": [
+      {
+        "nombre": "AccountCheckConfig",
+        "linea": 7
+      },
+      {
+        "nombre": "AccountCheck",
+        "linea": 74
+      },
+      {
+        "nombre": "name_get",
+        "linea": 62
+      },
+      {
+        "nombre": "_get_default_journal",
+        "linea": 80
+      },
+      {
+        "nombre": "_compute_currency",
+        "linea": 170
+      },
+      {
+        "nombre": "_compute_currency_rate",
+        "linea": 180
+      },
+      {
+        "nombre": "_compute_amount_currency",
+        "linea": 188
+      },
+      {
+        "nombre": "unlink",
+        "linea": 195
+      },
+      {
+        "nombre": "cancel_check",
+        "linea": 219
+      },
+      {
+        "nombre": "expired_check",
+        "linea": 335
+      },
+      {
+        "nombre": "_compute_debit_state",
+        "linea": 454
+      },
+      {
+        "nombre": "debit_checks",
+        "linea": 463
+      },
+      {
+        "nombre": "break_conciliation",
+        "linea": 548
+      },
+      {
+        "nombre": "issued_create_voucher_move_line",
+        "linea": 566
+      },
+      {
+        "nombre": "_compute_deposit_journal_id",
+        "linea": 708
+      },
+      {
+        "nombre": "_onchange_number",
+        "linea": 718
+      },
+      {
+        "nombre": "to_wallet",
+        "linea": 727
+      },
+      {
+        "nombre": "check_to_wallet",
+        "linea": 758
+      },
+      {
+        "nombre": "return_wallet",
+        "linea": 772
+      },
+      {
+        "nombre": "return_to_draft",
+        "linea": 794
+      },
+      {
+        "nombre": "check_delivered",
+        "linea": 817
+      },
+      {
+        "nombre": "third_party_create_voucher_move_line",
+        "linea": 846
+      },
+      {
+        "nombre": "_get_voucher_type",
+        "linea": 901
+      },
+      {
+        "nombre": "create_debit_note_from_rejected_check",
+        "linea": 911
+      },
+      {
+        "nombre": "get_formview_id",
+        "linea": 972
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "account_id",
+        "linea": 11
+      },
+      {
+        "nombre": "deferred_account_id",
+        "linea": 17
+      },
+      {
+        "nombre": "deferred_journal_id",
+        "linea": 22
+      },
+      {
+        "nombre": "receivable_rejected_account_id",
+        "linea": 27
+      },
+      {
+        "nombre": "rejected_account_id",
+        "linea": 33
+      },
+      {
+        "nombre": "company_id",
+        "linea": 39
+      },
+      {
+        "nombre": "expired_issued_checks_account_id",
+        "linea": 45
+      },
+      {
+        "nombre": "rejected_issued_checks_journal_id",
+        "linea": 49
+      },
+      {
+        "nombre": "rejected_check_product_id",
+        "linea": 55
+      },
+      {
+        "nombre": "number",
+        "linea": 85
+      },
+      {
+        "nombre": "journal_id",
+        "linea": 86
+      },
+      {
+        "nombre": "journal_bank_id",
+        "linea": 92
+      },
+      {
+        "nombre": "bank_id",
+        "linea": 95
+      },
+      {
+        "nombre": "checkbook_format",
+        "linea": 96
+      },
+      {
+        "nombre": "type",
+        "linea": 104
+      },
+      {
+        "nombre": "internal_type",
+        "linea": 110
+      },
+      {
+        "nombre": "amount",
+        "linea": 116
+      },
+      {
+        "nombre": "issue_date",
+        "linea": 117
+      },
+      {
+        "nombre": "payment_date",
+        "linea": 118
+      },
+      {
+        "nombre": "crossed",
+        "linea": 121
+      },
+      {
+        "nombre": "not_order",
+        "linea": 122
+      },
+      {
+        "nombre": "clearing",
+        "linea": 123
+      },
+      {
+        "nombre": "origin",
+        "linea": 128
+      },
+      {
+        "nombre": "signatory",
+        "linea": 129
+      },
+      {
+        "nombre": "currency_id",
+        "linea": 130
+      },
+      {
+        "nombre": "currency_rate",
+        "linea": 136
+      },
+      {
+        "nombre": "amount_currency",
+        "linea": 142
+      },
+      {
+        "nombre": "company_id",
+        "linea": 147
+      },
+      {
+        "nombre": "reject_date",
+        "linea": 154
+      },
+      {
+        "nombre": "reject_move_id",
+        "linea": 155
+      },
+      {
+        "nombre": "cancel_date",
+        "linea": 158
+      },
+      {
+        "nombre": "cancel_move_id",
+        "linea": 159
+      },
+      {
+        "nombre": "expired_date",
+        "linea": 162
+      },
+      {
+        "nombre": "expired_move_id",
+        "linea": 163
+      },
+      {
+        "nombre": "issued_check_state",
+        "linea": 415
+      },
+      {
+        "nombre": "checkbook_id",
+        "linea": 429
+      },
+      {
+        "nombre": "receiving_partner_id",
+        "linea": 435
+      },
+      {
+        "nombre": "payment_move_id",
+        "linea": 438
+      },
+      {
+        "nombre": "payment_order_id",
+        "linea": 441
+      },
+      {
+        "nombre": "clearance_move_id",
+        "linea": 446
+      },
+      {
+        "nombre": "accredited",
+        "linea": 449
+      },
+      {
+        "nombre": "third_party_check_state",
+        "linea": 644
+      },
+      {
+        "nombre": "deposit_bank_id",
+        "linea": 659
+      },
+      {
+        "nombre": "source_payment_order_id",
+        "linea": 662
+      },
+      {
+        "nombre": "debit_note_id",
+        "linea": 668
+      },
+      {
+        "nombre": "source_partner_id",
+        "linea": 674
+      },
+      {
+        "nombre": "destiny_partner_id",
+        "linea": 680
+      },
+      {
+        "nombre": "deposit_move_id",
+        "linea": 683
+      },
+      {
+        "nombre": "deposit_journal_id",
+        "linea": 686
+      },
+      {
+        "nombre": "bank_branch",
+        "linea": 692
+      },
+      {
+        "nombre": "zip",
+        "linea": 693
+      },
+      {
+        "nombre": "reception_date",
+        "linea": 694
+      },
+      {
+        "nombre": "endorsement_date",
+        "linea": 695
+      },
+      {
+        "nombre": "deposit_date",
+        "linea": 696
+      },
+      {
+        "nombre": "signatory_vat",
+        "linea": 697
+      },
+      {
+        "nombre": "signatory_account",
+        "linea": 698
+      },
+      {
+        "nombre": "deposit_slip",
+        "linea": 699
+      },
+      {
+        "nombre": "dest",
+        "linea": 700
+      },
+      {
+        "nombre": "accredit_move_id",
+        "linea": 701
+      },
+      {
+        "nombre": "accredit_date",
+        "linea": 704
+      },
+      {
+        "nombre": "debit_note_id",
+        "linea": 705
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/account_fiscal_position.py",
+    "simbolos": [
+      {
+        "nombre": "AccountFiscalPosition",
+        "linea": 5
+      },
+      {
+        "nombre": "_check_denomination_not_m",
+        "linea": 62
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "supplier_denomination",
+        "linea": 9
+      },
+      {
+        "nombre": "afip_code",
+        "linea": 24
+      },
+      {
+        "nombre": "retention_ids",
+        "linea": 25
+      },
+      {
+        "nombre": "perception_ids",
+        "linea": 39
+      },
+      {
+        "nombre": "local",
+        "linea": 53
+      },
+      {
+        "nombre": "is_final_consumer",
+        "linea": 59
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/account_journal.py",
+    "simbolos": [
+      {
+        "nombre": "AccountJournal",
+        "linea": 11
+      },
+      {
+        "nombre": "get_default_warehouse",
+        "linea": 16
+      },
+      {
+        "nombre": "_get_company",
+        "linea": 20
+      },
+      {
+        "nombre": "_get_tax_id_domain",
+        "linea": 24
+      },
+      {
+        "nombre": "_check_image_type",
+        "linea": 234
+      },
+      {
+        "nombre": "_check_denomination_not_m",
+        "linea": 242
+      },
+      {
+        "nombre": "_compute_default_account_type",
+        "linea": 250
+      },
+      {
+        "nombre": "_compute_seq_number_next",
+        "linea": 269
+      },
+      {
+        "nombre": "_inverse_seq_number_next",
+        "linea": 280
+      },
+      {
+        "nombre": "_compute_cn_seq_number_next",
+        "linea": 290
+      },
+      {
+        "nombre": "_inverse_cn_seq_number_next",
+        "linea": 301
+      },
+      {
+        "nombre": "_compute_dn_seq_number_next",
+        "linea": 311
+      },
+      {
+        "nombre": "_inverse_dn_seq_number_next",
+        "linea": 322
+      },
+      {
+        "nombre": "_compute_fce_seq_number_next",
+        "linea": 332
+      },
+      {
+        "nombre": "_inverse_fce_seq_number_next",
+        "linea": 343
+      },
+      {
+        "nombre": "_compute_nce_seq_number_next",
+        "linea": 353
+      },
+      {
+        "nombre": "_inverse_nce_seq_number_next",
+        "linea": 364
+      },
+      {
+        "nombre": "_compute_nde_seq_number_next",
+        "linea": 374
+      },
+      {
+        "nombre": "_inverse_nde_seq_number_next",
+        "linea": 385
+      },
+      {
+        "nombre": "_check_no_more_than_one_pos_fce_per_company",
+        "linea": 393
+      },
+      {
+        "nombre": "get_pos_number",
+        "linea": 409
+      },
+      {
+        "nombre": "create",
+        "linea": 416
+      },
+      {
+        "nombre": "_default_outbound_payment_methods",
+        "linea": 429
+      },
+      {
+        "nombre": "create_pos_sequence",
+        "linea": 434
+      },
+      {
+        "nombre": "unlink",
+        "linea": 478
+      },
+      {
+        "nombre": "get_sequence_from_invoice",
+        "linea": 484
+      },
+      {
+        "nombre": "_get_concepts_from_account",
+        "linea": 500
+      },
+      {
+        "nombre": "check_applicable",
+        "linea": 535
+      },
+      {
+        "nombre": "_parse_move_lines",
+        "linea": 603
+      },
+      {
+        "nombre": "_compute_base_retention",
+        "linea": 632
+      },
+      {
+        "nombre": "_get_taxapps",
+        "linea": 843
+      },
+      {
+        "nombre": "_prepare_perception_vals",
+        "linea": 918
+      },
+      {
+        "nombre": "compute_perception",
+        "linea": 942
+      },
+      {
+        "nombre": "get_applicable_perceptions",
+        "linea": 1040
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "afip_code",
+        "linea": 46
+      },
+      {
+        "nombre": "code",
+        "linea": 51
+      },
+      {
+        "nombre": "denomination",
+        "linea": 58
+      },
+      {
+        "nombre": "fiscal_position_id",
+        "linea": 72
+      },
+      {
+        "nombre": "fiscal_position_ids",
+        "linea": 75
+      },
+      {
+        "nombre": "fiscal_type",
+        "linea": 82
+      },
+      {
+        "nombre": "image",
+        "linea": 89
+      },
+      {
+        "nombre": "image_filename",
+        "linea": 90
+      },
+      {
+        "nombre": "activity_start_date",
+        "linea": 91
+      },
+      {
+        "nombre": "warehouse_id",
+        "linea": 94
+      },
+      {
+        "nombre": "due_date",
+        "linea": 99
+      },
+      {
+        "nombre": "type",
+        "linea": 104
+      },
+      {
+        "nombre": "fcred_is_fce_emitter",
+        "linea": 126
+      },
+      {
+        "nombre": "suspense_account_id",
+        "linea": 127
+      },
+      {
+        "nombre": "tax_id",
+        "linea": 142
+      },
+      {
+        "nombre": "type_tax_use",
+        "linea": 146
+      },
+      {
+        "nombre": "state_id",
+        "linea": 151
+      },
+      {
+        "nombre": "priority",
+        "linea": 152
+      },
+      {
+        "nombre": "is_for_voucher_with_legend",
+        "linea": 153
+      },
+      {
+        "nombre": "sequence_id",
+        "linea": 154
+      },
+      {
+        "nombre": "sequence_number_next",
+        "linea": 161
+      },
+      {
+        "nombre": "cn_sequence_id",
+        "linea": 167
+      },
+      {
+        "nombre": "cn_sequence_number_next",
+        "linea": 174
+      },
+      {
+        "nombre": "dn_sequence_id",
+        "linea": 180
+      },
+      {
+        "nombre": "dn_sequence_number_next",
+        "linea": 187
+      },
+      {
+        "nombre": "fce_sequence_id",
+        "linea": 193
+      },
+      {
+        "nombre": "fce_sequence_number_next",
+        "linea": 200
+      },
+      {
+        "nombre": "nce_sequence_id",
+        "linea": 206
+      },
+      {
+        "nombre": "nce_sequence_number_next",
+        "linea": 213
+      },
+      {
+        "nombre": "nde_sequence_id",
+        "linea": 219
+      },
+      {
+        "nombre": "nde_sequence_number_next",
+        "linea": 226
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/account_mapping_fiscal_year_closing.py",
+    "simbolos": [
+      {
+        "nombre": "AccountMappingFiscalYearClosing",
+        "linea": 15
+      },
+      {
+        "nombre": "AccountMappingFiscalYearClosingLossProfit",
+        "linea": 37
+      },
+      {
+        "nombre": "AccountMappingFiscalYearClosingNetLossProfit",
+        "linea": 62
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "name",
+        "linea": 19
+      },
+      {
+        "nombre": "destination_account_id",
+        "linea": 20
+      },
+      {
+        "nombre": "fiscal_year_close_id",
+        "linea": 23
+      },
+      {
+        "nombre": "source_account_type_id",
+        "linea": 29
+      },
+      {
+        "nombre": "name",
+        "linea": 41
+      },
+      {
+        "nombre": "destination_account_id",
+        "linea": 42
+      },
+      {
+        "nombre": "fiscal_year_close_id",
+        "linea": 48
+      },
+      {
+        "nombre": "source_account_type_id",
+        "linea": 54
+      },
+      {
+        "nombre": "name",
+        "linea": 66
+      },
+      {
+        "nombre": "destination_account_id",
+        "linea": 67
+      },
+      {
+        "nombre": "fiscal_year_close_id",
+        "linea": 73
+      },
+      {
+        "nombre": "source_account_type_id",
+        "linea": 79
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/account_move.py",
+    "simbolos": [
+      {
+        "nombre": "AccountMove",
+        "linea": 21
+      },
+      {
+        "nombre": "_compute_perception_splits",
+        "linea": 209
+      },
+      {
+        "nombre": "_inverse_perception_splits",
+        "linea": 220
+      },
+      {
+        "nombre": "_recompute_dynamic_lines",
+        "linea": 354
+      },
+      {
+        "nombre": "_recompute_currency_rate_lines",
+        "linea": 426
+      },
+      {
+        "nombre": "_check_invoice_date_due_after_invoice",
+        "linea": 439
+      },
+      {
+        "nombre": "_check_denomination_not_m",
+        "linea": 453
+      },
+      {
+        "nombre": "_compute_name",
+        "linea": 461
+      },
+      {
+        "nombre": "_compute_move_denomination",
+        "linea": 474
+      },
+      {
+        "nombre": "_compute_amount_all_cur",
+        "linea": 504
+      },
+      {
+        "nombre": "_compute_show_same_currency_cancel",
+        "linea": 661
+      },
+      {
+        "nombre": "_compute_show_get_arca_currency_btn",
+        "linea": 678
+      },
+      {
+        "nombre": "get_highest_pos_sequence",
+        "linea": 690
+      },
+      {
+        "nombre": "_onchange_partner",
+        "linea": 722
+      },
+      {
+        "nombre": "_onchange_partner_id",
+        "linea": 754
+      },
+      {
+        "nombre": "_onchange_perception_ids",
+        "linea": 763
+      },
+      {
+        "nombre": "_onchange_currency_id",
+        "linea": 813
+      },
+      {
+        "nombre": "_onchange_currency_rate",
+        "linea": 846
+      },
+      {
+        "nombre": "_onchange_currency",
+        "linea": 854
+      },
+      {
+        "nombre": "_onchange_payment_term_date_invoice",
+        "linea": 861
+      },
+      {
+        "nombre": "_onchange_inform_period",
+        "linea": 875
+      },
+      {
+        "nombre": "_get_refund_common_fields",
+        "linea": 882
+      },
+      {
+        "nombre": "_prepare_tax_line_vals",
+        "linea": 887
+      },
+      {
+        "nombre": "_onchange_supplier_move_reference",
+        "linea": 937
+      },
+      {
+        "nombre": "_compute_voucher_type_domain",
+        "linea": 963
+      },
+      {
+        "nombre": "_set_cn_dn_is_FCE",
+        "linea": 983
+      },
+      {
+        "nombre": "_set_is_FCE",
+        "linea": 1000
+      },
+      {
+        "nombre": "_onchange_invoice_date",
+        "linea": 1006
+      },
+      {
+        "nombre": "_compute_amount_custom",
+        "linea": 1025
+      },
+      {
+        "nombre": "_set_perception_date",
+        "linea": 1062
+      },
+      {
+        "nombre": "_get_fce_prefix",
+        "linea": 1075
+      },
+      {
+        "nombre": "_report_xls_query_extra",
+        "linea": 1118
+      },
+      {
+        "nombre": "_post",
+        "linea": 1128
+      },
+      {
+        "nombre": "action_post",
+        "linea": 1150
+      },
+      {
+        "nombre": "validate_period",
+        "linea": 1170
+      },
+      {
+        "nombre": "_check_electronic_invoice_informed_before",
+        "linea": 1188
+      },
+      {
+        "nombre": "unlink",
+        "linea": 1197
+      },
+      {
+        "nombre": "_check_electronic_invoice_approved_before",
+        "linea": 1209
+      },
+      {
+        "nombre": "_mark_afip_send_pending",
+        "linea": 1225
+      },
+      {
+        "nombre": "_clear_afip_send_pending",
+        "linea": 1246
+      },
+      {
+        "nombre": "_get_pending_afip_invoice_name",
+        "linea": 1257
+      },
+      {
+        "nombre": "_parse_afip_result_date",
+        "linea": 1308
+      },
+      {
+        "nombre": "_recover_pending_afip_send",
+        "linea": 1320
+      },
+      {
+        "nombre": "_check_closed_journal_moves",
+        "linea": 1417
+      },
+      {
+        "nombre": "button_cancel",
+        "linea": 1434
+      },
+      {
+        "nombre": "button_draft",
+        "linea": 1447
+      },
+      {
+        "nombre": "validate_denomination",
+        "linea": 1460
+      },
+      {
+        "nombre": "_compute_show_reset_to_draft_button",
+        "linea": 1467
+      },
+      {
+        "nombre": "create",
+        "linea": 1481
+      },
+      {
+        "nombre": "copy",
+        "linea": 1497
+      },
+      {
+        "nombre": "action_register_payment",
+        "linea": 1517
+      },
+      {
+        "nombre": "_get_payment_order_vals",
+        "linea": 1555
+      },
+      {
+        "nombre": "_get_payment_order_journal",
+        "linea": 1624
+      },
+      {
+        "nombre": "_check_unique_sequence_number",
+        "linea": 1642
+      },
+      {
+        "nombre": "_compute_base_perception",
+        "linea": 1675
+      },
+      {
+        "nombre": "_reverse_move_vals",
+        "linea": 1721
+      },
+      {
+        "nombre": "_get_perceptions_ctx",
+        "linea": 1759
+      },
+      {
+        "nombre": "_is_historical_refund",
+        "linea": 1770
+      },
+      {
+        "nombre": "_is_untouched_mirror",
+        "linea": 1776
+      },
+      {
+        "nombre": "_get_reverse_perception_base",
+        "linea": 1798
+      },
+      {
+        "nombre": "_compute_reverse_perception_line_vals",
+        "linea": 1832
+      },
+      {
+        "nombre": "_perception_fingerprint",
+        "linea": 1921
+      },
+      {
+        "nombre": "_build_reverse_perception_lines",
+        "linea": 1940
+      },
+      {
+        "nombre": "compute_perceptions",
+        "linea": 1957
+      },
+      {
+        "nombre": "_recompute_tax_lines",
+        "linea": 2007
+      },
+      {
+        "nombre": "_generate_qr_afip_url",
+        "linea": 2037
+      },
+      {
+        "nombre": "_generate_qr",
+        "linea": 2066
+      },
+      {
+        "nombre": "get_qr_code",
+        "linea": 2078
+      },
+      {
+        "nombre": "_get_mail_template",
+        "linea": 2084
+      },
+      {
+        "nombre": "_get_name_invoice_report",
+        "linea": 2096
+      },
+      {
+        "nombre": "get_afip_logo_path",
+        "linea": 2112
+      },
+      {
+        "nombre": "get_afip_logo",
+        "linea": 2115
+      },
+      {
+        "nombre": "price_subtotal_to_PDF",
+        "linea": 2118
+      },
+      {
+        "nombre": "_get_ws_conf",
+        "linea": 2126
+      },
+      {
+        "nombre": "_check_fce_using_abc",
+        "linea": 2162
+      },
+      {
+        "nombre": "_check_fce_using_ws",
+        "linea": 2189
+      },
+      {
+        "nombre": "_check_must_be_fce",
+        "linea": 2213
+      },
+      {
+        "nombre": "_ensure_fce_values",
+        "linea": 2235
+      },
+      {
+        "nombre": "_create_ws_request",
+        "linea": 2329
+      },
+      {
+        "nombre": "_validate_electronic_invoices",
+        "linea": 2337
+      },
+      {
+        "nombre": "get_voucher_type",
+        "linea": 2399
+      },
+      {
+        "nombre": "get_pos",
+        "linea": 2403
+      },
+      {
+        "nombre": "get_currency_code",
+        "linea": 2413
+      },
+      {
+        "nombre": "wsfe_relate_invoice",
+        "linea": 2433
+      },
+      {
+        "nombre": "get_arca_currency_rate",
+        "linea": 2476
+      },
+      {
+        "nombre": "delete_all_requests",
+        "linea": 2513
+      },
+      {
+        "nombre": "_filter_exempt",
+        "linea": 1026
+      },
+      {
+        "nombre": "_filter_untaxed",
+        "linea": 1029
+      },
+      {
+        "nombre": "_filter_taxed",
+        "linea": 1032
+      },
+      {
+        "nombre": "_to_secondary",
+        "linea": 533
+      },
+      {
+        "nombre": "_to_secondary",
+        "linea": 597
+      },
+      {
+        "nombre": "_to_secondary",
+        "linea": 541
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "address_shipping_id",
+        "linea": 24
+      },
+      {
+        "nombre": "amount_exempt",
+        "linea": 31
+      },
+      {
+        "nombre": "amount_no_taxed",
+        "linea": 36
+      },
+      {
+        "nombre": "amount_taxed",
+        "linea": 41
+      },
+      {
+        "nombre": "created_from_rej_check",
+        "linea": 46
+      },
+      {
+        "nombre": "internal_number",
+        "linea": 47
+      },
+      {
+        "nombre": "is_opening",
+        "linea": 51
+      },
+      {
+        "nombre": "supplier_move_reference",
+        "linea": 52
+      },
+      {
+        "nombre": "associated_inv_ids",
+        "linea": 59
+      },
+      {
+        "nombre": "cae",
+        "linea": 68
+      },
+      {
+        "nombre": "cae_due_date",
+        "linea": 75
+      },
+      {
+        "nombre": "afip_send_pending",
+        "linea": 81
+      },
+      {
+        "nombre": "afip_pending_pos_ar",
+        "linea": 86
+      },
+      {
+        "nombre": "afip_pending_voucher_type",
+        "linea": 91
+      },
+      {
+        "nombre": "afip_pending_voucher_number",
+        "linea": 96
+      },
+      {
+        "nombre": "denomination",
+        "linea": 101
+      },
+      {
+        "nombre": "fiscal_type",
+        "linea": 116
+      },
+      {
+        "nombre": "inform_cbu",
+        "linea": 124
+      },
+      {
+        "nombre": "inform_period",
+        "linea": 125
+      },
+      {
+        "nombre": "inform_period_date_from",
+        "linea": 126
+      },
+      {
+        "nombre": "inform_period_date_to",
+        "linea": 127
+      },
+      {
+        "nombre": "is_debit_note",
+        "linea": 128
+      },
+      {
+        "nombre": "local",
+        "linea": 129
+      },
+      {
+        "nombre": "voucher_type_id",
+        "linea": 130
+      },
+      {
+        "nombre": "voucher_type_domain",
+        "linea": 136
+      },
+      {
+        "nombre": "is_FCE_invoice",
+        "linea": 138
+      },
+      {
+        "nombre": "optional_ids",
+        "linea": 143
+      },
+      {
+        "nombre": "dst_cuit_id",
+        "linea": 149
+      },
+      {
+        "nombre": "dst_country_id",
+        "linea": 150
+      },
+      {
+        "nombre": "export_type_id",
+        "linea": 151
+      },
+      {
+        "nombre": "shipping_perm_ids",
+        "linea": 152
+      },
+      {
+        "nombre": "iva_digital_operation_code",
+        "linea": 158
+      },
+      {
+        "nombre": "ws_request_ids",
+        "linea": 174
+      },
+      {
+        "nombre": "disable_perceptions",
+        "linea": 180
+      },
+      {
+        "nombre": "perception_ids",
+        "linea": 181
+      },
+      {
+        "nombre": "perception_general_ids",
+        "linea": 189
+      },
+      {
+        "nombre": "perception_customs_ids",
+        "linea": 198
+      },
+      {
+        "nombre": "company_currency_id",
+        "linea": 229
+      },
+      {
+        "nombre": "currency_converted",
+        "linea": 234
+      },
+      {
+        "nombre": "currency_preciated",
+        "linea": 240
+      },
+      {
+        "nombre": "currency_rate",
+        "linea": 245
+      },
+      {
+        "nombre": "is_multi_currency",
+        "linea": 253
+      },
+      {
+        "nombre": "same_currency_cancel",
+        "linea": 259
+      },
+      {
+        "nombre": "secondary_currency_id",
+        "linea": 260
+      },
+      {
+        "nombre": "secondary_currency_rate",
+        "linea": 267
+      },
+      {
+        "nombre": "show_get_arca_currency_btn",
+        "linea": 275
+      },
+      {
+        "nombre": "show_same_currency_cancel",
+        "linea": 278
+      },
+      {
+        "nombre": "amount_exempt_cur",
+        "linea": 282
+      },
+      {
+        "nombre": "amount_fob_cur",
+        "linea": 289
+      },
+      {
+        "nombre": "amount_no_taxed_cur",
+        "linea": 296
+      },
+      {
+        "nombre": "amount_perception_curr",
+        "linea": 303
+      },
+      {
+        "nombre": "amount_customs_curr",
+        "linea": 310
+      },
+      {
+        "nombre": "amount_tax_cur",
+        "linea": 317
+      },
+      {
+        "nombre": "amount_taxed_cur",
+        "linea": 324
+      },
+      {
+        "nombre": "amount_total_cur",
+        "linea": 331
+      },
+      {
+        "nombre": "amount_untaxed_cur",
+        "linea": 338
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/account_move_line.py",
+    "simbolos": [
+      {
+        "nombre": "AccountMoveLine",
+        "linea": 8
+      },
+      {
+        "nombre": "_compute_counterpart",
+        "linea": 33
+      },
+      {
+        "nombre": "_compute_all_vat_taxes",
+        "linea": 43
+      },
+      {
+        "nombre": "_get_computed_price_unit",
+        "linea": 112
+      },
+      {
+        "nombre": "_get_price_total_and_subtotal",
+        "linea": 118
+      },
+      {
+        "nombre": "_get_fields_onchange_subtotal",
+        "linea": 144
+      },
+      {
+        "nombre": "_get_fields_onchange_balance",
+        "linea": 165
+      },
+      {
+        "nombre": "_onchange_amount_currency",
+        "linea": 191
+      },
+      {
+        "nombre": "price_unit_to_PDF",
+        "linea": 197
+      },
+      {
+        "nombre": "price_subtotal_to_PDF",
+        "linea": 210
+      },
+      {
+        "nombre": "get_iva_tax",
+        "linea": 223
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "issued_check_id",
+        "linea": 11
+      },
+      {
+        "nombre": "counterpart",
+        "linea": 16
+      },
+      {
+        "nombre": "currency_rate",
+        "linea": 22
+      },
+      {
+        "nombre": "amount_currency_cur",
+        "linea": 28
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/account_move_optionals.py",
+    "simbolos": [
+      {
+        "nombre": "AccountMoveOptional",
+        "linea": 9
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "code",
+        "linea": 13
+      },
+      {
+        "nombre": "invoice_id",
+        "linea": 14
+      },
+      {
+        "nombre": "optional_id",
+        "linea": 15
+      },
+      {
+        "nombre": "value",
+        "linea": 16
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/account_payment_method.py",
+    "simbolos": [
+      {
+        "nombre": "AccountPaymentMethod",
+        "linea": 4
+      },
+      {
+        "nombre": "AccountPaymentMethodLine",
+        "linea": 21
+      },
+      {
+        "nombre": "_get_payment_method_information",
+        "linea": 8
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "number",
+        "linea": 24
+      },
+      {
+        "nombre": "type",
+        "linea": 25
+      },
+      {
+        "nombre": "format",
+        "linea": 29
+      },
+      {
+        "nombre": "bank_account_id",
+        "linea": 37
+      },
+      {
+        "nombre": "bank_id",
+        "linea": 42
+      },
+      {
+        "nombre": "account_check_id",
+        "linea": 45
+      },
+      {
+        "nombre": "draft_issued_check_ids",
+        "linea": 51
+      },
+      {
+        "nombre": "cancelled_issued_check_ids",
+        "linea": 60
+      },
+      {
+        "nombre": "issued_check_ids",
+        "linea": 69
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/account_payment_order.py",
+    "simbolos": [
+      {
+        "nombre": "AccountPaymentOrder",
+        "linea": 15
+      },
+      {
+        "nombre": "AccountPaymentOrderLine",
+        "linea": 2070
+      },
+      {
+        "nombre": "AccountPaymentModeLine",
+        "linea": 2264
+      },
+      {
+        "nombre": "AccountPaymentOrderRetentionLine",
+        "linea": 2358
+      },
+      {
+        "nombre": "RetentionMoveLine",
+        "linea": 2788
+      },
+      {
+        "nombre": "AccountPaymentOrderConceptLine",
+        "linea": 2806
+      },
+      {
+        "nombre": "AccountPaymentOrderIssuedCheckLine",
+        "linea": 2845
+      },
+      {
+        "nombre": "_creation_message",
+        "linea": 22
+      },
+      {
+        "nombre": "name_get",
+        "linea": 38
+      },
+      {
+        "nombre": "fields_view_get",
+        "linea": 46
+      },
+      {
+        "nombre": "default_get",
+        "linea": 73
+      },
+      {
+        "nombre": "_compute_journal_id_domain",
+        "linea": 398
+      },
+      {
+        "nombre": "payment_order_amount_hook",
+        "linea": 405
+      },
+      {
+        "nombre": "get_payment_lines_amount",
+        "linea": 423
+      },
+      {
+        "nombre": "get_issued_checks_amount",
+        "linea": 426
+      },
+      {
+        "nombre": "get_third_party_checks_amount",
+        "linea": 429
+      },
+      {
+        "nombre": "get_third_party_check_receipts_amount",
+        "linea": 432
+      },
+      {
+        "nombre": "get_retentions_amount",
+        "linea": 435
+      },
+      {
+        "nombre": "get_concept_lines_amount",
+        "linea": 438
+      },
+      {
+        "nombre": "_compute_amount",
+        "linea": 448
+      },
+      {
+        "nombre": "onchange_checks",
+        "linea": 457
+      },
+      {
+        "nombre": "compute_advance_payment_retentions",
+        "linea": 462
+      },
+      {
+        "nombre": "_prepare_advanced_payment_retention",
+        "linea": 534
+      },
+      {
+        "nombre": "recompute_voucher_lines",
+        "linea": 557
+      },
+      {
+        "nombre": "calculate_retentions",
+        "linea": 573
+      },
+      {
+        "nombre": "calculate_single_retention",
+        "linea": 611
+      },
+      {
+        "nombre": "_check_previous_retentions",
+        "linea": 818
+      },
+      {
+        "nombre": "action_clean_lines",
+        "linea": 855
+      },
+      {
+        "nombre": "_onchange_journal_id",
+        "linea": 870
+      },
+      {
+        "nombre": "_payment_rate",
+        "linea": 875
+      },
+      {
+        "nombre": "_compute_invoice_ids",
+        "linea": 889
+      },
+      {
+        "nombre": "_compute_default_journal_currency",
+        "linea": 896
+      },
+      {
+        "nombre": "_compute_writeoff_amount",
+        "linea": 905
+      },
+      {
+        "nombre": "_get_writeoff_amount_hook",
+        "linea": 911
+      },
+      {
+        "nombre": "_compute_is_multicurrency",
+        "linea": 924
+      },
+      {
+        "nombre": "onchange_partner_id",
+        "linea": 929
+      },
+      {
+        "nombre": "onchange_debt_lines",
+        "linea": 949
+      },
+      {
+        "nombre": "onchange_income_lines",
+        "linea": 953
+      },
+      {
+        "nombre": "unlink",
+        "linea": 956
+      },
+      {
+        "nombre": "_check_retentions_unlinkable",
+        "linea": 972
+      },
+      {
+        "nombre": "_check_partner_set",
+        "linea": 989
+      },
+      {
+        "nombre": "update_o2m",
+        "linea": 998
+      },
+      {
+        "nombre": "_get_lines_common_domain",
+        "linea": 1010
+      },
+      {
+        "nombre": "gather_income_lines",
+        "linea": 1027
+      },
+      {
+        "nombre": "gather_debt_lines",
+        "linea": 1037
+      },
+      {
+        "nombre": "doesnt_have_residual",
+        "linea": 1047
+      },
+      {
+        "nombre": "_prepare_income_debt_lines",
+        "linea": 1057
+      },
+      {
+        "nombre": "recompute_payment_lines",
+        "linea": 1083
+      },
+      {
+        "nombre": "onchange_lines",
+        "linea": 1178
+      },
+      {
+        "nombre": "get_next_sequence",
+        "linea": 1201
+      },
+      {
+        "nombre": "proforma_voucher",
+        "linea": 1211
+      },
+      {
+        "nombre": "_get_income_amount",
+        "linea": 1255
+      },
+      {
+        "nombre": "_clean_payment_lines",
+        "linea": 1259
+      },
+      {
+        "nombre": "action_move_line_create",
+        "linea": 1265
+      },
+      {
+        "nombre": "_get_company_currency",
+        "linea": 1346
+      },
+      {
+        "nombre": "_get_current_currency",
+        "linea": 1356
+      },
+      {
+        "nombre": "account_move_get",
+        "linea": 1366
+      },
+      {
+        "nombre": "prepare_retention_values",
+        "linea": 1406
+      },
+      {
+        "nombre": "create_move_line_hook",
+        "linea": 1413
+      },
+      {
+        "nombre": "validate_retentions_sequence",
+        "linea": 1477
+      },
+      {
+        "nombre": "_create_move_line_payment",
+        "linea": 1490
+      },
+      {
+        "nombre": "create_move_lines",
+        "linea": 1537
+      },
+      {
+        "nombre": "first_move_line_get",
+        "linea": 1614
+      },
+      {
+        "nombre": "_convert_amount",
+        "linea": 1667
+      },
+      {
+        "nombre": "_get_exchange_lines",
+        "linea": 1670
+      },
+      {
+        "nombre": "voucher_move_line_create",
+        "linea": 1741
+      },
+      {
+        "nombre": "writeoff_move_line_get",
+        "linea": 1861
+      },
+      {
+        "nombre": "cancel_voucher",
+        "linea": 1910
+      },
+      {
+        "nombre": "action_cancel_draft",
+        "linea": 1941
+      },
+      {
+        "nombre": "is_payment",
+        "linea": 1949
+      },
+      {
+        "nombre": "is_receipt",
+        "linea": 1952
+      },
+      {
+        "nombre": "render_report",
+        "linea": 1955
+      },
+      {
+        "nombre": "send_email",
+        "linea": 1970
+      },
+      {
+        "nombre": "_check_voucher_not_duplicated",
+        "linea": 2168
+      },
+      {
+        "nombre": "onchange_amount",
+        "linea": 2182
+      },
+      {
+        "nombre": "onchange_amount_currency",
+        "linea": 2193
+      },
+      {
+        "nombre": "_compute_balance",
+        "linea": 2202
+      },
+      {
+        "nombre": "_compute_currency_id",
+        "linea": 2214
+      },
+      {
+        "nombre": "amount_full_conciliation",
+        "linea": 2225
+      },
+      {
+        "nombre": "_check_amount_over_original",
+        "linea": 2244
+      },
+      {
+        "nombre": "_check_amount",
+        "linea": 2259
+      },
+      {
+        "nombre": "_compute_currency_id",
+        "linea": 2309
+      },
+      {
+        "nombre": "onchange_currency_id",
+        "linea": 2313
+      },
+      {
+        "nombre": "onchange_payment_mode_id",
+        "linea": 2325
+      },
+      {
+        "nombre": "onchange_amount",
+        "linea": 2330
+      },
+      {
+        "nombre": "onchange_amount_currency",
+        "linea": 2341
+      },
+      {
+        "nombre": "_get_company_currency",
+        "linea": 2350
+      },
+      {
+        "nombre": "default_retention_move_lines",
+        "linea": 2362
+      },
+      {
+        "nombre": "_compute_concept_id",
+        "linea": 2521
+      },
+      {
+        "nombre": "create_retention_lines",
+        "linea": 2528
+      },
+      {
+        "nombre": "get_current_month_moves",
+        "linea": 2607
+      },
+      {
+        "nombre": "_compute_total_retention_move_lines",
+        "linea": 2624
+      },
+      {
+        "nombre": "_compute_total_month_retention",
+        "linea": 2635
+      },
+      {
+        "nombre": "_compute_month_applied_retentions",
+        "linea": 2647
+      },
+      {
+        "nombre": "_compute_actual_payment_retention",
+        "linea": 2664
+      },
+      {
+        "nombre": "_compute_amount_currency",
+        "linea": 2671
+      },
+      {
+        "nombre": "_compute_base_currency",
+        "linea": 2676
+      },
+      {
+        "nombre": "onchange_retention_id",
+        "linea": 2681
+      },
+      {
+        "nombre": "is_profit_retention",
+        "linea": 2693
+      },
+      {
+        "nombre": "create_voucher_move_line",
+        "linea": 2696
+      },
+      {
+        "nombre": "apply_retention_sequence",
+        "linea": 2755
+      },
+      {
+        "nombre": "get_readeable_name",
+        "linea": 2769
+      },
+      {
+        "nombre": "unlink",
+        "linea": 2779
+      },
+      {
+        "nombre": "change_journal_id",
+        "linea": 2832
+      },
+      {
+        "nombre": "change_account_id",
+        "linea": 2837
+      },
+      {
+        "nombre": "_onchange_checkbook_id",
+        "linea": 2895
+      },
+      {
+        "nombre": "_onchange_issue_date",
+        "linea": 2902
+      },
+      {
+        "nombre": "create",
+        "linea": 2909
+      },
+      {
+        "nombre": "write",
+        "linea": 2915
+      },
+      {
+        "nombre": "unlink",
+        "linea": 2922
+      },
+      {
+        "nombre": "prepare_line_vals",
+        "linea": 2931
+      },
+      {
+        "nombre": "clear_check_vals",
+        "linea": 2945
+      },
+      {
+        "nombre": "_filter_po_line_applicable",
+        "linea": 612
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "number",
+        "linea": 126
+      },
+      {
+        "nombre": "name",
+        "linea": 127
+      },
+      {
+        "nombre": "narration",
+        "linea": 128
+      },
+      {
+        "nombre": "partner_id",
+        "linea": 129
+      },
+      {
+        "nombre": "account_id",
+        "linea": 134
+      },
+      {
+        "nombre": "pay_now",
+        "linea": 138
+      },
+      {
+        "nombre": "reference",
+        "linea": 146
+      },
+      {
+        "nombre": "journal_id",
+        "linea": 147
+      },
+      {
+        "nombre": "journal_id_domain",
+        "linea": 153
+      },
+      {
+        "nombre": "move_id",
+        "linea": 156
+      },
+      {
+        "nombre": "move_line_ids",
+        "linea": 162
+      },
+      {
+        "nombre": "date",
+        "linea": 167
+      },
+      {
+        "nombre": "date_due",
+        "linea": 177
+      },
+      {
+        "nombre": "state",
+        "linea": 178
+      },
+      {
+        "nombre": "currency_id",
+        "linea": 189
+      },
+      {
+        "nombre": "amount",
+        "linea": 194
+      },
+      {
+        "nombre": "writeoff_acc_id",
+        "linea": 200
+      },
+      {
+        "nombre": "comment",
+        "linea": 204
+      },
+      {
+        "nombre": "analytic_id",
+        "linea": 209
+      },
+      {
+        "nombre": "writeoff_amount",
+        "linea": 213
+      },
+      {
+        "nombre": "type",
+        "linea": 220
+      },
+      {
+        "nombre": "tax_id",
+        "linea": 229
+      },
+      {
+        "nombre": "payment_option",
+        "linea": 236
+      },
+      {
+        "nombre": "company_id",
+        "linea": 250
+      },
+      {
+        "nombre": "company_currency",
+        "linea": 256
+      },
+      {
+        "nombre": "pre_line",
+        "linea": 259
+      },
+      {
+        "nombre": "payment_mode_line_ids",
+        "linea": 260
+      },
+      {
+        "nombre": "line_ids",
+        "linea": 269
+      },
+      {
+        "nombre": "income_line_ids",
+        "linea": 274
+      },
+      {
+        "nombre": "debt_line_ids",
+        "linea": 285
+      },
+      {
+        "nombre": "payment_rate",
+        "linea": 296
+      },
+      {
+        "nombre": "is_multi_currency",
+        "linea": 306
+      },
+      {
+        "nombre": "invoice_ids",
+        "linea": 312
+      },
+      {
+        "nombre": "message",
+        "linea": 318
+      },
+      {
+        "nombre": "issued_check_ids",
+        "linea": 320
+      },
+      {
+        "nombre": "issued_check_line_ids",
+        "linea": 331
+      },
+      {
+        "nombre": "third_party_check_receipt_ids",
+        "linea": 340
+      },
+      {
+        "nombre": "third_party_check_ids",
+        "linea": 351
+      },
+      {
+        "nombre": "retention_ids",
+        "linea": 363
+      },
+      {
+        "nombre": "date_effective",
+        "linea": 372
+      },
+      {
+        "nombre": "receipt_number",
+        "linea": 377
+      },
+      {
+        "nombre": "disable_retentions",
+        "linea": 382
+      },
+      {
+        "nombre": "concept_line_ids",
+        "linea": 388
+      },
+      {
+        "nombre": "other_payment",
+        "linea": 393
+      },
+      {
+        "nombre": "employee_id",
+        "linea": 394
+      },
+      {
+        "nombre": "employee_payment",
+        "linea": 395
+      },
+      {
+        "nombre": "name",
+        "linea": 2075
+      },
+      {
+        "nombre": "payment_order_id",
+        "linea": 2076
+      },
+      {
+        "nombre": "account_id",
+        "linea": 2081
+      },
+      {
+        "nombre": "partner_id",
+        "linea": 2085
+      },
+      {
+        "nombre": "untax_amount",
+        "linea": 2090
+      },
+      {
+        "nombre": "amount",
+        "linea": 2091
+      },
+      {
+        "nombre": "reconcile",
+        "linea": 2092
+      },
+      {
+        "nombre": "type",
+        "linea": 2093
+      },
+      {
+        "nombre": "move_line_id",
+        "linea": 2097
+      },
+      {
+        "nombre": "date_original",
+        "linea": 2100
+      },
+      {
+        "nombre": "account_analytic_id",
+        "linea": 2103
+      },
+      {
+        "nombre": "date_due",
+        "linea": 2106
+      },
+      {
+        "nombre": "amount_original",
+        "linea": 2109
+      },
+      {
+        "nombre": "amount_unreconciled",
+        "linea": 2115
+      },
+      {
+        "nombre": "amount_currency",
+        "linea": 2121
+      },
+      {
+        "nombre": "amount_original_currency",
+        "linea": 2122
+      },
+      {
+        "nombre": "amount_unreconciled_currency",
+        "linea": 2128
+      },
+      {
+        "nombre": "company_id",
+        "linea": 2134
+      },
+      {
+        "nombre": "currency_id",
+        "linea": 2141
+      },
+      {
+        "nombre": "original_currency_id",
+        "linea": 2147
+      },
+      {
+        "nombre": "invoice_id",
+        "linea": 2153
+      },
+      {
+        "nombre": "move_invoice_id",
+        "linea": 2158
+      },
+      {
+        "nombre": "state",
+        "linea": 2161
+      },
+      {
+        "nombre": "ref",
+        "linea": 2164
+      },
+      {
+        "nombre": "voucher_type_id",
+        "linea": 2165
+      },
+      {
+        "nombre": "name",
+        "linea": 2268
+      },
+      {
+        "nombre": "payment_order_id",
+        "linea": 2269
+      },
+      {
+        "nombre": "payment_mode_id",
+        "linea": 2272
+      },
+      {
+        "nombre": "amount",
+        "linea": 2275
+      },
+      {
+        "nombre": "amount_currency",
+        "linea": 2282
+      },
+      {
+        "nombre": "currency_id",
+        "linea": 2288
+      },
+      {
+        "nombre": "company_currency",
+        "linea": 2293
+      },
+      {
+        "nombre": "date",
+        "linea": 2299
+      },
+      {
+        "nombre": "name",
+        "linea": 2370
+      },
+      {
+        "nombre": "date",
+        "linea": 2371
+      },
+      {
+        "nombre": "payment_order_id",
+        "linea": 2372
+      },
+      {
+        "nombre": "currency_id",
+        "linea": 2377
+      },
+      {
+        "nombre": "currency_rate",
+        "linea": 2378
+      },
+      {
+        "nombre": "voucher_number",
+        "linea": 2379
+      },
+      {
+        "nombre": "account_id",
+        "linea": 2380
+      },
+      {
+        "nombre": "base",
+        "linea": 2388
+      },
+      {
+        "nombre": "amount",
+        "linea": 2389
+      },
+      {
+        "nombre": "base_currency",
+        "linea": 2390
+      },
+      {
+        "nombre": "amount_currency",
+        "linea": 2395
+      },
+      {
+        "nombre": "retention_id",
+        "linea": 2400
+      },
+      {
+        "nombre": "retention_type",
+        "linea": 2408
+      },
+      {
+        "nombre": "base_amount",
+        "linea": 2412
+      },
+      {
+        "nombre": "tax_amount",
+        "linea": 2416
+      },
+      {
+        "nombre": "company_id",
+        "linea": 2420
+      },
+      {
+        "nombre": "partner_id",
+        "linea": 2426
+      },
+      {
+        "nombre": "vat",
+        "linea": 2431
+      },
+      {
+        "nombre": "certificate_no",
+        "linea": 2436
+      },
+      {
+        "nombre": "state_id",
+        "linea": 2441
+      },
+      {
+        "nombre": "move_line_ids",
+        "linea": 2445
+      },
+      {
+        "nombre": "invoice_id",
+        "linea": 2452
+      },
+      {
+        "nombre": "invoice_ref",
+        "linea": 2453
+      },
+      {
+        "nombre": "taxapp_id",
+        "linea": 2454
+      },
+      {
+        "nombre": "reg_code",
+        "linea": 2457
+      },
+      {
+        "nombre": "date_applied",
+        "linea": 2458
+      },
+      {
+        "nombre": "manual",
+        "linea": 2462
+      },
+      {
+        "nombre": "excluded_percent",
+        "linea": 2463
+      },
+      {
+        "nombre": "exclusion_date_certificate",
+        "linea": 2464
+      },
+      {
+        "nombre": "unlinkable",
+        "linea": 2467
+      },
+      {
+        "nombre": "retention_move_line_ids",
+        "linea": 2468
+      },
+      {
+        "nombre": "retention_move_lines_total",
+        "linea": 2475
+      },
+      {
+        "nombre": "require_concept",
+        "linea": 2480
+      },
+      {
+        "nombre": "concept_id",
+        "linea": 2487
+      },
+      {
+        "nombre": "concept_amount",
+        "linea": 2494
+      },
+      {
+        "nombre": "applied_aliquot",
+        "linea": 2499
+      },
+      {
+        "nombre": "total_month_retention",
+        "linea": 2504
+      },
+      {
+        "nombre": "month_applied_retentions",
+        "linea": 2509
+      },
+      {
+        "nombre": "actual_payment_retention",
+        "linea": 2514
+      },
+      {
+        "nombre": "payment_order_line_id",
+        "linea": 2792
+      },
+      {
+        "nombre": "move_id",
+        "linea": 2797
+      },
+      {
+        "nombre": "move_type",
+        "linea": 2798
+      },
+      {
+        "nombre": "move_name",
+        "linea": 2799
+      },
+      {
+        "nombre": "total_without_vat",
+        "linea": 2802
+      },
+      {
+        "nombre": "payment_order_reference",
+        "linea": 2803
+      },
+      {
+        "nombre": "name",
+        "linea": 2810
+      },
+      {
+        "nombre": "journal_id",
+        "linea": 2811
+      },
+      {
+        "nombre": "account_id",
+        "linea": 2815
+      },
+      {
+        "nombre": "payment_order_id",
+        "linea": 2818
+      },
+      {
+        "nombre": "amount",
+        "linea": 2822
+      },
+      {
+        "nombre": "account_analytic_id",
+        "linea": 2826
+      },
+      {
+        "nombre": "payment_order_id",
+        "linea": 2849
+      },
+      {
+        "nombre": "journal_id",
+        "linea": 2850
+      },
+      {
+        "nombre": "checkbook_id",
+        "linea": 2855
+      },
+      {
+        "nombre": "issued_check_id",
+        "linea": 2860
+      },
+      {
+        "nombre": "bank_id",
+        "linea": 2865
+      },
+      {
+        "nombre": "type",
+        "linea": 2870
+      },
+      {
+        "nombre": "checkbook_format",
+        "linea": 2871
+      },
+      {
+        "nombre": "amount",
+        "linea": 2874
+      },
+      {
+        "nombre": "issue_date",
+        "linea": 2875
+      },
+      {
+        "nombre": "payment_date",
+        "linea": 2876
+      },
+      {
+        "nombre": "clearing",
+        "linea": 2880
+      },
+      {
+        "nombre": "origin",
+        "linea": 2885
+      },
+      {
+        "nombre": "signatory",
+        "linea": 2886
+      },
+      {
+        "nombre": "crossed",
+        "linea": 2887
+      },
+      {
+        "nombre": "not_order",
+        "linea": 2888
+      },
+      {
+        "nombre": "amount_currency",
+        "linea": 2889
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/account_tax.py",
+    "simbolos": [
+      {
+        "nombre": "create_diff_html",
+        "linea": 10
+      },
+      {
+        "nombre": "AccountTax",
+        "linea": 20
+      },
+      {
+        "nombre": "_check_syntax_python_code",
+        "linea": 146
+      },
+      {
+        "nombre": "get_taxpayer_type",
+        "linea": 166
+      },
+      {
+        "nombre": "_get_eval_code_context",
+        "linea": 215
+      },
+      {
+        "nombre": "_prepare_vals_from_origin",
+        "linea": 238
+      },
+      {
+        "nombre": "_get_associated_percentage",
+        "linea": 251
+      },
+      {
+        "nombre": "_get_taxapps_from_code",
+        "linea": 278
+      },
+      {
+        "nombre": "get_grouping_key",
+        "linea": 344
+      },
+      {
+        "nombre": "compute_all",
+        "linea": 358
+      },
+      {
+        "nombre": "get_perception_account",
+        "linea": 391
+      },
+      {
+        "nombre": "get_retention_account",
+        "linea": 410
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "afip_code",
+        "linea": 24
+      },
+      {
+        "nombre": "check_sit_iibb",
+        "linea": 25
+      },
+      {
+        "nombre": "is_bank_settlement",
+        "linea": 31
+      },
+      {
+        "nombre": "always_apply_padron",
+        "linea": 32
+      },
+      {
+        "nombre": "jurisdiccion",
+        "linea": 38
+      },
+      {
+        "nombre": "state_id",
+        "linea": 47
+      },
+      {
+        "nombre": "applicable_state",
+        "linea": 52
+      },
+      {
+        "nombre": "from_register_ARBA",
+        "linea": 65
+      },
+      {
+        "nombre": "inform_arba",
+        "linea": 66
+      },
+      {
+        "nombre": "inform_arciba",
+        "linea": 67
+      },
+      {
+        "nombre": "from_register_AGIP",
+        "linea": 71
+      },
+      {
+        "nombre": "retention_type",
+        "linea": 72
+      },
+      {
+        "nombre": "vat_application_ids",
+        "linea": 83
+      },
+      {
+        "nombre": "profit_application_ids",
+        "linea": 89
+      },
+      {
+        "nombre": "gi_application_ids",
+        "linea": 95
+      },
+      {
+        "nombre": "sequence_to_use",
+        "linea": 101
+      },
+      {
+        "nombre": "general_resolution",
+        "linea": 104
+      },
+      {
+        "nombre": "notes",
+        "linea": 105
+      },
+      {
+        "nombre": "tax_group_name",
+        "linea": 106
+      },
+      {
+        "nombre": "is_exempt",
+        "linea": 109
+      },
+      {
+        "nombre": "perc_vat_application_ids",
+        "linea": 115
+      },
+      {
+        "nombre": "perc_profit_application_ids",
+        "linea": 121
+      },
+      {
+        "nombre": "perc_gi_application_ids",
+        "linea": 127
+      },
+      {
+        "nombre": "apply_custom_code",
+        "linea": 133
+      },
+      {
+        "nombre": "python_code",
+        "linea": 134
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/account_tax_group.py",
+    "simbolos": [
+      {
+        "nombre": "AccountTaxGroup",
+        "linea": 4
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "group_type",
+        "linea": 7
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/arba_a122r.py",
+    "simbolos": [
+      {
+        "nombre": "ResCompanyArbaA122rActivity",
+        "linea": 31
+      },
+      {
+        "nombre": "ArbaA122rDj",
+        "linea": 94
+      },
+      {
+        "nombre": "ArbaA122rRequestLog",
+        "linea": 437
+      },
+      {
+        "nombre": "ArbaA122rComprobanteHistory",
+        "linea": 464
+      },
+      {
+        "nombre": "ArbaA122rRetentionRecord",
+        "linea": 558
+      },
+      {
+        "nombre": "ResCompany",
+        "linea": 706
+      },
+      {
+        "nombre": "ArbaA122rService",
+        "linea": 870
+      },
+      {
+        "nombre": "AccountPaymentOrder",
+        "linea": 2237
+      },
+      {
+        "nombre": "AccountPaymentOrderRetentionLine",
+        "linea": 2368
+      },
+      {
+        "nombre": "IrActionsReport",
+        "linea": 2602
+      },
+      {
+        "nombre": "_check_single_default",
+        "linea": 55
+      },
+      {
+        "nombre": "_onchange_is_default",
+        "linea": 74
+      },
+      {
+        "nombre": "name_get",
+        "linea": 81
+      },
+      {
+        "nombre": "name_get",
+        "linea": 151
+      },
+      {
+        "nombre": "_sanitize_company_cuit",
+        "linea": 175
+      },
+      {
+        "nombre": "_onchange_company_id_defaults",
+        "linea": 184
+      },
+      {
+        "nombre": "_onchange_activity_line_id",
+        "linea": 201
+      },
+      {
+        "nombre": "_find_company_activity_line",
+        "linea": 207
+      },
+      {
+        "nombre": "_check_company_activity",
+        "linea": 215
+      },
+      {
+        "nombre": "create",
+        "linea": 255
+      },
+      {
+        "nombre": "_get_period_date_range",
+        "linea": 284
+      },
+      {
+        "nombre": "_get_period_retention_domain",
+        "linea": 303
+      },
+      {
+        "nombre": "_get_period_retention_record_domain",
+        "linea": 315
+      },
+      {
+        "nombre": "_compute_retention_counts",
+        "linea": 326
+      },
+      {
+        "nombre": "action_view_period_retentions",
+        "linea": 342
+      },
+      {
+        "nombre": "action_view_period_informed_retentions",
+        "linea": 353
+      },
+      {
+        "nombre": "action_view_period_informed_records",
+        "linea": 365
+      },
+      {
+        "nombre": "action_mark_closed",
+        "linea": 391
+      },
+      {
+        "nombre": "action_mark_open",
+        "linea": 401
+      },
+      {
+        "nombre": "action_open_remote_dj",
+        "linea": 411
+      },
+      {
+        "nombre": "action_arba_download_pdf",
+        "linea": 505
+      },
+      {
+        "nombre": "_compute_name",
+        "linea": 664
+      },
+      {
+        "nombre": "action_open_current_line",
+        "linea": 675
+      },
+      {
+        "nombre": "action_arba_download_pdf",
+        "linea": 692
+      },
+      {
+        "nombre": "action_arba_a122r_test_connection",
+        "linea": 762
+      },
+      {
+        "nombre": "_check_arba_a122r_sucursal",
+        "linea": 779
+      },
+      {
+        "nombre": "_onchange_arba_a122r_mode",
+        "linea": 790
+      },
+      {
+        "nombre": "_check_arba_a122r_default_activity",
+        "linea": 801
+      },
+      {
+        "nombre": "_get_default_arba_a122r_activity_code",
+        "linea": 823
+      },
+      {
+        "nombre": "create",
+        "linea": 835
+      },
+      {
+        "nombre": "write",
+        "linea": 840
+      },
+      {
+        "nombre": "_ensure_arba_a122r_activity_defaults",
+        "linea": 845
+      },
+      {
+        "nombre": "_register_hook",
+        "linea": 864
+      },
+      {
+        "nombre": "_sanitize_cuit",
+        "linea": 875
+      },
+      {
+        "nombre": "_iso_datetime_from_date",
+        "linea": 882
+      },
+      {
+        "nombre": "_normalize_transaction_number",
+        "linea": 887
+      },
+      {
+        "nombre": "_next_transaction_number",
+        "linea": 900
+      },
+      {
+        "nombre": "_get_or_create_retention_record",
+        "linea": 943
+      },
+      {
+        "nombre": "orphan_retention_records",
+        "linea": 974
+      },
+      {
+        "nombre": "_build_record_snapshot_from_line",
+        "linea": 990
+      },
+      {
+        "nombre": "_ensure_record_snapshot_from_line",
+        "linea": 1029
+      },
+      {
+        "nombre": "_sync_line_from_record",
+        "linea": 1042
+      },
+      {
+        "nombre": "_create_comprobante_history",
+        "linea": 1065
+      },
+      {
+        "nombre": "_extract_pdf_bytes",
+        "linea": 1096
+      },
+      {
+        "nombre": "_store_comprobante_pdf_attachment",
+        "linea": 1133
+      },
+      {
+        "nombre": "_get_cached_comprobante_pdf",
+        "linea": 1160
+      },
+      {
+        "nombre": "_ensure_company_config",
+        "linea": 1167
+      },
+      {
+        "nombre": "_get_token",
+        "linea": 1197
+      },
+      {
+        "nombre": "_do_request",
+        "linea": 1247
+      },
+      {
+        "nombre": "_create_request_log",
+        "linea": 1349
+      },
+      {
+        "nombre": "_get_period_values",
+        "linea": 1396
+      },
+      {
+        "nombre": "_extract_dj_id",
+        "linea": 1404
+      },
+      {
+        "nombre": "_extract_dj_id_from_error",
+        "linea": 1414
+      },
+      {
+        "nombre": "_extract_comprobante_values",
+        "linea": 1421
+      },
+      {
+        "nombre": "_extract_comprobante_from_collection",
+        "linea": 1437
+      },
+      {
+        "nombre": "_recover_comprobante_from_logs",
+        "linea": 1464
+      },
+      {
+        "nombre": "_recover_comprobante_from_api",
+        "linea": 1493
+      },
+      {
+        "nombre": "_get_or_create_dj",
+        "linea": 1561
+      },
+      {
+        "nombre": "_find_dj_cache",
+        "linea": 1719
+      },
+      {
+        "nombre": "_resolve_activity_for_line",
+        "linea": 1735
+      },
+      {
+        "nombre": "_prepare_payload",
+        "linea": 1796
+      },
+      {
+        "nombre": "sync_retention_line",
+        "linea": 1867
+      },
+      {
+        "nombre": "delete_remote_comprobante",
+        "linea": 2086
+      },
+      {
+        "nombre": "get_comprobante_pdf",
+        "linea": 2191
+      },
+      {
+        "nombre": "get_comprobante_pdf_from_record",
+        "linea": 2204
+      },
+      {
+        "nombre": "_compute_has_arba_digital_retentions",
+        "linea": 2270
+      },
+      {
+        "nombre": "_compute_has_active_arba_retentions",
+        "linea": 2283
+      },
+      {
+        "nombre": "_compute_arba_retention_record_stats",
+        "linea": 2293
+      },
+      {
+        "nombre": "_get_active_arba_retention_lines",
+        "linea": 2303
+      },
+      {
+        "nombre": "_check_arba_retentions_recompute_allowed",
+        "linea": 2310
+      },
+      {
+        "nombre": "action_move_line_create",
+        "linea": 2325
+      },
+      {
+        "nombre": "_sync_arba_retentions_after_post",
+        "linea": 2335
+      },
+      {
+        "nombre": "fields_view_get",
+        "linea": 2346
+      },
+      {
+        "nombre": "_compute_is_arba_digital",
+        "linea": 2427
+      },
+      {
+        "nombre": "_is_arba_retention_syncable",
+        "linea": 2437
+      },
+      {
+        "nombre": "_get_arba_syncability_issues",
+        "linea": 2448
+      },
+      {
+        "nombre": "action_arba_send",
+        "linea": 2479
+      },
+      {
+        "nombre": "action_arba_delete_remote",
+        "linea": 2562
+      },
+      {
+        "nombre": "action_arba_download_pdf",
+        "linea": 2567
+      },
+      {
+        "nombre": "action_open_arba_retention_record",
+        "linea": 2579
+      },
+      {
+        "nombre": "unlink",
+        "linea": 2594
+      },
+      {
+        "nombre": "_render_qweb_pdf",
+        "linea": 2605
+      },
+      {
+        "nombre": "_request_with_bearer",
+        "linea": 1254
+      },
+      {
+        "nombre": "_is_network_error",
+        "linea": 1605
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "company_id",
+        "linea": 36
+      },
+      {
+        "nombre": "activity_code",
+        "linea": 39
+      },
+      {
+        "nombre": "is_default",
+        "linea": 44
+      },
+      {
+        "nombre": "company_id",
+        "linea": 99
+      },
+      {
+        "nombre": "cuit_agente",
+        "linea": 105
+      },
+      {
+        "nombre": "activity_line_id",
+        "linea": 106
+      },
+      {
+        "nombre": "actividad_id",
+        "linea": 111
+      },
+      {
+        "nombre": "anio",
+        "linea": 112
+      },
+      {
+        "nombre": "mes",
+        "linea": 115
+      },
+      {
+        "nombre": "quincena",
+        "linea": 118
+      },
+      {
+        "nombre": "arba_id_dj",
+        "linea": 119
+      },
+      {
+        "nombre": "state",
+        "linea": 120
+      },
+      {
+        "nombre": "rectificativa",
+        "linea": 126
+      },
+      {
+        "nombre": "fecha_creacion",
+        "linea": 127
+      },
+      {
+        "nombre": "fecha_cierre",
+        "linea": 128
+      },
+      {
+        "nombre": "last_sync",
+        "linea": 129
+      },
+      {
+        "nombre": "retention_count",
+        "linea": 130
+      },
+      {
+        "nombre": "informed_retention_count",
+        "linea": 134
+      },
+      {
+        "nombre": "informed_record_count",
+        "linea": 138
+      },
+      {
+        "nombre": "company_id",
+        "linea": 442
+      },
+      {
+        "nombre": "payment_order_id",
+        "linea": 443
+      },
+      {
+        "nombre": "retention_record_id",
+        "linea": 444
+      },
+      {
+        "nombre": "retention_line_id",
+        "linea": 450
+      },
+      {
+        "nombre": "endpoint",
+        "linea": 453
+      },
+      {
+        "nombre": "method",
+        "linea": 454
+      },
+      {
+        "nombre": "status_code",
+        "linea": 455
+      },
+      {
+        "nombre": "state",
+        "linea": 456
+      },
+      {
+        "nombre": "request_payload",
+        "linea": 459
+      },
+      {
+        "nombre": "response_payload",
+        "linea": 460
+      },
+      {
+        "nombre": "error_message",
+        "linea": 461
+      },
+      {
+        "nombre": "retention_record_id",
+        "linea": 469
+      },
+      {
+        "nombre": "retention_line_id",
+        "linea": 475
+      },
+      {
+        "nombre": "payment_order_id",
+        "linea": 481
+      },
+      {
+        "nombre": "company_id",
+        "linea": 486
+      },
+      {
+        "nombre": "action",
+        "linea": 487
+      },
+      {
+        "nombre": "state",
+        "linea": 490
+      },
+      {
+        "nombre": "arba_id_dj",
+        "linea": 499
+      },
+      {
+        "nombre": "arba_id_comprobante",
+        "linea": 500
+      },
+      {
+        "nombre": "arba_nro_emision",
+        "linea": 501
+      },
+      {
+        "nombre": "arba_n_transaccion_agente",
+        "linea": 502
+      },
+      {
+        "nombre": "notes",
+        "linea": 503
+      },
+      {
+        "nombre": "name",
+        "linea": 563
+      },
+      {
+        "nombre": "company_id",
+        "linea": 564
+      },
+      {
+        "nombre": "payment_order_id",
+        "linea": 565
+      },
+      {
+        "nombre": "partner_id",
+        "linea": 568
+      },
+      {
+        "nombre": "current_retention_line_id",
+        "linea": 569
+      },
+      {
+        "nombre": "current_history_entry_id",
+        "linea": 575
+      },
+      {
+        "nombre": "current",
+        "linea": 580
+      },
+      {
+        "nombre": "lifecycle_state",
+        "linea": 581
+      },
+      {
+        "nombre": "superseded_by_id",
+        "linea": 591
+      },
+      {
+        "nombre": "replaces_record_id",
+        "linea": 596
+      },
+      {
+        "nombre": "retention_id",
+        "linea": 601
+      },
+      {
+        "nombre": "tax_id",
+        "linea": 606
+      },
+      {
+        "nombre": "base_amount",
+        "linea": 609
+      },
+      {
+        "nombre": "retention_amount",
+        "linea": 610
+      },
+      {
+        "nombre": "alicuota",
+        "linea": 613
+      },
+      {
+        "nombre": "arba_fecha_operacion",
+        "linea": 614
+      },
+      {
+        "nombre": "arba_actividad_id_used",
+        "linea": 615
+      },
+      {
+        "nombre": "cuit_contribuyente",
+        "linea": 616
+      },
+      {
+        "nombre": "razon_social_contribuyente",
+        "linea": 617
+      },
+      {
+        "nombre": "sucursal",
+        "linea": 618
+      },
+      {
+        "nombre": "arba_sync_state",
+        "linea": 619
+      },
+      {
+        "nombre": "arba_id_dj",
+        "linea": 631
+      },
+      {
+        "nombre": "arba_id_comprobante",
+        "linea": 632
+      },
+      {
+        "nombre": "arba_nro_emision",
+        "linea": 633
+      },
+      {
+        "nombre": "arba_observacion",
+        "linea": 634
+      },
+      {
+        "nombre": "arba_last_request",
+        "linea": 635
+      },
+      {
+        "nombre": "arba_last_response",
+        "linea": 636
+      },
+      {
+        "nombre": "arba_last_error",
+        "linea": 637
+      },
+      {
+        "nombre": "arba_n_transaccion_agente",
+        "linea": 638
+      },
+      {
+        "nombre": "arba_pdf_attachment_id",
+        "linea": 639
+      },
+      {
+        "nombre": "history_ids",
+        "linea": 645
+      },
+      {
+        "nombre": "request_log_ids",
+        "linea": 651
+      },
+      {
+        "nombre": "arba_a122r_enabled",
+        "linea": 709
+      },
+      {
+        "nombre": "arba_a122r_enforced",
+        "linea": 710
+      },
+      {
+        "nombre": "arba_a122r_mode",
+        "linea": 714
+      },
+      {
+        "nombre": "arba_a122r_base_url",
+        "linea": 720
+      },
+      {
+        "nombre": "arba_a122r_token_url",
+        "linea": 724
+      },
+      {
+        "nombre": "arba_a122r_client_id",
+        "linea": 728
+      },
+      {
+        "nombre": "arba_a122r_client_secret",
+        "linea": 729
+      },
+      {
+        "nombre": "arba_a122r_username",
+        "linea": 730
+      },
+      {
+        "nombre": "arba_a122r_password",
+        "linea": 734
+      },
+      {
+        "nombre": "arba_a122r_timeout",
+        "linea": 735
+      },
+      {
+        "nombre": "arba_a122r_block_validation_on_error",
+        "linea": 736
+      },
+      {
+        "nombre": "arba_a122r_sucursal",
+        "linea": 744
+      },
+      {
+        "nombre": "arba_a122r_actividad_id",
+        "linea": 745
+      },
+      {
+        "nombre": "arba_a122r_activity_ids",
+        "linea": 746
+      },
+      {
+        "nombre": "arba_a122r_access_token",
+        "linea": 751
+      },
+      {
+        "nombre": "arba_a122r_token_expiration",
+        "linea": 752
+      },
+      {
+        "nombre": "arba_a122r_quincena_mode",
+        "linea": 755
+      },
+      {
+        "nombre": "arba_a122r_request_log_ids",
+        "linea": 2240
+      },
+      {
+        "nombre": "has_arba_digital_retentions",
+        "linea": 2246
+      },
+      {
+        "nombre": "has_active_arba_retentions",
+        "linea": 2249
+      },
+      {
+        "nombre": "arba_retention_record_ids",
+        "linea": 2252
+      },
+      {
+        "nombre": "arba_retention_record_count",
+        "linea": 2258
+      },
+      {
+        "nombre": "has_orphaned_arba_retention_records",
+        "linea": 2261
+      },
+      {
+        "nombre": "arba_retention_record_id",
+        "linea": 2371
+      },
+      {
+        "nombre": "arba_sync_state",
+        "linea": 2378
+      },
+      {
+        "nombre": "arba_id_dj",
+        "linea": 2389
+      },
+      {
+        "nombre": "arba_id_comprobante",
+        "linea": 2390
+      },
+      {
+        "nombre": "arba_nro_emision",
+        "linea": 2391
+      },
+      {
+        "nombre": "arba_observacion",
+        "linea": 2392
+      },
+      {
+        "nombre": "arba_last_request",
+        "linea": 2393
+      },
+      {
+        "nombre": "arba_last_response",
+        "linea": 2394
+      },
+      {
+        "nombre": "arba_last_error",
+        "linea": 2395
+      },
+      {
+        "nombre": "arba_n_transaccion_agente",
+        "linea": 2396
+      },
+      {
+        "nombre": "arba_fecha_operacion",
+        "linea": 2397
+      },
+      {
+        "nombre": "arba_actividad_id_used",
+        "linea": 2398
+      },
+      {
+        "nombre": "is_arba_digital",
+        "linea": 2399
+      },
+      {
+        "nombre": "payment_order_state",
+        "linea": 2400
+      },
+      {
+        "nombre": "arba_history_ids",
+        "linea": 2405
+      },
+      {
+        "nombre": "arba_pdf_attachment_id",
+        "linea": 2411
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/arba_exporter.py",
+    "simbolos": [
+      {
+        "nombre": "ArbaGeneratedFiles",
+        "linea": 11
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "code",
+        "linea": 14
+      },
+      {
+        "nombre": "company_id",
+        "linea": 15
+      },
+      {
+        "nombre": "datas",
+        "linea": 16
+      },
+      {
+        "nombre": "date_from",
+        "linea": 17
+      },
+      {
+        "nombre": "date_to",
+        "linea": 18
+      },
+      {
+        "nombre": "attachment_id",
+        "linea": 19
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/arciba_exporter.py",
+    "simbolos": [
+      {
+        "nombre": "ArcibaGeneratedFiles",
+        "linea": 11
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "code",
+        "linea": 14
+      },
+      {
+        "nombre": "company_id",
+        "linea": 15
+      },
+      {
+        "nombre": "datas",
+        "linea": 16
+      },
+      {
+        "nombre": "date_from",
+        "linea": 17
+      },
+      {
+        "nombre": "date_to",
+        "linea": 18
+      },
+      {
+        "nombre": "attachment_id",
+        "linea": 19
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/certificate_request.py",
+    "simbolos": [
+      {
+        "nombre": "WSAACertificateRequest",
+        "linea": 21
+      },
+      {
+        "nombre": "_compute_state",
+        "linea": 53
+      },
+      {
+        "nombre": "write",
+        "linea": 63
+      },
+      {
+        "nombre": "_normalize_subj_cuit",
+        "linea": 81
+      },
+      {
+        "nombre": "generate_certificate_request",
+        "linea": 86
+      },
+      {
+        "nombre": "generate_key",
+        "linea": 115
+      },
+      {
+        "nombre": "gather_from_cert",
+        "linea": 126
+      },
+      {
+        "nombre": "download_file",
+        "linea": 139
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "name",
+        "linea": 25
+      },
+      {
+        "nombre": "subj_o",
+        "linea": 26
+      },
+      {
+        "nombre": "subj_cn",
+        "linea": 27
+      },
+      {
+        "nombre": "subj_cuit",
+        "linea": 28
+      },
+      {
+        "nombre": "subj_c",
+        "linea": 29
+      },
+      {
+        "nombre": "partner_id",
+        "linea": 30
+      },
+      {
+        "nombre": "date",
+        "linea": 31
+      },
+      {
+        "nombre": "due_date",
+        "linea": 34
+      },
+      {
+        "nombre": "cert_request",
+        "linea": 35
+      },
+      {
+        "nombre": "old_certificate",
+        "linea": 36
+      },
+      {
+        "nombre": "certificate",
+        "linea": 39
+      },
+      {
+        "nombre": "key",
+        "linea": 40
+      },
+      {
+        "nombre": "state",
+        "linea": 41
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/default_jurisdiction_config.py",
+    "simbolos": [
+      {
+        "nombre": "DefaultJurisdictionConfiguration",
+        "linea": 28
+      },
+      {
+        "nombre": "_check_unique",
+        "linea": 47
+      },
+      {
+        "nombre": "name_get",
+        "linea": 57
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "pos_ar_id",
+        "linea": 31
+      },
+      {
+        "nombre": "state_id",
+        "linea": 37
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/delivery_carrier.py",
+    "simbolos": [
+      {
+        "nombre": "DeliveryCarrier",
+        "linea": 13
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "vat",
+        "linea": 16
+      },
+      {
+        "nombre": "document_type_id",
+        "linea": 19
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/fiscal_year_closing.py",
+    "simbolos": [
+      {
+        "nombre": "FiscalYearClosing",
+        "linea": 16
+      },
+      {
+        "nombre": "_default_company_ids",
+        "linea": 130
+      },
+      {
+        "nombre": "action_draft",
+        "linea": 135
+      },
+      {
+        "nombre": "action_run",
+        "linea": 161
+      },
+      {
+        "nombre": "action_confirm",
+        "linea": 165
+      },
+      {
+        "nombre": "action_cancel",
+        "linea": 183
+      },
+      {
+        "nombre": "action_recover",
+        "linea": 218
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "check_draft_moves",
+        "linea": 20
+      },
+      {
+        "nombre": "check_unbalanced_moves",
+        "linea": 21
+      },
+      {
+        "nombre": "closing_id",
+        "linea": 22
+      },
+      {
+        "nombre": "closing_account_mapping_ids",
+        "linea": 28
+      },
+      {
+        "nombre": "closing_date",
+        "linea": 33
+      },
+      {
+        "nombre": "closing_description",
+        "linea": 34
+      },
+      {
+        "nombre": "closing_journal_id",
+        "linea": 37
+      },
+      {
+        "nombre": "closing_move_id",
+        "linea": 40
+      },
+      {
+        "nombre": "company_id",
+        "linea": 46
+      },
+      {
+        "nombre": "company_id_domain",
+        "linea": 52
+      },
+      {
+        "nombre": "create_closing_move",
+        "linea": 55
+      },
+      {
+        "nombre": "create_loss_profit_move",
+        "linea": 56
+      },
+      {
+        "nombre": "create_opening_move",
+        "linea": 57
+      },
+      {
+        "nombre": "create_recpam",
+        "linea": 58
+      },
+      {
+        "nombre": "loss_profit_account_mapping_ids",
+        "linea": 59
+      },
+      {
+        "nombre": "loss_profit_date",
+        "linea": 64
+      },
+      {
+        "nombre": "loss_profit_description",
+        "linea": 65
+      },
+      {
+        "nombre": "loss_profit_journal_id",
+        "linea": 66
+      },
+      {
+        "nombre": "loss_profit_move_id",
+        "linea": 69
+      },
+      {
+        "nombre": "name",
+        "linea": 72
+      },
+      {
+        "nombre": "opening_id",
+        "linea": 73
+      },
+      {
+        "nombre": "opening_date",
+        "linea": 79
+      },
+      {
+        "nombre": "opening_description",
+        "linea": 80
+      },
+      {
+        "nombre": "opening_journal_id",
+        "linea": 83
+      },
+      {
+        "nombre": "opening_move_id",
+        "linea": 86
+      },
+      {
+        "nombre": "recpam_account_id",
+        "linea": 92
+      },
+      {
+        "nombre": "recpam_description",
+        "linea": 95
+      },
+      {
+        "nombre": "recpam_journal_id",
+        "linea": 96
+      },
+      {
+        "nombre": "recpam_move_id",
+        "linea": 97
+      },
+      {
+        "nombre": "rounding",
+        "linea": 100
+      },
+      {
+        "nombre": "state",
+        "linea": 103
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/gross_income.py",
+    "simbolos": [
+      {
+        "nombre": "GrossIncome",
+        "linea": 4
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "partner_id",
+        "linea": 7
+      },
+      {
+        "nombre": "province_id",
+        "linea": 8
+      },
+      {
+        "nombre": "type_taxpayer",
+        "linea": 13
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/iibb_situation.py",
+    "simbolos": [
+      {
+        "nombre": "IIBBSituation",
+        "linea": 4
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "name",
+        "linea": 8
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/inflation_index.py",
+    "simbolos": [
+      {
+        "nombre": "InflationIndex",
+        "linea": 15
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "coefficient",
+        "linea": 20
+      },
+      {
+        "nombre": "date",
+        "linea": 21
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/ir_attachment.py",
+    "simbolos": [
+      {
+        "nombre": "IrAttachment",
+        "linea": 4
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "report_file_id",
+        "linea": 8
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/iva_per_ret_exporter.py",
+    "simbolos": [
+      {
+        "nombre": "IVAPerGeneratedFiles",
+        "linea": 11
+      },
+      {
+        "nombre": "IVARetGeneratedFiles",
+        "linea": 22
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "code",
+        "linea": 14
+      },
+      {
+        "nombre": "company_id",
+        "linea": 15
+      },
+      {
+        "nombre": "datas",
+        "linea": 16
+      },
+      {
+        "nombre": "date_from",
+        "linea": 17
+      },
+      {
+        "nombre": "date_to",
+        "linea": 18
+      },
+      {
+        "nombre": "attachment_id",
+        "linea": 19
+      },
+      {
+        "nombre": "code",
+        "linea": 24
+      },
+      {
+        "nombre": "company_id",
+        "linea": 25
+      },
+      {
+        "nombre": "datas",
+        "linea": 26
+      },
+      {
+        "nombre": "date_from",
+        "linea": 27
+      },
+      {
+        "nombre": "date_to",
+        "linea": 28
+      },
+      {
+        "nombre": "attachment_id",
+        "linea": 29
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/libro_iva_generated_files.py",
+    "simbolos": [
+      {
+        "nombre": "LibroivaGeneratedFiles",
+        "linea": 11
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "attachment_id",
+        "linea": 14
+      },
+      {
+        "nombre": "code",
+        "linea": 15
+      },
+      {
+        "nombre": "company_id",
+        "linea": 16
+      },
+      {
+        "nombre": "datas",
+        "linea": 17
+      },
+      {
+        "nombre": "date_from",
+        "linea": 18
+      },
+      {
+        "nombre": "date_to",
+        "linea": 19
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/perception.py",
+    "simbolos": [
+      {
+        "nombre": "AccountAccount",
+        "linea": 14
+      },
+      {
+        "nombre": "PerceptionTaxLine",
+        "linea": 27
+      },
+      {
+        "nombre": "PerceptionVatTax",
+        "linea": 285
+      },
+      {
+        "nombre": "PerceptionConcept",
+        "linea": 303
+      },
+      {
+        "nombre": "PerceptionActivity",
+        "linea": 344
+      },
+      {
+        "nombre": "PerceptionTaxApplication",
+        "linea": 373
+      },
+      {
+        "nombre": "_default_company_id",
+        "linea": 120
+      },
+      {
+        "nombre": "unlink",
+        "linea": 123
+      },
+      {
+        "nombre": "_compute_perception_id_domain",
+        "linea": 157
+      },
+      {
+        "nombre": "_compute_base_amount_second_cur",
+        "linea": 173
+      },
+      {
+        "nombre": "_get_accounted_amount",
+        "linea": 200
+      },
+      {
+        "nombre": "_onchange_perception",
+        "linea": 219
+      },
+      {
+        "nombre": "compute_all",
+        "linea": 232
+      },
+      {
+        "nombre": "get_readeable_name",
+        "linea": 252
+      },
+      {
+        "nombre": "_compute",
+        "linea": 262
+      },
+      {
+        "nombre": "_get_company",
+        "linea": 308
+      },
+      {
+        "nombre": "_get_company",
+        "linea": 349
+      },
+      {
+        "nombre": "_compute_proportional_vat",
+        "linea": 445
+      },
+      {
+        "nombre": "compute_base",
+        "linea": 462
+      },
+      {
+        "nombre": "apply_perception",
+        "linea": 487
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "perception_concept_ids",
+        "linea": 18
+      },
+      {
+        "nombre": "name",
+        "linea": 33
+      },
+      {
+        "nombre": "date",
+        "linea": 38
+      },
+      {
+        "nombre": "invoice_id",
+        "linea": 41
+      },
+      {
+        "nombre": "base",
+        "linea": 46
+      },
+      {
+        "nombre": "amount",
+        "linea": 49
+      },
+      {
+        "nombre": "base_secondary_currency",
+        "linea": 52
+      },
+      {
+        "nombre": "amount_secondary_currency",
+        "linea": 57
+      },
+      {
+        "nombre": "perception_id",
+        "linea": 62
+      },
+      {
+        "nombre": "perception_id_domain",
+        "linea": 69
+      },
+      {
+        "nombre": "base_amount",
+        "linea": 70
+      },
+      {
+        "nombre": "tax_amount",
+        "linea": 74
+      },
+      {
+        "nombre": "company_id",
+        "linea": 78
+      },
+      {
+        "nombre": "partner_id",
+        "linea": 84
+      },
+      {
+        "nombre": "vat",
+        "linea": 89
+      },
+      {
+        "nombre": "state_id",
+        "linea": 94
+      },
+      {
+        "nombre": "aml_id",
+        "linea": 98
+      },
+      {
+        "nombre": "manual",
+        "linea": 103
+      },
+      {
+        "nombre": "reg_code",
+        "linea": 104
+      },
+      {
+        "nombre": "tax_app_id",
+        "linea": 105
+      },
+      {
+        "nombre": "concept_id",
+        "linea": 108
+      },
+      {
+        "nombre": "require_concept",
+        "linea": 109
+      },
+      {
+        "nombre": "percent",
+        "linea": 116
+      },
+      {
+        "nombre": "tax_id",
+        "linea": 290
+      },
+      {
+        "nombre": "application_id",
+        "linea": 291
+      },
+      {
+        "nombre": "rate",
+        "linea": 296
+      },
+      {
+        "nombre": "name",
+        "linea": 311
+      },
+      {
+        "nombre": "code",
+        "linea": 312
+      },
+      {
+        "nombre": "type",
+        "linea": 313
+      },
+      {
+        "nombre": "no_subject",
+        "linea": 323
+      },
+      {
+        "nombre": "account_ids",
+        "linea": 328
+      },
+      {
+        "nombre": "notes",
+        "linea": 335
+      },
+      {
+        "nombre": "company_id",
+        "linea": 336
+      },
+      {
+        "nombre": "name",
+        "linea": 352
+      },
+      {
+        "nombre": "code",
+        "linea": 353
+      },
+      {
+        "nombre": "type",
+        "linea": 354
+      },
+      {
+        "nombre": "notes",
+        "linea": 364
+      },
+      {
+        "nombre": "company_id",
+        "linea": 365
+      },
+      {
+        "nombre": "name",
+        "linea": 376
+      },
+      {
+        "nombre": "reg_code",
+        "linea": 377
+      },
+      {
+        "nombre": "concept_id",
+        "linea": 378
+      },
+      {
+        "nombre": "activity_id",
+        "linea": 379
+      },
+      {
+        "nombre": "perception_tax_id",
+        "linea": 380
+      },
+      {
+        "nombre": "tax_allowance",
+        "linea": 385
+      },
+      {
+        "nombre": "exclude_tax_allowance",
+        "linea": 390
+      },
+      {
+        "nombre": "calculation_base",
+        "linea": 396
+      },
+      {
+        "nombre": "vat_tax_ids",
+        "linea": 408
+      },
+      {
+        "nombre": "tax_minimum",
+        "linea": 412
+      },
+      {
+        "nombre": "percent",
+        "linea": 418
+      },
+      {
+        "nombre": "type",
+        "linea": 423
+      },
+      {
+        "nombre": "sit_iibb",
+        "linea": 432
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/product.py",
+    "simbolos": [
+      {
+        "nombre": "COTNomenclature",
+        "linea": 15
+      },
+      {
+        "nombre": "UoM",
+        "linea": 23
+      },
+      {
+        "nombre": "ProductTemplate",
+        "linea": 29
+      },
+      {
+        "nombre": "ProductProduct",
+        "linea": 47
+      },
+      {
+        "nombre": "onchange_cot_nomenclature_id",
+        "linea": 38
+      },
+      {
+        "nombre": "onchange_cot_nomenclature_id",
+        "linea": 56
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "name",
+        "linea": 19
+      },
+      {
+        "nombre": "code",
+        "linea": 20
+      },
+      {
+        "nombre": "cot_code",
+        "linea": 26
+      },
+      {
+        "nombre": "cot_nomenclature_id",
+        "linea": 32
+      },
+      {
+        "nombre": "cot_nomenclature_id",
+        "linea": 50
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/purchase.py",
+    "simbolos": [
+      {
+        "nombre": "PurchaseOrder",
+        "linea": 15
+      },
+      {
+        "nombre": "_prepare_invoice",
+        "linea": 18
+      },
+      {
+        "nombre": "action_view_invoice",
+        "linea": 40
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/reason_rejected_check.py",
+    "simbolos": [
+      {
+        "nombre": "ReasonRejectedCheck",
+        "linea": 9
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "name",
+        "linea": 13
+      },
+      {
+        "nombre": "type",
+        "linea": 14
+      },
+      {
+        "nombre": "code",
+        "linea": 17
+      },
+      {
+        "nombre": "is_critical",
+        "linea": 18
+      },
+      {
+        "nombre": "description",
+        "linea": 19
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/report_exporter.py",
+    "simbolos": [
+      {
+        "nombre": "ReportExporter",
+        "linea": 13
+      },
+      {
+        "nombre": "_default_groups",
+        "linea": 17
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "name",
+        "linea": 22
+      },
+      {
+        "nombre": "codename",
+        "linea": 23
+      },
+      {
+        "nombre": "group_ids",
+        "linea": 24
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/res_company.py",
+    "simbolos": [
+      {
+        "nombre": "ResCompany",
+        "linea": 13
+      },
+      {
+        "nombre": "AfipBigCompany",
+        "linea": 71
+      },
+      {
+        "nombre": "get_from_afip",
+        "linea": 78
+      },
+      {
+        "nombre": "do_update",
+        "linea": 90
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "rejected_issued_checks_journal_id",
+        "linea": 16
+      },
+      {
+        "nombre": "cbu",
+        "linea": 20
+      },
+      {
+        "nombre": "fcred_cbu_emitter",
+        "linea": 27
+      },
+      {
+        "nombre": "fcred_minimum_amount",
+        "linea": 28
+      },
+      {
+        "nombre": "fcred_transfer",
+        "linea": 32
+      },
+      {
+        "nombre": "fcred_is_fce_emitter",
+        "linea": 33
+      },
+      {
+        "nombre": "fcred_pos_ar_id",
+        "linea": 34
+      },
+      {
+        "nombre": "door",
+        "linea": 39
+      },
+      {
+        "nombre": "floor",
+        "linea": 45
+      },
+      {
+        "nombre": "num",
+        "linea": 51
+      },
+      {
+        "nombre": "apartment",
+        "linea": 57
+      },
+      {
+        "nombre": "cot_user",
+        "linea": 62
+      },
+      {
+        "nombre": "cot_pass",
+        "linea": 63
+      },
+      {
+        "nombre": "cot_url",
+        "linea": 64
+      },
+      {
+        "nombre": "group_check_cot",
+        "linea": 65
+      },
+      {
+        "nombre": "cuit",
+        "linea": 75
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/res_config_settings.py",
+    "simbolos": [
+      {
+        "nombre": "ResConfigSettings",
+        "linea": 4
+      },
+      {
+        "nombre": "set_values",
+        "linea": 64
+      },
+      {
+        "nombre": "get_values",
+        "linea": 69
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "cot_user",
+        "linea": 14
+      },
+      {
+        "nombre": "cot_pass",
+        "linea": 19
+      },
+      {
+        "nombre": "cot_url",
+        "linea": 24
+      },
+      {
+        "nombre": "group_check_cot",
+        "linea": 29
+      },
+      {
+        "nombre": "special_partner_required_fields",
+        "linea": 35
+      },
+      {
+        "nombre": "case_convertion",
+        "linea": 41
+      },
+      {
+        "nombre": "require_perception_concept",
+        "linea": 53
+      },
+      {
+        "nombre": "require_retention_concept",
+        "linea": 58
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/res_country_state.py",
+    "simbolos": [
+      {
+        "nombre": "ResCountryState",
+        "linea": 15
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "cot_code",
+        "linea": 18
+      },
+      {
+        "nombre": "cot_valid",
+        "linea": 19
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/res_currency.py",
+    "simbolos": [
+      {
+        "nombre": "ResCurrency",
+        "linea": 15
+      },
+      {
+        "nombre": "_get_conversion_rate",
+        "linea": 21
+      },
+      {
+        "nombre": "_get_currency_rate",
+        "linea": 51
+      },
+      {
+        "nombre": "_convert",
+        "linea": 64
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "afip_code",
+        "linea": 18
+      },
+      {
+        "nombre": "preciated",
+        "linea": 19
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/res_currency_rate.py",
+    "simbolos": [
+      {
+        "nombre": "ResCurrencyRate",
+        "linea": 15
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "preciated",
+        "linea": 18
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/res_document_type.py",
+    "simbolos": [
+      {
+        "nombre": "ResDocumentType",
+        "linea": 4
+      },
+      {
+        "nombre": "get_website_sale_documents",
+        "linea": 20
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "name",
+        "linea": 8
+      },
+      {
+        "nombre": "afip_code",
+        "linea": 9
+      },
+      {
+        "nombre": "verification_required",
+        "linea": 10
+      },
+      {
+        "nombre": "check_duplicated",
+        "linea": 13
+      },
+      {
+        "nombre": "dst_cuit",
+        "linea": 16
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/res_partner.py",
+    "simbolos": [
+      {
+        "nombre": "ResPartner",
+        "linea": 14
+      },
+      {
+        "nombre": "ResPartnerRetention",
+        "linea": 632
+      },
+      {
+        "nombre": "ResPartnerAdvanceRetention",
+        "linea": 724
+      },
+      {
+        "nombre": "DstCuitCodes",
+        "linea": 746
+      },
+      {
+        "nombre": "ResPartnerPerception",
+        "linea": 756
+      },
+      {
+        "nombre": "_get_retentions_domain",
+        "linea": 18
+      },
+      {
+        "nombre": "_get_perceptions_domain",
+        "linea": 27
+      },
+      {
+        "nombre": "_get_company_fiscal_position",
+        "linea": 92
+      },
+      {
+        "nombre": "parse_afip_values",
+        "linea": 117
+      },
+      {
+        "nombre": "_get_ws_conf",
+        "linea": 165
+      },
+      {
+        "nombre": "get_data_from_padron_afip",
+        "linea": 172
+      },
+      {
+        "nombre": "_get_perceptions_to_apply",
+        "linea": 194
+      },
+      {
+        "nombre": "_get_str_repeated_partners",
+        "linea": 266
+      },
+      {
+        "nombre": "get_ancestors",
+        "linea": 273
+      },
+      {
+        "nombre": "check_vat_duplicated",
+        "linea": 282
+      },
+      {
+        "nombre": "onchange_document_type",
+        "linea": 366
+      },
+      {
+        "nombre": "_set_multicompany_account_fiscal_position",
+        "linea": 371
+      },
+      {
+        "nombre": "write",
+        "linea": 436
+      },
+      {
+        "nombre": "create",
+        "linea": 457
+      },
+      {
+        "nombre": "_parse_vat_string",
+        "linea": 473
+      },
+      {
+        "nombre": "check_vat",
+        "linea": 481
+      },
+      {
+        "nombre": "_commercial_fields",
+        "linea": 517
+      },
+      {
+        "nombre": "check_vat_ar",
+        "linea": 522
+      },
+      {
+        "nombre": "_get_retentions_to_apply",
+        "linea": 559
+      },
+      {
+        "nombre": "get_clean_name",
+        "linea": 625
+      },
+      {
+        "nombre": "_compute_retention_percent",
+        "linea": 681
+      },
+      {
+        "nombre": "_check_excluded_percent",
+        "linea": 713
+      },
+      {
+        "nombre": "perception_id_change",
+        "linea": 794
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "retention_activity_id",
+        "linea": 35
+      },
+      {
+        "nombre": "retention_ids",
+        "linea": 38
+      },
+      {
+        "nombre": "advance_retention_ids",
+        "linea": 46
+      },
+      {
+        "nombre": "document_type_id",
+        "linea": 52
+      },
+      {
+        "nombre": "dst_cuit_id",
+        "linea": 55
+      },
+      {
+        "nombre": "dst_cuit",
+        "linea": 58
+      },
+      {
+        "nombre": "is_checked_special_partner_required_fields",
+        "linea": 61
+      },
+      {
+        "nombre": "fcred_transfer",
+        "linea": 68
+      },
+      {
+        "nombre": "perception_ids",
+        "linea": 71
+      },
+      {
+        "nombre": "nro_insc_iibb",
+        "linea": 79
+      },
+      {
+        "nombre": "door",
+        "linea": 80
+      },
+      {
+        "nombre": "floor",
+        "linea": 81
+      },
+      {
+        "nombre": "num",
+        "linea": 82
+      },
+      {
+        "nombre": "apartment",
+        "linea": 83
+      },
+      {
+        "nombre": "express_id",
+        "linea": 84
+      },
+      {
+        "nombre": "last_update_from_afip",
+        "linea": 85
+      },
+      {
+        "nombre": "gross_income_ids",
+        "linea": 86
+      },
+      {
+        "nombre": "partner_id",
+        "linea": 637
+      },
+      {
+        "nombre": "retention_id",
+        "linea": 638
+      },
+      {
+        "nombre": "percent",
+        "linea": 644
+      },
+      {
+        "nombre": "excluded_percent",
+        "linea": 647
+      },
+      {
+        "nombre": "ex_date_from",
+        "linea": 648
+      },
+      {
+        "nombre": "ex_date_to",
+        "linea": 649
+      },
+      {
+        "nombre": "exclusion_certificate",
+        "linea": 650
+      },
+      {
+        "nombre": "exclusion_date_certificate",
+        "linea": 651
+      },
+      {
+        "nombre": "sit_iibb",
+        "linea": 654
+      },
+      {
+        "nombre": "company_id",
+        "linea": 657
+      },
+      {
+        "nombre": "from_padron",
+        "linea": 662
+      },
+      {
+        "nombre": "retention_id",
+        "linea": 728
+      },
+      {
+        "nombre": "concept_id",
+        "linea": 734
+      },
+      {
+        "nombre": "partner_id",
+        "linea": 737
+      },
+      {
+        "nombre": "company_id",
+        "linea": 738
+      },
+      {
+        "nombre": "code",
+        "linea": 751
+      },
+      {
+        "nombre": "name",
+        "linea": 752
+      },
+      {
+        "nombre": "wsfex_config_id",
+        "linea": 753
+      },
+      {
+        "nombre": "perception_id",
+        "linea": 761
+      },
+      {
+        "nombre": "activity_id",
+        "linea": 770
+      },
+      {
+        "nombre": "percent",
+        "linea": 771
+      },
+      {
+        "nombre": "excluded_percent",
+        "linea": 772
+      },
+      {
+        "nombre": "ex_date_from",
+        "linea": 773
+      },
+      {
+        "nombre": "ex_date_to",
+        "linea": 774
+      },
+      {
+        "nombre": "exclusion_certificate",
+        "linea": 775
+      },
+      {
+        "nombre": "partner_id",
+        "linea": 776
+      },
+      {
+        "nombre": "sit_iibb",
+        "linea": 777
+      },
+      {
+        "nombre": "company_id",
+        "linea": 780
+      },
+      {
+        "nombre": "from_padron",
+        "linea": 786
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/res_partner_bank.py",
+    "simbolos": [
+      {
+        "nombre": "ResParterBank",
+        "linea": 4
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "account_id",
+        "linea": 7
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/res_users.py",
+    "simbolos": [
+      {
+        "nombre": "ResUsers",
+        "linea": 5
+      },
+      {
+        "nombre": "UsersJournalPriorityRel",
+        "linea": 20
+      },
+      {
+        "nombre": "get_journals_by_fiscal_position",
+        "linea": 14
+      },
+      {
+        "nombre": "_check_one_journal",
+        "linea": 35
+      },
+      {
+        "nombre": "create",
+        "linea": 58
+      },
+      {
+        "nombre": "_recompute_user_priorities",
+        "linea": 71
+      },
+      {
+        "nombre": "unlink",
+        "linea": 81
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "journal_rel_ids",
+        "linea": 8
+      },
+      {
+        "nombre": "user_id",
+        "linea": 24
+      },
+      {
+        "nombre": "journal_id",
+        "linea": 27
+      },
+      {
+        "nombre": "code",
+        "linea": 31
+      },
+      {
+        "nombre": "priority",
+        "linea": 32
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/res_voucher_type.py",
+    "simbolos": [
+      {
+        "nombre": "ResVoucherType",
+        "linea": 4
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "name",
+        "linea": 8
+      },
+      {
+        "nombre": "afip_code",
+        "linea": 9
+      },
+      {
+        "nombre": "voucher_model",
+        "linea": 10
+      },
+      {
+        "nombre": "doc_type",
+        "linea": 11
+      },
+      {
+        "nombre": "denomination",
+        "linea": 16
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/retention.py",
+    "simbolos": [
+      {
+        "nombre": "AccountAccount",
+        "linea": 14
+      },
+      {
+        "nombre": "RetentionConcept",
+        "linea": 27
+      },
+      {
+        "nombre": "RetentionActivity",
+        "linea": 67
+      },
+      {
+        "nombre": "RetentionVatTax",
+        "linea": 96
+      },
+      {
+        "nombre": "RetentionScale",
+        "linea": 114
+      },
+      {
+        "nombre": "RetentionScaleLine",
+        "linea": 126
+      },
+      {
+        "nombre": "RetentionTaxApplication",
+        "linea": 136
+      },
+      {
+        "nombre": "_get_company",
+        "linea": 32
+      },
+      {
+        "nombre": "_get_company",
+        "linea": 72
+      },
+      {
+        "nombre": "_default_company_id",
+        "linea": 228
+      },
+      {
+        "nombre": "_compute_proportional_vat",
+        "linea": 231
+      },
+      {
+        "nombre": "_compute_amount_via_scale",
+        "linea": 245
+      },
+      {
+        "nombre": "_get_month_date_span_from_date",
+        "linea": 265
+      },
+      {
+        "nombre": "get_period_partner_payments",
+        "linea": 278
+      },
+      {
+        "nombre": "get_period_partner_advance_payments",
+        "linea": 352
+      },
+      {
+        "nombre": "get_period_base_amount",
+        "linea": 369
+      },
+      {
+        "nombre": "apply_retention",
+        "linea": 391
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "retention_concept_ids",
+        "linea": 18
+      },
+      {
+        "nombre": "name",
+        "linea": 35
+      },
+      {
+        "nombre": "code",
+        "linea": 36
+      },
+      {
+        "nombre": "type",
+        "linea": 37
+      },
+      {
+        "nombre": "no_subject",
+        "linea": 47
+      },
+      {
+        "nombre": "account_ids",
+        "linea": 51
+      },
+      {
+        "nombre": "notes",
+        "linea": 58
+      },
+      {
+        "nombre": "company_id",
+        "linea": 59
+      },
+      {
+        "nombre": "name",
+        "linea": 75
+      },
+      {
+        "nombre": "code",
+        "linea": 76
+      },
+      {
+        "nombre": "type",
+        "linea": 77
+      },
+      {
+        "nombre": "notes",
+        "linea": 87
+      },
+      {
+        "nombre": "company_id",
+        "linea": 88
+      },
+      {
+        "nombre": "tax_id",
+        "linea": 101
+      },
+      {
+        "nombre": "application_id",
+        "linea": 102
+      },
+      {
+        "nombre": "rate",
+        "linea": 107
+      },
+      {
+        "nombre": "name",
+        "linea": 118
+      },
+      {
+        "nombre": "line_ids",
+        "linea": 119
+      },
+      {
+        "nombre": "name",
+        "linea": 130
+      },
+      {
+        "nombre": "limit",
+        "linea": 131
+      },
+      {
+        "nombre": "percent",
+        "linea": 132
+      },
+      {
+        "nombre": "scale_id",
+        "linea": 133
+      },
+      {
+        "nombre": "name",
+        "linea": 140
+      },
+      {
+        "nombre": "reg_code",
+        "linea": 141
+      },
+      {
+        "nombre": "concept_id",
+        "linea": 142
+      },
+      {
+        "nombre": "activity_id",
+        "linea": 143
+      },
+      {
+        "nombre": "retention_tax_id",
+        "linea": 144
+      },
+      {
+        "nombre": "tax_allowance",
+        "linea": 149
+      },
+      {
+        "nombre": "exclude_tax_allowance",
+        "linea": 154
+      },
+      {
+        "nombre": "calculation_base",
+        "linea": 160
+      },
+      {
+        "nombre": "vat_tax_ids",
+        "linea": 174
+      },
+      {
+        "nombre": "tax_minimum",
+        "linea": 178
+      },
+      {
+        "nombre": "aliq_type",
+        "linea": 184
+      },
+      {
+        "nombre": "percent",
+        "linea": 189
+      },
+      {
+        "nombre": "scale_id",
+        "linea": 194
+      },
+      {
+        "nombre": "type",
+        "linea": 195
+      },
+      {
+        "nombre": "sit_iibb",
+        "linea": 204
+      },
+      {
+        "nombre": "company_id",
+        "linea": 213
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/sale_order.py",
+    "simbolos": [
+      {
+        "nombre": "SaleOrder",
+        "linea": 15
+      },
+      {
+        "nombre": "_prepare_invoice",
+        "linea": 18
+      },
+      {
+        "nombre": "_create_invoices",
+        "linea": 59
+      },
+      {
+        "nombre": "action_confirm",
+        "linea": 74
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/sequence_mixin.py",
+    "simbolos": [
+      {
+        "nombre": "SequenceMixin",
+        "linea": 15
+      },
+      {
+        "nombre": "_deduce_sequence_number_reset",
+        "linea": 19
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/sicore.py",
+    "simbolos": [
+      {
+        "nombre": "SicoreFiscalPosition",
+        "linea": 4
+      },
+      {
+        "nombre": "SicoreConfig",
+        "linea": 12
+      },
+      {
+        "nombre": "SicoreGeneratedFiles",
+        "linea": 22
+      },
+      {
+        "nombre": "_compute_name",
+        "linea": 37
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "code",
+        "linea": 7
+      },
+      {
+        "nombre": "config_id",
+        "linea": 8
+      },
+      {
+        "nombre": "fiscal_position",
+        "linea": 9
+      },
+      {
+        "nombre": "fiscal_position_ids",
+        "linea": 16
+      },
+      {
+        "nombre": "name",
+        "linea": 19
+      },
+      {
+        "nombre": "attachment_id",
+        "linea": 25
+      },
+      {
+        "nombre": "code",
+        "linea": 26
+      },
+      {
+        "nombre": "company_id",
+        "linea": 27
+      },
+      {
+        "nombre": "datas",
+        "linea": 28
+      },
+      {
+        "nombre": "name",
+        "linea": 29
+      },
+      {
+        "nombre": "period_start",
+        "linea": 30
+      },
+      {
+        "nombre": "period_end",
+        "linea": 31
+      },
+      {
+        "nombre": "presentation_date",
+        "linea": 32
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/sifere.py",
+    "simbolos": [
+      {
+        "nombre": "SifereJurisdiction",
+        "linea": 9
+      },
+      {
+        "nombre": "SifereConfig",
+        "linea": 17
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "state",
+        "linea": 12
+      },
+      {
+        "nombre": "code",
+        "linea": 13
+      },
+      {
+        "nombre": "config_id",
+        "linea": 14
+      },
+      {
+        "nombre": "name",
+        "linea": 21
+      },
+      {
+        "nombre": "jurisdiction_ids",
+        "linea": 22
+      },
+      {
+        "nombre": "ignore_jurisdiction",
+        "linea": 25
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/stock_picking.py",
+    "simbolos": [
+      {
+        "nombre": "StockPicking",
+        "linea": 24
+      },
+      {
+        "nombre": "onchange_carrier",
+        "linea": 96
+      },
+      {
+        "nombre": "_action_done",
+        "linea": 100
+      },
+      {
+        "nombre": "_get_declared_value",
+        "linea": 116
+      },
+      {
+        "nombre": "button_validate",
+        "linea": 141
+      },
+      {
+        "nombre": "is_refund",
+        "linea": 150
+      },
+      {
+        "nombre": "get_cuit",
+        "linea": 161
+      },
+      {
+        "nombre": "get_sequence",
+        "linea": 181
+      },
+      {
+        "nombre": "is_valid_date",
+        "linea": 196
+      },
+      {
+        "nombre": "cot_remit",
+        "linea": 206
+      },
+      {
+        "nombre": "get_remit_vals",
+        "linea": 282
+      },
+      {
+        "nombre": "_get_partner_vals",
+        "linea": 349
+      },
+      {
+        "nombre": "_get_company_vals",
+        "linea": 460
+      },
+      {
+        "nombre": "cot_product",
+        "linea": 509
+      },
+      {
+        "nombre": "do_cot_file",
+        "linea": 564
+      },
+      {
+        "nombre": "_get_cot_user",
+        "linea": 673
+      },
+      {
+        "nombre": "_get_cot_pass",
+        "linea": 677
+      },
+      {
+        "nombre": "_get_cot_url",
+        "linea": 681
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "renum_pick_id",
+        "linea": 27
+      },
+      {
+        "nombre": "name_original",
+        "linea": 34
+      },
+      {
+        "nombre": "declared_value",
+        "linea": 35
+      },
+      {
+        "nombre": "cot",
+        "linea": 40
+      },
+      {
+        "nombre": "picking_supplier",
+        "linea": 46
+      },
+      {
+        "nombre": "voucher",
+        "linea": 50
+      },
+      {
+        "nombre": "cot_date",
+        "linea": 55
+      },
+      {
+        "nombre": "is_origin",
+        "linea": 60
+      },
+      {
+        "nombre": "cot_date_transfer",
+        "linea": 64
+      },
+      {
+        "nombre": "express_id",
+        "linea": 68
+      },
+      {
+        "nombre": "truck_license_plate",
+        "linea": 73
+      },
+      {
+        "nombre": "trailer_license_plate",
+        "linea": 76
+      },
+      {
+        "nombre": "dimension",
+        "linea": 79
+      },
+      {
+        "nombre": "pick_type",
+        "linea": 82
+      },
+      {
+        "nombre": "dom_partner_id",
+        "linea": 88
+      },
+      {
+        "nombre": "shipping_number",
+        "linea": 92
+      },
+      {
+        "nombre": "means_of_transport",
+        "linea": 93
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/stock_picking_type.py",
+    "simbolos": [
+      {
+        "nombre": "PickingType",
+        "linea": 4
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "sequence_transfer_id",
+        "linea": 10
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/ws.py",
+    "simbolos": [
+      {
+        "nombre": "WsCurrencyCodes",
+        "linea": 16
+      },
+      {
+        "nombre": "WsOptionals",
+        "linea": 48
+      },
+      {
+        "nombre": "WsPOS",
+        "linea": 76
+      },
+      {
+        "nombre": "WsPOSLine",
+        "linea": 105
+      },
+      {
+        "nombre": "WsTaxCodes",
+        "linea": 184
+      },
+      {
+        "nombre": "WsConfig",
+        "linea": 233
+      },
+      {
+        "nombre": "_check_only_one_ws_associated",
+        "linea": 37
+      },
+      {
+        "nombre": "_check_only_one_ws_associated",
+        "linea": 65
+      },
+      {
+        "nombre": "_check_only_one_ws_associated",
+        "linea": 94
+      },
+      {
+        "nombre": "_check_no_repeat_journal",
+        "linea": 136
+      },
+      {
+        "nombre": "write",
+        "linea": 161
+      },
+      {
+        "nombre": "create",
+        "linea": 171
+      },
+      {
+        "nombre": "unlink",
+        "linea": 178
+      },
+      {
+        "nombre": "_check_only_one_ws_associated",
+        "linea": 213
+      },
+      {
+        "nombre": "_get_tax_id_domain",
+        "linea": 223
+      },
+      {
+        "nombre": "_compute_url",
+        "linea": 264
+      },
+      {
+        "nombre": "_get_webservice",
+        "linea": 271
+      },
+      {
+        "nombre": "_create_ta",
+        "linea": 275
+      },
+      {
+        "nombre": "create",
+        "linea": 314
+      },
+      {
+        "nombre": "unlink",
+        "linea": 322
+      },
+      {
+        "nombre": "get_config",
+        "linea": 328
+      },
+      {
+        "nombre": "ws_auth",
+        "linea": 356
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "code",
+        "linea": 21
+      },
+      {
+        "nombre": "currency_id",
+        "linea": 22
+      },
+      {
+        "nombre": "from_afip",
+        "linea": 25
+      },
+      {
+        "nombre": "from_date",
+        "linea": 26
+      },
+      {
+        "nombre": "name",
+        "linea": 27
+      },
+      {
+        "nombre": "to_date",
+        "linea": 28
+      },
+      {
+        "nombre": "wsfe_config_id",
+        "linea": 29
+      },
+      {
+        "nombre": "wsfex_config_id",
+        "linea": 32
+      },
+      {
+        "nombre": "code",
+        "linea": 52
+      },
+      {
+        "nombre": "from_afip",
+        "linea": 53
+      },
+      {
+        "nombre": "from_date",
+        "linea": 54
+      },
+      {
+        "nombre": "name",
+        "linea": 55
+      },
+      {
+        "nombre": "to_date",
+        "linea": 56
+      },
+      {
+        "nombre": "wsfe_config_id",
+        "linea": 57
+      },
+      {
+        "nombre": "wsfex_config_id",
+        "linea": 60
+      },
+      {
+        "nombre": "code",
+        "linea": 80
+      },
+      {
+        "nombre": "blocked",
+        "linea": 81
+      },
+      {
+        "nombre": "from_afip",
+        "linea": 82
+      },
+      {
+        "nombre": "name",
+        "linea": 83
+      },
+      {
+        "nombre": "priority",
+        "linea": 84
+      },
+      {
+        "nombre": "to_date",
+        "linea": 85
+      },
+      {
+        "nombre": "wsfe_config_id",
+        "linea": 86
+      },
+      {
+        "nombre": "wsfex_config_id",
+        "linea": 89
+      },
+      {
+        "nombre": "code",
+        "linea": 110
+      },
+      {
+        "nombre": "blocked",
+        "linea": 111
+      },
+      {
+        "nombre": "from_afip",
+        "linea": 112
+      },
+      {
+        "nombre": "journal_id",
+        "linea": 113
+      },
+      {
+        "nombre": "name",
+        "linea": 117
+      },
+      {
+        "nombre": "pos_id",
+        "linea": 118
+      },
+      {
+        "nombre": "priority",
+        "linea": 122
+      },
+      {
+        "nombre": "to_date",
+        "linea": 123
+      },
+      {
+        "nombre": "wsfe_config_id",
+        "linea": 124
+      },
+      {
+        "nombre": "wsfex_config_id",
+        "linea": 129
+      },
+      {
+        "nombre": "code",
+        "linea": 188
+      },
+      {
+        "nombre": "exempt_operations",
+        "linea": 189
+      },
+      {
+        "nombre": "from_afip",
+        "linea": 196
+      },
+      {
+        "nombre": "from_date",
+        "linea": 197
+      },
+      {
+        "nombre": "name",
+        "linea": 198
+      },
+      {
+        "nombre": "tax_id",
+        "linea": 199
+      },
+      {
+        "nombre": "to_date",
+        "linea": 204
+      },
+      {
+        "nombre": "wsfe_config_id",
+        "linea": 205
+      },
+      {
+        "nombre": "wsfex_config_id",
+        "linea": 208
+      },
+      {
+        "nombre": "company_id",
+        "linea": 239
+      },
+      {
+        "nombre": "config_id",
+        "linea": 240
+      },
+      {
+        "nombre": "cuit",
+        "linea": 241
+      },
+      {
+        "nombre": "name",
+        "linea": 242
+      },
+      {
+        "nombre": "url",
+        "linea": 243
+      },
+      {
+        "nombre": "wsaa_ticket_id",
+        "linea": 244
+      },
+      {
+        "nombre": "products_date_difference",
+        "linea": 246
+      },
+      {
+        "nombre": "services_date_difference",
+        "linea": 254
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/ws_padron.py",
+    "simbolos": [
+      {
+        "nombre": "clean_result_date",
+        "linea": 18
+      },
+      {
+        "nombre": "WsPadronConfig",
+        "linea": 24
+      },
+      {
+        "nombre": "_compute_url",
+        "linea": 32
+      },
+      {
+        "nombre": "_get_webservice",
+        "linea": 38
+      },
+      {
+        "nombre": "fetch_data_from_afip",
+        "linea": 41
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/wsaa.py",
+    "simbolos": [
+      {
+        "nombre": "clean_url",
+        "linea": 28
+      },
+      {
+        "nombre": "parse_response_date",
+        "linea": 33
+      },
+      {
+        "nombre": "_as_pem_bytes",
+        "linea": 39
+      },
+      {
+        "nombre": "_validate_certificate_key_pair",
+        "linea": 45
+      },
+      {
+        "nombre": "WSAAConfig",
+        "linea": 98
+      },
+      {
+        "nombre": "AfipWsService",
+        "linea": 154
+      },
+      {
+        "nombre": "WSAATa",
+        "linea": 170
+      },
+      {
+        "nombre": "_compute_url",
+        "linea": 126
+      },
+      {
+        "nombre": "download_file",
+        "linea": 132
+      },
+      {
+        "nombre": "is_expired",
+        "linea": 189
+      },
+      {
+        "nombre": "get_token_sign",
+        "linea": 202
+      },
+      {
+        "nombre": "action_renew",
+        "linea": 280
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "certificate",
+        "linea": 102
+      },
+      {
+        "nombre": "company_id",
+        "linea": 103
+      },
+      {
+        "nombre": "homologation",
+        "linea": 109
+      },
+      {
+        "nombre": "key",
+        "linea": 110
+      },
+      {
+        "nombre": "name",
+        "linea": 111
+      },
+      {
+        "nombre": "url",
+        "linea": 112
+      },
+      {
+        "nombre": "service_ids",
+        "linea": 113
+      },
+      {
+        "nombre": "description",
+        "linea": 158
+      },
+      {
+        "nombre": "name",
+        "linea": 159
+      },
+      {
+        "nombre": "company_id",
+        "linea": 174
+      },
+      {
+        "nombre": "config_id",
+        "linea": 175
+      },
+      {
+        "nombre": "expiration_time",
+        "linea": 176
+      },
+      {
+        "nombre": "name",
+        "linea": 177
+      },
+      {
+        "nombre": "sign",
+        "linea": 178
+      },
+      {
+        "nombre": "token",
+        "linea": 179
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/wsfe.py",
+    "simbolos": [
+      {
+        "nombre": "WsfeConfig",
+        "linea": 22
+      },
+      {
+        "nombre": "_compute_url",
+        "linea": 61
+      },
+      {
+        "nombre": "_get_webservice",
+        "linea": 67
+      },
+      {
+        "nombre": "unlink",
+        "linea": 70
+      },
+      {
+        "nombre": "_create_records_from_afip_result",
+        "linea": 86
+      },
+      {
+        "nombre": "_get_currency_tables",
+        "linea": 132
+      },
+      {
+        "nombre": "_get_vat_tables",
+        "linea": 142
+      },
+      {
+        "nombre": "_get_optionals_tables",
+        "linea": 152
+      },
+      {
+        "nombre": "_get_pos_tables",
+        "linea": 164
+      },
+      {
+        "nombre": "get_currency_rate",
+        "linea": 203
+      },
+      {
+        "nombre": "get_afip_tables",
+        "linea": 302
+      },
+      {
+        "nombre": "_check_vat_taxes_configured",
+        "linea": 327
+      },
+      {
+        "nombre": "_get_vat_array",
+        "linea": 340
+      },
+      {
+        "nombre": "_get_next_number",
+        "linea": 352
+      },
+      {
+        "nombre": "get_voucher_info",
+        "linea": 362
+      },
+      {
+        "nombre": "_match_invoice_pos",
+        "linea": 389
+      },
+      {
+        "nombre": "_set_invoice_in_ws",
+        "linea": 407
+      },
+      {
+        "nombre": "_recover_pending_invoice_send",
+        "linea": 496
+      },
+      {
+        "nombre": "_request_invoice_approval",
+        "linea": 522
+      },
+      {
+        "nombre": "_join_ws_messages",
+        "linea": 577
+      },
+      {
+        "nombre": "_collect_ws_response_messages",
+        "linea": 584
+      },
+      {
+        "nombre": "_apply_invoice_approval_result",
+        "linea": 590
+      },
+      {
+        "nombre": "send_invoice_to_afip",
+        "linea": 619
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "currency_ids",
+        "linea": 29
+      },
+      {
+        "nombre": "exempt_operations_tax_ids",
+        "linea": 35
+      },
+      {
+        "nombre": "optional_ids",
+        "linea": 41
+      },
+      {
+        "nombre": "point_of_sale_ids",
+        "linea": 47
+      },
+      {
+        "nombre": "vat_tax_ids",
+        "linea": 53
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/wsfe_request.py",
+    "simbolos": [
+      {
+        "nombre": "WsRequest",
+        "linea": 11
+      },
+      {
+        "nombre": "WsRequestDetail",
+        "linea": 47
+      },
+      {
+        "nombre": "_compute_name",
+        "linea": 29
+      },
+      {
+        "nombre": "create",
+        "linea": 34
+      },
+      {
+        "nombre": "unlink",
+        "linea": 42
+      },
+      {
+        "nombre": "unlink",
+        "linea": 86
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "name",
+        "linea": 16
+      },
+      {
+        "nombre": "detail_ids",
+        "linea": 17
+      },
+      {
+        "nombre": "date_request",
+        "linea": 23
+      },
+      {
+        "nombre": "nregs",
+        "linea": 26
+      },
+      {
+        "nombre": "request_id",
+        "linea": 51
+      },
+      {
+        "nombre": "invoice_id",
+        "linea": 56
+      },
+      {
+        "nombre": "pos_ar",
+        "linea": 59
+      },
+      {
+        "nombre": "voucher_type",
+        "linea": 60
+      },
+      {
+        "nombre": "doctype",
+        "linea": 61
+      },
+      {
+        "nombre": "docnum",
+        "linea": 62
+      },
+      {
+        "nombre": "voucher_number",
+        "linea": 63
+      },
+      {
+        "nombre": "voucher_date",
+        "linea": 64
+      },
+      {
+        "nombre": "amount_total",
+        "linea": 65
+      },
+      {
+        "nombre": "currency",
+        "linea": 66
+      },
+      {
+        "nombre": "currency_rate",
+        "linea": 67
+      },
+      {
+        "nombre": "xml_request",
+        "linea": 68
+      },
+      {
+        "nombre": "is_currency_request",
+        "linea": 69
+      },
+      {
+        "nombre": "cae",
+        "linea": 70
+      },
+      {
+        "nombre": "cae_due_date",
+        "linea": 71
+      },
+      {
+        "nombre": "result",
+        "linea": 72
+      },
+      {
+        "nombre": "observations",
+        "linea": 82
+      },
+      {
+        "nombre": "events",
+        "linea": 83
+      },
+      {
+        "nombre": "errors",
+        "linea": 84
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/wsfecred.py",
+    "simbolos": [
+      {
+        "nombre": "WsfeConfig",
+        "linea": 19
+      },
+      {
+        "nombre": "_compute_url",
+        "linea": 27
+      },
+      {
+        "nombre": "_get_webservice",
+        "linea": 37
+      },
+      {
+        "nombre": "check_partner_obliged_to_FCE",
+        "linea": 40
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/models/wsfex.py",
+    "simbolos": [
+      {
+        "nombre": "AccountIncoterms",
+        "linea": 21
+      },
+      {
+        "nombre": "WsfexShippingPermission",
+        "linea": 37
+      },
+      {
+        "nombre": "WsfexUomCodes",
+        "linea": 58
+      },
+      {
+        "nombre": "WsfexLangCodes",
+        "linea": 69
+      },
+      {
+        "nombre": "WsfexDstCountryCodes",
+        "linea": 80
+      },
+      {
+        "nombre": "WsfexIncotermsCodes",
+        "linea": 91
+      },
+      {
+        "nombre": "WsfexExportTypeCodes",
+        "linea": 104
+      },
+      {
+        "nombre": "WsfexConfig",
+        "linea": 114
+      },
+      {
+        "nombre": "name_get",
+        "linea": 25
+      },
+      {
+        "nombre": "_check_name_length",
+        "linea": 48
+      },
+      {
+        "nombre": "_compute_url",
+        "linea": 160
+      },
+      {
+        "nombre": "_get_webservice",
+        "linea": 166
+      },
+      {
+        "nombre": "unlink",
+        "linea": 169
+      },
+      {
+        "nombre": "_create_records_from_afip_result_no_date",
+        "linea": 194
+      },
+      {
+        "nombre": "_create_records_from_afip_result",
+        "linea": 224
+      },
+      {
+        "nombre": "_get_currency_tables",
+        "linea": 273
+      },
+      {
+        "nombre": "_get_countries_tables",
+        "linea": 283
+      },
+      {
+        "nombre": "_get_lang_tables",
+        "linea": 295
+      },
+      {
+        "nombre": "_get_export_type_tables",
+        "linea": 305
+      },
+      {
+        "nombre": "_get_UOM_tables",
+        "linea": 317
+      },
+      {
+        "nombre": "_get_incoterms_tables",
+        "linea": 325
+      },
+      {
+        "nombre": "_get_pos_tables",
+        "linea": 337
+      },
+      {
+        "nombre": "get_afip_tables",
+        "linea": 411
+      },
+      {
+        "nombre": "get_voucher_info",
+        "linea": 439
+      },
+      {
+        "nombre": "get_currency_rate",
+        "linea": 462
+      },
+      {
+        "nombre": "_get_next_id",
+        "linea": 560
+      },
+      {
+        "nombre": "_get_next_number",
+        "linea": 567
+      },
+      {
+        "nombre": "_match_invoice_pos",
+        "linea": 577
+      },
+      {
+        "nombre": "_set_invoice_in_ws",
+        "linea": 595
+      },
+      {
+        "nombre": "send_invoice_to_afip",
+        "linea": 686
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "name",
+        "linea": 41
+      },
+      {
+        "nombre": "invoice_id",
+        "linea": 42
+      },
+      {
+        "nombre": "dst_country_id",
+        "linea": 43
+      },
+      {
+        "nombre": "code",
+        "linea": 63
+      },
+      {
+        "nombre": "name",
+        "linea": 64
+      },
+      {
+        "nombre": "uom_id",
+        "linea": 65
+      },
+      {
+        "nombre": "wsfex_config_id",
+        "linea": 66
+      },
+      {
+        "nombre": "code",
+        "linea": 74
+      },
+      {
+        "nombre": "name",
+        "linea": 75
+      },
+      {
+        "nombre": "lang_id",
+        "linea": 76
+      },
+      {
+        "nombre": "wsfex_config_id",
+        "linea": 77
+      },
+      {
+        "nombre": "code",
+        "linea": 85
+      },
+      {
+        "nombre": "name",
+        "linea": 86
+      },
+      {
+        "nombre": "country_id",
+        "linea": 87
+      },
+      {
+        "nombre": "wsfex_config_id",
+        "linea": 88
+      },
+      {
+        "nombre": "code",
+        "linea": 96
+      },
+      {
+        "nombre": "name",
+        "linea": 97
+      },
+      {
+        "nombre": "incoterms_id",
+        "linea": 98
+      },
+      {
+        "nombre": "wsfex_config_id",
+        "linea": 101
+      },
+      {
+        "nombre": "code",
+        "linea": 109
+      },
+      {
+        "nombre": "name",
+        "linea": 110
+      },
+      {
+        "nombre": "wsfex_config_id",
+        "linea": 111
+      },
+      {
+        "nombre": "currency_ids",
+        "linea": 121
+      },
+      {
+        "nombre": "country_ids",
+        "linea": 127
+      },
+      {
+        "nombre": "export_type_ids",
+        "linea": 132
+      },
+      {
+        "nombre": "incoterms_ids",
+        "linea": 137
+      },
+      {
+        "nombre": "lang_ids",
+        "linea": 142
+      },
+      {
+        "nombre": "point_of_sale_ids",
+        "linea": 147
+      },
+      {
+        "nombre": "uom_ids",
+        "linea": 153
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/report/__init__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/report/account_invoice_report.py",
+    "simbolos": [
+      {
+        "nombre": "ReportInvoiceWithoutPayment",
+        "linea": 4
+      },
+      {
+        "nombre": "_get_report_values",
+        "linea": 8
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/report/report_subjournal_xlsx.py",
+    "simbolos": [
+      {
+        "nombre": "int2xlscol",
+        "linea": 16
+      },
+      {
+        "nombre": "get_line_with_total",
+        "linea": 29
+      },
+      {
+        "nombre": "SubjournalXlsx",
+        "linea": 37
+      },
+      {
+        "nombre": "get_title",
+        "linea": 41
+      },
+      {
+        "nombre": "_get_types",
+        "linea": 54
+      },
+      {
+        "nombre": "get_invoice_type",
+        "linea": 60
+      },
+      {
+        "nombre": "get_move_domain",
+        "linea": 70
+      },
+      {
+        "nombre": "get_columns",
+        "linea": 79
+      },
+      {
+        "nombre": "get_lines",
+        "linea": 164
+      },
+      {
+        "nombre": "get_query_vals",
+        "linea": 296
+      },
+      {
+        "nombre": "_report_xls_fields",
+        "linea": 472
+      },
+      {
+        "nombre": "set_column",
+        "linea": 492
+      },
+      {
+        "nombre": "create_format",
+        "linea": 500
+      },
+      {
+        "nombre": "generate_xlsx_report",
+        "linea": 521
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/report/sales_by_jurisdiction_xls.py",
+    "simbolos": [
+      {
+        "nombre": "SalesExportXlsx",
+        "linea": 11
+      },
+      {
+        "nombre": "_get_cell_format",
+        "linea": 15
+      },
+      {
+        "nombre": "_get_formula_format",
+        "linea": 21
+      },
+      {
+        "nombre": "_get_ws_params",
+        "linea": 29
+      },
+      {
+        "nombre": "_print_jurisdiction_block",
+        "linea": 141
+      },
+      {
+        "nombre": "_sales_report",
+        "linea": 201
+      },
+      {
+        "nombre": "get_data",
+        "linea": 269
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/tests/__init__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/tests/common.py",
+    "simbolos": [
+      {
+        "nombre": "TestLocAr",
+        "linea": 12
+      },
+      {
+        "nombre": "setUpClass",
+        "linea": 16
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/tests/test_account_payment_order.py",
+    "simbolos": [
+      {
+        "nombre": "TestAccountPaymentOrder",
+        "linea": 12
+      },
+      {
+        "nombre": "setUpClass",
+        "linea": 16
+      },
+      {
+        "nombre": "test_gather_income_lines",
+        "linea": 96
+      },
+      {
+        "nombre": "test_onchange_income_lines",
+        "linea": 111
+      },
+      {
+        "nombre": "test_clean_payment_lines",
+        "linea": 132
+      },
+      {
+        "nombre": "test_proforma_voucher",
+        "linea": 164
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/tests/test_res_partner.py",
+    "simbolos": [
+      {
+        "nombre": "TestResPartnerForm",
+        "linea": 19
+      },
+      {
+        "nombre": "TestResPartnerDocumentTypeAndVat",
+        "linea": 29
+      },
+      {
+        "nombre": "setUp",
+        "linea": 21
+      },
+      {
+        "nombre": "setUp",
+        "linea": 31
+      },
+      {
+        "nombre": "test_CUIT",
+        "linea": 35
+      },
+      {
+        "nombre": "test_DNI",
+        "linea": 47
+      },
+      {
+        "nombre": "_is_valid_CUIT",
+        "linea": 59
+      },
+      {
+        "nombre": "_is_reapeated_CUIT",
+        "linea": 79
+      },
+      {
+        "nombre": "_is_valid_DNI",
+        "linea": 98
+      },
+      {
+        "nombre": "_is_repeated_DNI",
+        "linea": 107
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/utils/__init__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/utils/arba_fixed_width_dicts.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/utils/arciba_fixed_width_dicts.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/utils/iva_per_ret_fixed_width_dicts.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/utils/sicore_fixed_width.py",
+    "simbolos": [
+      {
+        "nombre": "moneyfmt",
+        "linea": 4
+      },
+      {
+        "nombre": "FixedWidth",
+        "linea": 70
+      },
+      {
+        "nombre": "__init__",
+        "linea": 94
+      },
+      {
+        "nombre": "update",
+        "linea": 206
+      },
+      {
+        "nombre": "validate",
+        "linea": 214
+      },
+      {
+        "nombre": "_build_line",
+        "linea": 281
+      },
+      {
+        "nombre": "_string_to_dict",
+        "linea": 319
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/utils/sicore_fixed_width_dicts.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/utils/sifere_fixed_width_dicts.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/__init__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/account_change_currency.py",
+    "simbolos": [
+      {
+        "nombre": "AccountChangeCurrency",
+        "linea": 18
+      },
+      {
+        "nombre": "_prepare_preserved_perception_lines",
+        "linea": 22
+      },
+      {
+        "nombre": "_get_actual_currency_id",
+        "linea": 52
+      },
+      {
+        "nombre": "_get_actual_currency_rate",
+        "linea": 61
+      },
+      {
+        "nombre": "onchange_new_currency_id",
+        "linea": 108
+      },
+      {
+        "nombre": "change_currency",
+        "linea": 122
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "actual_currency_id",
+        "linea": 77
+      },
+      {
+        "nombre": "actual_currency_preciated",
+        "linea": 83
+      },
+      {
+        "nombre": "actual_currency_rate",
+        "linea": 88
+      },
+      {
+        "nombre": "new_currency_id",
+        "linea": 94
+      },
+      {
+        "nombre": "new_currency_preciated",
+        "linea": 95
+      },
+      {
+        "nombre": "new_currency_rate",
+        "linea": 100
+      },
+      {
+        "nombre": "invoice_id",
+        "linea": 101
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/account_check_change_state.py",
+    "simbolos": [
+      {
+        "nombre": "ChangeCheckStateWizard",
+        "linea": 9
+      },
+      {
+        "nombre": "_load_options",
+        "linea": 20
+      },
+      {
+        "nombre": "_get_default_check",
+        "linea": 46
+      },
+      {
+        "nombre": "change_stage",
+        "linea": 54
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "check_id",
+        "linea": 13
+      },
+      {
+        "nombre": "new_state",
+        "linea": 17
+      },
+      {
+        "nombre": "reason",
+        "linea": 18
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/account_debit_note.py",
+    "simbolos": [
+      {
+        "nombre": "AccountDebitNote",
+        "linea": 4
+      },
+      {
+        "nombre": "default_journal",
+        "linea": 7
+      },
+      {
+        "nombre": "_get_voucher_type",
+        "linea": 18
+      },
+      {
+        "nombre": "_prepare_default_values",
+        "linea": 22
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "journal_id",
+        "linea": 11
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/account_move_reversal.py",
+    "simbolos": [
+      {
+        "nombre": "AccountMoveReversal",
+        "linea": 4
+      },
+      {
+        "nombre": "selection_vals",
+        "linea": 9
+      },
+      {
+        "nombre": "default_get",
+        "linea": 20
+      },
+      {
+        "nombre": "_get_voucher_type",
+        "linea": 26
+      },
+      {
+        "nombre": "_prepare_default_reversal",
+        "linea": 36
+      },
+      {
+        "nombre": "reverse_moves",
+        "linea": 49
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "refund_method",
+        "linea": 13
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/account_tax_subjournal.py",
+    "simbolos": [
+      {
+        "nombre": "AccountTaxSubjournal",
+        "linea": 17
+      },
+      {
+        "nombre": "_get_report_id",
+        "linea": 21
+      },
+      {
+        "nombre": "create_report",
+        "linea": 71
+      },
+      {
+        "nombre": "_onchange_date_from",
+        "linea": 87
+      },
+      {
+        "nombre": "validate_date_from",
+        "linea": 91
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "date_from",
+        "linea": 27
+      },
+      {
+        "nombre": "date_to",
+        "linea": 31
+      },
+      {
+        "nombre": "report_id",
+        "linea": 32
+      },
+      {
+        "nombre": "based_on",
+        "linea": 37
+      },
+      {
+        "nombre": "grouped",
+        "linea": 43
+      },
+      {
+        "nombre": "grouped_max_amount",
+        "linea": 48
+      },
+      {
+        "nombre": "sort_by",
+        "linea": 53
+      },
+      {
+        "nombre": "base_position",
+        "linea": 59
+      },
+      {
+        "nombre": "company_id",
+        "linea": 65
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/accredit_check_wizard.py",
+    "simbolos": [
+      {
+        "nombre": "AccreditCheckwizard",
+        "linea": 7
+      },
+      {
+        "nombre": "view_init",
+        "linea": 17
+      },
+      {
+        "nombre": "_check_validations",
+        "linea": 39
+      },
+      {
+        "nombre": "action_accredit",
+        "linea": 59
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "date",
+        "linea": 11
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/afip_sinchronize_voucher.py",
+    "simbolos": [
+      {
+        "nombre": "AFIPSinchronizeVoucher",
+        "linea": 16
+      },
+      {
+        "nombre": "default_get",
+        "linea": 96
+      },
+      {
+        "nombre": "_compute_pos_id_domain",
+        "linea": 129
+      },
+      {
+        "nombre": "_clean_values",
+        "linea": 139
+      },
+      {
+        "nombre": "_compute_sync_values",
+        "linea": 155
+      },
+      {
+        "nombre": "_check_invoice_number_not_posted",
+        "linea": 242
+      },
+      {
+        "nombre": "relate_invoice",
+        "linea": 257
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "voucher_type",
+        "linea": 25
+      },
+      {
+        "nombre": "pos_id",
+        "linea": 28
+      },
+      {
+        "nombre": "pos_id_domain",
+        "linea": 29
+      },
+      {
+        "nombre": "wsfe_config_id",
+        "linea": 30
+      },
+      {
+        "nombre": "wsfex_config_id",
+        "linea": 31
+      },
+      {
+        "nombre": "voucher_number",
+        "linea": 32
+      },
+      {
+        "nombre": "document_type",
+        "linea": 34
+      },
+      {
+        "nombre": "document_number",
+        "linea": 40
+      },
+      {
+        "nombre": "date_invoice",
+        "linea": 43
+      },
+      {
+        "nombre": "amount_total",
+        "linea": 46
+      },
+      {
+        "nombre": "amount_no_taxed",
+        "linea": 52
+      },
+      {
+        "nombre": "amount_taxed",
+        "linea": 58
+      },
+      {
+        "nombre": "amount_tax",
+        "linea": 64
+      },
+      {
+        "nombre": "amount_exempt",
+        "linea": 70
+      },
+      {
+        "nombre": "cae",
+        "linea": 76
+      },
+      {
+        "nombre": "cae_due_date",
+        "linea": 83
+      },
+      {
+        "nombre": "date_process",
+        "linea": 86
+      },
+      {
+        "nombre": "infook",
+        "linea": 89
+      },
+      {
+        "nombre": "invoice_id",
+        "linea": 92
+      },
+      {
+        "nombre": "error_msg",
+        "linea": 93
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/arba_a122r_diagnostic_wizard.py",
+    "simbolos": [
+      {
+        "nombre": "ArbaA122rDiagnosticWizard",
+        "linea": 8
+      },
+      {
+        "nombre": "ArbaA122rDiagnosticLine",
+        "linea": 993
+      },
+      {
+        "nombre": "_default_company_ids",
+        "linea": 57
+      },
+      {
+        "nombre": "_onchange_company_id_defaults",
+        "linea": 63
+      },
+      {
+        "nombre": "_check_mes",
+        "linea": 80
+      },
+      {
+        "nombre": "_check_quincena_company_mode",
+        "linea": 86
+      },
+      {
+        "nombre": "_normalize_transaction",
+        "linea": 114
+      },
+      {
+        "nombre": "_get_period_date_range",
+        "linea": 117
+      },
+      {
+        "nombre": "_build_local_candidates",
+        "linea": 136
+      },
+      {
+        "nombre": "_normalize_remote_items",
+        "linea": 181
+      },
+      {
+        "nombre": "_build_remote_index_by_id",
+        "linea": 188
+      },
+      {
+        "nombre": "action_run_diagnostic",
+        "linea": 197
+      },
+      {
+        "nombre": "_mark_heuristic_candidates",
+        "linea": 516
+      },
+      {
+        "nombre": "action_apply_matched",
+        "linea": 598
+      },
+      {
+        "nombre": "_extract_remote_payload_dict",
+        "linea": 647
+      },
+      {
+        "nombre": "_get_local_signature",
+        "linea": 656
+      },
+      {
+        "nombre": "_get_remote_signature",
+        "linea": 684
+      },
+      {
+        "nombre": "_apply_diagnostic_lines",
+        "linea": 714
+      },
+      {
+        "nombre": "action_apply_heuristic",
+        "linea": 790
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "company_id",
+        "linea": 12
+      },
+      {
+        "nombre": "company_id_domain",
+        "linea": 18
+      },
+      {
+        "nombre": "activity_line_id",
+        "linea": 21
+      },
+      {
+        "nombre": "anio",
+        "linea": 27
+      },
+      {
+        "nombre": "mes",
+        "linea": 30
+      },
+      {
+        "nombre": "quincena",
+        "linea": 33
+      },
+      {
+        "nombre": "remote_state",
+        "linea": 39
+      },
+      {
+        "nombre": "result_line_ids",
+        "linea": 43
+      },
+      {
+        "nombre": "matched_count",
+        "linea": 49
+      },
+      {
+        "nombre": "only_remote_count",
+        "linea": 50
+      },
+      {
+        "nombre": "only_local_count",
+        "linea": 51
+      },
+      {
+        "nombre": "conflict_count",
+        "linea": 52
+      },
+      {
+        "nombre": "execution_date",
+        "linea": 53
+      },
+      {
+        "nombre": "applied_date",
+        "linea": 54
+      },
+      {
+        "nombre": "wizard_id",
+        "linea": 998
+      },
+      {
+        "nombre": "diagnostic_state",
+        "linea": 1001
+      },
+      {
+        "nombre": "n_transaccion_agente",
+        "linea": 1011
+      },
+      {
+        "nombre": "local_line_id",
+        "linea": 1012
+      },
+      {
+        "nombre": "payment_order_id",
+        "linea": 1017
+      },
+      {
+        "nombre": "local_sync_state",
+        "linea": 1023
+      },
+      {
+        "nombre": "arba_id_dj",
+        "linea": 1034
+      },
+      {
+        "nombre": "arba_id_comprobante",
+        "linea": 1035
+      },
+      {
+        "nombre": "arba_nro_emision",
+        "linea": 1038
+      },
+      {
+        "nombre": "remote_payload",
+        "linea": 1039
+      },
+      {
+        "nombre": "heuristic_candidate",
+        "linea": 1040
+      },
+      {
+        "nombre": "heuristic_match_key",
+        "linea": 1044
+      },
+      {
+        "nombre": "note",
+        "linea": 1048
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/arba_a122r_reprocess_wizard.py",
+    "simbolos": [
+      {
+        "nombre": "ArbaA122rReprocessWizard",
+        "linea": 6
+      },
+      {
+        "nombre": "_default_company_ids",
+        "linea": 23
+      },
+      {
+        "nombre": "action_reprocess",
+        "linea": 28
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "company_id",
+        "linea": 10
+      },
+      {
+        "nombre": "company_id_domain",
+        "linea": 13
+      },
+      {
+        "nombre": "date_from",
+        "linea": 16
+      },
+      {
+        "nombre": "date_to",
+        "linea": 17
+      },
+      {
+        "nombre": "include_observed",
+        "linea": 18
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/arba_perception_exporter.py",
+    "simbolos": [
+      {
+        "nombre": "ArbaPerceptionExporterWizard",
+        "linea": 27
+      },
+      {
+        "nombre": "_default_company_ids",
+        "linea": 39
+      },
+      {
+        "nombre": "create_file",
+        "linea": 44
+      },
+      {
+        "nombre": "_check_perception_tax_line_data",
+        "linea": 87
+      },
+      {
+        "nombre": "_get_arba_filename",
+        "linea": 127
+      },
+      {
+        "nombre": "_sanitize_vat",
+        "linea": 138
+      },
+      {
+        "nombre": "_get_period_code",
+        "linea": 142
+      },
+      {
+        "nombre": "_build_attachment_payload",
+        "linea": 171
+      },
+      {
+        "nombre": "_get_voucher_type",
+        "linea": 183
+      },
+      {
+        "nombre": "_generate_perception_file",
+        "linea": 209
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "company_id",
+        "linea": 31
+      },
+      {
+        "nombre": "company_id_domain",
+        "linea": 32
+      },
+      {
+        "nombre": "date_from",
+        "linea": 35
+      },
+      {
+        "nombre": "date_to",
+        "linea": 36
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/arba_retention_exporter.py",
+    "simbolos": [
+      {
+        "nombre": "ArbaRetentionExporterWizard",
+        "linea": 27
+      },
+      {
+        "nombre": "_default_company_ids",
+        "linea": 52
+      },
+      {
+        "nombre": "create_file",
+        "linea": 57
+      },
+      {
+        "nombre": "_validate_export_configuration",
+        "linea": 98
+      },
+      {
+        "nombre": "_check_retention_tax_line_data",
+        "linea": 111
+      },
+      {
+        "nombre": "_get_arba_filename",
+        "linea": 170
+      },
+      {
+        "nombre": "_sanitize_vat",
+        "linea": 183
+      },
+      {
+        "nombre": "_get_period_code",
+        "linea": 187
+      },
+      {
+        "nombre": "_build_attachment_payload",
+        "linea": 233
+      },
+      {
+        "nombre": "_get_certificate_parts",
+        "linea": 244
+      },
+      {
+        "nombre": "_get_transaction_number",
+        "linea": 258
+      },
+      {
+        "nombre": "_generate_retention_file",
+        "linea": 267
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "company_id",
+        "linea": 31
+      },
+      {
+        "nombre": "company_id_domain",
+        "linea": 32
+      },
+      {
+        "nombre": "date_from",
+        "linea": 35
+      },
+      {
+        "nombre": "date_to",
+        "linea": 36
+      },
+      {
+        "nombre": "activity_code",
+        "linea": 37
+      },
+      {
+        "nombre": "mode",
+        "linea": 40
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/cancel_picking_done.py",
+    "simbolos": [
+      {
+        "nombre": "CancelPickingDone",
+        "linea": 28
+      },
+      {
+        "nombre": "create_returns",
+        "linea": 35
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "reason",
+        "linea": 31
+      },
+      {
+        "nombre": "next_action",
+        "linea": 32
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/create_arciba_file.py",
+    "simbolos": [
+      {
+        "nombre": "informed_amount",
+        "linea": 40
+      },
+      {
+        "nombre": "CreateArcibaFiles",
+        "linea": 57
+      },
+      {
+        "nombre": "CreateArcibaNcFile",
+        "linea": 720
+      },
+      {
+        "nombre": "_default_company_ids",
+        "linea": 70
+      },
+      {
+        "nombre": "_get_partner_document_type_code",
+        "linea": 76
+      },
+      {
+        "nombre": "_get_partner_iibb_code",
+        "linea": 92
+      },
+      {
+        "nombre": "_get_partner_fiscal_position_code",
+        "linea": 108
+      },
+      {
+        "nombre": "generate_fw_file",
+        "linea": 128
+      },
+      {
+        "nombre": "_get_invoice_tax_lines",
+        "linea": 193
+      },
+      {
+        "nombre": "_get_invoice_vat_tax_lines",
+        "linea": 197
+      },
+      {
+        "nombre": "_get_invoice_iva_total",
+        "linea": 204
+      },
+      {
+        "nombre": "_get_ret_data",
+        "linea": 217
+      },
+      {
+        "nombre": "_get_perc_data",
+        "linea": 412
+      },
+      {
+        "nombre": "create_files",
+        "linea": 599
+      },
+      {
+        "nombre": "_default_company_ids",
+        "linea": 733
+      },
+      {
+        "nombre": "_get_inv_data",
+        "linea": 739
+      },
+      {
+        "nombre": "generate_fw_file",
+        "linea": 883
+      },
+      {
+        "nombre": "create_files",
+        "linea": 948
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "company_id",
+        "linea": 61
+      },
+      {
+        "nombre": "company_id_domain",
+        "linea": 62
+      },
+      {
+        "nombre": "notes",
+        "linea": 65
+      },
+      {
+        "nombre": "period_start",
+        "linea": 66
+      },
+      {
+        "nombre": "period_end",
+        "linea": 67
+      },
+      {
+        "nombre": "company_id",
+        "linea": 724
+      },
+      {
+        "nombre": "company_id_domain",
+        "linea": 725
+      },
+      {
+        "nombre": "notes",
+        "linea": 728
+      },
+      {
+        "nombre": "period_start",
+        "linea": 729
+      },
+      {
+        "nombre": "period_end",
+        "linea": 730
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/create_checkbook_wizard.py",
+    "simbolos": [
+      {
+        "nombre": "CreateCheckbookWizard",
+        "linea": 5
+      },
+      {
+        "nombre": "create_checkbook",
+        "linea": 32
+      },
+      {
+        "nombre": "_onchange_number",
+        "linea": 83
+      },
+      {
+        "nombre": "_onchange_start_num",
+        "linea": 90
+      },
+      {
+        "nombre": "_onchange_end_num",
+        "linea": 98
+      },
+      {
+        "nombre": "check_range",
+        "linea": 105
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "number",
+        "linea": 10
+      },
+      {
+        "nombre": "journal_id",
+        "linea": 11
+      },
+      {
+        "nombre": "checkbook_format",
+        "linea": 17
+      },
+      {
+        "nombre": "type",
+        "linea": 25
+      },
+      {
+        "nombre": "start_num",
+        "linea": 29
+      },
+      {
+        "nombre": "end_num",
+        "linea": 30
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/create_iva_per_ret_files.py",
+    "simbolos": [
+      {
+        "nombre": "_format_amount",
+        "linea": 17
+      },
+      {
+        "nombre": "_get_afip_code",
+        "linea": 23
+      },
+      {
+        "nombre": "CreateIVARetentionFile",
+        "linea": 37
+      },
+      {
+        "nombre": "CreateIVAPerceptionFile",
+        "linea": 230
+      },
+      {
+        "nombre": "_default_company_ids",
+        "linea": 50
+      },
+      {
+        "nombre": "create_retention_file",
+        "linea": 55
+      },
+      {
+        "nombre": "_get_period_name",
+        "linea": 120
+      },
+      {
+        "nombre": "_generate_retention_file",
+        "linea": 126
+      },
+      {
+        "nombre": "_default_company_ids",
+        "linea": 243
+      },
+      {
+        "nombre": "create_perception_file",
+        "linea": 248
+      },
+      {
+        "nombre": "_get_period_name",
+        "linea": 312
+      },
+      {
+        "nombre": "_generate_perception_file",
+        "linea": 318
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "company_id",
+        "linea": 41
+      },
+      {
+        "nombre": "company_id_domain",
+        "linea": 42
+      },
+      {
+        "nombre": "date_start",
+        "linea": 45
+      },
+      {
+        "nombre": "date_stop",
+        "linea": 46
+      },
+      {
+        "nombre": "notes",
+        "linea": 47
+      },
+      {
+        "nombre": "company_id",
+        "linea": 234
+      },
+      {
+        "nombre": "company_id_domain",
+        "linea": 235
+      },
+      {
+        "nombre": "date_start",
+        "linea": 238
+      },
+      {
+        "nombre": "date_stop",
+        "linea": 239
+      },
+      {
+        "nombre": "notes",
+        "linea": 240
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/create_libro_iva.py",
+    "simbolos": [
+      {
+        "nombre": "LibroIVAExporterWizard",
+        "linea": 14
+      },
+      {
+        "nombre": "_default_company_ids",
+        "linea": 31
+      },
+      {
+        "nombre": "_check_date_to",
+        "linea": 36
+      },
+      {
+        "nombre": "_get_invoice_tax_lines",
+        "linea": 43
+      },
+      {
+        "nombre": "_get_invoice_not_vat_tax_lines",
+        "linea": 47
+      },
+      {
+        "nombre": "_get_invoice_vat_tax_lines",
+        "linea": 57
+      },
+      {
+        "nombre": "_get_perception_with_type_iva",
+        "linea": 67
+      },
+      {
+        "nombre": "_get_perception_with_type",
+        "linea": 77
+      },
+      {
+        "nombre": "_get_taxes_with_type",
+        "linea": 87
+      },
+      {
+        "nombre": "_get_operation_code",
+        "linea": 94
+      },
+      {
+        "nombre": "_get_tax_lines_qty",
+        "linea": 99
+      },
+      {
+        "nombre": "_get_amount_original_currency",
+        "linea": 106
+      },
+      {
+        "nombre": "_get_fiscal_credit_currency",
+        "linea": 109
+      },
+      {
+        "nombre": "_get_ganancias_perceptions",
+        "linea": 115
+      },
+      {
+        "nombre": "_get_invoice_date",
+        "linea": 125
+      },
+      {
+        "nombre": "_get_invoice_voucher_type",
+        "linea": 149
+      },
+      {
+        "nombre": "_get_invoice_point_of_sale",
+        "linea": 177
+      },
+      {
+        "nombre": "_get_invoice_number",
+        "linea": 209
+      },
+      {
+        "nombre": "_get_partner_doc_type",
+        "linea": 247
+      },
+      {
+        "nombre": "_get_partner_vat",
+        "linea": 274
+      },
+      {
+        "nombre": "_get_partner_name",
+        "linea": 296
+      },
+      {
+        "nombre": "_get_invoice_amount_total",
+        "linea": 320
+      },
+      {
+        "nombre": "_get_invoice_amount_no_taxed",
+        "linea": 338
+      },
+      {
+        "nombre": "_get_invoice_amount_exempt",
+        "linea": 357
+      },
+      {
+        "nombre": "_get_invoice_currency",
+        "linea": 368
+      },
+      {
+        "nombre": "_get_invoice_currency_rate",
+        "linea": 394
+      },
+      {
+        "nombre": "_check_invoice_is_exempt",
+        "linea": 423
+      },
+      {
+        "nombre": "_check_invoice_is_import",
+        "linea": 435
+      },
+      {
+        "nombre": "_format_sale_aliquot_line",
+        "linea": 441
+      },
+      {
+        "nombre": "_format_aliquot_purchase_line",
+        "linea": 479
+      },
+      {
+        "nombre": "_format_aliquot_import_line",
+        "linea": 523
+      },
+      {
+        "nombre": "_create_sale_line",
+        "linea": 553
+      },
+      {
+        "nombre": "_create_sale_aliq_line",
+        "linea": 655
+      },
+      {
+        "nombre": "_create_purchase_line",
+        "linea": 678
+      },
+      {
+        "nombre": "_create_aliquot_purchase_line",
+        "linea": 758
+      },
+      {
+        "nombre": "_create_aliquot_import_purchase_line",
+        "linea": 795
+      },
+      {
+        "nombre": "create_attachment",
+        "linea": 811
+      },
+      {
+        "nombre": "create_sales_voucher_file",
+        "linea": 841
+      },
+      {
+        "nombre": "create_purchases_voucher_file",
+        "linea": 888
+      },
+      {
+        "nombre": "create_files",
+        "linea": 988
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "date_from",
+        "linea": 18
+      },
+      {
+        "nombre": "date_to",
+        "linea": 19
+      },
+      {
+        "nombre": "company_id",
+        "linea": 20
+      },
+      {
+        "nombre": "company_id_domain",
+        "linea": 21
+      },
+      {
+        "nombre": "is_simple_vat",
+        "linea": 24
+      },
+      {
+        "nombre": "notes",
+        "linea": 25
+      },
+      {
+        "nombre": "state",
+        "linea": 26
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/create_sicore_file.py",
+    "simbolos": [
+      {
+        "nombre": "CreateSicoreFiles",
+        "linea": 44
+      },
+      {
+        "nombre": "_default_company_ids",
+        "linea": 61
+      },
+      {
+        "nombre": "_parse_move_lines",
+        "linea": 67
+      },
+      {
+        "nombre": "_validate_before_create",
+        "linea": 138
+      },
+      {
+        "nombre": "_format_monetary",
+        "linea": 144
+      },
+      {
+        "nombre": "_generate_retention_file",
+        "linea": 148
+      },
+      {
+        "nombre": "create_files",
+        "linea": 338
+      },
+      {
+        "nombre": "get_data_of_employee",
+        "linea": 429
+      },
+      {
+        "nombre": "_generate_retention_file_rrhh",
+        "linea": 444
+      },
+      {
+        "nombre": "create_files_rrhh",
+        "linea": 604
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "company_id",
+        "linea": 48
+      },
+      {
+        "nombre": "company_id_domain",
+        "linea": 49
+      },
+      {
+        "nombre": "period_start",
+        "linea": 52
+      },
+      {
+        "nombre": "period_end",
+        "linea": 53
+      },
+      {
+        "nombre": "notes",
+        "linea": 54
+      },
+      {
+        "nombre": "rrhh_ret_profit_code",
+        "linea": 55
+      },
+      {
+        "nombre": "presentation_date",
+        "linea": 56
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/create_sifere_file.py",
+    "simbolos": [
+      {
+        "nombre": "CreateSifereFiles",
+        "linea": 27
+      },
+      {
+        "nombre": "ReportFilesGenerator",
+        "linea": 131
+      },
+      {
+        "nombre": "_check_period",
+        "linea": 35
+      },
+      {
+        "nombre": "_get_period_name",
+        "linea": 54
+      },
+      {
+        "nombre": "create_files",
+        "linea": 60
+      },
+      {
+        "nombre": "_get_period_name",
+        "linea": 134
+      },
+      {
+        "nombre": "_do_sifere",
+        "linea": 140
+      },
+      {
+        "nombre": "_do_sifere_ret",
+        "linea": 153
+      },
+      {
+        "nombre": "create_retention_file",
+        "linea": 156
+      },
+      {
+        "nombre": "_generate_retention_file",
+        "linea": 218
+      },
+      {
+        "nombre": "_do_sifere_per",
+        "linea": 369
+      },
+      {
+        "nombre": "create_perception_file",
+        "linea": 372
+      },
+      {
+        "nombre": "_get_tipo_comprobante",
+        "linea": 411
+      },
+      {
+        "nombre": "_generate_perception_file",
+        "linea": 423
+      },
+      {
+        "nombre": "_do_sifere_per_adu",
+        "linea": 524
+      },
+      {
+        "nombre": "create_aduana_file",
+        "linea": 527
+      },
+      {
+        "nombre": "_generate_aduana_file",
+        "linea": 569
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "period_start",
+        "linea": 31
+      },
+      {
+        "nombre": "period_end",
+        "linea": 32
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/debit_check_wizard.py",
+    "simbolos": [
+      {
+        "nombre": "DebitCheckWizard",
+        "linea": 5
+      },
+      {
+        "nombre": "_get_default_checks",
+        "linea": 24
+      },
+      {
+        "nombre": "_get_default_method",
+        "linea": 30
+      },
+      {
+        "nombre": "_get_issued_check_id",
+        "linea": 34
+      },
+      {
+        "nombre": "button_debit_checks",
+        "linea": 37
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "deposit_date",
+        "linea": 9
+      },
+      {
+        "nombre": "issued_checks",
+        "linea": 10
+      },
+      {
+        "nombre": "issued_check_id",
+        "linea": 14
+      },
+      {
+        "nombre": "multichecks",
+        "linea": 19
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/deposit_check_wizard.py",
+    "simbolos": [
+      {
+        "nombre": "DepositCheckwizard",
+        "linea": 7
+      },
+      {
+        "nombre": "view_init",
+        "linea": 32
+      },
+      {
+        "nombre": "_get_source_account_check",
+        "linea": 59
+      },
+      {
+        "nombre": "_check_validations",
+        "linea": 76
+      },
+      {
+        "nombre": "action_deposit",
+        "linea": 110
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "voucher_number",
+        "linea": 11
+      },
+      {
+        "nombre": "bank_account_id",
+        "linea": 12
+      },
+      {
+        "nombre": "date",
+        "linea": 20
+      },
+      {
+        "nombre": "company_id",
+        "linea": 25
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/fiscal_year_closing_operation_wizard.py",
+    "simbolos": [
+      {
+        "nombre": "FiscalYearClosingOperationWizard",
+        "linea": 20
+      },
+      {
+        "nombre": "_check_draft_moves",
+        "linea": 24
+      },
+      {
+        "nombre": "_check_unbalanced_moves",
+        "linea": 47
+      },
+      {
+        "nombre": "_checkings",
+        "linea": 81
+      },
+      {
+        "nombre": "_pre_run",
+        "linea": 88
+      },
+      {
+        "nombre": "run",
+        "linea": 111
+      },
+      {
+        "nombre": "_get_balance",
+        "linea": 135
+      },
+      {
+        "nombre": "_get_loss_profit_data",
+        "linea": 158
+      },
+      {
+        "nombre": "_get_closing_data",
+        "linea": 176
+      },
+      {
+        "nombre": "_get_accounts_from_group",
+        "linea": 199
+      },
+      {
+        "nombre": "create_closing_move",
+        "linea": 208
+      },
+      {
+        "nombre": "create_opening_move",
+        "linea": 300
+      },
+      {
+        "nombre": "remove_move",
+        "linea": 365
+      },
+      {
+        "nombre": "get_coefficient",
+        "linea": 397
+      },
+      {
+        "nombre": "get_accounts_by_period",
+        "linea": 439
+      },
+      {
+        "nombre": "_prepare_move_line",
+        "linea": 491
+      },
+      {
+        "nombre": "_generate_monthly_periods",
+        "linea": 503
+      },
+      {
+        "nombre": "create_recpam_move",
+        "linea": 520
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/force_journal_change.py",
+    "simbolos": [
+      {
+        "nombre": "ForceJournalChangewizard",
+        "linea": 4
+      },
+      {
+        "nombre": "force_journal_change",
+        "linea": 18
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "new_journal_id",
+        "linea": 8
+      },
+      {
+        "nombre": "company_id",
+        "linea": 11
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/reject_check_wizard.py",
+    "simbolos": [
+      {
+        "nombre": "RejectIssuedCheckWizard",
+        "linea": 5
+      },
+      {
+        "nombre": "RejectThirdPartyCheckWizard",
+        "linea": 105
+      },
+      {
+        "nombre": "action_reject",
+        "linea": 21
+      },
+      {
+        "nombre": "_get_field_string",
+        "linea": 118
+      },
+      {
+        "nombre": "_missing_config_fields_for_delivered_third_party_check",
+        "linea": 125
+      },
+      {
+        "nombre": "_create_account_move_line",
+        "linea": 140
+      },
+      {
+        "nombre": "action_reject",
+        "linea": 196
+      },
+      {
+        "nombre": "get_account",
+        "linea": 252
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "company_id",
+        "linea": 9
+      },
+      {
+        "nombre": "generate_rejection_journal_entry",
+        "linea": 15
+      },
+      {
+        "nombre": "reject_date",
+        "linea": 18
+      },
+      {
+        "nombre": "reject_reason",
+        "linea": 19
+      },
+      {
+        "nombre": "company_id",
+        "linea": 109
+      },
+      {
+        "nombre": "reject_date",
+        "linea": 115
+      },
+      {
+        "nombre": "reject_reason",
+        "linea": 116
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/report_exporter.py",
+    "simbolos": [
+      {
+        "nombre": "ReportFilesGenerator",
+        "linea": 14
+      },
+      {
+        "nombre": "ReportFiles",
+        "linea": 169
+      },
+      {
+        "nombre": "ReportFilesError",
+        "linea": 208
+      },
+      {
+        "nombre": "get_dates",
+        "linea": 29
+      },
+      {
+        "nombre": "do_store",
+        "linea": 32
+      },
+      {
+        "nombre": "postprocess",
+        "linea": 108
+      },
+      {
+        "nombre": "_control_error",
+        "linea": 132
+      },
+      {
+        "nombre": "do_generate",
+        "linea": 141
+      },
+      {
+        "nombre": "to_declared",
+        "linea": 190
+      },
+      {
+        "nombre": "to_generated",
+        "linea": 193
+      },
+      {
+        "nombre": "regenerate",
+        "linea": 196
+      },
+      {
+        "nombre": "unlink",
+        "linea": 201
+      },
+      {
+        "nombre": "goto",
+        "linea": 225
+      },
+      {
+        "nombre": "_compute_resource_name",
+        "linea": 236
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "exporter_id",
+        "linea": 17
+      },
+      {
+        "nombre": "exporter_codename",
+        "linea": 18
+      },
+      {
+        "nombre": "date_start",
+        "linea": 21
+      },
+      {
+        "nombre": "date_stop",
+        "linea": 22
+      },
+      {
+        "nombre": "company_id",
+        "linea": 23
+      },
+      {
+        "nombre": "name",
+        "linea": 180
+      },
+      {
+        "nombre": "state",
+        "linea": 182
+      },
+      {
+        "nombre": "error_ids",
+        "linea": 183
+      },
+      {
+        "nombre": "attachment_ids",
+        "linea": 186
+      },
+      {
+        "nombre": "resource_ref",
+        "linea": 212
+      },
+      {
+        "nombre": "resource_name",
+        "linea": 213
+      },
+      {
+        "nombre": "error",
+        "linea": 214
+      },
+      {
+        "nombre": "file_id",
+        "linea": 215
+      },
+      {
+        "nombre": "type",
+        "linea": 216
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/res_partner_afip_padron_wizard.py",
+    "simbolos": [
+      {
+        "nombre": "ResPartnerAfipPadron",
+        "linea": 9
+      },
+      {
+        "nombre": "ResPartnerAfipPadronWizard",
+        "linea": 23
+      },
+      {
+        "nombre": "get_fields",
+        "linea": 69
+      },
+      {
+        "nombre": "get_fields_domain",
+        "linea": 73
+      },
+      {
+        "nombre": "get_default_case",
+        "linea": 89
+      },
+      {
+        "nombre": "default_get",
+        "linea": 99
+      },
+      {
+        "nombre": "get_partners",
+        "linea": 115
+      },
+      {
+        "nombre": "_change_text_case",
+        "linea": 127
+      },
+      {
+        "nombre": "change_partner",
+        "linea": 139
+      },
+      {
+        "nombre": "_selection_state",
+        "linea": 189
+      },
+      {
+        "nombre": "state_exit_mass_configuration",
+        "linea": 197
+      },
+      {
+        "nombre": "state_exit_single_update",
+        "linea": 200
+      },
+      {
+        "nombre": "open_next",
+        "linea": 221
+      },
+      {
+        "nombre": "_update",
+        "linea": 228
+      },
+      {
+        "nombre": "update_selected",
+        "linea": 245
+      },
+      {
+        "nombre": "update_partners_automatically",
+        "linea": 254
+      },
+      {
+        "nombre": "start_mass_update",
+        "linea": 262
+      },
+      {
+        "nombre": "action_open_wizard",
+        "linea": 270
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "wizard_id",
+        "linea": 13
+      },
+      {
+        "nombre": "field",
+        "linea": 17
+      },
+      {
+        "nombre": "old_value",
+        "linea": 18
+      },
+      {
+        "nombre": "new_value",
+        "linea": 19
+      },
+      {
+        "nombre": "new_value_id",
+        "linea": 20
+      },
+      {
+        "nombre": "field_ids",
+        "linea": 28
+      },
+      {
+        "nombre": "partner_ids",
+        "linea": 33
+      },
+      {
+        "nombre": "partner_id",
+        "linea": 41
+      },
+      {
+        "nombre": "case_convertion",
+        "linea": 47
+      },
+      {
+        "nombre": "field_to_update_ids",
+        "linea": 57
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/sale_make_invoice_advance.py",
+    "simbolos": [
+      {
+        "nombre": "SaleAdvancePaymentInv",
+        "linea": 4
+      },
+      {
+        "nombre": "_create_invoice",
+        "linea": 7
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/sales_by_jurisdiction.py",
+    "simbolos": [
+      {
+        "nombre": "ExportSalesByJurisdictionXLS",
+        "linea": 31
+      },
+      {
+        "nombre": "create_report",
+        "linea": 39
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "date_from",
+        "linea": 35
+      },
+      {
+        "nombre": "date_to",
+        "linea": 36
+      },
+      {
+        "nombre": "company_ids",
+        "linea": 37
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/update_journal_period.py",
+    "simbolos": [
+      {
+        "nombre": "UpdateJournalPeriodWizard",
+        "linea": 5
+      },
+      {
+        "nombre": "UpdateJournalPeriodWizardLine",
+        "linea": 71
+      },
+      {
+        "nombre": "_check_date",
+        "linea": 27
+      },
+      {
+        "nombre": "update_periods",
+        "linea": 31
+      },
+      {
+        "nombre": "_get_all_journals",
+        "linea": 46
+      },
+      {
+        "nombre": "_get_default_type",
+        "linea": 64
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "due_date",
+        "linea": 9
+      },
+      {
+        "nombre": "selection_type",
+        "linea": 14
+      },
+      {
+        "nombre": "journal_ids",
+        "linea": 19
+      },
+      {
+        "nombre": "wizard_id",
+        "linea": 75
+      },
+      {
+        "nombre": "journal_id",
+        "linea": 76
+      },
+      {
+        "nombre": "journal_due_date",
+        "linea": 79
+      },
+      {
+        "nombre": "selected",
+        "linea": 80
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/validate_account_move.py",
+    "simbolos": [
+      {
+        "nombre": "ValidateAccountMove",
+        "linea": 9
+      },
+      {
+        "nombre": "validate_move",
+        "linea": 15
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/wsaa_load_config.py",
+    "simbolos": [
+      {
+        "nombre": "WSAALoadConfig",
+        "linea": 13
+      },
+      {
+        "nombre": "read_file",
+        "linea": 17
+      },
+      {
+        "nombre": "load_cert",
+        "linea": 33
+      },
+      {
+        "nombre": "load_key",
+        "linea": 49
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "certificate",
+        "linea": 65
+      },
+      {
+        "nombre": "cert_name",
+        "linea": 66
+      },
+      {
+        "nombre": "key",
+        "linea": 67
+      },
+      {
+        "nombre": "key_name",
+        "linea": 68
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wizard/wsfe_massive_sinchronize.py",
+    "simbolos": [
+      {
+        "nombre": "WsfeMassiveSinchronize",
+        "linea": 16
+      },
+      {
+        "nombre": "_search_invoice",
+        "linea": 25
+      },
+      {
+        "nombre": "sinchronize",
+        "linea": 67
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "voucher_type",
+        "linea": 20
+      },
+      {
+        "nombre": "pos_id",
+        "linea": 23
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_eynes/wsfetools/__init__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/wsfetools/ws_afip.py",
+    "simbolos": [
+      {
+        "nombre": "WSParser",
+        "linea": 25
+      },
+      {
+        "nombre": "_afip_round",
+        "linea": 26
+      },
+      {
+        "nombre": "_convert_date_to_AFIP_format",
+        "linea": 40
+      },
+      {
+        "nombre": "_get_last_working_day",
+        "linea": 43
+      },
+      {
+        "nombre": "clean_result_date",
+        "linea": 67
+      },
+      {
+        "nombre": "parse_associated_voucher",
+        "linea": 72
+      },
+      {
+        "nombre": "parse_errors",
+        "linea": 90
+      },
+      {
+        "nombre": "parse_errors_raise",
+        "linea": 103
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/wsfetools/wsfe_helper.py",
+    "simbolos": [
+      {
+        "nombre": "WSFEParser",
+        "linea": 18
+      },
+      {
+        "nombre": "_get_concept",
+        "linea": 19
+      },
+      {
+        "nombre": "_get_date_due",
+        "linea": 35
+      },
+      {
+        "nombre": "_get_date_from",
+        "linea": 70
+      },
+      {
+        "nombre": "_get_date_to",
+        "linea": 82
+      },
+      {
+        "nombre": "parse_invoice",
+        "linea": 94
+      },
+      {
+        "nombre": "parse_vat_lines",
+        "linea": 155
+      },
+      {
+        "nombre": "parse_taxes_not_vat",
+        "linea": 195
+      },
+      {
+        "nombre": "parse_associated_voucher",
+        "linea": 219
+      },
+      {
+        "nombre": "parse_associated_period",
+        "linea": 248
+      },
+      {
+        "nombre": "parse_optionals",
+        "linea": 264
+      },
+      {
+        "nombre": "get_cae_due_date",
+        "linea": 284
+      },
+      {
+        "nombre": "get_invoice_date",
+        "linea": 296
+      },
+      {
+        "nombre": "get_invoice_name",
+        "linea": 306
+      },
+      {
+        "nombre": "handle_FCE_prefix",
+        "linea": 319
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_eynes/wsfetools/wsfex_helper.py",
+    "simbolos": [
+      {
+        "nombre": "WSFEXParser",
+        "linea": 17
+      },
+      {
+        "nombre": "_check_shipping_perm",
+        "linea": 18
+      },
+      {
+        "nombre": "_get_date_due",
+        "linea": 32
+      },
+      {
+        "nombre": "parse_invoice",
+        "linea": 57
+      },
+      {
+        "nombre": "parse_items",
+        "linea": 119
+      },
+      {
+        "nombre": "parse_permissions",
+        "linea": 152
+      },
+      {
+        "nombre": "get_cae_due_date",
+        "linea": 163
+      },
+      {
+        "nombre": "get_invoice_date",
+        "linea": 175
+      },
+      {
+        "nombre": "get_invoice_name",
+        "linea": 185
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_padron_ws_consumer/__init__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_padron_ws_consumer/__manifest__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_padron_ws_consumer/hooks.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_padron_ws_consumer/models/__init__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_padron_ws_consumer/models/account_journal.py",
+    "simbolos": [
+      {
+        "nombre": "AccountJournal",
+        "linea": 4
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "padron_state_id",
+        "linea": 7
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_padron_ws_consumer/models/res_company.py",
+    "simbolos": [
+      {
+        "nombre": "ResCompany",
+        "linea": 4
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "use_special_padron",
+        "linea": 7
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_padron_ws_consumer/models/res_config_settings.py",
+    "simbolos": [
+      {
+        "nombre": "ResConfigSettings",
+        "linea": 4
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "check_padron_server_state",
+        "linea": 7
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_padron_ws_consumer/models/res_partner.py",
+    "simbolos": [
+      {
+        "nombre": "ResPartnerPerception",
+        "linea": 20
+      },
+      {
+        "nombre": "ResPartnerRetention",
+        "linea": 48
+      },
+      {
+        "nombre": "ResPartner",
+        "linea": 66
+      },
+      {
+        "nombre": "create",
+        "linea": 73
+      },
+      {
+        "nombre": "_get_padron_url",
+        "linea": 81
+      },
+      {
+        "nombre": "_filter_valid_vats",
+        "linea": 91
+      },
+      {
+        "nombre": "_get_padron_values",
+        "linea": 103
+      },
+      {
+        "nombre": "_get_padron_config_int",
+        "linea": 137
+      },
+      {
+        "nombre": "_get_padron_http_timeout",
+        "linea": 150
+      },
+      {
+        "nombre": "_get_journal_from_padron_name",
+        "linea": 160
+      },
+      {
+        "nombre": "_get_padron_state_xml_id",
+        "linea": 186
+      },
+      {
+        "nombre": "_cache_padron_journal",
+        "linea": 203
+      },
+      {
+        "nombre": "_build_date_from_integer",
+        "linea": 209
+      },
+      {
+        "nombre": "_get_iibb_situation",
+        "linea": 223
+      },
+      {
+        "nombre": "_update_partner_perceptions",
+        "linea": 234
+      },
+      {
+        "nombre": "_update_partner_retentions",
+        "linea": 288
+      },
+      {
+        "nombre": "_update_partner_coeficients",
+        "linea": 333
+      },
+      {
+        "nombre": "_update_partner_ivas",
+        "linea": 386
+      },
+      {
+        "nombre": "_get_partner_padron_value",
+        "linea": 433
+      },
+      {
+        "nombre": "_create_partner_padron_value",
+        "linea": 450
+      },
+      {
+        "nombre": "_with_padron_value_cache",
+        "linea": 459
+      },
+      {
+        "nombre": "_get_users_from_padron_group",
+        "linea": 488
+      },
+      {
+        "nombre": "_cleanup_old_padron_values",
+        "linea": 494
+      },
+      {
+        "nombre": "_validate_partners_vat",
+        "linea": 505
+      },
+      {
+        "nombre": "do_update_from_padron",
+        "linea": 538
+      },
+      {
+        "nombre": "_is_padron_server_available",
+        "linea": 580
+      },
+      {
+        "nombre": "_get_padron_partner_domain",
+        "linea": 608
+      },
+      {
+        "nombre": "_run_padron_batches",
+        "linea": 629
+      },
+      {
+        "nombre": "_fetch_padron_batch",
+        "linea": 735
+      },
+      {
+        "nombre": "_apply_padron_batch_response",
+        "linea": 770
+      },
+      {
+        "nombre": "_mark_partners_padron_updated",
+        "linea": 830
+      },
+      {
+        "nombre": "_try_apply_padron_values",
+        "linea": 862
+      },
+      {
+        "nombre": "_get_padron_notification",
+        "linea": 882
+      },
+      {
+        "nombre": "_apply_padron_values",
+        "linea": 898
+      },
+      {
+        "nombre": "_schedule_padron_cron_continuation",
+        "linea": 946
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "period",
+        "linea": 23
+      },
+      {
+        "nombre": "coeficient",
+        "linea": 24
+      },
+      {
+        "nombre": "coeficient_percent",
+        "linea": 25
+      },
+      {
+        "nombre": "risk",
+        "linea": 26
+      },
+      {
+        "nombre": "is_multilateral",
+        "linea": 34
+      },
+      {
+        "nombre": "period",
+        "linea": 51
+      },
+      {
+        "nombre": "is_multilateral",
+        "linea": 52
+      },
+      {
+        "nombre": "last_padron_update",
+        "linea": 69
+      },
+      {
+        "nombre": "last_padron_update_error",
+        "linea": 70
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_padron_ws_consumer/utils/__init__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_padron_ws_consumer/utils/helpers.py",
+    "simbolos": [
+      {
+        "nombre": "get_current_period",
+        "linea": 4
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_pos_wsfe/__init__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_pos_wsfe/__manifest__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_pos_wsfe/models/__init__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_pos_wsfe/models/account_journal.py",
+    "simbolos": [
+      {
+        "nombre": "AccountJournal",
+        "linea": 9
+      },
+      {
+        "nombre": "get_pretty_denomination",
+        "linea": 21
+      },
+      {
+        "nombre": "name_search",
+        "linea": 32
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "pos_config_id",
+        "linea": 12
+      },
+      {
+        "nombre": "wsfe_pos_config_id",
+        "linea": 16
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_pos_wsfe/models/account_move.py",
+    "simbolos": [
+      {
+        "nombre": "AccountMove",
+        "linea": 10
+      },
+      {
+        "nombre": "get_journal_from_pos",
+        "linea": 13
+      },
+      {
+        "nombre": "is_out_invoice_fce",
+        "linea": 46
+      },
+      {
+        "nombre": "get_pretty_sequence",
+        "linea": 55
+      },
+      {
+        "nombre": "get_next_sequence_from_pos",
+        "linea": 65
+      },
+      {
+        "nombre": "select_default_voucher_type",
+        "linea": 105
+      },
+      {
+        "nombre": "_validate_electronic_invoices",
+        "linea": 111
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_pos_wsfe/models/pos_config.py",
+    "simbolos": [
+      {
+        "nombre": "PosConfig",
+        "linea": 8
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "invoice_journal_ids",
+        "linea": 11
+      },
+      {
+        "nombre": "invoice_manual_journal_ids",
+        "linea": 18
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_pos_wsfe/models/pos_order.py",
+    "simbolos": [
+      {
+        "nombre": "PosOrder",
+        "linea": 10
+      },
+      {
+        "nombre": "_export_for_ui",
+        "linea": 23
+      },
+      {
+        "nombre": "_order_fields",
+        "linea": 32
+      },
+      {
+        "nombre": "_prepare_invoice_vals",
+        "linea": 38
+      },
+      {
+        "nombre": "_hook_recompute_account_move",
+        "linea": 51
+      },
+      {
+        "nombre": "_check_balanced",
+        "linea": 60
+      },
+      {
+        "nombre": "_create_invoice",
+        "linea": 64
+      },
+      {
+        "nombre": "_generate_pos_order_invoice",
+        "linea": 70
+      },
+      {
+        "nombre": "_compute_all_vat_taxes",
+        "linea": 115
+      },
+      {
+        "nombre": "_get_computed_account",
+        "linea": 179
+      },
+      {
+        "nombre": "_compute_base_perception",
+        "linea": 207
+      },
+      {
+        "nombre": "_get_perceptions_ctx",
+        "linea": 264
+      },
+      {
+        "nombre": "compute_perceptions",
+        "linea": 273
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "invoice_journal_id",
+        "linea": 13
+      },
+      {
+        "nombre": "is_wsfe",
+        "linea": 18
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_pos_wsfe/models/pos_payment.py",
+    "simbolos": [
+      {
+        "nombre": "PosPayment",
+        "linea": 5
+      },
+      {
+        "nombre": "_create_payment_moves",
+        "linea": 8
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_reconciliation/__init__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_reconciliation/__manifest__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_reconciliation/models/__init__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_reconciliation/models/account_move_line.py",
+    "simbolos": [
+      {
+        "nombre": "AccountMoveLine",
+        "linea": 4
+      },
+      {
+        "nombre": "write",
+        "linea": 7
+      }
+    ],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_remito_r/__init__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_remito_r/__manifest__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_remito_r/models/__init__.py",
+    "simbolos": [],
+    "campos": []
+  },
+  {
+    "archivo": "l10n_ar_remito_r/models/res_company.py",
+    "simbolos": [
+      {
+        "nombre": "ResCompany",
+        "linea": 4
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "autoprinter_num",
+        "linea": 8
+      },
+      {
+        "nombre": "autoprinter_code",
+        "linea": 9
+      },
+      {
+        "nombre": "autoprinter_due_date",
+        "linea": 10
+      },
+      {
+        "nombre": "dnrp_num",
+        "linea": 11
+      }
+    ]
+  },
+  {
+    "archivo": "l10n_ar_remito_r/models/stock_picking.py",
+    "simbolos": [
+      {
+        "nombre": "StockPicking",
+        "linea": 4
+      }
+    ],
+    "campos": [
+      {
+        "nombre": "bulk",
+        "linea": 7
+      }
+    ]
+  }
+]

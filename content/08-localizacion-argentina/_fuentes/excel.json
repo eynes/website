@@ -1,0 +1,781 @@
+{
+  "archivo": "temas localización.xlsx",
+  "sha256": "b9b9a6b4b0b906f6ec2b5957fb0ba2ed425560f9cf4a2541b7a44bf18b263b53",
+  "hojas": [
+    {
+      "nombre": "Comprobantes",
+      "filas": [
+        {
+          "fila": 1,
+          "celdas": {
+            "A1": "Carga de tipo de documento en clientes"
+          }
+        },
+        {
+          "fila": 2,
+          "celdas": {
+            "A2": "Carga de número de IIBB en clientes"
+          }
+        },
+        {
+          "fila": 3,
+          "celdas": {
+            "A3": "Carga de certificados de exclusión de retenciones en clientes"
+          }
+        },
+        {
+          "fila": 4,
+          "celdas": {
+            "A4": "Carga de certificados de exclusión de percepciones en clientes"
+          }
+        },
+        {
+          "fila": 5,
+          "celdas": {
+            "A5": "Carga de certificados de exclusión de retenciones en proveedores"
+          }
+        },
+        {
+          "fila": 6,
+          "celdas": {
+            "A6": "Carga de certificados de exclusión de percepciones en proveedores"
+          }
+        },
+        {
+          "fila": 7,
+          "celdas": {
+            "A7": "Puntos de venta para facturas electrónicas"
+          }
+        },
+        {
+          "fila": 8,
+          "celdas": {
+            "A8": "Puntos de venta para carga de facturas internas"
+          }
+        },
+        {
+          "fila": 9,
+          "celdas": {
+            "A9": "Gestión de notas de débito"
+          }
+        },
+        {
+          "fila": 10,
+          "celdas": {
+            "A10": "Carga de tipo de cambio en la emisión de facturas de clientes"
+          }
+        },
+        {
+          "fila": 11,
+          "celdas": {
+            "A11": "Carga de tipo de cambio en la emisión de facturas de proveedores"
+          }
+        },
+        {
+          "fila": 12,
+          "celdas": {
+            "A12": "Multiples métodos de cobro en un recibo"
+          }
+        },
+        {
+          "fila": 13,
+          "celdas": {
+            "A13": "Cobro de múltiples facturas en un recibo"
+          }
+        },
+        {
+          "fila": 14,
+          "celdas": {
+            "A14": "Carga de multiples cheques de terceros en un recibo "
+          }
+        },
+        {
+          "fila": 15,
+          "celdas": {
+            "A15": "Creación de cheques de distintos tipos (echeq, físico, virtual)"
+          }
+        },
+        {
+          "fila": 16,
+          "celdas": {
+            "A16": "Carga de multiples certificados de retenciones emitidos por clientes"
+          }
+        },
+        {
+          "fila": 17,
+          "celdas": {
+            "A17": "Multiples métodos de pago en una orden de pago a proveedores"
+          }
+        },
+        {
+          "fila": 18,
+          "celdas": {
+            "A18": "Pago de múltiples facturas en un recibo"
+          }
+        },
+        {
+          "fila": 19,
+          "celdas": {
+            "A19": "Carga de multiples cheques de terceros en una orden de pago "
+          }
+        },
+        {
+          "fila": 20,
+          "celdas": {
+            "A20": "Carga de cheques propios y de terceros en una orden de pago"
+          }
+        },
+        {
+          "fila": 21,
+          "celdas": {
+            "A21": "Cálculo automatizado de retenciones en ordenes de pago"
+          }
+        },
+        {
+          "fila": 22,
+          "celdas": {
+            "A22": "Numeración de certificados de retenciones en ordenes de pago"
+          }
+        },
+        {
+          "fila": 23,
+          "celdas": {
+            "A23": "Cálculo automatizado de retenciones de ganancias a partir de escalas, conceptos y actividades"
+          }
+        },
+        {
+          "fila": 24,
+          "celdas": {
+            "A24": "Cálculo automatizado de retenciones de IIBB a partir de padrones"
+          }
+        },
+        {
+          "fila": 25,
+          "celdas": {
+            "A25": "Cálculo automatizado de retenciones de IVA y SUSS"
+          }
+        },
+        {
+          "fila": 26,
+          "celdas": {
+            "A26": "Impresión de orden de pago"
+          }
+        },
+        {
+          "fila": 27,
+          "celdas": {
+            "A27": "Impresión de certificados de retenciones"
+          }
+        },
+        {
+          "fila": 28,
+          "celdas": {
+            "A28": "Envío de certificados de retenciones y ordenes de pago por mail"
+          }
+        },
+        {
+          "fila": 29,
+          "celdas": {
+            "A29": "Cálculo automátizado de percepciones en facturas de clientes a partir de padrones"
+          }
+        },
+        {
+          "fila": 30,
+          "celdas": {
+            "A30": "Cálculo automátizado de percepciones en facturas de clientes"
+          }
+        },
+        {
+          "fila": 31,
+          "celdas": {
+            "A31": "Envío de facturas por mail"
+          }
+        },
+        {
+          "fila": 32,
+          "celdas": {
+            "A32": "Creación de ND/NC a partir de diferencia de cambio "
+          }
+        },
+        {
+          "fila": 33,
+          "celdas": {
+            "A33": "Carga Cobros / pagos en pesos o moneda extranjera con tipo de cambio por comprobante"
+          }
+        },
+        {
+          "fila": 34,
+          "celdas": {
+            "A34": "Impuestos internos en compras y ventas"
+          }
+        },
+        {
+          "fila": 35,
+          "celdas": {
+            "A35": "Generación de asientos de cierre de ejercicio - con/sin RECPAM"
+          }
+        },
+        {
+          "fila": 36,
+          "celdas": {
+            "A36": "Impresión remito R autoimpresores "
+          }
+        },
+        {
+          "fila": 37,
+          "celdas": {
+            "A37": "Impresión remito R sobre plantilla (ver bien como describir esto)"
+          }
+        },
+        {
+          "fila": 38,
+          "celdas": {
+            "A38": "Impresión remito X "
+          }
+        },
+        {
+          "fila": 39,
+          "celdas": {
+            "A39": "Bloqueo de diarios por fecha de cierre"
+          }
+        },
+        {
+          "fila": 40,
+          "celdas": {
+            "A40": "Emisión de facturas electrónicas desde punto de venta"
+          }
+        },
+        {
+          "fila": 41,
+          "celdas": {
+            "A41": "Emisión de facturas internas desde punto de venta"
+          }
+        },
+        {
+          "fila": 42,
+          "celdas": {
+            "A42": "Cálculo automatizado de percepciones e impuestos desde punto de venta"
+          }
+        },
+        {
+          "fila": 43,
+          "celdas": {
+            "A43": "Impresión de factura legal desde punto de venta "
+          }
+        },
+        {
+          "fila": 44,
+          "celdas": {
+            "A44": "Tipos de documento de AFIP precargados"
+          }
+        },
+        {
+          "fila": 45,
+          "celdas": {
+            "A45": "Tipos de comprobante de AFIP precargados"
+          }
+        },
+        {
+          "fila": 46,
+          "celdas": {
+            "A46": "Posiciones fiscales argentinas"
+          }
+        },
+        {
+          "fila": 47,
+          "celdas": {
+            "A47": "Situaciones de Ingresos Brutos"
+          }
+        },
+        {
+          "fila": 48,
+          "celdas": {
+            "A48": "Provincias y localidades argentinas precargadas"
+          }
+        },
+        {
+          "fila": 49,
+          "celdas": {
+            "A49": "Ejercicios fiscales y períodos contables"
+          }
+        },
+        {
+          "fila": 50,
+          "celdas": {
+            "A50": "Alícuotas de retención y percepción por contacto"
+          }
+        },
+        {
+          "fila": 51,
+          "celdas": {
+            "A51": "Consulta del padrón de AFIP desde el contacto"
+          }
+        },
+        {
+          "fila": 52,
+          "celdas": {
+            "A52": "Actualización automática de padrones por jurisdicción"
+          }
+        },
+        {
+          "fila": 53,
+          "celdas": {
+            "A53": "Transportistas y expresos en la ficha del contacto"
+          }
+        },
+        {
+          "fila": 54,
+          "celdas": {
+            "A54": "Numeración independiente por punto de venta y tipo de comprobante"
+          }
+        },
+        {
+          "fila": 55,
+          "celdas": {
+            "A55": "Gestión de notas de crédito"
+          }
+        },
+        {
+          "fila": 56,
+          "celdas": {
+            "A56": "Facturas M y facturas A con leyenda"
+          }
+        },
+        {
+          "fila": 57,
+          "celdas": {
+            "A57": "Facturas y notas de exportación"
+          }
+        },
+        {
+          "fila": 58,
+          "celdas": {
+            "A58": "Factura de Crédito Electrónica MiPyME (FCE)"
+          }
+        },
+        {
+          "fila": 59,
+          "celdas": {
+            "A59": "Cambio o actualizacion de moneda de un comprobante ya cargado"
+          }
+        },
+        {
+          "fila": 60,
+          "celdas": {
+            "A60": "Percepciones sufridas en facturas de proveedor"
+          }
+        },
+        {
+          "fila": 61,
+          "celdas": {
+            "A61": "Código QR de AFIP en la factura"
+          }
+        },
+        {
+          "fila": 62,
+          "celdas": {
+            "A62": "Cobros y pagos a cuenta"
+          }
+        },
+        {
+          "fila": 63,
+          "celdas": {
+            "A63": "Retenciones sobre pagos a cuenta"
+          }
+        },
+        {
+          "fila": 64,
+          "celdas": {
+            "A64": "Otros pagos y cobros por concepto"
+          }
+        },
+        {
+          "fila": 65,
+          "celdas": {
+            "A65": "Ajuste por diferencia en cobros y pagos"
+          }
+        },
+        {
+          "fila": 66,
+          "celdas": {
+            "A66": "Control del acumulado del período"
+          }
+        },
+        {
+          "fila": 67,
+          "celdas": {
+            "A67": "Consulta de retenciones y percepciones aplicadas y sufridas"
+          }
+        },
+        {
+          "fila": 68,
+          "celdas": {
+            "A68": "Conceptos y actividades de retención y percepción configurables"
+          }
+        },
+        {
+          "fila": 69,
+          "celdas": {
+            "A69": "Datos de transporte en el remito"
+          }
+        },
+        {
+          "fila": 70,
+          "celdas": {
+            "A70": "Cancelación y renumeración de remitos validados"
+          }
+        },
+        {
+          "fila": 71,
+          "celdas": {
+            "A71": "Carga de índices de inflación"
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "POS",
+      "filas": [
+        {
+          "fila": 1,
+          "celdas": {
+            "A1": "Emisión de facturas electrónicas desde punto de venta"
+          }
+        },
+        {
+          "fila": 2,
+          "celdas": {
+            "A2": "Emisión de facturas internas desde punto de venta"
+          }
+        },
+        {
+          "fila": 3,
+          "celdas": {
+            "A3": "Emisión de notas de crédito electrónicas desde punto de venta"
+          }
+        },
+        {
+          "fila": 4,
+          "celdas": {
+            "A4": "Emisión de notas de crédito internas desde punto de venta"
+          }
+        },
+        {
+          "fila": 5,
+          "celdas": {
+            "A5": "Cálculo de percepciones desde el punto de venta"
+          }
+        },
+        {
+          "fila": 6,
+          "celdas": {
+            "A6": "Impresión de la factura legal desde el punto de venta"
+          }
+        },
+        {
+          "fila": 7,
+          "celdas": {
+            "A7": "Elección entre factura electrónica y manual en la pantalla de pago"
+          }
+        },
+        {
+          "fila": 8,
+          "celdas": {
+            "A8": "Modo de facturación por defecto"
+          }
+        },
+        {
+          "fila": 9,
+          "celdas": {
+            "A9": "Impuestos y percepciones a la vista en la pantalla de pago"
+          }
+        },
+        {
+          "fila": 10,
+          "celdas": {
+            "A10": "Bloqueo de facturación offline por posición fiscal"
+          }
+        },
+        {
+          "fila": 11,
+          "celdas": {
+            "A11": "Selección de la posición fiscal del pedido"
+          }
+        },
+        {
+          "fila": 12,
+          "celdas": {
+            "A12": "Factura de Crédito Electrónica MiPyME desde el punto de venta"
+          }
+        },
+        {
+          "fila": 13,
+          "celdas": {
+            "A13": "Control de cuentas contables al cerrar la caja"
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "Cheques",
+      "filas": [
+        {
+          "fila": 1,
+          "celdas": {
+            "A1": "Gestión de tipos de chequeras (echeq, virtuales, físicos)"
+          }
+        },
+        {
+          "fila": 2,
+          "celdas": {
+            "A2": "Configuración de la contabilidad a utilizar en chequeres"
+          }
+        },
+        {
+          "fila": 3,
+          "celdas": {
+            "A3": "Gestión de multiples chequeras"
+          }
+        },
+        {
+          "fila": 4,
+          "celdas": {
+            "A4": "Gestión de cheques propios y de terceros"
+          }
+        },
+        {
+          "fila": 5,
+          "celdas": {
+            "A5": "Cheques comunes y diferidos"
+          }
+        },
+        {
+          "fila": 6,
+          "celdas": {
+            "A6": "Asistente de creación de chequeras"
+          }
+        },
+        {
+          "fila": 7,
+          "celdas": {
+            "A7": "Estados del cheque propio"
+          }
+        },
+        {
+          "fila": 8,
+          "celdas": {
+            "A8": "Estados del cheque de terceros"
+          }
+        },
+        {
+          "fila": 9,
+          "celdas": {
+            "A9": "Depósito, acreditación, débito y rechazo de cheques"
+          }
+        },
+        {
+          "fila": 10,
+          "celdas": {
+            "A10": "Nota de débito automática por cheque rechazado"
+          }
+        },
+        {
+          "fila": 11,
+          "celdas": {
+            "A11": "Endoso de cheques de terceros a proveedores"
+          }
+        },
+        {
+          "fila": 12,
+          "celdas": {
+            "A12": "Cambio de estado masivo de cheques"
+          }
+        },
+        {
+          "fila": 13,
+          "celdas": {
+            "A13": "Calendarios de cheques"
+          }
+        },
+        {
+          "fila": 14,
+          "celdas": {
+            "A14": "Cheques en moneda extranjera"
+          }
+        },
+        {
+          "fila": 15,
+          "celdas": {
+            "A15": "Actualización del estado del cheque al conciliar"
+          }
+        },
+        {
+          "fila": 16,
+          "celdas": {
+            "A16": "Impresión de cheques",
+            "B16": "print_check de v19, cheques sobre plantillas"
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "Reportes",
+      "filas": [
+        {
+          "fila": 1,
+          "celdas": {
+            "A1": "Excel subdiario de IVA Compras / IVA Ventas con detalle de percepciones y otros impuestos - con agrupamiento de tipo de impuestos - Agrupamiento de facturas B por día"
+          }
+        },
+        {
+          "fila": 2,
+          "celdas": {
+            "A2": "Compras y ventas por jurisdicción PDF"
+          }
+        },
+        {
+          "fila": 3,
+          "celdas": {
+            "A3": "Libro Diario PDF "
+          }
+        },
+        {
+          "fila": 4,
+          "celdas": {
+            "A4": "Libro IVA Compras PDF"
+          }
+        },
+        {
+          "fila": 5,
+          "celdas": {
+            "A5": "Libro IVA Ventas PDF"
+          }
+        },
+        {
+          "fila": 6,
+          "celdas": {
+            "A6": "Subdiario de IVA con prorrateo"
+          }
+        },
+        {
+          "fila": 7,
+          "celdas": {
+            "A7": "Factura legal en PDF con QR de AFIP"
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "Exportadores",
+      "filas": [
+        {
+          "fila": 1,
+          "celdas": {
+            "A1": "Exportador arciba"
+          }
+        },
+        {
+          "fila": 2,
+          "celdas": {
+            "A2": "Exportador ARBA"
+          }
+        },
+        {
+          "fila": 3,
+          "celdas": {
+            "A3": "Exportador Libro IVA Digital"
+          }
+        },
+        {
+          "fila": 4,
+          "celdas": {
+            "A4": "Exportador IVA Simple"
+          }
+        },
+        {
+          "fila": 5,
+          "celdas": {
+            "A5": "Exportador SICORE"
+          }
+        },
+        {
+          "fila": 6,
+          "celdas": {
+            "A6": "Exportador SIFERE"
+          }
+        },
+        {
+          "fila": 7,
+          "celdas": {
+            "A7": "Lotes A122R de ARBA"
+          }
+        },
+        {
+          "fila": 8,
+          "celdas": {
+            "A8": "Archivos de percepciones y retenciones de IVA sufridas"
+          }
+        }
+      ]
+    },
+    {
+      "nombre": "Webservice",
+      "filas": [
+        {
+          "fila": 1,
+          "celdas": {
+            "A1": "WSFE"
+          }
+        },
+        {
+          "fila": 2,
+          "celdas": {
+            "A2": "WSFEX"
+          }
+        },
+        {
+          "fila": 3,
+          "celdas": {
+            "A3": "WSLP"
+          }
+        },
+        {
+          "fila": 4,
+          "celdas": {
+            "A4": "CAEA"
+          }
+        },
+        {
+          "fila": 5,
+          "celdas": {
+            "A5": "WS Padrón (constancia de inscripción)"
+          }
+        },
+        {
+          "fila": 6,
+          "celdas": {
+            "A6": "WSFECRED"
+          }
+        },
+        {
+          "fila": 7,
+          "celdas": {
+            "A7": "Consulta y sincronización de comprobantes con ARCA"
+          }
+        },
+        {
+          "fila": 8,
+          "celdas": {
+            "A8": "Carga de tablas ARCA"
+          }
+        },
+        {
+          "fila": 9,
+          "celdas": {
+            "A9": "A122R Digital de ARBA"
+          }
+        }
+      ]
+    }
+  ]
+}

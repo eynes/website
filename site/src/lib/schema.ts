@@ -166,9 +166,6 @@ export function breadcrumbListSchema(crumbs: Crumb[]) {
   };
 }
 
-export function blogSchema() {
-  return { '@type': 'Blog' };
-}
 
 /** True-ish ISO date check — real content still often has "[COMPLETAR ...]" placeholders. */
 export function isRealDate(value?: string | null): boolean {

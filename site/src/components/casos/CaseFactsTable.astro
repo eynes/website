@@ -14,16 +14,16 @@ const { rubro, pais, usuarios, modulos } = Astro.props;
     <dt class="font-mono text-xs font-semibold uppercase tracking-wide text-teal">Rubro</dt>
     <dd class="mt-1.5 font-medium text-ink">{rubro.replace(/-/g, ' ')}</dd>
   </div>
-  <div>
+  {pais && <div>
     <dt class="font-mono text-xs font-semibold uppercase tracking-wide text-teal">País</dt>
     <dd class="mt-1.5 font-medium text-ink">{pais}</dd>
-  </div>
-  <div>
+  </div>}
+  {usuarios && <div>
     <dt class="font-mono text-xs font-semibold uppercase tracking-wide text-teal">Usuarios</dt>
     <dd class="mt-1.5 font-medium text-ink">{usuarios}</dd>
-  </div>
-  <div>
+  </div>}
+  {modulos.length > 0 && <div>
     <dt class="font-mono text-xs font-semibold uppercase tracking-wide text-teal">Módulos</dt>
     <dd class="mt-1.5 font-medium text-ink">{modulos.join(', ')}</dd>
-  </div>
+  </div>}
 </dl>

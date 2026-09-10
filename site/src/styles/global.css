@@ -8,17 +8,17 @@
 
   /* Paper */
   --color-paper: #ffffff;
-  --color-paper-dim: #f6f4f6;
-  --color-paper-deep: #ece7eb;
+  --color-paper-dim: #f7f8f8;
+  --color-paper-deep: #edf0ef;
 
   /* Ink */
-  --color-ink: #1c1a1e;
-  --color-ink-soft: #4a454a;
-  --color-ink-faint: #8f8f8f; /* = Odoo's documented neutral gray */
+  --color-ink: #28262c;
+  --color-ink-soft: #605c65;
+  --color-ink-faint: #746f78; /* = Odoo's documented neutral gray */
 
   /* Dark band (derived from the Odoo purple at low lightness) */
-  --color-dark: #241a21;
-  --color-dark-soft: #34252e;
+  --color-dark: #302832;
+  --color-dark-soft: #3e3440;
   --color-dark-line: #4a3a44;
 
   /* Odoo brand colors, verbatim from odoo.com/page/brand-assets */
@@ -44,8 +44,8 @@
     background-color: var(--color-paper);
     color: var(--color-ink);
     font-family: var(--font-sans);
-    background-image: radial-gradient(color-mix(in srgb, var(--color-ink) 10%, transparent) 1px, transparent 1px);
-    background-size: 22px 22px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -67,13 +67,14 @@
   h3 {
     font-family: var(--font-display);
     font-weight: 600;
-    line-height: 1;
-    letter-spacing: -0.01em;
+    line-height: 1.14;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
     color: var(--color-ink);
   }
 
   p {
-    line-height: 1.5;
+    line-height: 1.7;
   }
 
   a {
@@ -88,38 +89,26 @@
 
 @layer components {
   .container-page {
-    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+    @apply mx-auto w-full max-w-[1240px] px-6 sm:px-10;
   }
 
   .section {
-    @apply py-16 sm:py-24;
+    @apply py-16 sm:py-24 lg:py-28;
   }
 
-  /* Small mono all-caps label used as an eyebrow over headings */
+  /* Quiet section labels retain the original wording. */
   .kicker {
-    @apply inline-flex items-center gap-2 font-mono text-xs font-medium uppercase tracking-[0.16em] text-teal;
+    @apply inline-flex items-center gap-2 text-sm font-medium tracking-normal text-teal;
   }
 
-  .kicker::before {
-    content: '';
-    @apply block h-px w-5 bg-teal;
-  }
 
-  /* Ghost numeral echoing the content's own "01 —" section numbering */
-  .ledger-number {
-    font-family: var(--font-mono);
-    color: transparent;
-    -webkit-text-stroke: 1px color-mix(in srgb, var(--color-purple) 20%, transparent);
-    line-height: 1;
-    user-select: none;
-  }
 
   .btn,
   .btn-primary,
   .btn-secondary,
   .btn-outline,
   .btn-whatsapp {
-    @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple;
   }
 
   .btn-primary {
@@ -138,24 +127,23 @@
 
   .btn-whatsapp {
     @apply text-white;
-    background-color: var(--color-whatsapp);
+    background-color: #147d53;
   }
 
   .btn-whatsapp:hover {
     filter: brightness(0.92);
   }
 
-  /* Hairline-bordered card — precise, not soft/bubbly */
+  /* Neutral surfaces for supporting content. */
   .card {
-    @apply relative rounded-md border bg-paper p-6 transition-all duration-200;
+    @apply relative rounded-xl border bg-paper p-7 transition-colors duration-200;
     border-color: var(--color-line);
   }
 
   a.card:hover,
   .card.is-hoverable:hover {
     border-color: var(--color-purple);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 24px -12px color-mix(in srgb, var(--color-ink) 22%, transparent);
+    background-color: color-mix(in srgb, var(--color-purple) 3%, white);
   }
 
   /* "Ver más →" style affordances: the arrow glyph nudges forward on hover */
@@ -217,13 +205,9 @@
     @apply absolute left-4 top-[-100px] z-50 rounded-md bg-ink px-4 py-2 text-paper transition-all focus:top-4;
   }
 
-  /* Scroll-reveal: JS adds .is-visible when the element enters the viewport */
+  /* Content remains visible without JavaScript. */
   .reveal {
-    opacity: 0;
-    transform: translateY(16px);
-    transition:
-      opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
-      transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+    opacity: 1;
   }
 
   .reveal.is-visible {
@@ -233,22 +217,22 @@
 
   /* One-shot entrance for above-the-fold content (hero) — runs on load,
      no observer needed since it's already in the viewport. Stagger with
-     .enter-1..4 (120ms apart). */
+     .enter-1..4 (60ms apart). */
   .enter {
-    animation: enter-up 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation: enter-up 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
   }
 
   .enter-1 {
     animation-delay: 0ms;
   }
   .enter-2 {
-    animation-delay: 120ms;
+    animation-delay: 60ms;
   }
   .enter-3 {
-    animation-delay: 240ms;
+    animation-delay: 120ms;
   }
   .enter-4 {
-    animation-delay: 360ms;
+    animation-delay: 180ms;
   }
 
   @keyframes enter-up {
@@ -262,3 +246,103 @@
     }
   }
 }
+
+/* Shared presentation: readable labels and a consistent heading scale. */
+@layer base {
+  :focus-visible { outline: 2px solid var(--color-purple); outline-offset: 5px; }
+  html { scroll-padding-top: 100px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+}
+@layer components {
+  .prose-content { line-height: 1.75; }
+  .prose-content h2 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
+  .prose-content h3 { font-size: 1.3rem; line-height: 1.35; }
+  .prose-content :is(p, li) { max-width: 75ch; }
+}
+.section h2 { font-size: clamp(1.8rem, 3.1vw, 2.8rem); max-width: 26ch; }
+/* Existing metadata uses the same sans family as navigation and body. */
+.font-mono { font-family: var(--font-sans); letter-spacing: 0; text-transform: none; }
+.site-nav { background: rgb(255 255 255 / 96%); backdrop-filter: blur(16px); }
+.site-nav > .container-page { min-height: 88px; }
+.site-nav nav a { font-size: 0.875rem; }
+.site-nav nav a.text-purple { text-decoration: underline; text-underline-offset: 8px; }
+.site-brand > span:first-child { font-size: 2rem; font-weight: 600; letter-spacing: -0.07em; }
+.site-brand > span:last-child { border-left: 1px solid var(--color-line); padding-left: 14px; margin-left: 5px; }
+.hero { background: var(--color-paper); }
+.hero-layout { padding-block: clamp(4rem, 8vw, 7.5rem); }
+.hero-title { max-width: 1000px; font-size: clamp(2.6rem, 5.65vw, 5rem); line-height: 1.06; letter-spacing: -0.055em; font-weight: 500; }
+.hero-description { max-width: 620px; font-size: clamp(1rem, 1.45vw, 1.125rem); line-height: 1.8; }
+.hero-bottom { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-top: 32px; }
+.hero-actions { flex-shrink: 0; padding-bottom: 5px; }
+.hero-compact .hero-layout { padding-block: clamp(3rem, 6vw, 5.5rem); }
+.hero-compact .hero-title { max-width: 1000px; font-size: clamp(2.5rem, 4.8vw, 4.25rem); }
+.trust-strip { background: var(--color-paper); padding-block: 32px; }
+.trust-strip > div { justify-content: space-between; text-align: left; }
+.trust-strip p { font-size: 0.9375rem; font-weight: 500; }
+.trust-strip > div > div { gap: 24px; font-size: 0.8rem; color: var(--color-ink-soft); }
+.industry-grid { gap: 0 36px; margin-top: 40px; }
+.industry-grid .card { display: flex; flex-direction: column; justify-content: space-between; align-items: start; gap: 12px; border: 0; border-top: 1px solid var(--color-line); border-radius: 0; padding: 22px 4px; text-align: left; background: transparent; }
+.industry-grid .card:hover { border-color: var(--color-purple); }
+.industry-grid .card p { font-size: 0.9375rem; font-weight: 500; line-height: 1.45; }
+.industry-grid .card > span { margin-top: 0; font-size: 0.8125rem; }
+.comparison-table { border: 0; border-radius: 12px; }
+.comparison-table :is(th, td) { padding: 24px; }
+.comparison-table th { color: var(--color-ink-soft); font-weight: 500; }
+.comparison-table td:nth-child(2) { background: #eef4f2; }
+.comparison-table tbody tr:last-child td { border-bottom: 0; }
+.flagship-section { padding-block: 48px; }
+.flagship-card { padding: clamp(28px, 5vw, 64px); border: none; border-radius: 16px; }
+.flagship-card .kicker { color: #b9d9d4; }
+.flagship-card h2 { max-width: 28ch; }
+.flagship-card p { margin-top: 20px; }
+.flagship-card > span:last-child { color: #c9dfe7; margin-top: 32px; }
+a.flagship-card:hover { background-color: var(--color-dark-soft); }
+.module-grid { gap: 12px; }
+.module-grid .card { text-align: left; font-size: 0.9375rem; padding: 24px; font-weight: 500; }
+.featured-case { padding-block: 36px; border-inline: 0; border-radius: 0; }
+.featured-case > div > p:first-child { font-size: 1.6rem; letter-spacing: -0.03em; }
+.reasons-grid { gap: 36px; }
+.reasons-grid .card { background: transparent; border: 0; border-top: 1px solid var(--color-line); border-radius: 0; padding: 28px 0 0; }
+.reasons-grid .card > p:first-child { font-size: 1.125rem; font-weight: 500; line-height: 1.4; }
+.reasons-grid .card > p + p { margin-top: 16px; line-height: 1.8; }
+.contact-cta .kicker { color: #bad8d4; }
+.contact-cta h2 { max-width: 22ch; font-size: clamp(2.25rem, 4.5vw, 4rem); font-weight: 500; }
+.contact-cta .btn-primary { background: white; color: var(--color-purple-dark); }
+.contact-cta .btn-primary:hover { background: #eae4e9; }
+.contact-cta .btn-whatsapp { background: transparent; border: 1px solid #8e858f; }
+.contact-cta .btn-whatsapp:hover { background: var(--color-dark-soft); }
+.site-footer > .container-page { gap: 40px; padding-block: 64px; }
+.site-footer { border-top: 1px solid var(--color-dark-line); }
+.site-footer li { line-height: 1.65; }
+.site-footer a { overflow-wrap: anywhere; }
+#contact-form { padding: clamp(24px, 4vw, 48px); gap: 24px; }
+#contact-form :is(input:not([type=hidden]):not([type=checkbox]), select, textarea) { background: var(--color-paper-dim); min-height: 48px; border-radius: 8px; }
+details { padding-block: 24px; }
+details[open] { background: var(--color-paper-dim); }
+.team-grid .card { padding: 0 0 24px; overflow: hidden; border: none; background: transparent; text-align: left; }
+.team-grid img { width: 100%; height: auto; aspect-ratio: 1; border-radius: 12px; object-fit: cover; }
+.team-grid .card p { padding-inline: 4px; }
+@media (min-width: 1024px) {
+  .industry-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .site-footer > .container-page { grid-template-columns: 1.25fr 1.5fr 1fr 1fr 1fr; gap: 28px; }
+}
+@media (max-width: 1023px) {
+  .hero-bottom { align-items: start; flex-direction: column; gap: 28px; }
+  .trust-strip > div { align-items: start; flex-direction: column; }
+  .trust-strip > div > div { justify-content: start; }
+}
+@media (max-width: 639px) {
+  .site-nav > .container-page { min-height: 72px; }
+  .hero-title { font-size: clamp(2.5rem, 10.8vw, 3.8rem); }
+  .hero-bottom { margin-top: 24px; }
+  .industry-grid { margin-top: 28px; }
+  .industry-grid .card { flex-direction: row; align-items: center; gap: 20px; }
+  .industry-grid .card > span { flex-shrink: 0; }
+  .comparison-table :is(th, td) { padding: 18px; }
+  .trust-strip > div > div { gap: 12px 20px; }
+  .site-footer > .container-page { gap: 32px; }
+}
+
+.hero-layout:has(> div:nth-child(2)) .hero-bottom { flex-direction: column; align-items: start; }

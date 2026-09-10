@@ -19,6 +19,8 @@ const pageMeta = {
   slug: z.string(),
   url: z.string().optional(),
   estado,
+  portfolio: z.boolean().default(false),
+  agrupador: z.string().default(''),
   og_image: z.string().optional().default(''),
 };
 
@@ -64,6 +66,7 @@ const casosDeExito = defineCollection({
   schema: z.object({
     ...pageMeta,
     schema_type: z.literal('Article'),
+    faqs: z.array(faq).default([]),
     cliente: z.string(),
     logo: z.string().optional().default(''),
     rubro: z.string(),
@@ -74,22 +77,41 @@ const casosDeExito = defineCollection({
   }),
 });
 
-// ---- 05-blog/posts ----
-const blog = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: CONTENT('05-blog/posts') }),
+// ---- 08-localizacion-argentina: functional fichas, public sub-pages under /localizacion-argentina/[slug] ----
+// Only the 13 named fichas are real pages — README, matriz, versiones, arquitectura,
+// pendientes and _fuentes/ are editorial-only and must never become routes.
+const LOCALIZACION_FICHAS = [
+  'cheques-y-conciliacion',
+  'cierre-contable-e-inflacion',
+  'cobros-y-pagos',
+  'cuentas-corrientes',
+  'datos-fiscales-y-padrones',
+  'exportadores-impositivos',
+  'facturacion-y-comprobantes',
+  'multimoneda-y-diferencias',
+  'punto-de-venta',
+  'remitos-y-transporte',
+  'reportes-contables',
+  'retenciones-y-percepciones',
+  'servicios-arca-y-arba',
+];
+const localizacionArgentina = defineCollection({
+  loader: glob({
+    pattern: `{${LOCALIZACION_FICHAS.join(',')}}.md`,
+    base: CONTENT('08-localizacion-argentina'),
+  }),
   schema: z.object({
-    ...pageMeta,
-    schema_type: z.literal('Article'),
-    categoria: z.enum(['localizacion-ar', 'comparativas', 'por-rubro', 'guias-de-uso']),
-    autor: z.string(),
-    fecha_publicacion: z.string(),
-    fecha_actualizacion: z.string(),
-    tiempo_lectura_min: z.union([z.number(), z.string()]),
-    og_image_alt: z.string().optional().default(''),
-    origen_linkedin: z.string().nullable().optional(),
-    relacionados: z.array(z.string()).default([]),
-    enlaces_internos_sugeridos: z.array(z.string()).default([]),
-    indice: z.array(z.string()).default([]),
+    title: z.string(),
+    seo_title: z.string(),
+    meta_description: z.string(),
+    slug: z.string(),
+    url: z.string().optional(),
+    estado,
+    publicar: z.boolean().default(false),
+    schema_type: z.literal('Service'),
+    agrupador: z.string().default(''),
+    fuente_principal: z.string().optional().default(''),
+    fecha_revision: z.string().optional().default(''),
     faqs: z.array(faq).default([]),
   }),
 });
@@ -118,17 +140,6 @@ const casosHub = defineCollection({
   loader: glob({ pattern: '_hub.md', base: CONTENT('04-casos-de-exito') }),
   schema: z.object({ ...hubMeta, schema_type: z.literal('CollectionPage') }),
 });
-const blogHub = defineCollection({
-  loader: glob({ pattern: '_hub.md', base: CONTENT('05-blog') }),
-  schema: z.object({
-    ...hubMeta,
-    schema_type: z.literal('Blog'),
-    categorias: z.array(
-      z.object({ slug: z.string(), nombre: z.string(), descripcion: z.string() })
-    ),
-  }),
-});
-
 // ---- 00-config: only site.md + navegacion.md are consumed by the build ----
 const siteConfig = defineCollection({
   loader: glob({ pattern: 'site.md', base: CONTENT('00-config') }),
@@ -210,12 +221,11 @@ export const collections = {
   verticales,
   modulos,
   casosDeExito,
-  blog,
+  localizacionArgentina,
   paginasUnicas,
   verticalesHub,
   modulosHub,
   casosHub,
-  blogHub,
   siteConfig,
   navConfig,
 };

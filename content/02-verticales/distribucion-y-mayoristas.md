@@ -12,7 +12,7 @@ meta_description: "Centralizá stock, ventas y facturación ARCA en un solo sist
 slug: "distribucion-y-mayoristas"
 url: "eynes.com.ar/verticales/distribucion-y-mayoristas"
 schema_type: "Service"
-estado: "publicado"
+estado: "borrador"
 og_image: ""
 
 faqs:
