@@ -32,7 +32,7 @@ const jsonLd = [contactPageSchema(), breadcrumbListSchema(crumbs)];
 
 <BaseLayout title={page?.data.seo_title ?? ''} description={page?.data.meta_description ?? ''} jsonLd={jsonLd}>
   <Breadcrumbs crumbs={crumbs} />
-  <Hero title={page?.data.title ?? ''} showPartnerBadge={false} compact />
+  <Hero understated title={page?.data.title ?? ''} showPartnerBadge={false} compact />
 
   <section class="section">
     <div class="container-page reveal grid gap-12 lg:grid-cols-2">

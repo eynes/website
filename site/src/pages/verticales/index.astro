@@ -2,7 +2,6 @@
 import { getEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/hero/Hero.astro';
-import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
 import CTASection from '../../components/cta/CTASection.astro';
 import { getPublished } from '../../lib/content';
 import { collectionPageSchema, breadcrumbListSchema } from '../../lib/schema';
@@ -29,16 +28,15 @@ const jsonLd = hub
 ---
 
 <BaseLayout title={hub?.data.seo_title ?? ''} description={hub?.data.meta_description ?? ''} jsonLd={jsonLd}>
-  <Breadcrumbs crumbs={crumbs} />
-  <Hero title={hub?.data.title ?? ''} subtitle="Odoo se adapta a cada industria — cada rubro tiene sus propios problemas y su propia solución." showPartnerBadge={false} compact />
+  <Hero understated title="Verticales" showPartnerBadge={false} compact />
 
-  <nav aria-label="Agrupadores de rubros" class="container-page flex flex-wrap gap-3 py-6">
+  <nav aria-label="Agrupadores de rubros" class="industry-filters container-page flex flex-wrap gap-3 py-6">
     {[...new Set(verticales.map(v => v.data.agrupador))].map((group, i) => (
       <a href={`#grupo-${i}`} class="rounded-full border border-line px-4 py-2 text-sm text-teal hover:bg-paper-dim">{group}</a>
     ))}
   </nav>
   {[...new Set(verticales.map(v => v.data.agrupador))].map((group, i) => (
-    <section id={`grupo-${i}`} class="section scroll-mt-24">
+    <section id={`grupo-${i}`} class="section collection-section scroll-mt-24">
       <div class="container-page">
         <h2 class="mb-6 text-2xl">{group}</h2>
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

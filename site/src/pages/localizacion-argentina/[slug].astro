@@ -41,7 +41,7 @@ const jsonLd = [
 
 <BaseLayout title={entry.data.seo_title} description={entry.data.meta_description} jsonLd={jsonLd}>
   <Breadcrumbs crumbs={crumbs} />
-  <Hero
+  <Hero understated
     title={entry.data.title}
     subtitle={intro}
     primaryCta={{ label: 'Agendar demo', href: `/demo?tema=${entry.data.slug}` }}

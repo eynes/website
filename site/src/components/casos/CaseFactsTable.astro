@@ -9,21 +9,41 @@ interface Props {
 const { rubro, pais, usuarios, modulos } = Astro.props;
 ---
 
-<dl class="grid grid-cols-2 gap-x-6 gap-y-5 rounded-md border border-line bg-paper-dim p-6 sm:grid-cols-4">
+<dl class="case-facts">
   <div>
-    <dt class="font-mono text-xs font-semibold uppercase tracking-wide text-teal">Rubro</dt>
-    <dd class="mt-1.5 font-medium text-ink">{rubro.replace(/-/g, ' ')}</dd>
+    <dt class="sr-only">Rubro</dt>
+    <dd class="case-facts-value">{rubro.replace(/-/g, ' ')}</dd>
   </div>
   {pais && <div>
-    <dt class="font-mono text-xs font-semibold uppercase tracking-wide text-teal">País</dt>
-    <dd class="mt-1.5 font-medium text-ink">{pais}</dd>
+    <dt class="case-facts-label">País</dt>
+    <dd class="case-facts-value">{pais}</dd>
   </div>}
   {usuarios && <div>
-    <dt class="font-mono text-xs font-semibold uppercase tracking-wide text-teal">Usuarios</dt>
-    <dd class="mt-1.5 font-medium text-ink">{usuarios}</dd>
+    <dt class="case-facts-label">Usuarios</dt>
+    <dd class="case-facts-value">{usuarios}</dd>
   </div>}
   {modulos.length > 0 && <div>
-    <dt class="font-mono text-xs font-semibold uppercase tracking-wide text-teal">Módulos</dt>
-    <dd class="mt-1.5 font-medium text-ink">{modulos.join(', ')}</dd>
+    <dt class="case-facts-label">Módulos</dt>
+    <dd class="case-facts-value">{modulos.join(', ')}</dd>
   </div>}
 </dl>
+
+<style>
+  .case-facts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 16px 32px;
+    max-width: 900px;
+  }
+  .case-facts > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 10px;
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+  .case-facts-label { color: var(--color-ink-faint); }
+  .case-facts-value { color: var(--color-purple); font-weight: 500; }
+</style>

@@ -2,6 +2,7 @@
 import { getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/hero/Hero.astro';
+import ClientLogos from '../components/shared/ClientLogos.astro';
 import CTASection from '../components/cta/CTASection.astro';
 import { getPublished } from '../lib/content';
 import { organizationSchema, websiteSchema } from '../lib/schema';
@@ -42,15 +43,12 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
   {
     site && (
       <section class="trust-strip border-b border-line py-8">
-        <div class="container-page reveal flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-center">
+        <div class="container-page reveal text-center">
           <p class="text-lg font-semibold text-ink">
             {site.data.prueba_social_home.empresas_clientes} · {site.data.prueba_social_home.anios_experiencia} · {site.data.prueba_social_home.paises}
           </p>
-          <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 font-mono text-xs uppercase tracking-wide text-ink-faint">
-            {site.data.prueba_social_home.logos_clientes_destacados.map((logo) => (
-              <span>{logo}</span>
-            ))}
-          </div>
+
+          <ClientLogos fallbackNames={site.data.prueba_social_home.logos_clientes_destacados} />
         </div>
       </section>
     )
@@ -58,7 +56,6 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
 
   <section class="section">
     <div class="container-page reveal">
-      <span class="kicker">02 — Rubros</span>
       <h2 class="mt-2 text-2xl sm:text-3xl">Trabajamos con empresas como la tuya</h2>
       <div class="industry-grid mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {verticales.map((v) => (
@@ -76,7 +73,6 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
 
   <section class="section bg-paper-dim">
     <div class="container-page reveal">
-      <span class="kicker">03 — Antes / después</span>
       <h2 class="mt-2 text-2xl sm:text-3xl">De la planilla al sistema, en un solo lugar</h2>
       <div class="comparison-table mt-8 overflow-x-auto rounded-md border border-line">
         <table class="w-full min-w-[480px] border-collapse bg-paper text-sm">
@@ -116,7 +112,6 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
 
   <section class="section bg-paper-dim">
     <div class="container-page reveal">
-      <span class="kicker">04 — Módulos</span>
       <h2 class="mt-2 text-2xl sm:text-3xl">Todo lo que podés gestionar con Odoo</h2>
       <div class="module-grid mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {modulos.map((m) => (
@@ -130,7 +125,6 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
     featuredCase && (
       <section class="section">
         <div class="container-page reveal">
-          <span class="kicker">05 — Prueba</span>
           <h2 class="mt-2 text-2xl sm:text-3xl">Caso de éxito destacado</h2>
           <a href={withBase(`/casos/${featuredCase.data.slug}`)} class="card featured-case mt-6 block sm:flex sm:items-center sm:justify-between sm:gap-6">
             <div>
@@ -149,7 +143,6 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
 
   <section class="section bg-paper-dim">
     <div class="container-page reveal">
-      <span class="kicker">06 — Por qué Eynes</span>
       <h2 class="mt-2 text-2xl sm:text-3xl">Por qué Eynes</h2>
       <div class="reasons-grid mt-8 grid gap-5 sm:grid-cols-3">
         <div class="card bg-paper">

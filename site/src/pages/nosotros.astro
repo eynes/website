@@ -3,7 +3,6 @@ import { getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/hero/Hero.astro';
 import Breadcrumbs from '../components/seo/Breadcrumbs.astro';
-import CTASection from '../components/cta/CTASection.astro';
 import CollaboratorMap from '../components/shared/CollaboratorMap.astro';
 import {
   aboutPageSchema,
@@ -79,18 +78,16 @@ const jsonLd = site
 
 <BaseLayout title={page?.data.seo_title ?? ''} description={page?.data.meta_description ?? ''} jsonLd={jsonLd}>
   <Breadcrumbs crumbs={crumbs} />
-  <Hero
+  <Hero understated
     title={page?.data.title ?? ''}
-    subtitle="Equipo propio, presencia local real y dos décadas implementando Odoo en la región."
     showPartnerBadge={false}
     compact
   />
 
   <section class="section">
     <div class="container-page reveal">
-      <span class="kicker">Nuestra historia</span>
-      <h2 class="mt-2 text-2xl sm:text-3xl">Dos décadas en la región</h2>
-      <ol class="mt-8 space-y-6 border-l-2 pl-6" style="border-color: var(--color-purple)">
+      <h2 class="mt-2 text-2xl sm:text-3xl">Nuestra historia</h2>
+      <ol class="about-timeline">
         {timeline.map((item) => (
           <li>
             <p class="font-mono text-sm font-bold text-purple">{item.year}</p>
@@ -103,8 +100,7 @@ const jsonLd = site
 
   <section class="section bg-paper-dim">
     <div class="container-page reveal">
-      <span class="kicker">Equipo</span>
-      <h2 class="mt-2 text-2xl sm:text-3xl">Caras reales, no un ícono genérico</h2>
+      <h2 class="mt-2 text-2xl sm:text-3xl">Nuestro equipo</h2>
       <div class="team-grid mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {team.map((person) => (
           <div class="card bg-paper text-center">
@@ -121,7 +117,6 @@ const jsonLd = site
     site && (
       <section class="section">
         <div class="container-page reveal">
-          <span class="kicker">Presencia</span>
           <h2 class="mt-2 text-2xl sm:text-3xl">Oficinas y zonas de cobertura</h2>
           <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {site.data.oficinas.map((office) => (
@@ -147,7 +142,6 @@ const jsonLd = site
 
   <section class="section bg-paper-dim">
     <div class="container-page reveal">
-      <span class="kicker">Dónde estamos</span>
       <h2 class="mt-2 text-2xl sm:text-3xl">Un equipo distribuido por Argentina</h2>
       <p class="mt-3 max-w-2xl text-ink-soft">La implementación y el soporte se construyen con personas que trabajan desde distintas provincias. Explorá el mapa para conocer nuestra red.</p>
       <div class="mt-8">
@@ -157,5 +151,46 @@ const jsonLd = site
     </div>
   </section>
 
-  <CTASection heading="Conocé cómo trabajamos" primaryLabel="Agendar demo" primaryHref="/demo" />
+  <section class="section join-team" aria-labelledby="forma-parte">
+    <div class="container-page">
+      <h2 id="forma-parte">Forma parte</h2>
+      <ol class="join-steps">
+        <li>
+          <span class="join-step" aria-hidden="true">01</span>
+          <h3>Enviá tu CV</h3>
+          <a href="mailto:bienestarhumano@eynes.com.ar">bienestarhumano@eynes.com.ar</a>
+        </li>
+        <li>
+          <span class="join-step" aria-hidden="true">02</span>
+          <h3>Agendá una entrevista con Bienestar Humano</h3>
+        </li>
+        <li>
+          <span class="join-step" aria-hidden="true">03</span>
+          <h3>Agendá una entrevista con el director de área</h3>
+        </li>
+        <li>
+          <span class="join-step" aria-hidden="true">04</span>
+          <h3>Ya estás a bordo</h3>
+        </li>
+      </ol>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .join-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px;
+    margin-top: 36px;
+    list-style: none;
+    padding: 0;
+  }
+  .join-steps li { border-top: 1px solid var(--color-line); padding-top: 20px; }
+  .join-step { display: block; margin-bottom: 16px; font-size: 0.875rem; color: var(--color-teal); }
+  .join-steps h3 { font-size: 1.0625rem; font-weight: 500; line-height: 1.5; letter-spacing: -0.015em; text-wrap: initial; }
+  .join-steps a { display: inline-block; margin-top: 8px; font-size: 0.875rem; color: var(--color-purple); overflow-wrap: anywhere; }
+  .join-steps a:hover { text-decoration: underline; }
+  @media (max-width: 1023px) { .join-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 639px) { .join-steps { grid-template-columns: 1fr; gap: 24px; } }
+</style>

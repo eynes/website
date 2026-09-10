@@ -7,7 +7,7 @@ estado: "publicado"
 schema_type: "Service"
 agrupador: "ALIMENTOS Y GASTRONOMÍA"
 portfolio: true
-casos_relacionados: ["las-dinas"]
+casos_relacionados: ["las-dinas", "rafaela-alimentos"]
 faqs: [{"pregunta": "¿El sistema gestiona la trazabilidad requerida por SENASA?", "respuesta": "Sí, el módulo de inventario exige y rastrea números de lote, fechas de elaboración y vencimiento en toda la cadena: desde la recepción de la materia prima hasta la expedición del producto terminado, facilitando las auditorías."}, {"pregunta": "¿Puedo medir mermas y rinde en procesos de curado o desposte?", "respuesta": "Totalmente. A través de las órdenes de producción, podés registrar el peso inicial de la carne y el peso final tras el secado o desposte. El sistema calcula automáticamente la merma y ajusta los costos del producto terminado con precisión."}, {"pregunta": "¿Qué pasa si mi empresa crece y necesito más usuarios o asistencia?", "respuesta": "Nuestro modelo se basa en acompañar tu crecimiento. A diferencia de proveedores con tiempos de respuesta excesivos, contamos con un SLA estricto y soporte técnico dedicado, para que nunca te quedes con la producción o facturación frenada."}]
 ---
 
@@ -28,6 +28,18 @@ El desposte, el secado y el curado generan merma real, y de un mismo insumo sale
 ### Soporte técnico con tiempos de respuesta excesivos
 
 Un soporte que tarda semanas en responder no es un problema de servicio: es un problema operativo. Cada bloqueo del sistema frena despachos, y la empresa queda sin margen de acción hasta que el proveedor decide atender.
+
+### Compra de materia prima desconectada de la gestión de costos
+
+El precio de la hacienda en pie define el costo de todo lo que viene después, pero si el área de compras no está conectada con el costeo, ese dato entra al sistema tarde o transformado. El resultado es que se produce y se vende sobre un costo que no es el real, y el margen por línea de producto se conoce recién en el cierre.
+
+### Integración de múltiples webservices fiscales
+
+La operación de un frigorífico exige convivir con varios webservices a la vez: liquidación primaria, facturación electrónica y facturación de exportación. Cuando esa integración no está resuelta de forma nativa, cada uno se atiende con un desarrollo o un proceso aparte, y una caída de cualquiera de ellos frena despachos.
+
+### Circuitos de compra con varios niveles de autorización
+
+La compra pasa por niveles de autorización que combinan rol, centro de costos y monto. Sin un circuito de aprobación configurado en el sistema, esas validaciones se resuelven por mail o verbalmente: no queda registro de quién autorizó qué, y la compra o se frena o avanza sin el visto bueno que correspondía.
 
 ## 03 — Módulos relevantes
 

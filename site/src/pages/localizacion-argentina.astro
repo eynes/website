@@ -58,7 +58,7 @@ const jsonLd = page
 
 <BaseLayout title={page?.data.seo_title ?? ''} description={page?.data.meta_description ?? ''} jsonLd={jsonLd as Record<string, unknown>[]}>
   <Breadcrumbs crumbs={crumbs} />
-  <Hero
+  <Hero understated
     title={page?.data.title ?? ''}
     subtitle={subtitle}
     primaryCta={{ label: 'Agendar demo', href: '/demo' }}
@@ -72,7 +72,6 @@ const jsonLd = page
     grupos.some((g) => g.fichas.length > 0) && (
       <section class="section bg-paper-dim" id="capacidades">
         <div class="container-page reveal">
-          <span class="kicker">03</span>
           <h2 class="mt-2 text-2xl sm:text-3xl">Todo lo que resuelve, en un solo lugar</h2>
           <div class="mt-8 grid gap-10 sm:grid-cols-3">
             {grupos.map((g) => (
@@ -107,7 +106,6 @@ const jsonLd = page
     experiencia.length > 0 && (
       <section class="section">
         <div class="container-page reveal">
-          <span class="kicker">06</span>
           <h2 class="mt-2 text-2xl sm:text-3xl">Experiencia documentada</h2>
           <div class="mt-8 grid gap-5 sm:grid-cols-3">
             {experiencia.map(({ caso, nota }) => (

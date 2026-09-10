@@ -7,7 +7,7 @@ interface Props {
   narrow?: boolean;
 }
 
-const { title, number, html, tone = 'light', narrow = false } = Astro.props;
+const { title, html, tone = 'light', narrow = false } = Astro.props;
 ---
 
 {
@@ -16,7 +16,6 @@ const { title, number, html, tone = 'light', narrow = false } = Astro.props;
       <div class:list={['container-page prose-content', narrow && 'max-w-3xl']}>
         {title && (
           <div class="mb-4 flex items-baseline gap-3">
-            {number && <span class="font-mono text-sm text-teal">{number}</span>}
             <h2 class="text-2xl sm:text-3xl">{title}</h2>
           </div>
         )}

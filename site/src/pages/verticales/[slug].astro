@@ -51,7 +51,7 @@ const jsonLd = [
 
 <BaseLayout title={entry.data.seo_title} description={entry.data.meta_description} jsonLd={jsonLd}>
   <Breadcrumbs crumbs={crumbs} />
-  <Hero title={entry.data.title} subtitle={subtitle} primaryCta={{ label: `Agendar demo para ${entry.data.title}`, href: `/demo?rubro=${entry.data.slug}` }} />
+  <Hero understated title={entry.data.title} subtitle={subtitle} primaryCta={{ label: `Agendar demo para ${entry.data.title}`, href: `/demo?rubro=${entry.data.slug}` }} />
 
   <ContentSection number="02" title="Problemas específicos del rubro" html={problemsHtml} narrow />
   <ContentSection number="02b" title="Odoo vs. las alternativas" html={comparisonHtml} tone="muted" />
@@ -63,7 +63,6 @@ const jsonLd = [
     modulos.length > 0 && (
       <section class="section">
         <div class="container-page reveal">
-          <span class="kicker">03</span>
           <h2 class="mt-2 text-2xl sm:text-3xl">Módulos relevantes para este rubro</h2>
           <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {modulos.map((m) => (
@@ -81,7 +80,6 @@ const jsonLd = [
     entry.data.integraciones_destacadas.length > 0 && (
       <section class="section bg-paper-dim">
         <div class="container-page reveal">
-          <span class="kicker">03a</span>
           <h2 class="mt-2 text-2xl sm:text-3xl">No tenés que abandonar tus herramientas</h2>
           <div class="mt-6 flex flex-wrap gap-3">
             {entry.data.integraciones_destacadas.map((i: string) => (
@@ -97,7 +95,6 @@ const jsonLd = [
     casos.length > 0 && (
       <section class="section">
         <div class="container-page reveal">
-          <span class="kicker">04</span>
           <h2 class="mt-2 text-2xl sm:text-3xl">Casos de éxito del rubro</h2>
           <div class="mt-8 grid gap-5 sm:grid-cols-2">
             {casos.map((c) => (

@@ -2,7 +2,6 @@
 import { getEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/hero/Hero.astro';
-import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
 import CTASection from '../../components/cta/CTASection.astro';
 import { getPublished } from '../../lib/content';
 import { collectionPageSchema, breadcrumbListSchema } from '../../lib/schema';
@@ -29,11 +28,10 @@ const jsonLd = hub
 ---
 
 <BaseLayout title={hub?.data.seo_title ?? ''} description={hub?.data.meta_description ?? ''} jsonLd={jsonLd}>
-  <Breadcrumbs crumbs={crumbs} />
-  <Hero title={hub?.data.title ?? ''} subtitle="Cada módulo se implementa a medida, integrado con el resto de tu operación." showPartnerBadge={false} compact />
+  <Hero understated title="Módulos" showPartnerBadge={false} compact />
 
-  <section class="section">
-    <div class="container-page reveal grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+  <section class="section collection-section">
+    <div class="container-page module-list grid gap-5 sm:grid-cols-2">
       {
         modulos.map((m) => (
           <a href={withBase(`/modulos/${m.data.slug}`)} class="card block">

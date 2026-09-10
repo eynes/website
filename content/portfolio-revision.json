@@ -25,6 +25,51 @@
     "texto": "[REVISAR] En el archivo original figura como 'Frigorífico (Ejemplo)', que es un texto de relleno. Opciones reales dentro del agrupador ALIMENTOS Y GASTRONOMÍA: Rafaela Alimentos es el mismo rubro exacto (frigorífico, alimentos y chacinados) y sería el segundo caso natural, en cuanto se complete su información."
   },
   {
+    "empresa": "Rafaela Alimentos",
+    "columna": "K",
+    "texto": "[REVISAR] La celda vino vacía en el archivo original. Según lo que describe el caso, corresponderían: Compras con flujos de aprobación por rol, centro de costos y monto · Fabricación/MRP · Inventario con trazabilidad por lote · Contabilidad + Localización Argentina (WSLP, WSFE, WSFEX) · Contabilidad Analítica por centro de costos · Calidad. CONFIRMAR con el equipo de implementación."
+  },
+  {
+    "empresa": "Rafaela Alimentos",
+    "columna": "L",
+    "texto": "[REVISAR] Celda vacía en el archivo original."
+  },
+  {
+    "empresa": "Rafaela Alimentos",
+    "columna": "M",
+    "texto": "[REVISAR] Celda vacía en el archivo original."
+  },
+  {
+    "empresa": "Rafaela Alimentos",
+    "columna": "N",
+    "texto": "[REVISAR] Celda vacía en el archivo original."
+  },
+  {
+    "empresa": "Rafaela Alimentos",
+    "columna": "O",
+    "texto": "[REVISAR] Celda vacía en el archivo original."
+  },
+  {
+    "empresa": "Rafaela Alimentos",
+    "columna": "P",
+    "texto": "RAFAELA ALIMENTOS. Situación inicial: sistema no estandarizado y poca integración entre la información de las áreas. Tres puntos concretos: desconexión entre la compra de hacienda en pie y la gestión de costos; dificultad para integrar los distintos webservices fiscales (WSLP, WSFE, WSFEX) con el sistema de gestión; y procesos de compra complejos con niveles de autorización por rol, centro de costos y monto. [REVISAR] Falta el detalle de qué se implementó y con qué resultado. El archivo original tiene vacías las columnas de integraciones, casos, testimonio y FAQ para este cliente."
+  },
+  {
+    "empresa": "Rafaela Alimentos",
+    "columna": "Q",
+    "texto": "[REVISAR] Sin definir. Opciones dentro del agrupador ALIMENTOS Y GASTRONOMÍA: Las Dinas (mismo rubro exacto de frigorífico y chacinados) es la más natural."
+  },
+  {
+    "empresa": "Rafaela Alimentos",
+    "columna": "R",
+    "texto": "[REVISAR] NO SE REDACTÓ. El archivo original no tiene testimonio para este cliente. Cuando esté la información, armarlo con la misma estructura de tres partes. Preguntas para el referente: (1) ¿Qué era lo más difícil antes de Odoo? (2) ¿Qué se implementó y qué movió más la aguja? (3) ¿Qué pueden hacer hoy que antes no podían, y hay algún número que lo muestre?"
+  },
+  {
+    "empresa": "Rafaela Alimentos",
+    "columna": "S",
+    "texto": "[REVISAR] NO SE REDACTARON. El archivo original no tiene FAQs para este cliente. Como base pueden reutilizarse las de Las Dinas, que es el mismo rubro (trazabilidad SENASA, mermas de desposte y curado, peso variable), sumando dos propias de este caso: integración de webservices fiscales y circuitos de autorización de compra por rol y centro de costos."
+  },
+  {
     "empresa": "El Jumillano S.A. (IVESS)",
     "columna": "P",
     "texto": "EL JUMILLANO S.A. (IVESS). Situación inicial: información descentralizada, aplicaciones satélite sin mantenimiento y unidades de negocio integradas de forma ineficiente. Qué se hizo: implementación de Odoo como sistema único, absorbiendo las funciones que cubrían las aplicaciones satélite e integrando las unidades de negocio sobre una misma base. Resultado: [REVISAR] completar con cantidad de aplicaciones satélite eliminadas, tiempo de cierre o de rendición de reparto, o consolidación del reporte por unidad."

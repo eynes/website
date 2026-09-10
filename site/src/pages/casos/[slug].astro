@@ -41,10 +41,8 @@ const jsonLd = [
 
 <BaseLayout title={entry.data.seo_title} description={entry.data.meta_description} jsonLd={jsonLd}>
   <Breadcrumbs crumbs={crumbs} />
-  <Hero title={entry.data.title} showPartnerBadge={false} />
-
-  <section class="-mt-4">
-    <div class="container-page reveal">
+  <Hero understated title={entry.data.title} showPartnerBadge={false}>
+    <div slot="details" class="mt-8 sm:mt-10">
       <CaseFactsTable
         rubro={entry.data.rubro}
         pais={entry.data.pais}
@@ -52,7 +50,7 @@ const jsonLd = [
         modulos={entry.data.modulos_implementados}
       />
     </div>
-  </section>
+  </Hero>
 
   <ContentSection number="03" title="El problema" html={problemHtml} narrow />
   <ContentSection number="04" title="La solución" html={solutionHtml} narrow tone="muted" />

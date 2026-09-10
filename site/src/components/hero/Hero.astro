@@ -15,6 +15,7 @@ interface Props {
   secondaryCta?: CtaLink;
   imagePlaceholder?: string;
   compact?: boolean;
+  understated?: boolean;
 }
 
 const {
@@ -25,10 +26,11 @@ const {
   secondaryCta,
   imagePlaceholder,
   compact = false,
+  understated = false,
 } = Astro.props;
 ---
 
-<section class:list={['hero relative border-b border-line', compact && 'hero-compact']}>
+<section class:list={['hero relative border-b border-line', compact && 'hero-compact', understated && 'hero-understated']}>
   <div
     class:list={[
       'hero-layout container-page relative grid items-end gap-10',
@@ -44,7 +46,8 @@ const {
       <h1 class:list={['hero-title enter enter-2', showPartnerBadge && 'mt-8']}>
         {title}
       </h1>
-      <div class="hero-bottom">
+      <slot name="details" />
+      {(subtitle || primaryCta || secondaryCta) && <div class="hero-bottom">
         {subtitle && (
           <p class="hero-description enter enter-3 text-ink-soft">
             {subtitle}
@@ -66,7 +69,7 @@ const {
             </div>
           )
         }
-      </div>
+      </div>}
     </div>
     {
       imagePlaceholder && (

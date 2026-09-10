@@ -2,7 +2,6 @@
 import { getEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/hero/Hero.astro';
-import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
 import CTASection from '../../components/cta/CTASection.astro';
 import { getPublished } from '../../lib/content';
 import { collectionPageSchema, breadcrumbListSchema } from '../../lib/schema';
@@ -29,11 +28,10 @@ const jsonLd = hub
 ---
 
 <BaseLayout title={hub?.data.seo_title ?? ''} description={hub?.data.meta_description ?? ''} jsonLd={jsonLd}>
-  <Breadcrumbs crumbs={crumbs} />
-  <Hero title={hub?.data.title ?? ''} subtitle="Empresas reales, resultados reales — sin cifras inventadas." showPartnerBadge={false} compact />
+  <Hero understated title={hub?.data.title ?? ''} showPartnerBadge={false} compact />
 
-  <section class="section">
-    <div class="container-page reveal grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+  <section class="section collection-section">
+    <div class="container-page case-list grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {
         casos.map((c) => (
           <a href={withBase(`/casos/${c.data.slug}`)} class="card block">

@@ -1,0 +1,80 @@
+---
+import fg from 'fast-glob';
+import { withBase } from '../../lib/url';
+
+interface Props {
+  fallbackNames: string[];
+}
+
+const { fallbackNames } = Astro.props;
+const files = fg.sync('public/images/clientes/*.{svg,png,webp,jpg,jpeg,avif}').sort((a, b) => a.localeCompare(b));
+const logos = files.map((file) => ({
+  src: withBase(file.replace(/^public/, '').split('/').map(encodeURIComponent).join('/')),
+  name: file.split('/').pop()!.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' '),
+}));
+const items = logos.length ? logos : fallbackNames.map((name) => ({ name, src: '' }));
+// Each half fills even a wide screen, keeping the loop seamless with few logos.
+const copies = Math.max(1, Math.ceil(10 / Math.max(items.length, 1)));
+---
+
+{items.length > 0 && (
+  <client-logos class="client-logos" role="region" aria-label="Empresas que confían en Eynes">
+    <div class="logo-window">
+      <div class="logo-track">
+        {[0, 1].map((half) => (
+          <div class="logo-group" aria-hidden={half === 1 ? 'true' : undefined}>
+            {Array.from({ length: copies }, (_, copy) => items.map((item) => (
+              <div class:list={['logo-item', (half > 0 || copy > 0) && 'logo-repeat']} aria-hidden={copy > 0 ? 'true' : undefined}>
+                {item.src ? <img src={item.src} alt={half === 0 && copy === 0 ? item.name : ''} width="160" height="64" /> : <span>{item.name}</span>}
+              </div>
+            )))}
+          </div>
+        ))}
+      </div>
+    </div>
+    <button type="button" class="logo-toggle" aria-label="Pausar movimiento de logos" aria-pressed="false">
+      <svg class="pause-icon" viewBox="0 0 20 20" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M5 4h3v12H5zm7 0h3v12h-3z" /></svg>
+      <svg class="play-icon" viewBox="0 0 20 20" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="m6 3 11 7-11 7z" /></svg>
+    </button>
+  </client-logos>
+)}
+
+<script>
+  class ClientLogos extends HTMLElement {
+    connectedCallback() {
+      this.querySelector('button')?.addEventListener('click', () => {
+        const paused = this.toggleAttribute('data-paused');
+        const button = this.querySelector('button');
+        button?.setAttribute('aria-pressed', String(paused));
+        button?.setAttribute('aria-label', paused ? 'Reanudar movimiento de logos' : 'Pausar movimiento de logos');
+      });
+    }
+  }
+  if (!customElements.get('client-logos')) customElements.define('client-logos', ClientLogos);
+</script>
+
+<style>
+  .client-logos { display: flex; align-items: center; gap: 12px; width: 100%; min-width: 0; margin-top: 28px; }
+  .logo-window { overflow: hidden; flex: 1; min-width: 0; mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); }
+  .logo-track { display: flex; width: max-content; animation: logo-scroll 60s linear infinite; }
+  .logo-group { display: flex; flex-shrink: 0; }
+  .logo-item { width: 200px; padding: 16px 24px; display: flex; align-items: center; justify-content: center; }
+  .logo-item img { width: 152px; height: 64px; object-fit: contain; }
+  .logo-item span { color: var(--color-ink-soft); font-size: 1rem; font-weight: 500; text-align: center; }
+  .client-logos:hover .logo-track, .client-logos:focus-within .logo-track, .client-logos[data-paused] .logo-track { animation-play-state: paused; }
+  .logo-toggle { display: grid; place-items: center; flex-shrink: 0; width: 40px; height: 40px; border: 1px solid var(--color-line); border-radius: 50%; color: var(--color-ink-soft); cursor: pointer; }
+  .logo-toggle:hover { background: var(--color-paper-dim); }
+  .play-icon, [data-paused] .pause-icon { display: none; }
+  [data-paused] .play-icon { display: block; }
+  @keyframes logo-scroll { to { transform: translateX(-50%); } }
+  @media (max-width: 639px) {
+    .logo-item { width: 160px; padding-inline: 16px; }
+    .logo-item img { width: 128px; height: 56px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .logo-toggle, .logo-group[aria-hidden], .logo-repeat { display: none; }
+    .logo-window { mask-image: none; overflow: visible; }
+    .logo-track { width: 100%; animation: none; }
+    .logo-group { width: 100%; flex-wrap: wrap; justify-content: center; }
+  }
+</style>
