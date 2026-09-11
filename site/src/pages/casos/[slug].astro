@@ -9,6 +9,7 @@ import CaseFactsTable from '../../components/casos/CaseFactsTable.astro';
 import CTASection from '../../components/cta/CTASection.astro';
 import { getPublished } from '../../lib/content';
 import { splitSections, renderSection, renderFragment } from '../../lib/sections';
+import { resolvePublishedRelated } from '../../lib/related';
 import { articleSchema, breadcrumbListSchema } from '../../lib/schema';
 
 export async function getStaticPaths() {
@@ -38,7 +39,12 @@ const solutionHtml = await renderFragment(
     : implementation
 );
 const showIndustry = !entry.data.title.toLocaleLowerCase().includes(entry.data.rubro.toLocaleLowerCase());
-const hasFacts = showIndustry || entry.data.pais || entry.data.usuarios || entry.data.modulos_implementados.length > 0;
+const modulosImplementados = (
+  await Promise.all(entry.data.modulos_implementados.map((slug: string) => resolvePublishedRelated('modulos', slug)))
+)
+  .filter(Boolean)
+  .map((m) => m!.data.title);
+const hasFacts = showIndustry || entry.data.pais || entry.data.usuarios || modulosImplementados.length > 0;
 const resultHtml = await renderSection(sections, '05');
 
 const crumbs = [
@@ -65,7 +71,7 @@ const jsonLd = [
         rubro={showIndustry ? entry.data.rubro : ''}
         pais={entry.data.pais}
         usuarios={entry.data.usuarios}
-        modulos={entry.data.modulos_implementados}
+        modulos={modulosImplementados}
       />
     </div>}
   </Hero>
@@ -77,8 +83,12 @@ const jsonLd = [
   {['06', '07', '08', '09'].map(async (key) => (
     <ContentSection title={sections[key]?.title} html={await renderSection(sections, key)} narrow />
   ))}
-  <FAQAccordion faqs={entry.data.faqs} title="Preguntas frecuentes del rubro" />
-  <div class="container-page pb-8"><a class="text-teal underline" href={withBase('/sectores')}>Explorá todos los rubros →</a></div>
+  <FAQAccordion faqs={entry.data.faqs} title="Preguntas frecuentes" />
+  <div class="container-page pb-16 text-center">
+    <a href={withBase('/sectores')} class="text-sm font-medium text-teal hover:underline">
+      Explorá todos los rubros <span class="arrow">→</span>
+    </a>
+  </div>
 
   <CTASection heading="Quiero un resultado similar en mi empresa" />
 </BaseLayout>

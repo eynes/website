@@ -9,7 +9,7 @@ cliente: "Melisam S.A."
 rubro: "Extinción de incendios / Seguridad Industrial"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "Controlamos toda la fábrica. Tenemos trazabilidad exacta de cada componente hasta los productos terminados que entregamos a nuestros clientes, las auditorías se aprueban con reportes digitales en minutos, y nuestro departamento de administración factura con la tranquilidad de que las percepciones se calculan solas y sin errores."
 agrupador: "SERVICIOS E INSUMOS INDUSTRIALES"
 portfolio: true

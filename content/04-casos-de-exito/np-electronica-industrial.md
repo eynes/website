@@ -9,7 +9,7 @@ cliente: "NP Electrónica Industrial"
 rubro: "Electrónica y Automatización"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras"]
 resultado_clave: "Sabemos en el momento dónde está cada equipo y si está en garantía o no. Los repuestos que se consumen ahora llegan a la factura."
 agrupador: "TECNOLOGÍA E INNOVACIÓN"
 portfolio: true

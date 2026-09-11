@@ -9,7 +9,7 @@ cliente: "Diesel frenos"
 rubro: "Taller / Autopartes"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "Recuperamos la confiabilidad en nuestra tecnología operativa. Hoy, al modificar el tipo de cambio o la condición de un proveedor, el recálculo se aplica automáticamente a todos los productos afectados, etiquetando los presupuestos vencidos para proteger la rentabilidad y manteniendo los costos ocultos para la fuerza de ventas. La gestión de importaciones es completamente transparente: conocemos el estado exacto de nuestros compromisos anuales, trazamos cada pieza por su número de despacho aduanero y sabemos su costo real exacto, incluyendo fletes y seguros. Administrativamente, dejamos de trabajar a pulmón; el sistema gestiona las percepciones de las seis provincias actualizando los padrones a tiempo, controlando la cartera de cheques y emitiendo el COT de ARBA de manera directa desde el remito."
 agrupador: "AUTOMOTRIZ Y VEHÍCULOS"
 portfolio: true

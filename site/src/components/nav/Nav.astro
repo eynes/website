@@ -181,6 +181,12 @@ const sectorGroups = sortGroups(
     trigger.setAttribute('aria-expanded', String(open));
     mega.classList.toggle('is-open', open);
     collapse.style.maxHeight = open ? `${collapse.scrollHeight}px` : '0px';
+    // The panel is hidden with opacity/pointer-events while closed, but its
+    // links stay in the DOM — without this they're still reachable by Tab.
+    collapse.querySelectorAll<HTMLAnchorElement>('a').forEach((link) => {
+      if (open) link.removeAttribute('tabindex');
+      else link.setAttribute('tabindex', '-1');
+    });
   }
 
   function closeAllMegas(except?: HTMLElement) {
@@ -188,6 +194,10 @@ const sectorGroups = sortGroups(
       if (mega !== except) setOpen(mega, false);
     });
   }
+
+  // Start every panel's links out of the tab order — they render open in
+  // the DOM but visually collapsed, so this must run before any interaction.
+  closeAllMegas();
 
   megas.forEach((mega) => {
     const trigger = mega.querySelector<HTMLButtonElement>('[data-mega-trigger]');

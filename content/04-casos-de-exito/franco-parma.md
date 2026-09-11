@@ -9,7 +9,7 @@ cliente: "Franco Parma"
 rubro: "Gastronomía"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "contabilidad-y-finanzas"]
 resultado_clave: "El control ahora es total. Si se vende un sándwich en una sucursal, el sistema descuenta automáticamente los insumos del stock de ese local. Desde la oficina central, podemos ver la rentabilidad, los cierres de caja de cada turno y gestionar transferencias de mercadería sin perder trazabilidad."
 agrupador: "ALIMENTOS Y GASTRONOMÍA"
 portfolio: true

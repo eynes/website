@@ -1,6 +1,7 @@
 ---
 import { getEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/hero/Hero.astro';
 import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
 
 const site = await getEntry('siteConfig', 'site');
@@ -20,11 +21,11 @@ const crumbs = [
   jsonLd={[]}
 >
   <Breadcrumbs crumbs={crumbs} />
+  <Hero understated compact title="Términos y condiciones" showPartnerBadge={false} />
   <section class="section">
     <div class="container-page">
       <div class="prose-content max-w-2xl">
-        <h1 class="text-3xl">Términos y condiciones</h1>
-        <p>Última actualización: agosto de 2026.</p>
+        <p>Última actualización: septiembre de 2026.</p>
 
         <h2>Alcance</h2>
         <p>

@@ -9,7 +9,7 @@ cliente: "El Jumillano S.A. (IVESS)"
 rubro: "Elaboración y distribución de agua"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "contabilidad-y-finanzas"]
 resultado_clave: "Dejamos de depender de desarrollos que nadie podía tocar. Hoy la información está en un solo lugar, además optamos por la infraestructura de odoo.sh y fue todo un éxito."
 agrupador: "ALIMENTOS Y GASTRONOMÍA"
 portfolio: true

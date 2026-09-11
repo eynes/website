@@ -9,7 +9,7 @@ cliente: "Macro Argentina"
 rubro: "Repuestos y Autopartes"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras"]
 resultado_clave: "El cambio fue rotundo: pasamos de tomar decisiones por instinto a basarnos 100% en datos. Podemos apelar a nuestra experiencia, pero hoy el sistema nos sugiere qué comprar, cuándo y en qué cantidad. Optimizamos nuestro nivel de inventario, redujimos las compras de urgencia y el capital de la empresa por fin está invertido en los repuestos que realmente nos dan ganancia."
 agrupador: "AUTOMOTRIZ Y VEHÍCULOS"
 portfolio: true

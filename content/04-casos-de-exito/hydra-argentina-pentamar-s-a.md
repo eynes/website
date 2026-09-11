@@ -9,7 +9,7 @@ cliente: "HYDRA ARGENTINA / PENTAMAR S.A."
 rubro: "Construcción y dragado"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["compras", "contabilidad-y-finanzas"]
 resultado_clave: "Hoy vemos el desvío mientras la obra está en ejecución y no al cierre. Cambió la forma en que tomamos decisiones, porque ahora las tomamos a tiempo."
 agrupador: "CONSTRUCCIÓN E INFRAESTRUCTURA"
 portfolio: true

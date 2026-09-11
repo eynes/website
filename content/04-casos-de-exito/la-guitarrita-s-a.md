@@ -9,7 +9,7 @@ cliente: "La Guitarrita S.A."
 rubro: "Gastronomía"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "Hoy la merma se mide y se puede atacar. Y la diferencia con la experiencia anterior fue tener a alguien que entendía el negocio, no solo el software."
 agrupador: "ALIMENTOS Y GASTRONOMÍA"
 portfolio: true

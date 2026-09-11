@@ -9,7 +9,7 @@ cliente: "Clínica IMA S.A."
 rubro: "Salud"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "Hubo una reducción importante de los tiempos de auditoría en el consumo de alimentos y generamos reportes con información confiable. Cuando se consumen alimentos en cocina, el sistema ya sabe a qué área se dedicará y a que centro de costos imputarlo. Además, las presentaciones ante ARCA ahora se generan con algunos clics, devolviéndole días de trabajo a nuestra administración."
 agrupador: "SALUD, CIENCIA Y CUIDADO ANIMAL"
 portfolio: true

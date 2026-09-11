@@ -9,7 +9,7 @@ cliente: "Ferraro"
 rubro: "Calzado / Marroquinería"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "Sabemos qué rota y qué no, y podemos mover mercadería entre locales antes de que se convierta en liquidación."
 agrupador: "AGROINDUSTRIA Y MANUFACTURA"
 portfolio: true

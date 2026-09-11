@@ -9,7 +9,7 @@ cliente: "CIDEFAMA S.A."
 rubro: "Comercio Internacional"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "Hoy sabemos cuánto cuesta realmente lo que traemos y podemos fijar precio sobre ese número."
 agrupador: "SERVICIOS EMPRESARIALES"
 portfolio: true

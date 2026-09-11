@@ -9,7 +9,7 @@ cliente: "Manas-ti"
 rubro: "Tecnología (TI)"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "contabilidad-y-finanzas"]
 resultado_clave: "Hoy sabemos qué proyecto va bien y cuál presenta dificultades mientras está en curso. Y facturamos lo que efectivamente se trabajó."
 agrupador: "TECNOLOGÍA E INNOVACIÓN"
 portfolio: true

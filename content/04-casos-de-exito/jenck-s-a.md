@@ -9,7 +9,7 @@ cliente: "Jenck S.A."
 rubro: "Equipamiento científico / Laboratorio"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "Lo que se compromete en la licitación llega al técnico sin que nadie tenga que acordarse. El historial de calibración de cada equipo está disponible cuando el cliente lo pide, y eso dejó de ser un pedido que nos complicaba para pasar a ser un argumento de venta: el cliente sabe que con nosotros va a tener esa documentación cuando la necesite.\n\nEn el depósito dejamos de perder reactivos por vencimiento, porque el sistema avisa antes y prioriza la salida. Y por primera vez sabemos el costo real de lo que importamos, que es lo que nos permite saber si una licitación fue rentable o si el número lo explicaba el tipo de cambio. \n\nPara nosotros el post-venta es donde está el negocio recurrente. Antes dependía de la memoria de cada uno; hoy está en el sistema."
 agrupador: "SALUD, CIENCIA Y CUIDADO ANIMAL"
 portfolio: true

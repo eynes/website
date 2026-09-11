@@ -9,7 +9,7 @@ cliente: "Imoberdoff"
 rubro: "Soluciones Electromecánicas"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "Sabemos en qué estado está cada equipo y qué lo está frenando. Los faltantes sorpresa dejaron de ser la norma."
 agrupador: "SERVICIOS E INSUMOS INDUSTRIALES"
 portfolio: true

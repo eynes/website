@@ -9,7 +9,7 @@ cliente: "Supply Parts"
 rubro: "Repuestos y Autopartes"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario"]
 resultado_clave: "El cambio en la relación con los clientes fue inmediato. Ahora, en cuanto el cliente reporta su pago en el portal, el impacto se refleja en su cuenta corriente y el cupo de crédito se libera en el acto. Eliminamos la fricción de tener clientes queriendo comprar y no poder hacerlo por un trámite administrativo demorado. Además, libero a nuestro equipo de contabilidad de horas de carga manual, permitiéndonos escalar el volumen de clientes sin necesidad de sumar más personal administrativo."
 agrupador: "AUTOMOTRIZ Y VEHÍCULOS"
 portfolio: true

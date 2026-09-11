@@ -9,7 +9,7 @@ cliente: "Serivet"
 rubro: "Veterinaria"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "Ahora tenemos todo el historial en un solo lugar. Cuando atendemos a un paciente, veo sus vacunas previas, laboratorios, las prestaciones realizadas y los insumos usados, y eso impacta directo en caja. Además, el sistema nos avisa qué medicamentos están por vencer para darles prioridad, eliminando las pérdidas por caducidad."
 agrupador: "SALUD, CIENCIA Y CUIDADO ANIMAL"
 portfolio: true

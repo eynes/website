@@ -9,7 +9,7 @@ cliente: "YPF"
 rubro: "Energía y Petróleo"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["compras", "contabilidad-y-finanzas"]
 resultado_clave: "El salto cualitativo fue absoluto y logramos una visibilidad financiera transversal. Gracias a la convivencia armónica entre Odoo y SAP, estandarizada bajo las normativas de seguridad de YPF, ahora los socios pueden auditar sus aportes de manera transparente. Los sobrecostos operativos en el campo se detectan de inmediato y las liquidaciones cruzadas entre las empresas del consorcio se emiten de forma automatizada, sin errores ni demoras, protegiendo así la rentabilidad de cada proyecto de extracción."
 agrupador: "ENERGÍA Y SECTORES PESADOS"
 portfolio: true

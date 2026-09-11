@@ -9,7 +9,7 @@ cliente: "Comercializadora Casper S.A. (Casper Pet Store)"
 rubro: "Pet Shop y Veterinaria"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "Hoy lo que se ve en la web es lo que hay para vender. Y el turno se cobra en el mismo lugar donde se agenda."
 agrupador: "COMERCIO MAYORISTA Y MINORISTA"
 portfolio: true

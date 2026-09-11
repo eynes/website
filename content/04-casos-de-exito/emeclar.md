@@ -9,7 +9,7 @@ cliente: "Emeclar"
 rubro: "Importación y distribución de productos médicos"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: ""
 agrupador: "SALUD, CIENCIA Y CUIDADO ANIMAL"
 portfolio: true

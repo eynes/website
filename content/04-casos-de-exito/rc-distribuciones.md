@@ -9,7 +9,7 @@ cliente: "RC Distribuciones"
 rubro: "Mayorista de Ferretería y Bulonería"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "Logramos eliminar la doble carga de datos. Hoy el viajante registra el cobro en la calle y la cuenta corriente del cliente se actualiza de inmediato; administración simplemente controla contra el banco y emite el recibo definitivo. El sistema ahora determina el descuento por pronto pago y emite la nota de crédito con CAE en el mismo acto. Estandarizamos el cálculo de comisiones cumpliendo con la Ley 14.546, dejando de depender de procesos manuales. Centralizar nuestros 18.000 artículos, la logística de fletes y la gestión de cheques rechazados en una única plataforma nos permitió alcanzar una operación mucho más ágil y ordenada."
 agrupador: "COMERCIO MAYORISTA Y MINORISTA"
 portfolio: true

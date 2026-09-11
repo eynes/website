@@ -9,7 +9,7 @@ cliente: "Tecnitower S.A."
 rubro: "Refrigeración Industrial"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "El stock hoy refleja lo que hay. Y sabemos cuánto costó realmente cada equipo que fabricamos."
 agrupador: "SERVICIOS E INSUMOS INDUSTRIALES"
 portfolio: true

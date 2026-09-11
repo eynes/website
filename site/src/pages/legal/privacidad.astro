@@ -1,6 +1,7 @@
 ---
 import { getEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/hero/Hero.astro';
 import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
 
 const site = await getEntry('siteConfig', 'site');
@@ -21,33 +22,32 @@ const crumbs = [
   jsonLd={[]}
 >
   <Breadcrumbs crumbs={crumbs} />
+  <Hero understated compact title="Política de privacidad" showPartnerBadge={false} />
   <section class="section">
     <div class="container-page">
       <div class="prose-content max-w-2xl">
-        <h1 class="text-3xl">Política de privacidad</h1>
-        <p>Última actualización: agosto de 2026.</p>
+        <p>Última actualización: septiembre de 2026.</p>
 
         <h2>Qué datos recolectamos</h2>
         <p>
-          Cuando completás el formulario de contacto o agendás una demo, recolectamos nombre y
-          apellido, email corporativo, empresa, rubro, cantidad de usuarios y una descripción de
-          tu sistema actual. Si nos escribís por WhatsApp, recolectamos lo que nos compartas en
-          esa conversación. No usamos cookies de seguimiento ni herramientas de analítica de
-          terceros en este sitio.
+          Si nos escribís por WhatsApp, recolectamos lo que nos compartas en esa conversación.
+          Si agendás una reunión desde nuestro calendario, Google Calendar recolecta tu nombre,
+          tu email y el horario elegido para coordinar el evento. No usamos cookies de seguimiento
+          ni herramientas de analítica de terceros en este sitio.
         </p>
 
         <h2>Para qué los usamos</h2>
         <p>
-          Usamos estos datos exclusivamente para responder tu consulta, coordinar una demo y, si
-          avanza la conversación, preparar una propuesta comercial. No vendemos ni cedemos tus
+          Usamos estos datos exclusivamente para responder tu consulta, coordinar una reunión y,
+          si avanza la conversación, preparar una propuesta comercial. No vendemos ni cedemos tus
           datos a terceros con fines comerciales.
         </p>
 
         <h2>Cómo se procesan</h2>
         <p>
-          El formulario de contacto usa Web3Forms como proveedor técnico para reenviarnos el
-          mensaje por email — no almacena tus datos más allá de ese envío. El resto de la
-          comunicación (email, WhatsApp) queda en nuestros propios canales.
+          Agendar una reunión te lleva a Google Calendar, que procesa esa reserva bajo su propia
+          política de privacidad. El resto de la comunicación (WhatsApp, email) queda en nuestros
+          propios canales.
         </p>
 
         <h2>Tus derechos</h2>

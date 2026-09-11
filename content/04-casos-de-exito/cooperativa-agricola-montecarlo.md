@@ -9,7 +9,7 @@ cliente: "Cooperativa Agrícola Montecarlo"
 rubro: "Agroindustria"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras"]
 resultado_clave: "Hoy, el camión sube a la báscula, se presiona un botón y el peso neto ingresa directamente al sistema sin intervención humana. El margen de error es cero. Al automatizar este paso, podemos emitir las liquidaciones a nuestros socios productores de forma periódica, mejorando drásticamente nuestra relación con ellos."
 agrupador: "AGROINDUSTRIA Y MANUFACTURA"
 portfolio: true

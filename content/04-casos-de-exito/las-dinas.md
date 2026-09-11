@@ -9,7 +9,7 @@ cliente: "Las Dinas"
 rubro: "Frigorífico, alimentos y chacinados"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "contabilidad-y-finanzas"]
 resultado_clave: "El cambio fue rotundo. Hoy trazamos la historia del producto desde que ingresa la media res hasta que el salame llega al supermercado. Sabemos exactamente cuánto rinde cada partida, cumplimos con SENASA sin estrés y, sobre todo, tenemos un equipo de soporte técnico que nos acompaña en el día a día."
 agrupador: "ALIMENTOS Y GASTRONOMÍA"
 portfolio: true

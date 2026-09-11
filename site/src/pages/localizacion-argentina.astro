@@ -83,7 +83,7 @@ const jsonLd = page
                   {g.fichas.map((f) => (
                     <li>
                       <a href={withBase(`/localizacion-argentina/${f.data.slug}`)} class="text-sm font-medium text-teal hover:underline">
-                        {f.data.title} →
+                        {f.data.title} <span class="arrow">→</span>
                       </a>
                     </li>
                   ))}
@@ -118,7 +118,7 @@ const jsonLd = page
               <a href={withBase(`/casos/${caso.data.slug}`)} class="card block">
                 <p class="font-semibold text-ink">{caso.data.cliente}</p>
                 <p class="mt-2 text-sm text-ink-soft">{nota}</p>
-                <span class="mt-4 inline-block text-sm font-medium text-teal">Ver caso →</span>
+                <span class="mt-4 inline-block text-sm font-medium text-teal">Ver caso <span class="arrow">→</span></span>
               </a>
             ))}
           </div>

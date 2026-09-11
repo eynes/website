@@ -9,7 +9,7 @@ cliente: "Manolo"
 rubro: "Gastronomía"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "Logramos orden de punta a punta. Hoy la cocina central lanza órdenes de producción precisas, el stock de insumos se descuenta automáticamente con cada lote terminado de masa o rellenos, las sucursales se reabastecen desde el almacén central, y pagamos a los proveedores emitiendo el certificado de retención sin intervención manual."
 agrupador: "ALIMENTOS Y GASTRONOMÍA"
 portfolio: true

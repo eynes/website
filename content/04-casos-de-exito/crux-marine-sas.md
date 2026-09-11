@@ -9,7 +9,7 @@ cliente: "Crux Marine SAS"
 rubro: "Sector Naval / Marítimo"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "Tenemos toda la operación en un solo lugar y, por primera vez, sabemos cuánto nos reporta cada trabajo. Nos ordenó para poder crecer."
 agrupador: "ENERGÍA Y SECTORES PESADOS"
 portfolio: true

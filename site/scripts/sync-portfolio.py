@@ -100,7 +100,7 @@ for row in rows:
     name = slug(row['A'])
     testimony = re.split(r'EL DESAFÍO\s*|LA SOLUCIÓN\s*|EL RESULTADO\s*', row['R'])
     result = testimony[3].strip().strip('"') if len(testimony) == 4 else ''
-    meta = dict(title=row['A'] + ': Odoo para ' + row['B'], seo_title=row['A'] + ' | Casos de Odoo | Eynes', meta_description=row['D'][:155], slug=name, estado='publicado', schema_type='Article', cliente=row['A'], rubro=row['B'], pais='', usuarios='', modulos_implementados=[], resultado_clave=result, agrupador=row['C'], portfolio=True)
+    meta = dict(title=row['A'] + ': Odoo para ' + row['B'], seo_title=row['A'] + ' | Casos de Odoo | Eynes', meta_description=row['D'][:155], slug=name, estado='publicado', schema_type='Article', cliente=row['A'], rubro=row['B'], pais='', usuarios='', modulos_implementados=modulo_slugs(row['K']), resultado_clave=result, agrupador=row['C'], portfolio=True)
     body = section('03', 'El problema', row['D'])
     body += section('04', 'La implementación', row['P'])
     body += section('05', 'Testimonio', row['R'])

@@ -9,7 +9,7 @@ cliente: "Anadelia"
 rubro: "Higiene Industrial y Sanidad"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "Dejamos de pelearnos con el sistema todos los meses. Los cambios impositivos ahora se aplican y se prueban antes de que nos impacten, no después."
 agrupador: "SALUD, CIENCIA Y CUIDADO ANIMAL"
 portfolio: true

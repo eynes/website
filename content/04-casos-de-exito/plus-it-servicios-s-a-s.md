@@ -9,7 +9,7 @@ cliente: "Plus-IT Servicios S.A.S."
 rubro: "Tecnología (TI)"
 pais: ""
 usuarios: ""
-modulos_implementados: []
+modulos_implementados: ["ventas-y-crm", "contabilidad-y-finanzas"]
 resultado_clave: "Hoy podemos mostrarle al cliente el cumplimiento real de su SLA. Y la facturación mensual dejó de ser una tarea manual."
 agrupador: "TECNOLOGÍA E INNOVACIÓN"
 portfolio: true
