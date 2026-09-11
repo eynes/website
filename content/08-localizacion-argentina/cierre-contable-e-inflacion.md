@@ -31,6 +31,7 @@ El cierre necesita reunir saldos, detectar movimientos pendientes y aplicar crit
 - Opciones y estados del proceso de cierre, incluyendo recuperación/cancelación y referencias a los asientos generados.
 - Validación de períodos y restricciones de movimientos en diarios cerrados.
 
+
 ## 04 — Diferencias por versión
 
 El modelo de cierre, índices y asistente de operaciones está en 15, 17 y 19. Esto respalda documentar el proceso, pero no certifica todos los caminos de cierre con y sin RECPAM. En las tres ramas, `action_confirm` exige un movimiento RECPAM si se utiliza esa transición: probar el flujo sin ajuste que se pretende ofrecer.

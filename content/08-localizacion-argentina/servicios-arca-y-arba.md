@@ -31,7 +31,7 @@ Cuando una autorización falla o un comprobante quedó informado fuera del siste
 - Solicitudes vinculadas al comprobante, detalles de respuesta y errores para revisar el proceso.
 - A122R Digital de ARBA: configuración por compañía/actividad, declaraciones por período, envío de retenciones, seguimiento de estados, registros de solicitudes, recuperación de comprobantes, descarga PDF y asistentes de diagnóstico/reproceso.
 - WSFECRED: implementación parcial localizada que requiere revisión de registro del modelo.
-- WSLP y CAEA: alcance declarado en el Excel, sin implementación localizada en estas ramas.
+
 
 ## 04 — Diferencias por versión
 

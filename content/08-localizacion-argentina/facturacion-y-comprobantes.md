@@ -24,12 +24,12 @@ Facturar por fuera del sistema obliga a volver a cargar clientes, importes y com
 ## 03 — Alcance funcional
 
 - Diarios y puntos de venta para comprobantes electrónicos e internos, con secuencias independientes para facturas, notas de crédito, notas de débito y documentos FCE.
-- Notas de crédito y débito asociadas a comprobantes; reversión de percepciones según la lógica de cada rama.
 - Autorización electrónica por WSFE, almacenamiento de CAE y vencimiento, solicitudes y respuestas vinculadas al comprobante.
 - PDF de factura con datos fiscales y QR; selección de plantilla para envío por correo.
 - Exportaciones mediante WSFEX: tipo de exportación, país de destino, CUIT de destino, permisos de embarque y catálogos auxiliares según la operación.
 - Circuito de Factura de Crédito Electrónica MiPyME: tipos, secuencias, datos bancarios y opcionales. La consulta de obligatoriedad por WSFECRED tiene un pendiente técnico específico.
 - Catálogo de documentos históricos y campos para leyendas y datos bancarios; no todos los tipos del catálogo son admisibles para nueva emisión.
+
 
 ## 04 — Diferencias por versión
 

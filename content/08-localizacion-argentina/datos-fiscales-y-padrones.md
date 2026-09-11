@@ -31,6 +31,7 @@ Cuando la condición fiscal, el número de IIBB o una exclusión quedan en una p
 - Módulo `l10n_ar_padron_ws_consumer` para consultar un servidor de padrones y actualizar retenciones, percepciones, coeficientes e información de IVA. No es el mismo servicio que la constancia de inscripción de ARCA.
 - Campos por compañía y reglas para aplicar la información fiscal en entornos con varias empresas.
 
+
 ## 04 — Diferencias por versión
 
 El núcleo y el consumidor de padrones aparecen en 15, 17 y 19. La estructura de impuestos y algunos campos cambian entre ramas; no copiar una configuración de una versión a otra sin revisar el módulo instalado.

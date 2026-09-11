@@ -30,7 +30,7 @@ Calcular a mano una retención exige revisar concepto, actividad, pagos anterior
 - Percepciones en ventas y carga de percepciones sufridas en compras; conceptos, bases, porcentajes y mínimos.
 - Certificados de exclusión y vigencias del contacto utilizados al determinar la aplicación.
 - Registro del detalle de las retenciones: base, porcentaje, acumulado y certificado; líneas de percepciones vinculadas a factura y cuenta contable.
-- Motor específico de impuestos internos en las ramas 17 y 19, con líneas de base e importe para compras y ventas.
+
 
 ## 04 — Diferencias por versión
 

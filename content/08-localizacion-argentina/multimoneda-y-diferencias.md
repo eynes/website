@@ -27,8 +27,8 @@ Una factura en moneda extranjera y un pago posterior pueden usar cotizaciones di
 - Moneda y cotización en recibos y órdenes de pago, con importes de líneas expresados en la moneda correspondiente.
 - Campos de segunda moneda y totales convertidos en los comprobantes.
 - Asistente para cambiar la moneda de una factura y recalcular importes usando las cotizaciones de origen y destino. Si la moneda elegida es la misma, retorna sin cambios; no sirve para actualizar solo su cotización.
-- Integración con cotizaciones del servicio de facturación de ARCA en las ramas que exponen el método correspondiente.
 - El Excel incluye ND/NC por diferencia de cambio; se conservó como alcance declarado pendiente de localizar un flujo específico.
+
 
 ## 04 — Diferencias por versión
 

@@ -10,7 +10,7 @@ schema_type: "Service"
 agrupador: "Operar y cerrar"
 fuente_principal: "temas localización.xlsx"
 fecha_revision: "2026-09-10"
-faqs: [{"pregunta": "¿El remito toma los productos de la entrega?", "respuesta": "Las plantillas se generan sobre la transferencia de stock y sus datos asociados."}, {"pregunta": "¿El sistema obtiene la autorización de autoimpresor?", "respuesta": "No se acreditó esa gestión. La plantilla utiliza datos de autorización configurados en la empresa."}, {"pregunta": "¿Los talonarios CAI están en todas las versiones?", "respuesta": "El addon específico de rangos y vigencias se encontró en 17. Su disponibilidad en otras versiones debe confirmarse."}]
+faqs: [{"pregunta": "¿El remito toma los productos de la entrega?", "respuesta": "Las plantillas se generan sobre la transferencia de stock y sus datos asociados."}, {"pregunta": "¿El sistema obtiene la autorización de autoimpresor?", "respuesta": "No se acreditó esa gestión. La plantilla utiliza datos de autorización configurados en la empresa."}]
 ---
 
 ## 01 — Texto para el sitio
@@ -27,8 +27,8 @@ Preparar el remito por fuera del depósito obliga a volver a escribir destinatar
 - Remito R mediante `l10n_ar_remito_r`, con bultos y datos de autoimpresor, autorización y vencimiento configurados en la empresa.
 - Expreso/transportista, patente de camión y remolque, valor declarado, fechas y otros datos del traslado.
 - Cancelación y renumeración mediante asistente, conservando campos de número original y referencia a otro movimiento.
-- Gestión de talonarios CAI por rangos, vencimiento y diario en el módulo adicional de 17; asignación al remito y controles de rangos superpuestos.
 - Funciones para construir y enviar el archivo COT, con campos de respuesta y configuración del servicio, encontradas en el núcleo.
+
 
 ## 04 — Diferencias por versión
 

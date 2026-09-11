@@ -40,6 +40,7 @@ Cuando cada paso depende de otra herramienta, los datos se vuelven a cargar y el
 | Información contable | Reportes, archivos impositivos y procesos de cierre | [Reportes](reportes-contables.md), [exportadores](exportadores-impositivos.md), [cierre](cierre-contable-e-inflacion.md) |
 | Servicios | Autorizaciones, consultas y seguimiento de respuestas | [ARCA y ARBA](servicios-arca-y-arba.md) |
 
+
 ## 04 — Un circuito para entenderlo
 
 Un proveedor tiene su identificación fiscal, situación de IIBB y reglas de retención. Administración registra sus facturas. Al preparar la orden de pago, selecciona cuáles cancelar, combina los medios y revisa las retenciones calculadas. La orden conserva el detalle y permite generar los certificados. Esa información alimenta la consulta contable y los exportadores correspondientes.

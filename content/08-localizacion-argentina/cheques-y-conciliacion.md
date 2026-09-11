@@ -10,7 +10,7 @@ schema_type: "Service"
 agrupador: "Cobrar y pagar"
 fuente_principal: "temas localización.xlsx"
 fecha_revision: "2026-09-10"
-faqs: [{"pregunta": "¿Puedo usar un cheque recibido para pagar a un proveedor?", "respuesta": "El circuito admite entregar cheques de terceros y conservar los vínculos de origen y destino."}, {"pregunta": "¿El sistema se conecta al banco para emitir eCheqs?", "respuesta": "El código revisado acredita registro y gestión del instrumento. No se encontró evidencia suficiente para anunciar emisión bancaria por API."}, {"pregunta": "¿Se pueden imprimir cheques?", "respuesta": "Hay módulos de impresión por plantilla en 17 y 19. Requieren configuración y dependencias adicionales."}]
+faqs: [{"pregunta": "¿Puedo usar un cheque recibido para pagar a un proveedor?", "respuesta": "El circuito admite entregar cheques de terceros y conservar los vínculos de origen y destino."}, {"pregunta": "¿El sistema se conecta al banco para emitir eCheqs?", "respuesta": "El código revisado acredita registro y gestión del instrumento. No se encontró evidencia suficiente para anunciar emisión bancaria por API."}]
 ---
 
 ## 01 — Texto para el sitio
@@ -30,8 +30,7 @@ Una cartera de cheques mantenida en una planilla pierde fácilmente el vínculo 
 - Operaciones y asientos asociados a depósito, débito, acreditación y rechazo; generación de nota de débito por cheque rechazado con configuración previa.
 - Endoso/entrega de cheques de terceros a proveedores y calendarios de seguimiento.
 - Operaciones sobre varios cheques en asistentes específicos. El cambio genérico de estado no admite cualquier selección masiva.
-- Impresión sobre plantillas mediante addon adicional en 17 y 19.
-- Complemento de conciliación para actualizar estados de cheque en 15 y 19.
+
 
 ## 04 — Diferencias por versión
 

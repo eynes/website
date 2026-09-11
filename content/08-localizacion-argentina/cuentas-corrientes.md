@@ -10,7 +10,7 @@ schema_type: "Service"
 agrupador: "Cobrar y pagar"
 fuente_principal: "origin/17.0:customer_balance_history (commit registrado en _fuentes/ramas.json)"
 fecha_revision: "2026-09-10"
-faqs: [{"pregunta": "¿Puedo consultar clientes y proveedores?", "respuesta": "El módulo incluye asistentes y reportes para ambos tipos de cuenta."}, {"pregunta": "¿Está disponible en Odoo 19?", "respuesta": "No se encontró el módulo en la rama 19 inspeccionada. El alcance localizado corresponde a 17."}, {"pregunta": "¿Puedo obtener el informe en PDF?", "respuesta": "Sí. Los asistentes ofrecen PDF y una exportación .xls construida como tabla HTML; esta última no es XLSX nativo."}]
+faqs: [{"pregunta": "¿Puedo consultar clientes y proveedores?", "respuesta": "El módulo incluye asistentes y reportes para ambos tipos de cuenta."}, {"pregunta": "¿Puedo obtener el informe en PDF?", "respuesta": "Sí. Los asistentes ofrecen PDF y una exportación .xls construida como tabla HTML; esta última no es XLSX nativo."}]
 ---
 
 ## 01 — Texto para el sitio
@@ -19,7 +19,7 @@ Consultá la cuenta corriente por período y la composición de los saldos pendi
 
 ## 02 — El problema que resuelve
 
-La cuenta corriente permite revisar movimientos de un período. La composición muestra qué partidas siguen pendientes al momento de la consulta. El módulo de 17 ofrece ambos reportes, pero no reconstruye las partidas abiertas a una fecha histórica: utiliza el residual y la conciliación actuales.
+La cuenta corriente permite revisar movimientos de un período. La composición muestra qué partidas siguen pendientes al momento de la consulta. El módulo ofrece ambos reportes, pero no reconstruye las partidas abiertas a una fecha histórica: utiliza el residual y la conciliación actuales.
 
 ## 03 — Alcance funcional
 
@@ -29,6 +29,7 @@ La cuenta corriente permite revisar movimientos de un período. La composición 
 - Composición de partidas actualmente no conciliadas y su importe residual actual, filtradas por fecha de emisión. Los días de atraso se calculan respecto de hoy.
 - Salida PDF y exportación `.xls` basada en una tabla HTML, mediante acciones de los asistentes. No es un archivo XLSX nativo. Acceso desde el contacto o los menús del módulo.
 - Dependencias de contabilidad, contactos, ventas y localización.
+
 
 ## 04 — Diferencias por versión
 

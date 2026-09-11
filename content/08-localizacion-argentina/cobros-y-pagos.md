@@ -32,6 +32,7 @@ Cuando un pago combina transferencia, cheques y retenciones, cargar cada parte p
 - Numeración, fecha, moneda y cotización del comprobante; creación de movimientos contables y conciliación de partidas.
 - Impresión y envío de órdenes de pago y certificados de retención por correo.
 
+
 ## 04 — Diferencias por versión
 
 El modelo `account.payment.order` y sus líneas de medios, deuda, cheques y retenciones existen en 15, 17 y 19. El comportamiento contable y los asistentes se adaptan a cada versión. El complemento que actualiza estados de cheques al conciliar tiene otra matriz de versiones.

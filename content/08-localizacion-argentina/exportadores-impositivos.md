@@ -1,7 +1,7 @@
 ---
 title: "Exportadores impositivos para Argentina"
 seo_title: "Exportadores impositivos para Argentina | Eynes"
-meta_description: "Generá archivos impositivos desde las operaciones registradas, con formatos y controles específicos para cada régimen y versión."
+meta_description: "Generá archivos impositivos desde las operaciones registradas, con formatos y controles específicos para cada régimen."
 slug: "exportadores-impositivos"
 url: "/localizacion-argentina/exportadores-impositivos"
 estado: "publicado"
@@ -10,12 +10,12 @@ schema_type: "Service"
 agrupador: "Operar y cerrar"
 fuente_principal: "temas localización.xlsx"
 fecha_revision: "2026-09-10"
-faqs: [{"pregunta": "¿IVA Simple tiene un asistente distinto?", "respuesta": "En el código revisado es una modalidad del asistente de Libro IVA, activada mediante is_simple_vat."}, {"pregunta": "¿Exportar equivale a presentar ante el organismo?", "respuesta": "No. Los exportadores generan archivos; el envío digital solo debe describirse cuando se identifica y valida un servicio específico."}, {"pregunta": "¿Los formatos son iguales en todas las versiones?", "respuesta": "No. Hay exportadores adicionales en 17 y diferencias en formatos y opciones del asistente."}]
+faqs: [{"pregunta": "¿IVA Simple tiene un asistente distinto?", "respuesta": "En el código revisado es una modalidad del asistente de Libro IVA, activada mediante is_simple_vat."}, {"pregunta": "¿Exportar equivale a presentar ante el organismo?", "respuesta": "No. Los exportadores generan archivos; el envío digital solo debe describirse cuando se identifica y valida un servicio específico."}]
 ---
 
 ## 01 — Texto para el sitio
 
-Generá archivos impositivos desde las operaciones registradas, con formatos y controles específicos para cada régimen y versión.
+Generá archivos impositivos desde las operaciones registradas, con formatos y controles específicos para cada régimen.
 
 ## 02 — El problema que resuelve
 
@@ -28,8 +28,7 @@ Volver a armar los comprobantes para cada aplicativo fiscal duplica trabajo y pu
 - SICORE y SIFERE con configuraciones, asistentes y formatos de longitud fija.
 - Archivos de percepciones y retenciones de IVA sufridas.
 - A122R Digital de ARBA: envío de retenciones y comprobantes remotos. El rótulo del Excel “Lotes A122R” requiere precisar si se refiere a envío múltiple o a un formato de archivo; el exportador TXT general no prueba un formato de lote A122R.
-- En 17 se encontraron exportadores adicionales para SIRCAR, SIPOT (percepciones de Salta), SIRETPER (Tucumán) e IIBB Misiones; sus imports y vistas están declarados en el módulo.
-- En 17/19 el asistente de Libro IVA incorpora elección TXT/XLSX; 15 debe describirse con el formato efectivamente disponible en su asistente.
+
 
 ## 04 — Diferencias por versión
 

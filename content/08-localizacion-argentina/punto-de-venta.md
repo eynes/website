@@ -10,7 +10,7 @@ schema_type: "Service"
 agrupador: "Facturar y vender"
 fuente_principal: "temas localización.xlsx"
 fecha_revision: "2026-09-10"
-faqs: [{"pregunta": "¿Puedo elegir factura electrónica o interna desde caja?", "respuesta": "La interfaz incorpora ambas modalidades cuando los diarios correspondientes están configurados."}, {"pregunta": "¿El POS calcula percepciones?", "respuesta": "El módulo llama al cálculo de percepciones de la orden y muestra sus importes. Deben estar configuradas las reglas y los datos fiscales del cliente."}, {"pregunta": "¿Puedo facturar electrónicamente sin internet?", "respuesta": "No se acreditó ese alcance. En 17 y 19 hay un bloqueo configurable por posición fiscal para situaciones offline."}]
+faqs: [{"pregunta": "¿Puedo elegir factura electrónica o interna desde caja?", "respuesta": "La interfaz incorpora ambas modalidades cuando los diarios correspondientes están configurados."}, {"pregunta": "¿El POS calcula percepciones?", "respuesta": "El módulo llama al cálculo de percepciones de la orden y muestra sus importes. Deben estar configuradas las reglas y los datos fiscales del cliente."}]
 ---
 
 ## 01 — Texto para el sitio
@@ -27,10 +27,8 @@ Si la caja vende y la factura se genera después en otro circuito, el operador d
 - Circuito de devolución y preparación del comprobante correspondiente; probar notas electrónicas e internas como escenarios distintos.
 - Cálculo de percepciones desde los datos de la orden y visualización de sus importes en la interfaz.
 - Selección de modalidad manual/interna o electrónica desde el pago; documentos y datos del cliente vinculados a la posición fiscal.
-- Impresión de la factura mediante acciones de reporte de la localización o de la integración, según versión.
-- Configuración de modalidad inicial y bloqueo offline por posición fiscal en 17/19.
 - Uso del circuito FCE a través de la facturación, sujeto a los pendientes de verificación de ese circuito.
-- Control específico de cuentas contables de medios de pago al cerrar caja localizado en 19.
+
 
 ## 04 — Diferencias por versión
 

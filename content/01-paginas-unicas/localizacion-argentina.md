@@ -22,11 +22,9 @@ og_image: ""
 
 faqs:
   - pregunta: "¿La localización incluye más que facturación electrónica?"
-    respuesta: "Sí. El alcance documentado abarca datos fiscales, recibos, órdenes de pago, retenciones, percepciones, cheques, remitos, reportes, exportadores y cierre contable, con diferencias por versión y módulos instalados."
+    respuesta: "Sí. El alcance documentado abarca datos fiscales, recibos, órdenes de pago, retenciones, percepciones, cheques, remitos, reportes, exportadores y cierre contable, según los módulos instalados."
   - pregunta: "¿Se puede adaptar a cómo paga y cobra mi empresa?"
     respuesta: "Los comprobantes de pago y cobro admiten varias facturas, medios y cheques. El relevamiento define cómo se configuran las cuentas, los conceptos, las retenciones y los documentos de tu operación."
-  - pregunta: "¿Es igual en Odoo 15, 17 y 19?"
-    respuesta: "No. Hay un núcleo común y componentes que cambian entre ramas. La propuesta se detalla para la versión que usa tu empresa."
   - pregunta: "¿Los padrones se actualizan automáticamente?"
     respuesta: "El consumidor de padrones dispone de una tarea programada. Hay que configurar el servicio, las jurisdicciones y la frecuencia de actualización; no queda activado por el solo hecho de instalarlo."
   - pregunta: "¿Podemos ver nuestro circuito antes de implementarlo?"
@@ -55,10 +53,8 @@ Cuando cada paso depende de otra herramienta, los datos se vuelven a cargar y el
 
 Un proveedor tiene su identificación fiscal, situación de IIBB y reglas de retención. Administración registra sus facturas. Al preparar la orden de pago, selecciona cuáles cancelar, combina los medios y revisa las retenciones calculadas. La orden conserva el detalle y permite generar los certificados. Esa información alimenta la consulta contable y los exportadores correspondientes.
 
-**Demostración:** factura de proveedor → orden de pago → medios y retenciones → certificados → reporte. Elegimos una versión y compañía configuradas para mostrar el recorrido completo.
+**Demostración:** factura de proveedor → orden de pago → medios y retenciones → certificados → reporte. Preparamos una compañía configurada para mostrar el recorrido completo.
 
-## 05 — Alcance por versión
+## 05 — Alcance de la implementación
 
-El proyecto tiene ramas para Odoo 15, 17 y 19. El núcleo comparte grandes áreas de operación, pero los módulos adicionales y algunos circuitos varían.
-
-La implementación se define a partir de tu versión, tus puntos de venta, las jurisdicciones en las que operás y los procesos que necesitás.
+La implementación se define a partir de tus puntos de venta, las jurisdicciones en las que operás y los procesos que necesitás.

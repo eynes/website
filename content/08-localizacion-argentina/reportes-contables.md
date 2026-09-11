@@ -26,11 +26,8 @@ La preparación de IVA suele terminar en varias planillas para separar alícuota
 - Subdiario IVA Compras/Ventas en XLSX con detalle de impuestos y opciones de agrupación de percepciones/retenciones.
 - Agrupación de facturas B por día e impuesto, con límite de importe configurable; no una consolidación incondicional de todas las facturas B.
 - Compras y ventas por jurisdicción en XLSX, con período y compañías.
-- Libro Diario e IVA Compras/Ventas en PDF en 17 y 19.
-- Subdiario con IVA prorrateable en 17 y 19, asociado a configuración de la compañía.
 - PDF de factura y QR desde el circuito de facturación.
-- Reportes de DDJJ IVA e IIBB en módulo separado: presentes en 17 y 19, pero no instalables en el manifiesto de 19.
-- Reportes de cuenta corriente por período y composición de saldos pendientes actuales en el módulo de 17 documentado en su propia ficha.
+
 
 ## 04 — Diferencias por versión
 
