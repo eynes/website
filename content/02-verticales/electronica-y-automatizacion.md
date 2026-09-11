@@ -8,6 +8,8 @@ schema_type: "Service"
 agrupador: "TECNOLOGÍA E INNOVACIÓN"
 portfolio: true
 casos_relacionados: ["np-electronica-industrial"]
+modulos_relevantes: ["inventario", "ventas-y-crm", "compras"]
+integraciones_destacadas: ["ARCA / AFIP", "Portal de clientes", "Bancos y cobranzas"]
 faqs: [{"pregunta": "¿Puedo saber si un equipo está en garantía sin buscar el remito?", "respuesta": "Sí. El número de serie queda asociado al cliente, a la fecha de venta y a las condiciones de garantía, así que al ingresar el equipo el sistema indica su situación y todo su historial de intervenciones."}, {"pregunta": "¿Cómo controlo miles de componentes de bajo valor?", "respuesta": "Con stock mínimo y punto de pedido por artículo, historial de consumo y alertas de baja rotación, que es lo que permite detectar obsolescencia antes de que el componente ya no sirva para nada."}, {"pregunta": "¿El presupuesto de reparación puede salir del sistema?", "respuesta": "Sí: se arma sobre la orden de reparación con los repuestos y la mano de obra estimados, se envía para aprobación del cliente y, una vez aprobado, los consumos reales se registran contra esa misma orden."}, {"pregunta": "¿Se puede ver el estado de una reparación sin llamar?", "respuesta": "Sí, mediante el portal de clientes, donde el cliente consulta el estado, aprueba presupuestos y accede al historial de sus equipos."}, {"pregunta": "Compramos componentes importados. ¿Se refleja el costo real?", "respuesta": "Sí, el costeo en destino incorpora flete, seguro e impuestos al valor del componente, de modo que el margen de la reparación se calcule sobre el costo real y no sobre el precio de factura del proveedor."}]
 ---
 

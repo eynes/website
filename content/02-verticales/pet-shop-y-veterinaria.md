@@ -8,6 +8,8 @@ schema_type: "Service"
 agrupador: "COMERCIO MAYORISTA Y MINORISTA"
 portfolio: true
 casos_relacionados: ["comercializadora-casper-s-a-casper-pet-store"]
+modulos_relevantes: ["inventario", "ventas-y-crm", "compras"]
+integraciones_destacadas: ["ARCA / AFIP", "Medios de pago", "Logística y couriers", "Marketplaces"]
 faqs: [{"pregunta": "¿El stock de la tienda online es realmente el mismo que el del local?", "respuesta": "Sí: no hay sincronización entre sistemas porque no hay dos sistemas. El ecommerce, el POS de cada sucursal y el depósito leen y escriben sobre el mismo sistema de inventario, y una venta en mostrador impacta en la web en el momento."}, {"pregunta": "¿Puedo agendar servicios y cobrarlos en la misma operación?", "respuesta": "Sí. El turno queda asociado al cliente y a su mascota, y al momento de cobrar se suma al ticket junto con los productos, con la venta de servicio y la de mercadería en el mismo comprobante."}, {"pregunta": "¿Cómo se cotiza el envío de una bolsa de 15 kilos?", "respuesta": "Con reglas por peso y volumen en lugar de por monto de compra, integradas con el courier o con las zonas del reparto propio, de manera que el costo cotizado se parezca al costo real."}, {"pregunta": "¿Puedo trazar vencimientos de alimento y medicamentos?", "respuesta": "Sí, por lote y fecha de vencimiento, con salida FEFO y alertas de próximo vencimiento por depósito."}, {"pregunta": "¿Sirve si tengo varias sucursales con precios distintos?", "respuesta": "Sí, con listas de precios y promociones por sucursal o por canal, sobre un catálogo único."}]
 ---
 

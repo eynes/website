@@ -8,6 +8,8 @@ schema_type: "Service"
 agrupador: "TECNOLOGÍA E INNOVACIÓN"
 portfolio: true
 casos_relacionados: ["manas-ti", "plus-it-servicios-s-a-s"]
+modulos_relevantes: ["ventas-y-crm", "contabilidad-y-finanzas"]
+integraciones_destacadas: ["ARCA / AFIP", "Multimoneda", "Cobros recurrentes"]
 faqs: [{"pregunta": "¿Cómo hago para que el equipo técnico cargue las horas?", "respuesta": "La clave es que la carga viva donde el técnico ya trabaja: desde la tarea, desde el ticket o desde el móvil, en segundos y sin abrir una planilla aparte. Cuando cargar la hora cuesta menos que evitarlo, el dato aparece."}, {"pregunta": "¿Puedo medir los SLA que firmo con mis clientes?", "respuesta": "Sí. Cada ticket toma la política de SLA del contrato del cliente, y el sistema mide tiempo de primera respuesta y de resolución, con alertas antes del vencimiento y reportes de cumplimiento por período."}, {"pregunta": "¿Se puede automatizar la facturación de abonos mensuales?", "respuesta": "Sí, con contratos de suscripción que generan la factura en la fecha correspondiente, contemplan altas, bajas y ajustes de precio, y permiten sumar los consumos por fuera del abono en el mismo comprobante."}, {"pregunta": "¿Puedo saber la rentabilidad real de cada proyecto y de cada cliente?", "respuesta": "Sí, imputando horas, gastos y compras al proyecto y contrastándolos contra lo facturado. Es la diferencia entre saber cuánto facturás y saber cuánto te queda."}, {"pregunta": "Facturamos a clientes del exterior. ¿Odoo lo contempla?", "respuesta": "Sí, opera en multimoneda con facturación de exportación de servicios y valuación de saldos, dejando la diferencia de cambio separada del resultado operativo."}]
 ---
 

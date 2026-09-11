@@ -8,6 +8,8 @@ schema_type: "Service"
 agrupador: "ALIMENTOS Y GASTRONOMÍA"
 portfolio: true
 casos_relacionados: ["el-jumillano-s-a-ivess"]
+modulos_relevantes: ["inventario", "ventas-y-crm", "contabilidad-y-finanzas"]
+integraciones_destacadas: ["ARCA / AFIP (alto volumen)", "Medios de pago y cobranzas", "App de reparto", "Portal de clientes"]
 faqs: [{"pregunta": "Tenemos varios desarrollos a medida funcionando. ¿Se pueden reemplazar?", "respuesta": "En general sí: buena parte de lo que resuelven esas aplicaciones ya está cubierto de forma estándar, y lo que es específico del negocio se contempla en la implementación. El objetivo es reducir la cantidad de piezas que hay que mantener, no sumar una más."}, {"pregunta": "¿Cómo se controlan los envases retornables?", "respuesta": "Como stock en poder del cliente: cada entrega y cada devolución mueve ese saldo, de modo que en cualquier momento se sabe cuántos envases tiene cada cliente sin depender de la memoria del repartidor."}, {"pregunta": "¿Se puede facturar y cobrar en el reparto?", "respuesta": "Sí, con la hoja de ruta cargada en el sistema y el registro de entrega, devolución y cobranza en el momento, lo que elimina la rendición manual al final del día."}, {"pregunta": "¿Puedo ver el resultado de cada unidad de negocio por separado y consolidado?", "respuesta": "Sí, con contabilidad analítica y estructura multi-compañía según cómo estén constituidas, obteniendo tanto el detalle por canal como la visión del grupo."}, {"pregunta": "Emitimos muchísimos comprobantes por mes. ¿Aguanta el volumen?", "respuesta": "Sí, con emisión masiva contra los servicios de ARCA. El punto a dimensionar en la implementación no es la emisión sino el circuito de cobranza e imputación asociado."}]
 ---
 
