@@ -3,7 +3,7 @@ title: "Soluciones por rubro"
 seo_title: "Odoo por Rubro: Soluciones para tu Industria | Eynes"
 meta_description: "Descubrí cómo Odoo se adapta a distribución, ferretería, servicios e IT y otros rubros, con casos reales de implementación de Eynes."
 slug: "verticales"
-url: "eynes.com.ar/verticales"
+url: "eynes.com.ar/sectores"
 schema_type: "CollectionPage"
 estado: "publicado"
 ---

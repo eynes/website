@@ -56,10 +56,10 @@ sin página. -->
 
 **Título de sección:** "Elegí tu rubro" / "Trabajamos con empresas como la tuya"
 
-- Distribución y mayoristas → `/verticales/distribucion-y-mayoristas`
-- Materiales eléctricos y ferreterías → `/verticales/materiales-electricos-y-ferreterias`
-- Servicios / consultoría / IT → `/verticales/servicios-consultoria-it`
-- Ver todos los rubros → `/verticales`
+- Distribución y mayoristas → `/sectores/distribucion-y-mayoristas`
+- Materiales eléctricos y ferreterías → `/sectores/materiales-electricos-y-ferreterias`
+- Servicios / consultoría / IT → `/sectores/servicios-consultoria-it`
+- Ver todos los rubros → `/sectores`
 
 ## 04 — Problemas → Solución
 

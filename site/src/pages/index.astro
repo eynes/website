@@ -59,12 +59,12 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
       <h2 class="mt-2 text-2xl sm:text-3xl">Trabajamos con empresas como la tuya</h2>
       <div class="industry-grid mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {verticales.map((v) => (
-          <a href={withBase(`/verticales/${v.data.slug}`)} class="card block">
+          <a href={withBase(`/sectores/${v.data.slug}`)} class="card block">
             <p class="font-semibold text-ink">{v.data.title}</p>
             <span class="mt-2 inline-block text-sm font-medium text-teal">Ver solución <span class="arrow">→</span></span>
           </a>
         ))}
-        <a href={withBase('/verticales')} class="card flex flex-col items-center justify-center border-dashed text-center text-sm font-medium text-ink-faint hover:text-purple">
+        <a href={withBase('/sectores')} class="card flex flex-col items-center justify-center border-dashed text-center text-sm font-medium text-ink-faint hover:text-purple">
           Ver todos los rubros <span class="arrow">→</span>
         </a>
       </div>

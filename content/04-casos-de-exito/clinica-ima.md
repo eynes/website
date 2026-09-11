@@ -1,6 +1,6 @@
 ---
 # Fuente de todos los datos de este caso: Excel "portfolio de proyectos
-# realizados.xlsx", hojas "Casos" y "Verticales" (fila Clínica IMA S.A.).
+# realizados.xlsx", hojas "Casos" y "Sectores" (fila Clínica IMA S.A.).
 
 cliente: "Clínica IMA S.A."
 logo: ""

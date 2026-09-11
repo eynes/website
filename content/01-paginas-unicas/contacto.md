@@ -50,7 +50,7 @@ Campos del formulario:
 - Nombre y apellido
 - Email corporativo
 - Empresa
-- Rubro *(prellenar si el visitante viene de una página de `/verticales/*`)*
+- Rubro *(prellenar si el visitante viene de una página de `/sectores/*`)*
 - Cantidad de usuarios
 - ¿Cómo gestionan hoy la empresa? *(sistema actual — señal de punto de dolor de migración)*
 

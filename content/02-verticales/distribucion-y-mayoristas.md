@@ -10,7 +10,7 @@ title: "Software de gestión para distribuidoras y mayoristas"
 seo_title: "Software de Gestión para Distribuidoras y Mayoristas | Eynes"
 meta_description: "Centralizá stock, ventas y facturación ARCA en un solo sistema. Implementación de Odoo para distribuidoras, con soporte local. Agendá una demo."
 slug: "distribucion-y-mayoristas"
-url: "eynes.com.ar/verticales/distribucion-y-mayoristas"
+url: "eynes.com.ar/sectores/distribucion-y-mayoristas"
 schema_type: "Service"
 estado: "borrador"
 og_image: ""
@@ -18,7 +18,7 @@ og_image: ""
 faqs:
   # GUÍA: respuestas tomadas del material real que Eynes ya usa para este
   # rubro (Excel "portfolio de proyectos realizados.xlsx", hoja
-  # "Verticales", fila Supply Parts) — no son copy inventado.
+  # "Sectores", fila Supply Parts) — no son copy inventado.
   - pregunta: "¿El sistema cumple con la facturación de ARCA para mayoristas de repuestos?"
     respuesta: "Sí, la plataforma está 100% actualizada con las normativas de ARCA (ex AFIP). Automatiza la emisión de facturas y recibos, gestiona la validación de CAE y calcula automáticamente las percepciones y retenciones impositivas específicas que aplican al rubro."
   - pregunta: "¿Puedo integrar mi cuenta de Mercado Libre?"

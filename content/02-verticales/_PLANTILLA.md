@@ -17,7 +17,7 @@ title: "[COMPLETAR H1 — ej: 'Software de gestión para distribuidoras y mayori
 seo_title: "[COMPLETAR ~60 caracteres]"
 meta_description: "[COMPLETAR ~155 caracteres]"
 slug: "[nombre-del-rubro]"
-url: "eynes.com.ar/verticales/[nombre-del-rubro]"
+url: "eynes.com.ar/sectores/[nombre-del-rubro]"
 schema_type: "Service"
 estado: "borrador"
 og_image: "[COMPLETAR]"

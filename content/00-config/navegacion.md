@@ -4,8 +4,8 @@
 # desincronizado entre páginas.
 
 nav_principal:
-  - etiqueta: "Verticales"
-    url: "/verticales"
+  - etiqueta: "Sectores"
+    url: "/sectores"
   - etiqueta: "Módulos"
     url: "/modulos"
   - etiqueta: "Localización"
@@ -28,7 +28,7 @@ footer_columnas:
     tipo: "dinamico_oficinas"
   - titulo: "Enlaces rápidos"
     links:
-      - { etiqueta: "Verticales", url: "/verticales" }
+      - { etiqueta: "Sectores", url: "/sectores" }
       - { etiqueta: "Módulos", url: "/modulos" }
       - { etiqueta: "Localización Argentina", url: "/localizacion-argentina" }
       - { etiqueta: "Casos de éxito", url: "/casos" }

@@ -12,14 +12,16 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'never',
   redirects: {
-    '/verticales/distribucion-y-mayoristas': '/verticales/repuestos-y-autopartes',
-    '/verticales/servicios-consultoria-it': '/verticales/tecnologia-ti',
-    '/verticales/materiales-electricos-y-ferreterias': '/verticales/mayorista-de-ferreteria-y-buloneria',
+    '/verticales': '/sectores',
+    '/verticales/[slug]': '/sectores/[slug]',
+    '/verticales/distribucion-y-mayoristas': '/sectores/repuestos-y-autopartes',
+    '/verticales/servicios-consultoria-it': '/sectores/tecnologia-ti',
+    '/verticales/materiales-electricos-y-ferreterias': '/sectores/mayorista-de-ferreteria-y-buloneria',
     '/casos/clinica-ima': '/casos/clinica-ima-s-a',
   },
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/gracias') && !page.includes('/legal/'),
+      filter: (page) => !page.includes('/gracias') && !page.includes('/legal/') && !page.includes('/verticales'),
     }),
   ],
   vite: {

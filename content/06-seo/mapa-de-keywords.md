@@ -17,9 +17,9 @@ herramienta y ajustar acá si corresponde. -->
 | Página | Keyword principal | Keywords secundarias | Intención de búsqueda | Estado |
 |---|---|---|---|---|
 | Home | "Odoo Argentina" | "implementación Odoo", "partner Odoo Argentina" | Navegacional / marca | borrador |
-| Verticales — Distribución y mayoristas | "software para distribuidoras" | "software para mayoristas", "Odoo distribución" | Comercial | borrador |
-| Verticales — Materiales eléctricos y ferreterías | "software para ferreterías" | "software materiales eléctricos", "sistema de gestión ferretería" | Comercial | borrador |
-| Verticales — Servicios/consultoría/IT | "software de gestión para consultoras" | "software para empresas de IT", "facturación de horas" | Comercial | borrador |
+| Sectores — Distribución y mayoristas | "software para distribuidoras" | "software para mayoristas", "Odoo distribución" | Comercial | borrador |
+| Sectores — Materiales eléctricos y ferreterías | "software para ferreterías" | "software materiales eléctricos", "sistema de gestión ferretería" | Comercial | borrador |
+| Sectores — Servicios/consultoría/IT | "software de gestión para consultoras" | "software para empresas de IT", "facturación de horas" | Comercial | borrador |
 | Módulos — Contabilidad y finanzas | "software de contabilidad Odoo" | "facturación ARCA Odoo", "conciliación bancaria Odoo" | Comercial | borrador |
 | Módulos — Ventas y CRM | "CRM Odoo Argentina" | "portal de clientes Odoo", "Odoo Mercado Libre" | Comercial | borrador |
 | Módulos — Inventario | "inventario Odoo" | "control de stock multi-depósito", "trazabilidad por lote Odoo" | Comercial | borrador |

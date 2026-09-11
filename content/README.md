@@ -65,7 +65,7 @@ Estas decisiones ya se tomaron durante el research de SEO/marketing y aplican a 
 | `seo_title` | Title tag / pestaña del navegador. Máx. ~60 caracteres, con la keyword principal | `"Odoo para Distribución y Mayoristas \| Eynes"` |
 | `meta_description` | Meta description. Máx. ~155 caracteres, con un beneficio + llamado a la acción implícito | `"Gestión de stock, ventas y facturación ARCA en un solo sistema para distribuidoras. Implementación con Eynes, partner oficial de Odoo."` |
 | `slug` | Última parte de la URL | `"distribucion-y-mayoristas"` |
-| `url` | URL completa de referencia (informativa, no se usa para generar la ruta) | `"eynes.com.ar/verticales/distribucion-y-mayoristas"` |
+| `url` | URL completa de referencia (informativa, no se usa para generar la ruta) | `"eynes.com.ar/sectores/distribucion-y-mayoristas"` |
 | `schema_type` | Tipo de schema.org que le corresponde a esta página (ver `06-seo/schema-org-referencia.md`) | `"Service"`, `"Article"`, `"FAQPage"`, `"LocalBusiness"` |
 | `estado` | `borrador` \| `revision` \| `publicado` — controla si el build la incluye | `"borrador"` |
 | `faqs` | Lista estructurada de preguntas/respuestas específicas de esta página, para JSON-LD FAQPage | ver cualquier plantilla |
