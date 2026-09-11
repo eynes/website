@@ -1,5 +1,5 @@
 ---
-title: "20+ años implementando Odoo en Argentina, Uruguay y España"
+title: "20+ años implementando Odoo"
 seo_title: "Sobre Eynes — Partner Oficial de Odoo | Eynes"
 meta_description: "Eynes es Silver Partner de Odoo con 20+ años y más de 150 clientes en Argentina, Uruguay y España. Conocé al equipo y las oficinas locales."
 slug: "nosotros"
@@ -11,24 +11,21 @@ og_image: ""
 
 ## 01 — Hero
 
-"20+ años implementando Odoo en Argentina, Uruguay y España" (confirmar cifra contra `00-config/site.md → antiguedad`) + foto real del equipo — **nunca foto de stock**.
+"20+ años implementando Odoo" (confirmar cifra contra `00-config/site.md → antiguedad`) + foto real del equipo — **nunca foto de stock**.
 
-## 02 — Historia / hitos
+## 02 — Cómo trabajamos
 
-<!-- GUÍA: una historia con fechas reales da señales de confianza
-(antigüedad, continuidad) que Google y las personas leen como
-legitimidad — algo que la competencia (Adhoc) comunica poco. Usar fechas
-reales, no aproximaciones. -->
+### Entendemos tu operación
 
-Línea de tiempo breve:
+Conversamos con tu equipo para conocer los procesos, las dificultades y lo que necesitás resolver con Odoo.
 
-- **2006** — Fundación (confirmado contra `00-config/site.md → antiguedad`)
-- **2007** — Primeros clientes
-- **2016** — Expansión regional (Uruguay / España)
-- **2020** — YPF se suma como cliente
+### Definimos e implementamos
 
-<!-- Línea de tiempo confirmada directamente con el equipo (27/08/2026),
-no estaba publicada en odoo.com ni en eynes.com.ar/sobrenosotros. -->
+Acordamos el alcance y las prioridades del proyecto. Configuramos los módulos y trabajamos con tu equipo en la puesta en marcha.
+
+### Te acompañamos
+
+Después de la implementación, seguimos cerca para resolver consultas y acompañar los cambios de tu operación.
 
 ## 03 — Equipo
 

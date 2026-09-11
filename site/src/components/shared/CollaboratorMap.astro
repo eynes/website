@@ -1,14 +1,4 @@
 ---
-export interface Collaborator {
-  name: string;
-  province: string;
-}
-
-interface Props {
-  collaborators: Collaborator[];
-}
-
-const { collaborators } = Astro.props;
 ---
 
 <div class="collaborator-map" data-collaborator-map>
@@ -19,29 +9,33 @@ const { collaborators } = Astro.props;
       <path class="collaborator-map__silhouette" d="M191 20 254 34 280 80 314 112 300 164 332 207 315 260 348 304 330 355 357 395 337 449 365 498 343 553 309 590 284 663 239 679 215 636 222 580 198 542 210 497 183 451 191 404 169 361 182 314 160 270 175 220 153 176 174 133 161 94Z" />
 
       <!-- The shapes are deliberately schematic: the interaction carries the data; labels remain readable at every width. -->
-      <g class="province province--active" data-province="La Rioja" tabindex="0" role="button" aria-label="La Rioja, 1 colaborador">
+      <g class="province province--active" data-province="La Rioja" tabindex="0" role="button" aria-label="La Rioja">
         <path d="M173 132 220 119 243 158 226 204 179 220 157 176Z" />
-        <text x="196" y="171">La Rioja</text><text class="province__count" x="196" y="188">1</text>
+        <text x="196" y="179">La Rioja</text>
       </g>
-      <g class="province province--active" data-province="Chaco" tabindex="0" role="button" aria-label="Chaco, 1 colaborador">
+      <g class="province province--active" data-province="Chaco" tabindex="0" role="button" aria-label="Chaco">
         <path d="M243 158 294 164 320 205 300 246 252 236 226 204Z" />
-        <text x="273" y="200">Chaco</text><text class="province__count" x="273" y="217">1</text>
+        <text x="273" y="209">Chaco</text>
       </g>
-      <g class="province province--active" data-province="Misiones" tabindex="0" role="button" aria-label="Misiones, 2 colaboradores">
+      <g class="province province--active" data-province="Misiones" tabindex="0" role="button" aria-label="Misiones">
         <path d="M320 205 344 190 362 214 351 263 321 276 300 246Z" />
-        <text x="333" y="226">Misiones</text><text class="province__count" x="333" y="243">2</text>
+        <text x="333" y="235">Misiones</text>
       </g>
-      <g class="province province--active" data-province="Mendoza" tabindex="0" role="button" aria-label="Mendoza, 2 colaboradores">
+      <g class="province province--active" data-province="Mendoza" tabindex="0" role="button" aria-label="Mendoza">
         <path d="M179 220 226 204 252 236 241 288 205 318 171 287Z" />
-        <text x="208" y="263">Mendoza</text><text class="province__count" x="208" y="280">2</text>
+        <text x="208" y="272">Mendoza</text>
       </g>
-      <g class="province province--active" data-province="Santa Fe" tabindex="0" role="button" aria-label="Santa Fe, 5 colaboradores">
+      <g class="province province--active" data-province="Santa Fe" tabindex="0" role="button" aria-label="Santa Fe">
         <path d="M252 236 300 246 321 276 303 342 270 370 241 333 241 288Z" />
-        <text x="280" y="305">Santa Fe</text><text class="province__count" x="280" y="322">5</text>
+        <text x="280" y="314">Santa Fe</text>
       </g>
-      <g class="province province--active province--largest" data-province="Buenos Aires" tabindex="0" role="button" aria-label="Buenos Aires, 16 colaboradores">
+      <g class="province province--active province--largest" data-province="Buenos Aires" tabindex="0" role="button" aria-label="Buenos Aires">
         <path d="M241 333 270 370 303 342 330 355 357 395 337 449 365 498 343 553 309 590 284 663 239 679 215 636 222 580 198 542 210 497 183 451 191 404 169 361Z" />
-        <text x="267" y="455">Buenos Aires</text><text class="province__count" x="267" y="474">16</text>
+        <text x="267" y="465">Buenos Aires</text>
+      </g>
+      <g class="province province--active province--spain" data-province="Barcelona, España" tabindex="0" role="button" aria-label="Barcelona, España">
+        <circle cx="435" cy="105" r="21" />
+        <text x="435" y="140">Barcelona</text>
       </g>
       <path class="collaborator-map__river" d="M306 342c-13 31-12 62 4 91 14 24 18 51 7 83" />
     </svg>
@@ -51,31 +45,23 @@ const { collaborators } = Astro.props;
       <div class="collaborator-map__eyebrow">Red distribuida</div>
       <h3 id="collaborator-popup-title" data-map-title></h3>
       <p class="collaborator-map__summary" data-map-summary></p>
-      <div class="collaborator-map__people" data-map-people></div>
     </div>
   </div>
 </div>
 
-<script define:vars={{ collaborators }}>
-  const root = document.querySelector('[data-collaborator-map]');
+<script>
+  const root = document.querySelector<HTMLElement>('[data-collaborator-map]');
   if (root) {
-    const title = root.querySelector('[data-map-title]');
-    const summary = root.querySelector('[data-map-summary]');
-    const people = root.querySelector('[data-map-people]');
-    const popup = root.querySelector('[data-map-popup]');
-    const close = root.querySelector('[data-map-close]');
-    const regions = [...root.querySelectorAll('[data-province]')];
+    const title = root.querySelector<HTMLElement>('[data-map-title]');
+    const summary = root.querySelector<HTMLElement>('[data-map-summary]');
+    const popup = root.querySelector<HTMLElement>('[data-map-popup]');
+    const close = root.querySelector<HTMLButtonElement>('[data-map-close]');
+    const regions = [...root.querySelectorAll<SVGGElement>('[data-province]')];
 
-    const render = (province) => {
-      const selected = collaborators.filter((person) => person.province === province);
-      if (!title || !summary || !people || !popup) return;
+    const render = (province: string) => {
+      if (!title || !summary || !popup) return;
       title.textContent = province;
-      summary.textContent = `${selected.length} ${selected.length === 1 ? 'colaborador' : 'colaboradores'}`;
-      people.innerHTML = selected.map((person) => `
-        <div class="collaborator-map__person">
-          <strong>${person.name}</strong>
-        </div>
-      `).join('');
+      summary.textContent = province === 'Barcelona, España' ? 'Presencia de Eynes en España' : 'Presencia de Eynes en Argentina';
       popup.hidden = false;
       regions.forEach((region) => region.classList.toggle('is-selected', region.dataset.province === province));
     };
@@ -86,7 +72,7 @@ const { collaborators } = Astro.props;
     };
 
     regions.forEach((region) => {
-      const select = () => render(region.dataset.province);
+      const select = () => render(region.dataset.province ?? '');
       region.addEventListener('click', select);
       region.addEventListener('keydown', (event) => {
         if (event.key === 'Enter' || event.key === ' ') {
@@ -113,8 +99,8 @@ const { collaborators } = Astro.props;
   .province--active:hover path, .province--active:focus path, .province--active.is-selected path { fill: var(--color-purple); transform: scale(1.035); }
   .province text { fill: var(--color-ink); font: 600 11px var(--font-inter, sans-serif); pointer-events: none; text-anchor: middle; }
   .province--active:hover text, .province--active:focus text, .province--active.is-selected text { fill: var(--color-paper); }
-  .province .province__count { font: 700 14px var(--font-plex-mono, monospace); fill: var(--color-teal); }
-  .province--active:hover .province__count, .province--active:focus .province__count, .province--active.is-selected .province__count { fill: var(--color-silver); }
+  .province--spain circle { fill: #eeeafa; stroke: var(--color-paper); stroke-width: 3; transition: fill .2s ease, transform .2s ease; transform-box: fill-box; transform-origin: center; }
+  .province--spain:hover circle, .province--spain:focus circle, .province--spain.is-selected circle { fill: var(--color-purple); transform: scale(1.12); }
   .collaborator-map__river { fill: none; stroke: rgba(38, 157, 157, .45); stroke-width: 4; pointer-events: none; }
   .collaborator-map__hint { position: absolute; bottom: 1rem; left: 1.25rem; margin: 0; font: 500 .72rem var(--font-plex-mono, monospace); text-transform: uppercase; letter-spacing: .08em; color: var(--color-ink-faint); }
   .collaborator-map__popup { position: absolute; z-index: 2; top: 1rem; right: 1rem; width: min(19rem, calc(100% - 2rem)); max-height: calc(100% - 2rem); overflow: auto; padding: 1.25rem; border: 1px solid rgba(255,255,255,.14); border-radius: .45rem; background: var(--color-dark); color: var(--color-paper); box-shadow: 0 1rem 2.5rem rgba(16, 18, 32, .22); }
@@ -124,8 +110,5 @@ const { collaborators } = Astro.props;
   .collaborator-map__eyebrow { color: var(--color-silver); font: 600 .7rem var(--font-plex-mono, monospace); letter-spacing: .14em; text-transform: uppercase; }
   .collaborator-map__popup h3 { margin: .65rem 0 .35rem; color: var(--color-paper); font-size: clamp(1.5rem, 4vw, 2.2rem); letter-spacing: -.04em; }
   .collaborator-map__summary { margin: 0 0 1rem; color: rgba(255,255,255,.65); font-size: .9rem; }
-  .collaborator-map__people { display: grid; gap: .65rem; max-height: 25rem; overflow: auto; padding-right: .35rem; }
-  .collaborator-map__person { display: grid; padding: .7rem 0; border-top: 1px solid rgba(255,255,255,.14); }
-  .collaborator-map__person strong { font-size: .9rem; color: var(--color-paper); }
   @media (max-width: 800px) { .collaborator-map__visual { min-height: 29rem; } }
 </style>
