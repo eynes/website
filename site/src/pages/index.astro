@@ -5,9 +5,11 @@ import Hero from '../components/hero/Hero.astro';
 import ClientLogos from '../components/shared/ClientLogos.astro';
 import CTASection from '../components/cta/CTASection.astro';
 import ModuleIcon from '../components/shared/ModuleIcon.astro';
+import CaseCard from '../components/casos/CaseCard.astro';
 import { getPublished } from '../lib/content';
 import { organizationSchema, websiteSchema } from '../lib/schema';
 import { withBase } from '../lib/url';
+import { groupColorClass, sortGroups } from '../lib/sectorGroups';
 
 const page = await getEntry('paginasUnicas', 'home');
 const site = await getEntry('siteConfig', 'site');
@@ -25,6 +27,14 @@ const dolorAlivio = [
 ];
 
 const modulos = await getPublished('modulos');
+
+const sectorGroups = sortGroups(
+  [...new Set(verticales.map((v) => v.data.agrupador))].map((group) => ({
+    nombre: group,
+    colorClass: groupColorClass(group),
+    items: verticales.filter((v) => v.data.agrupador === group),
+  }))
+);
 
 const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] : [];
 ---
@@ -55,19 +65,27 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
     )
   }
 
-  <section class="section">
+  <section class="section sector-columns-section">
     <div class="container-page reveal">
-      <h2 class="mt-2 text-2xl sm:text-3xl">Trabajamos con empresas como la tuya</h2>
-      <div class="industry-grid mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {verticales.map((v) => (
-          <a href={withBase(`/sectores/${v.data.slug}`)} class="card block">
-            <p class="font-semibold text-ink">{v.data.title}</p>
-            <span class="mt-2 inline-block text-sm font-medium text-teal">Ver solución <span class="arrow">→</span></span>
-          </a>
-        ))}
-        <a href={withBase('/sectores')} class="card flex flex-col items-center justify-center border-dashed text-center text-sm font-medium text-ink-faint hover:text-purple">
+      <div class="flex flex-wrap items-baseline justify-between gap-4">
+        <h2 class="mt-2 text-2xl sm:text-3xl">Trabajamos con empresas como la tuya</h2>
+        <a href={withBase('/sectores')} class="text-sm font-semibold text-teal">
           Ver todos los rubros <span class="arrow">→</span>
         </a>
+      </div>
+      <div class="sector-columns mt-8">
+        {sectorGroups.map((group) => (
+          <div class="sector-column">
+            <h3 class:list={['sector-column-title', group.colorClass]}>{group.nombre}</h3>
+            <ul>
+              {group.items.map((v) => (
+                <li>
+                  <a href={withBase(`/sectores/${v.data.slug}`)}>{v.data.title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -130,16 +148,9 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
       <section class="section">
         <div class="container-page reveal">
           <h2 class="mt-2 text-2xl sm:text-3xl">Caso de éxito destacado</h2>
-          <a href={withBase(`/casos/${featuredCase.data.slug}`)} class="card featured-case mt-6 block sm:flex sm:items-center sm:justify-between sm:gap-6">
-            <div>
-              <p class="font-semibold text-ink">{featuredCase.data.cliente}</p>
-              <p class="mt-1 font-mono text-xs uppercase tracking-wide text-ink-faint">
-                {[featuredCase.data.rubro, featuredCase.data.usuarios && `${featuredCase.data.usuarios} usuarios`, featuredCase.data.pais].filter(Boolean).join(' · ')}
-              </p>
-              <p class="mt-3 max-w-2xl text-ink-soft">{featuredCase.data.resultado_clave}</p>
-            </div>
-            <span class="mt-4 inline-block font-semibold text-teal sm:mt-0 sm:shrink-0">Ver caso completo <span class="arrow">→</span></span>
-          </a>
+          <div class="mt-6 max-w-xl">
+            <CaseCard entry={featuredCase} />
+          </div>
         </div>
       </section>
     )

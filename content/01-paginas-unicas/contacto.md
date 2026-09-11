@@ -38,24 +38,15 @@ un número que después no se pueda sostener. Copy centralizado en
 
 > Cotización personalizada en 48hs, sin compromiso.
 
-## 02 — Formulario calificador
+## 02 — Agendar reunión
 
-<!-- GUÍA: cada campo califica al lead para ventas (tamaño de oportunidad,
-sistema actual = punto de dolor de migración). Mismo patrón que usa la
-competencia. No sacar campos sin avisar a ventas — cada uno alimenta la
-segmentación del CRM. -->
+<!-- GUÍA: sin formulario calificador — el lead reserva horario directo en
+el calendario del equipo (link en `00-config/site.md → contacto_general →
+link_agenda`). Menos fricción que un formulario; la calificación pasa a
+hacerse en vivo durante la reunión, no antes. -->
 
-Campos del formulario:
-
-- Nombre y apellido
-- Email corporativo
-- Empresa
-- Rubro *(prellenar si el visitante viene de una página de `/sectores/*`)*
-- Cantidad de usuarios
-- ¿Cómo gestionan hoy la empresa? *(sistema actual — señal de punto de dolor de migración)*
-
-Botón: **Enviar / Agendar horario**
+Botón grande: **Agendar reunión** → `contacto_general.link_agenda` (se abre en pestaña nueva)
 
 ## 03 — Canal alternativo directo
 
-Botón grande: **Escribinos por WhatsApp** *(para el lead que no quiere completar el formulario — número en `00-config/site.md → contacto_general`)*
+Botón grande: **Escribinos por WhatsApp** *(para quien prefiere resolverlo por chat antes de agendar — número en `00-config/site.md → contacto_general`)*

@@ -8,8 +8,8 @@ schema_type: "Service"
 agrupador: "SALUD, CIENCIA Y CUIDADO ANIMAL"
 portfolio: true
 casos_relacionados: ["serivet"]
-modulos_relevantes: ["ventas-y-crm", "inventario", "compras"]
-integraciones_destacadas: ["Trazabilidad SENASA / ANMAT", "WhatsApp / SMS", "ARCA / AFIP"]
+modulos_relevantes: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
+integraciones_destacadas: ["Trazabilidad SENASA/ANMAT (Medicamentos veterinarios)", "WhatsApp / SMS (Recordatorios automáticos)", "ARCA"]
 faqs: [{"pregunta": "¿El sistema permite unificar la historia clínica del animal con la facturación?", "respuesta": "Sí. Podés crear fichas detalladas por animal asociadas a la cuenta de su dueño. Al registrar una consulta clínica, podés imputar directamente los servicios y medicamentos utilizados, generando la factura sin doble carga manual."}, {"pregunta": "¿Puedo controlar el vencimiento de vacunas y medicamentos veterinarios?", "respuesta": "Totalmente. El módulo de inventario exige la carga de número de lote y fecha de vencimiento al ingresar mercadería (cumpliendo normas de SENASA/ANMAT). El sistema utiliza el método FEFO (Primero en vencer, primero en salir) y te alerta sobre productos próximos a caducar."}, {"pregunta": "¿Se pueden automatizar los recordatorios para los clientes?", "respuesta": "Sí. Al tener la base de datos centralizada, podés configurar envíos automáticos de correos o mensajes (vía integración con WhatsApp) para recordarle a los tutores sobre fechas de vacunación, laboratorios, desparasitación o turnos programados, aumentando la recurrencia."}]
 ---
 

@@ -107,16 +107,20 @@ const jsonLd = site
     )
   }
 
-  <section class="section bg-paper-dim">
-    <div class="container-page reveal">
-      <h2 class="mt-2 text-2xl sm:text-3xl">Un equipo distribuido por Argentina</h2>
-      <p class="mt-3 max-w-2xl text-ink-soft">La implementación y el soporte se construyen con personas que trabajan desde distintas provincias. Explorá el mapa para conocer nuestra red.</p>
-      <div class="mt-8">
-        <CollaboratorMap />
-      </div>
-      <p class="mt-4 text-xs text-ink-faint">Datos de colaboradores según el archivo interno actualizado. El mapa muestra provincia y ciudad; no publica domicilios particulares.</p>
-    </div>
-  </section>
+  {
+    site && (
+      <section class="section bg-paper-dim">
+        <div class="container-page reveal">
+          <h2 class="mt-2 text-2xl sm:text-3xl">Un equipo distribuido en dos países</h2>
+          <p class="mt-3 max-w-2xl text-ink-soft">La implementación y el soporte se construyen con personas que trabajan desde distintas provincias de Argentina y desde España.</p>
+          <div class="mt-8">
+            <CollaboratorMap ubicaciones={site.data.equipo.ubicaciones} cantidadPersonas={site.data.equipo.cantidad_personas} />
+          </div>
+          <p class="mt-4 text-xs text-ink-faint">Datos de colaboradores según el archivo interno actualizado. El mapa muestra provincia y ciudad; no publica domicilios particulares.</p>
+        </div>
+      </section>
+    )
+  }
 
   <section class="section join-team" aria-labelledby="forma-parte">
     <div class="container-page">

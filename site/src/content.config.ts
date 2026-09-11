@@ -158,6 +158,19 @@ const siteConfig = defineCollection({
       anios_operando: z.string(),
     }),
     paises_operacion: z.array(z.string()),
+    // Dónde vive/trabaja el equipo (colaboradores), no oficinas comerciales
+    // — usado por el mapa de "Nosotros". lat/lon en grados decimales.
+    equipo: z.object({
+      cantidad_personas: z.string(),
+      ubicaciones: z.array(
+        z.object({
+          nombre: z.string(),
+          pais: z.string(),
+          lat: z.number(),
+          lon: z.number(),
+        })
+      ),
+    }),
     prueba_social_home: z.object({
       empresas_clientes: z.string(),
       anios_experiencia: z.string(),
@@ -190,6 +203,7 @@ const siteConfig = defineCollection({
       email_comercial: z.string(),
       email_soporte: z.string(),
       whatsapp_comercial: z.string(),
+      link_agenda: z.string(),
     }),
     redes: z.object({
       linkedin: z.string(),

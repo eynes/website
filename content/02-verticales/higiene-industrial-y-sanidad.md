@@ -8,8 +8,8 @@ schema_type: "Service"
 agrupador: "SALUD, CIENCIA Y CUIDADO ANIMAL"
 portfolio: true
 casos_relacionados: ["anadelia"]
-modulos_relevantes: ["inventario", "ventas-y-crm", "compras", "contabilidad-y-finanzas"]
-integraciones_destacadas: ["ARCA / ARBA / AGIP", "Bancos", "Portal B2B"]
+modulos_relevantes: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
+integraciones_destacadas: ["ARCA / ARBA / AGIP", "Bancos", "Canales de venta y catálogos"]
 faqs: [{"pregunta": "¿Odoo se mantiene actualizado con los cambios impositivos de Argentina?", "respuesta": "Sí, la localización argentina se actualiza con los cambios normativos, y en una implementación acompañada esas actualizaciones se aplican y prueban antes de que impacten en la operación. La diferencia frente a un sistema cerrado o discontinuado es que no depende de que un único proveedor decida desarrollarlo."}, {"pregunta": "¿Puedo trazar un lote de producto terminado hasta la materia prima que lo originó?", "respuesta": "Sí. Inventario y Fabricación registran qué lote de cada insumo se consumió en cada orden de producción, y a qué clientes se despachó cada lote de producto terminado. Ante un desvío de calidad, permite identificar en minutos todos los lotes afectados por una misma partida de materia prima."}, {"pregunta": "¿Cómo manejo las distintas presentaciones del mismo producto?", "respuesta": "Se resuelve con variantes y unidades de medida: un mismo producto con presentaciones de distinto tamaño, cada una con su código, su precio por canal y su stock propio, pero con la misma fórmula y trazabilidad detrás."}, {"pregunta": "¿Puedo asociar fichas técnicas y hojas de seguridad a cada producto?", "respuesta": "Sí, la documentación queda vinculada al producto y accesible desde el sistema, tanto para el equipo comercial como para adjuntarla al despacho. Elimina la carpeta de red paralela."}, {"pregunta": "Vengo de un sistema viejo. ¿Se puede migrar la información histórica?", "respuesta": "Si, es posible, pueden migrarse datos históricos si el cliente lo solicita en la propuesta comercial."}]
 ---
 

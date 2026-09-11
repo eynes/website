@@ -8,8 +8,8 @@ schema_type: "Service"
 agrupador: "AGROINDUSTRIA Y MANUFACTURA"
 portfolio: true
 casos_relacionados: ["ferraro"]
-modulos_relevantes: ["inventario", "ventas-y-crm", "compras", "contabilidad-y-finanzas"]
-integraciones_destacadas: ["ARCA / AFIP", "Medios de pago", "Marketplaces y tienda online"]
+modulos_relevantes: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
+integraciones_destacadas: ["Facturación electrónica", "Medios de pago y promociones bancarias", "Canales de venta online", "Logística y transferencias"]
 faqs: [{"pregunta": "¿Cómo maneja Odoo los talles y colores?", "respuesta": "Con variantes: un modelo con sus atributos genera cada combinación como ítem con stock, código y precio propios, manteniendo el análisis a nivel modelo cuando conviene y a nivel variante cuando hace falta decidir la reposición."}, {"pregunta": "¿Puedo ver el resultado de cada local por separado?", "respuesta": "Sí. Cada punto de venta se analiza por ventas, margen y rotación, y también permite comparar qué producto funciona en un local y no en otro, que es la base para redistribuir en lugar de liquidar."}, {"pregunta": "¿Sirve para vender mayorista y minorista a la vez?", "respuesta": "Sí, con listas de precios y condiciones distintas por canal sobre un mismo catálogo y un mismo stock, incluyendo pedidos mayoristas por curva de talles."}, {"pregunta": "¿Puedo detectar el stock que no rota antes del cierre de temporada?", "respuesta": "Sí, con reportes de antigüedad y rotación por variante, que permiten actuar durante la temporada, cuando el producto todavía se vende a precio de lista."}]
 ---
 

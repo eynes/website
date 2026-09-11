@@ -19,6 +19,8 @@ const {
   whatsappMessage = 'Hola, quiero agendar una demo de Odoo con Eynes.',
   tone = 'dark',
 } = Astro.props;
+
+const isExternal = /^[a-z][a-z0-9+.-]*:/i.test(primaryHref);
 ---
 
 <section class:list={['section relative overflow-hidden', tone === 'dark' && 'contact-cta', tone === 'dark' ? 'bg-dark text-paper' : 'bg-paper-dim']}>
@@ -26,7 +28,13 @@ const {
     <h2 class:list={['max-w-2xl text-3xl sm:text-4xl', tone === 'dark' && 'text-paper']}>{heading}</h2>
     {body && <p class:list={['max-w-xl text-base', tone === 'dark' ? 'text-paper/70' : 'text-ink-soft']}>{body}</p>}
     <div class="mt-2 flex flex-wrap items-center justify-center gap-3">
-      <a href={withBase(primaryHref)} class="btn-primary">{primaryLabel}</a>
+      <a
+        href={withBase(primaryHref)}
+        class="btn-primary"
+        {...isExternal && { target: '_blank', rel: 'noopener noreferrer' }}
+      >
+        {primaryLabel}
+      </a>
       <WhatsAppButton variant="inline" message={whatsappMessage} />
     </div>
   </div>

@@ -62,6 +62,32 @@ def faqs(value):
 def section(number, title, body):
     return f'\n## {number} — {title}\n\n{body}\n' if body else ''
 
+# The 4 module pages that actually exist under content/03-modulos — keywords
+# are matched against the free-text "Módulos relevantes" column to link only
+# to real pages (order fixed so the resulting list reads consistently).
+MODULE_KEYWORDS = [
+    ('ventas-y-crm', ('venta', 'crm')),
+    ('inventario', ('inventario', 'stock')),
+    ('compras', ('compra',)),
+    ('contabilidad-y-finanzas', ('contabilidad', 'facturaci', 'finanza')),
+]
+
+def modulo_slugs(text):
+    lowered = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode().lower()
+    return [slug for slug, keywords in MODULE_KEYWORDS if any(k in lowered for k in keywords)]
+
+def integracion_labels(members, columns, limit=6):
+    labels = []
+    for row in members:
+        for column in columns:
+            value = row[column]
+            if not value:
+                continue
+            label = value.split('.', 1)[0].strip().rstrip('.')
+            if label and label.lower() not in (l.lower() for l in labels):
+                labels.append(label)
+    return labels[:limit]
+
 def write(folder, name, meta, body):
     path = CONTENT / folder / (name + '.md')
     path.write_text('---\n' + '\n'.join(f'{k}: {json.dumps(v, ensure_ascii=False)}' for k, v in meta.items()) + '\n---\n' + body)
@@ -87,7 +113,8 @@ for row in rows:
 
 for rubro, members in groups.items():
     first = members[0]
-    meta = dict(title=rubro, seo_title='Odoo para ' + rubro + ' | Eynes', meta_description='Problemas, módulos, integraciones y experiencias de implementación de Odoo para ' + rubro + '.', slug=slug(rubro), estado='publicado', schema_type='Service', agrupador=first['C'], portfolio=True, casos_relacionados=[slug(r['A']) for r in members], faqs=[])
+    modulos_text = ' '.join(dict.fromkeys(r['K'] for r in members if r['K']))
+    meta = dict(title=rubro, seo_title='Odoo para ' + rubro + ' | Eynes', meta_description='Problemas, módulos, integraciones y experiencias de implementación de Odoo para ' + rubro + '.', slug=slug(rubro), estado='publicado', schema_type='Service', agrupador=first['C'], portfolio=True, casos_relacionados=[slug(r['A']) for r in members], modulos_relevantes=modulo_slugs(modulos_text), integraciones_destacadas=integracion_labels(members, 'LMNO'), faqs=[])
     for row in members:
         for faq in faqs(row['S']):
             if faq not in meta['faqs']:

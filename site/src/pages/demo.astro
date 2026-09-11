@@ -3,11 +3,15 @@ import { getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/hero/Hero.astro';
 import Breadcrumbs from '../components/seo/Breadcrumbs.astro';
-import ContactForm from '../components/forms/ContactForm.astro';
 import WhatsAppButton from '../components/forms/WhatsAppButton.astro';
 import { contactPageSchema, breadcrumbListSchema } from '../lib/schema';
+import { withBase } from '../lib/url';
 
 const page = await getEntry('paginasUnicas', 'demo');
+const site = await getEntry('siteConfig', 'site');
+
+const whatsappMessage = 'Hola, quiero agendar una reunión sobre Odoo con Eynes.';
+const agendaHref = site?.data.contacto_general.link_agenda ?? '#';
 
 const steps = [
   'Nos contás tus problemas.',
@@ -32,10 +36,15 @@ const jsonLd = [contactPageSchema(), breadcrumbListSchema(crumbs)];
 
 <BaseLayout title={page?.data.seo_title ?? ''} description={page?.data.meta_description ?? ''} jsonLd={jsonLd}>
   <Breadcrumbs crumbs={crumbs} />
-  <Hero understated title={page?.data.title ?? ''} showPartnerBadge={false} compact />
+  <Hero
+    understated
+    title={page?.data.title ?? ''}
+    subtitle="Reservá una reunión de 30 minutos: nos contás tu operación y te llevás un presupuesto. Sin formularios, sin vueltas."
+    showPartnerBadge={false}
+  />
 
   <section class="section">
-    <div class="container-page reveal grid gap-12 lg:grid-cols-2">
+    <div class="container-page reveal grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
       <div>
         <span class="kicker">Cómo sigue</span>
         <h2 class="mt-2 text-2xl sm:text-3xl">Qué va a pasar</h2>
@@ -48,25 +57,63 @@ const jsonLd = [contactPageSchema(), breadcrumbListSchema(crumbs)];
           ))}
         </ol>
 
-        <div class="mt-10">
+        <div class="mt-12">
           <span class="kicker">Costo</span>
-        </div>
-        <h2 class="mt-2 text-2xl sm:text-3xl">¿Cuánto cuesta implementar Odoo?</h2>
-        <p class="mt-2 text-ink-soft">No publicamos un precio fijo porque no existe — depende de:</p>
-        <ul class="mt-4 ml-5 list-disc space-y-2 text-ink-soft">
-          {costDrivers.map((d) => <li>{d}</li>)}
-        </ul>
-        <p class="mt-4 font-semibold text-teal">Cotización personalizada en 48hs, sin compromiso.</p>
-
-        <div class="mt-8">
-          <p class="mb-3 font-medium text-ink">¿Preferís resolverlo ya?</p>
-          <WhatsAppButton variant="inline" message="Hola, quiero agendar una demo de Odoo con Eynes." />
+          <h2 class="mt-2 text-2xl sm:text-3xl">¿Cuánto cuesta implementar Odoo?</h2>
+          <p class="mt-2 text-ink-soft">No publicamos un precio fijo porque no existe — depende de:</p>
+          <ul class="mt-4 ml-5 list-disc space-y-2 text-ink-soft">
+            {costDrivers.map((d) => <li>{d}</li>)}
+          </ul>
+          <p class="mt-4 font-semibold text-teal">Cotización personalizada en la reunión, sin compromiso.</p>
         </div>
       </div>
 
-      <div>
-        <ContactForm />
+      <div class="lg:sticky lg:top-28 lg:self-start">
+        <div class="card agenda-card block bg-dark text-paper">
+          <span class="kicker">Reservá tu horario</span>
+          <h2 class="mt-2 text-2xl text-paper">¿Charlamos 30 minutos?</h2>
+          <p class="mt-3 text-paper/70">Elegí el día y la hora que te queden cómodos. Nosotros nos acomodamos.</p>
+          <div class="mt-6 flex flex-col gap-3">
+            <a href={withBase(agendaHref)} class="btn-primary w-full" target="_blank" rel="noopener noreferrer">
+              Agendar reunión
+            </a>
+            <WhatsAppButton variant="inline" message={whatsappMessage} label="Escribinos por WhatsApp" />
+          </div>
+          {site && (
+            <p class="mt-6 border-t border-dark-line pt-5 text-sm text-paper/60">
+              {site.data.prueba_social_home.empresas_clientes} confiaron en Eynes en {site.data.prueba_social_home.anios_experiencia} de trabajo.
+            </p>
+          )}
+        </div>
       </div>
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .agenda-card {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(28px, 3vw, 36px);
+    border: none;
+    box-shadow: 0 24px 48px -20px color-mix(in srgb, var(--color-dark) 60%, transparent);
+  }
+  .agenda-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 320px 220px at 100% 0%, color-mix(in srgb, var(--color-teal) 30%, transparent), transparent 65%),
+      radial-gradient(ellipse 280px 200px at 0% 100%, color-mix(in srgb, var(--color-purple-light) 24%, transparent), transparent 65%);
+    pointer-events: none;
+  }
+  .agenda-card > * {
+    position: relative;
+  }
+  .agenda-card .kicker {
+    color: #b9d9d4;
+  }
+  .agenda-card :global(.btn-whatsapp) {
+    width: 100%;
+  }
+</style>

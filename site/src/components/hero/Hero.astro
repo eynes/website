@@ -28,6 +28,8 @@ const {
   compact = false,
   understated = false,
 } = Astro.props;
+
+const isExternalLink = (href: string) => /^[a-z][a-z0-9+.-]*:/i.test(href);
 ---
 
 <section class:list={['hero relative border-b border-line', compact && 'hero-compact', understated && 'hero-understated']}>
@@ -57,12 +59,20 @@ const {
           (primaryCta || secondaryCta) && (
             <div class="hero-actions enter enter-4 flex flex-wrap gap-3">
               {primaryCta && (
-                <a href={withBase(primaryCta.href)} class="btn-primary">
+                <a
+                  href={withBase(primaryCta.href)}
+                  class="btn-primary"
+                  {...isExternalLink(primaryCta.href) && { target: '_blank', rel: 'noopener noreferrer' }}
+                >
                   {primaryCta.label}
                 </a>
               )}
               {secondaryCta && (
-                <a href={withBase(secondaryCta.href)} class="btn-outline">
+                <a
+                  href={withBase(secondaryCta.href)}
+                  class="btn-outline"
+                  {...isExternalLink(secondaryCta.href) && { target: '_blank', rel: 'noopener noreferrer' }}
+                >
                   {secondaryCta.label}
                 </a>
               )}

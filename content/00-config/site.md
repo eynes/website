@@ -31,6 +31,41 @@ paises_operacion:
   - "Colombia"
   - "Chile"
 
+equipo:
+  # GUÍA: dónde vive y trabaja el equipo (colaboradores), no las oficinas
+  # comerciales de arriba — alimenta el mapa de la página Nosotros.
+  # Confirmado con RRHH (11/09/2026): 28 personas en total.
+  cantidad_personas: "28"
+  ubicaciones:
+    - nombre: "Buenos Aires"
+      pais: "Argentina"
+      lat: -34.6
+      lon: -58.4
+    - nombre: "Santa Fe"
+      pais: "Argentina"
+      lat: -31.6
+      lon: -60.7
+    - nombre: "Mendoza"
+      pais: "Argentina"
+      lat: -32.9
+      lon: -68.8
+    - nombre: "La Rioja"
+      pais: "Argentina"
+      lat: -29.4
+      lon: -66.85
+    - nombre: "Chaco"
+      pais: "Argentina"
+      lat: -27.45
+      lon: -59.0
+    - nombre: "Misiones"
+      pais: "Argentina"
+      lat: -27.36
+      lon: -55.9
+    - nombre: "Barcelona"
+      pais: "España"
+      lat: 41.39
+      lon: 2.16
+
 prueba_social_home:
   # GUÍA: banda de confianza que va justo debajo del hero del Home
   # (sección "02 — Prueba social inmediata" del wireframe).
@@ -86,6 +121,7 @@ contacto_general:
   email_comercial: "info@eynes.com.ar"
   email_soporte: "soporte@eynes.com.ar"
   whatsapp_comercial: "+54 9 11 4528-1900"
+  link_agenda: "https://calendar.app.google/4SNcwxGB64NSKhXFA"
 
 redes:
   linkedin: "https://www.linkedin.com/company/eynes-odoo-argentina"

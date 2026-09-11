@@ -8,8 +8,8 @@ schema_type: "Service"
 agrupador: "ALIMENTOS Y GASTRONOMÍA"
 portfolio: true
 casos_relacionados: ["las-dinas", "rafaela-alimentos"]
-modulos_relevantes: ["inventario", "ventas-y-crm"]
-integraciones_destacadas: ["SENASA", "Balanzas industriales", "ARCA / AFIP", "Plataformas B2B"]
+modulos_relevantes: ["ventas-y-crm", "inventario", "contabilidad-y-finanzas"]
+integraciones_destacadas: ["SENASA (Remitos cárnicos)", "Balanzas industriales de producción", "ARCA (Facturación electrónica)", "Plataformas B2B"]
 faqs: [{"pregunta": "¿El sistema gestiona la trazabilidad requerida por SENASA?", "respuesta": "Sí, el módulo de inventario exige y rastrea números de lote, fechas de elaboración y vencimiento en toda la cadena: desde la recepción de la materia prima hasta la expedición del producto terminado, facilitando las auditorías."}, {"pregunta": "¿Puedo medir mermas y rinde en procesos de curado o desposte?", "respuesta": "Totalmente. A través de las órdenes de producción, podés registrar el peso inicial de la carne y el peso final tras el secado o desposte. El sistema calcula automáticamente la merma y ajusta los costos del producto terminado con precisión."}, {"pregunta": "¿Qué pasa si mi empresa crece y necesito más usuarios o asistencia?", "respuesta": "Nuestro modelo se basa en acompañar tu crecimiento. A diferencia de proveedores con tiempos de respuesta excesivos, contamos con un SLA estricto y soporte técnico dedicado, para que nunca te quedes con la producción o facturación frenada."}]
 ---
 

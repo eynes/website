@@ -21,7 +21,7 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/gracias') && !page.includes('/legal/') && !page.includes('/verticales'),
+      filter: (page) => !page.includes('/legal/') && !page.includes('/verticales'),
     }),
   ],
   vite: {

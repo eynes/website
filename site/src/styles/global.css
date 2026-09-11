@@ -410,10 +410,6 @@ a.nav-mobile-link { justify-content: flex-start; }
 .trust-strip { background: var(--color-paper); padding-block: 32px; }
 .trust-strip > div { text-align: center; }
 .trust-strip p { font-size: 0.9375rem; font-weight: 500; }
-.industry-grid { gap: 14px; margin-top: 40px; }
-.industry-grid .card { display: flex; flex-direction: column; justify-content: space-between; align-items: start; gap: 14px; padding: 22px; text-align: left; }
-.industry-grid .card p { font-size: 0.9375rem; font-weight: 500; line-height: 1.45; }
-.industry-grid .card > span { margin-top: 0; font-size: 0.8125rem; }
 .comparison-table { border: 0; border-radius: 12px; }
 .comparison-table :is(th, td) { padding: 24px; }
 .comparison-table th { color: var(--color-ink-soft); font-weight: 500; }
@@ -445,9 +441,6 @@ a.flagship-card:hover { background-color: var(--color-dark-soft); transform: non
 .module-icon svg { width: 22px; height: 22px; }
 .module-icon.is-purple { background: color-mix(in srgb, var(--color-purple) 12%, white); color: var(--color-purple); }
 .module-icon.is-teal { background: color-mix(in srgb, var(--color-teal) 12%, white); color: var(--color-teal); }
-.featured-case { padding-block: 36px; border-inline: 0; border-radius: 0; box-shadow: none; }
-.featured-case:hover { transform: none; box-shadow: none; }
-.featured-case > div > p:first-child { font-size: 1.6rem; letter-spacing: -0.03em; }
 .reasons-grid { gap: 36px; }
 .reasons-grid .card { background: transparent; border: 0; border-top: 1px solid var(--color-line); border-radius: 0; padding: 28px 0 0; box-shadow: none; }
 .reasons-grid .card:hover { transform: none; }
@@ -493,7 +486,6 @@ details[open] { background: var(--color-paper-dim); }
 .team-grid .card:hover img { transform: scale(1.03); }
 .team-grid .card p { padding-inline: 4px; }
 @media (min-width: 1024px) {
-  .industry-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .site-footer > .container-page { grid-template-columns: 1.25fr 1.5fr 1fr 1fr 1fr; gap: 28px; }
 }
 @media (max-width: 1023px) {
@@ -504,9 +496,6 @@ details[open] { background: var(--color-paper-dim); }
   .site-logo { width: 126px; }
   .hero-title { font-size: clamp(2.5rem, 10.8vw, 3.8rem); }
   .hero-bottom { margin-top: 24px; }
-  .industry-grid { margin-top: 28px; }
-  .industry-grid .card { flex-direction: row; align-items: center; gap: 20px; }
-  .industry-grid .card > span { flex-shrink: 0; }
   .comparison-table :is(th, td) { padding: 18px; }
   .site-footer > .container-page { gap: 32px; }
 }

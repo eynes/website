@@ -8,8 +8,8 @@ schema_type: "Service"
 agrupador: "SERVICIOS E INSUMOS INDUSTRIALES"
 portfolio: true
 casos_relacionados: ["imoberdoff"]
-modulos_relevantes: ["inventario", "ventas-y-crm", "compras", "contabilidad-y-finanzas"]
-integraciones_destacadas: ["ARCA / AFIP", "Portal de clientes", "Bancos y cuenta corriente"]
+modulos_relevantes: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
+integraciones_destacadas: ["Facturación electrónica", "Compras e importación de repuestos", "Portal de clientes", "Bancos y cuenta corriente"]
 faqs: [{"pregunta": "¿Puedo ver el estado de todos los equipos que hay en el taller?", "respuesta": "Sí, con cada orden en su etapa y el motivo de detención visible, lo que permite atacar la espera (repuesto o aprobación) en lugar de asumir que el problema es capacidad."}, {"pregunta": "¿Cómo evito quedarme sin un repuesto crítico?", "respuesta": "Definiendo stock mínimo y punto de pedido por artículo sobre el historial real de consumo, para que la reposición se dispare sola antes de que el faltante frene un trabajo."}, {"pregunta": "¿El presupuesto se puede armar desde la orden de trabajo?", "respuesta": "Sí: los repuestos y las horas estimadas se cargan en la orden y el presupuesto se genera desde ahí con costos actualizados, se envía al cliente y queda registrada su aprobación."}, {"pregunta": "¿Se puede saber el margen real de cada reparación?", "respuesta": "Sí, imputando repuestos consumidos y horas de taller a la orden y comparándolos contra lo facturado."}]
 ---
 

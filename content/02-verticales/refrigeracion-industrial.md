@@ -8,8 +8,8 @@ schema_type: "Service"
 agrupador: "SERVICIOS E INSUMOS INDUSTRIALES"
 portfolio: true
 casos_relacionados: ["tecnitower-s-a"]
-modulos_relevantes: ["inventario", "compras", "ventas-y-crm", "contabilidad-y-finanzas"]
-integraciones_destacadas: ["ARCA / AFIP", "Compras del exterior y costeo en destino", "Bancos y cuenta corriente"]
+modulos_relevantes: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
+integraciones_destacadas: ["Facturación electrónica", "Compras del exterior y costeo en destino", "Servicio técnico en campo", "Bancos y cuenta corriente"]
 faqs: [{"pregunta": "¿La producción descuenta el stock automáticamente?", "respuesta": "Sí. Cada orden de producción consume los materiales de su lista contra el inventario en el momento en que se ejecuta, y el sistema registra la diferencia entre consumo teórico y real."}, {"pregunta": "Fabricamos equipos a medida. ¿Se puede costear cada uno?", "respuesta": "Sí, tratando el equipo o el pedido como unidad analítica: materiales, horas de taller y servicios de terceros se imputan ahí y se comparan contra lo presupuestado."}, {"pregunta": "¿Puedo saber qué equipo tiene instalado cada cliente?", "respuesta": "Sí, con número de serie asociado al cliente y a la venta, más el historial de instalación, puesta en marcha y mantenimientos posteriores."}, {"pregunta": "¿Contempla el servicio post-venta y el mantenimiento?", "respuesta": "Sí, con planes de mantenimiento sobre el equipo instalado y órdenes de servicio en campo que registran repuestos y horas, quedando vinculadas al mismo activo."}]
 ---
 
