@@ -25,32 +25,36 @@ const jsonLd = hub
       breadcrumbListSchema(crumbs),
     ]
   : [];
+
+const groups = [...new Set(verticales.map((v) => v.data.agrupador))].map((group) => ({
+  nombre: group,
+  items: verticales.filter((v) => v.data.agrupador === group),
+}));
+
+const colorClasses = ['text-teal', 'text-purple', 'text-silver', 'text-purple-light'];
 ---
 
 <BaseLayout title={hub?.data.seo_title ?? ''} description={hub?.data.meta_description ?? ''} jsonLd={jsonLd}>
   <Hero understated title="Sectores" showPartnerBadge={false} compact />
 
-  <nav aria-label="Agrupadores de rubros" class="industry-filters container-page flex flex-wrap gap-3 py-6">
-    {[...new Set(verticales.map(v => v.data.agrupador))].map((group, i) => (
-      <a href={`#grupo-${i}`} class="rounded-full border border-line px-4 py-2 text-sm text-teal hover:bg-paper-dim">{group}</a>
-    ))}
-  </nav>
-  {[...new Set(verticales.map(v => v.data.agrupador))].map((group, i) => (
-    <section id={`grupo-${i}`} class="section collection-section scroll-mt-24">
-      <div class="container-page">
-        <h2 class="mb-6 text-2xl">{group}</h2>
-        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {verticales.filter(v => v.data.agrupador === group).map(v => (
-            <a href={withBase(`/sectores/${v.data.slug}`)} class="card block">
-              <h3 class="font-semibold text-ink">{v.data.title}</h3>
-              <p class="mt-2 text-sm text-ink-soft">{v.data.casos_relacionados.length} {v.data.casos_relacionados.length === 1 ? 'empresa' : 'empresas'} en este rubro</p>
-              <span class="mt-4 inline-block text-sm font-medium text-teal">Ver problemas y soluciones →</span>
-            </a>
-          ))}
-        </div>
+  <section class="section sector-columns-section">
+    <div class="container-page">
+      <div class="sector-columns">
+        {groups.map((group, i) => (
+          <div class="sector-column">
+            <h2 class:list={['sector-column-title', colorClasses[i % colorClasses.length]]}>{group.nombre}</h2>
+            <ul>
+              {group.items.map((v) => (
+                <li>
+                  <a href={withBase(`/sectores/${v.data.slug}`)}>{v.data.title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
-    </section>
-  ))}
+    </div>
+  </section>
 
   <CTASection heading="¿No encontrás tu rubro? Contanos tu caso igual" />
 </BaseLayout>

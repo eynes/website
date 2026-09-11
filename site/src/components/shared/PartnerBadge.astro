@@ -3,10 +3,11 @@ import { getEntry } from 'astro:content';
 import { withBase } from '../../lib/url';
 
 interface Props {
-  size?: 'sm' | 'md';
+  size?: 'sm' | 'md' | 'lg';
 }
 
 const { size = 'md' } = Astro.props;
+const heightClass = { sm: 'h-8', md: 'h-10', lg: 'h-20' } as const;
 const site = await getEntry('siteConfig', 'site');
 ---
 
@@ -22,7 +23,7 @@ const site = await getEntry('siteConfig', 'site');
       <img
         src={withBase('/brand/odoo_silver_partner_rgb.svg')}
         alt="Silver Partner Oficial de Odoo"
-        class:list={[size === 'sm' ? 'h-8' : 'h-10', 'w-auto']}
+        class:list={[heightClass[size], 'w-auto']}
         width="600"
         height="300"
         loading="eager"

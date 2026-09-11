@@ -268,8 +268,10 @@
 .site-nav > .container-page { min-height: 80px; }
 .site-nav nav a { font-size: 0.875rem; }
 .site-nav nav a.text-purple { text-decoration: underline; text-underline-offset: 8px; }
-.site-brand > span:first-child { font-size: 2rem; font-weight: 600; letter-spacing: -0.07em; }
-.site-brand > span:last-child { border-left: 1px solid var(--color-line); padding-left: 14px; margin-left: 5px; }
+.site-logo { display: block; width: 232px; height: auto; }
+.site-brand-divider { width: 1px; height: 64px; background: var(--color-line); }
+.footer-logo-wrap { display: inline-flex; padding: 8px 12px; border-radius: 8px; background: white; }
+.footer-logo { display: block; width: 150px; height: auto; }
 .hero { background: var(--color-paper); }
 .hero-layout { padding-block: clamp(3rem, 6vw, 5.5rem); }
 .hero-title { max-width: 1000px; font-size: clamp(2.6rem, 5vw, 4.5rem); line-height: 1.06; letter-spacing: -0.055em; font-weight: 500; }
@@ -332,6 +334,7 @@ details[open] { background: var(--color-paper-dim); }
 }
 @media (max-width: 639px) {
   .site-nav > .container-page { min-height: 72px; }
+  .site-logo { width: 126px; }
   .hero-title { font-size: clamp(2.5rem, 10.8vw, 3.8rem); }
   .hero-bottom { margin-top: 24px; }
   .industry-grid { margin-top: 28px; }
@@ -377,9 +380,31 @@ main:has(.hero-understated) .prose-content h3 { font-size: 1.2rem; letter-spacin
 .case-list .card > p:last-child { margin-top: 20px; line-height: 1.75; }
 .module-list .card { padding: 32px; }
 .module-list .card > span { margin-top: 24px; }
-.industry-filters { padding-top: 0; padding-bottom: 24px; gap: 8px; }
-.industry-filters a { font-size: 0.8125rem; color: var(--color-ink-soft); }
-.industry-filters a:hover { color: var(--color-purple); border-color: var(--color-purple); }
+/* Odoo-style "Sectores" index: categories laid out as a CSS multi-column
+   grid (not a manual row/col grid) so uneven group sizes pack tightly,
+   the way odoo.com/es_ES's mega-menu sector list does. */
+.sector-columns { column-gap: 48px; }
+.sector-column { break-inside: avoid; margin-bottom: 40px; }
+.sector-columns-section .sector-column-title {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  max-width: none;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid currentColor;
+}
+.sector-column ul { display: flex; flex-direction: column; gap: 11px; }
+.sector-column a { font-size: 0.9375rem; line-height: 1.4; color: var(--color-ink-soft); }
+.sector-column a:hover { color: var(--color-purple); text-decoration: underline; text-underline-offset: 3px; }
+@media (min-width: 640px) {
+  .sector-columns { columns: 2; }
+}
+@media (min-width: 1024px) {
+  .sector-columns { columns: 4; }
+}
 @media (max-width: 639px) {
   main:has(.hero-understated) .section { padding-block: 36px; }
   .hero-understated .hero-title { font-size: 2rem; }
