@@ -1,6 +1,6 @@
 ---
 title: "Contanos tu proyecto"
-seo_title: "Agendar demo de Odoo"
+seo_title: "Agendar demo de Odoo | Eynes"
 meta_description: "Tenes un proyecto y nosotros tenemos el sistema para que concretes tu sueño"
 slug: "demo"
 url: "eynes.com.ar/demo"
