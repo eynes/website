@@ -20,10 +20,6 @@ faqs: []
 
 Sistema no estandarizado, poca integración entre la información de las áreas
 
-## 04 — La implementación
-
-RAFAELA ALIMENTOS. Situación inicial: sistema no estandarizado y poca integración entre la información de las áreas. Tres puntos concretos: desconexión entre la compra de hacienda en pie y la gestión de costos; dificultad para integrar los distintos webservices fiscales (WSLP, WSFE, WSFEX) con el sistema de gestión; y procesos de compra complejos con niveles de autorización por rol, centro de costos y monto.
-
 ## 09 — Problemas específicos del rubro
 
 ### Compra de materia prima desconectada de la gestión de costos

@@ -29,6 +29,10 @@ El descuento —escala de 5%, 3% y 2%— se determina por días promedio de pago
 
 Lista 1 y Lista 2 son costo más markup, con el costo en dólares o en pesos. La oferta no es una lista: es un porcentaje sobre Lista 2 o un importe fijo, y sólo vale si se despacha desde el depósito habilitado. El descuento por bulto cerrado depende del producto y también del depósito. Y la comisión del vendedor cambia línea por línea según el precio efectivo: 4% a Lista 1, 3,5% a Lista 2, 2,5% con oferta o bulto cerrado aplicado. Con 18.000 productos y 280 categorías sin estructura, actualizar precios era trabajo de días. Aparte, el control de fletes de transportistas y la gestión de cheques rechazados vivían fuera del sistema, en manos de una sola persona.
 
+## 03 — Módulos relevantes
+
+Ventas (con motor de reglas de descuentos por depósito y nivel de precio) · Compras · Inventario multi-depósito · Contabilidad + Localización Argentina (notas de crédito con CAE, retenciones) · Conciliación bancaria avanzada · Comisiones de viajantes (informe legal Ley 14.546) · Portal o catálogo de viajantes.
+
 ## 03a — Integraciones
 
 ARCA/AFIP nativo, en reemplazo del middleware. Facturación electrónica nativa, en reemplazo del middleware que se usaba antes.

@@ -49,6 +49,10 @@ Portal de clientes. Consulta del estado de una reparación, del presupuesto pend
 
 Bancos y cobranzas. Conciliación bancaria y gestión de cuenta corriente de clientes industriales, con plazos de pago largos.
 
+## 08 — Otros casos del rubro
+
+IMOBERDOFF. Situación inicial: órdenes de trabajo demoradas en taller, faltantes sorpresa de repuestos clave y presupuestación lenta hacia el cliente. Qué se hizo: implementación de Odoo con órdenes de trabajo, control de repuestos por punto de pedido y presupuestación generada desde la propia orden.
+
 ## 09 — Problemas específicos del rubro
 
 ### Garantías sin trazabilidad por número de serie

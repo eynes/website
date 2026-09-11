@@ -49,6 +49,10 @@ ARCA (Facturación electrónica). Facturación electrónica.
 
 Plataformas B2B. Plataformas B2B para el canal mayorista y distribuidor.
 
+## 08 — Otros casos del rubro
+
+Frigorífico El Ekeko
+
 ## 09 — Problemas específicos del rubro
 
 ### Trazabilidad manual frente a las auditorías sanitarias

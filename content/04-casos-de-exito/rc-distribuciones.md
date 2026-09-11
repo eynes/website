@@ -35,6 +35,10 @@ LA SOLUCIÓN
 EL RESULTADO
 "Logramos eliminar la doble carga de datos. Hoy el viajante registra el cobro en la calle y la cuenta corriente del cliente se actualiza de inmediato; administración simplemente controla contra el banco y emite el recibo definitivo. El sistema ahora determina el descuento por pronto pago y emite la nota de crédito con CAE en el mismo acto. Estandarizamos el cálculo de comisiones cumpliendo con la Ley 14.546, dejando de depender de procesos manuales. Centralizar nuestros 18.000 artículos, la logística de fletes y la gestión de cheques rechazados en una única plataforma nos permitió alcanzar una operación mucho más ágil y ordenada."
 
+## 06 — Módulos relevantes para el rubro
+
+Ventas (con motor de reglas de descuentos por depósito y nivel de precio) · Compras · Inventario multi-depósito · Contabilidad + Localización Argentina (notas de crédito con CAE, retenciones) · Conciliación bancaria avanzada · Comisiones de viajantes (informe legal Ley 14.546) · Portal o catálogo de viajantes.
+
 ## 07 — Integraciones del rubro
 
 ARCA/AFIP nativo, en reemplazo del middleware. Facturación electrónica nativa, en reemplazo del middleware que se usaba antes.
