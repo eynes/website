@@ -1,36 +1,33 @@
 ---
 title: "Soluciones por rubro"
 seo_title: "Odoo por Rubro: Soluciones para tu Industria | Eynes"
-meta_description: "Descubrí cómo Odoo se adapta a distribución, ferretería, servicios e IT y otros rubros, con casos reales de implementación de Eynes."
+meta_description: "Descubrí cómo Odoo se adapta a tu industria: agroindustria, salud, energía, tecnología y otros 19 rubros más, con casos reales de implementación de Eynes."
 slug: "verticales"
 url: "eynes.com.ar/sectores"
 schema_type: "CollectionPage"
 estado: "publicado"
 ---
 
-<!-- GUÍA: esta es la página de listado (hub) de todos los rubros. Lista
-solo los rubros que YA tienen un archivo .md propio en esta carpeta con
-contenido completo — no linkear a un rubro sin página propia. -->
+<!-- GUÍA (actualizada — ya no aplica el modelo original de curar 3-4
+rubros a mano): esta página lista los 23 rubros reales del portfolio de
+Eynes, agrupados en 10 categorías ("Agrupador principal"). El contenido
+de cada rubro (problemas, módulos, integraciones, FAQs) se genera
+automáticamente desde content/eynes_portfolio_rubros_consolidado.xlsx
+vía site/scripts/sync-portfolio.py — sumar un rubro nuevo es agregar su
+fila al Excel y correr el sync, no crear un .md a mano ni editar esta
+página. El agrupador y su color (site/src/lib/sectorGroups.ts) son los
+mismos en el mega-menú de Nav, acá y en la home. -->
 
 ## 01 — Encabezado
 
-"Soluciones por rubro" + intro corta explicando que Odoo se adapta a cada industria.
+"Sectores" (H1 corto) — sin intro larga, la grilla agrupada de abajo ya comunica la variedad de rubros de un vistazo.
 
 ## 02 — Grilla de rubros
 
-<!-- GUÍA: arrancamos con 3-4 rubros donde ya hay casos reales
-documentados — cada página nueva necesita contenido único y sustancial
-para rankear, así que menos páginas sólidas ganan más que muchas
-genéricas. Sumar un rubro nuevo a esta lista SOLO cuando su archivo .md
-esté completo con research y casos reales (no antes). -->
-
-- Distribución y mayoristas → `distribucion-y-mayoristas.md`
-- Materiales eléctricos y ferreterías → `materiales-electricos-y-ferreterias.md`
-- Servicios / consultoría / IT → `servicios-consultoria-it.md`
-- + Próximamente (placeholder visual, **nunca** un link roto a una página inexistente)
+Lista agrupada por categoría (`sector-columns` en el template), 10 grupos con 23 rubros en total. Cada rubro linkea a `/sectores/[slug]`.
 
 ## 03 — CTA
 
 "¿No encontrás tu rubro? Contanos tu caso igual" → Agendar demo (`/demo`)
 
-<!-- GUÍA: evita perder al visitante cuyo rubro todavía no tiene página propia. -->
+<!-- GUÍA: evita perder al visitante cuyo rubro no está entre los 23 ya documentados. -->

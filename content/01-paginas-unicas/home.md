@@ -50,16 +50,16 @@ prueba_social_home para no duplicarlos. -->
 
 <!-- GUÍA: patrón central que también usa Adhoc y funciona porque el
 visitante se identifica con su industria antes que con un módulo técnico.
-Cada card linkea a su página en 02-verticales/. Mantener solo los rubros
-que ya tienen página propia con contenido real — no linkear a un rubro
-sin página. -->
+Ya no es una selección manual de 3-4 rubros: los 23 rubros vienen del
+Excel fuente (content/eynes_portfolio_rubros_consolidado.xlsx) vía
+site/scripts/sync-portfolio.py, agrupados por "Agrupador principal" (10
+grupos) con el mismo color por grupo que usa el mega-menú y /sectores —
+ver site/src/lib/sectorGroups.ts. Sumar un rubro nuevo es agregar su fila
+al Excel, no editar esta página. -->
 
-**Título de sección:** "Elegí tu rubro" / "Trabajamos con empresas como la tuya"
+**Título de sección:** "Trabajamos con empresas como la tuya"
 
-- Distribución y mayoristas → `/sectores/distribucion-y-mayoristas`
-- Materiales eléctricos y ferreterías → `/sectores/materiales-electricos-y-ferreterias`
-- Servicios / consultoría / IT → `/sectores/servicios-consultoria-it`
-- Ver todos los rubros → `/sectores`
+Lista agrupada por rubro (10 grupos, 23 rubros en total) + "Ver todos los rubros" → `/sectores`
 
 ## 04 — Problemas → Solución
 
@@ -84,20 +84,17 @@ antes de entrar a la grilla genérica de módulos. -->
 
 ## 05 — Grilla completa de módulos (resumen)
 
-<!-- GUÍA: se mantiene porque ya existe hoy en el sitio, pero como resumen
-visual, no como el contenido principal — cada card linkea a su página de
-módulo propia. Localización queda afuera de esta grilla porque ya tiene
-su banner propio arriba (04b). Actualizar esta lista si se suma o saca un
-módulo de 03-modulos/. -->
+<!-- GUÍA: resumen visual, no el contenido principal — cada card linkea a
+su página de módulo propia (fuente: content/03-modulos/_hub.md). Hoy solo
+hay 4 módulos con página propia; no listar acá Marketing, Manufactura,
+Punto de venta ni RRHH hasta que tengan su .md real en 03-modulos/ (evita
+un link roto). Localización queda afuera de esta grilla porque ya tiene
+su banner propio arriba (04b). -->
 
 - Ventas y CRM
-- Contabilidad
-- Compras
-- Marketing
-- Manufactura
+- Contabilidad y finanzas
 - Inventario
-- Punto de venta
-- RRHH
+- Compras
 
 ## 06 — Caso de éxito destacado
 
@@ -107,14 +104,15 @@ el caso de 04-casos-de-exito/ con mejor resultado cuantificado y
 mantenerlo actualizado; no dejar siempre el mismo caso "para siempre". -->
 
 - **Cliente destacado:** Supply Parts (`04-casos-de-exito/supply-parts`)
-- **Resumen:** "Repuestos y autopartes — 67 usuarios (Community) — Argentina"
-- **Resultado cuantificado:** Sin cifra porcentual verificada por el cliente — el resultado real y documentado es cualitativo: "las cuentas corrientes y el cupo de crédito se liberan al instante cuando el distribuidor reporta su pago, sin carga manual" (antes tardaba días). Ver nota en `voz-y-tono.md` regla 3 — no inventamos un % que el cliente no dijo.
+- **Resumen:** "Repuestos y autopartes" (los campos `pais` y `usuarios` quedan vacíos hoy — el Excel fuente no trae esos dos datos por cliente; si se consiguen, se cargan en `eynes_portfolio_rubros_consolidado.xlsx` y se propagan solos vía `sync-portfolio.py`, no hace falta tocar el template).
+- **Resultado cuantificado:** Sin cifra porcentual verificada por el cliente — el resultado real y documentado es cualitativo: "las cuentas corrientes y el cupo de crédito se liberan al instante cuando el distribuidor reporta su pago, sin carga manual" (antes tardaba días). No inventamos un % que el cliente no dijo.
 - Link: → Ver caso completo
 
-<!-- GUÍA cumplida: de los 7 casos con relato completo en el Excel, ninguno
-trae un porcentaje de mejora dicho por el cliente — todos son resultados
-cualitativos verificados. Si en el futuro se consigue una cifra real
-(ej. "reducimos X días a Y horas"), reemplazar acá y en el caso completo. -->
+<!-- GUÍA cumplida: de los 29 casos del Excel fuente, ninguno trae un
+porcentaje de mejora dicho por el cliente — todos son resultados
+cualitativos verificados (`resultado_clave` en cada .md, generado por
+sync-portfolio.py). Si en el futuro se consigue una cifra real
+(ej. "reducimos X días a Y horas"), se carga en el Excel, no acá. -->
 
 ## 07 — Por qué Eynes
 
@@ -127,14 +125,16 @@ verificables (no marketing vacío). -->
 - **Soporte humano, no ticket genérico.** Hablás con la misma gente que te implementó el sistema.
 - **Presencia real en 5 ciudades.** Oficina en Buenos Aires y atención local con teléfono dedicado en Santa Fe, Mendoza, Montevideo y Valencia/Castellón.
 
-## 08 — CTA final calificador
+## 08 — CTA final
 
-<!-- GUÍA: doble canal — el formulario calificador alimenta al CRM con
-datos de segmentación (rubro, cantidad de usuarios); WhatsApp para el que
-quiere resolver ya, típico en Argentina. Copy centralizado en
+<!-- GUÍA: doble canal, sin formulario — el botón lleva directo al
+calendario (Google Calendar) para reservar horario; WhatsApp para el que
+quiere resolver ya, típico en Argentina. La calificación del lead (rubro,
+cantidad de usuarios) ya no se hace con un formulario previo: se hace en
+vivo durante la reunión. Copy centralizado en
 00-config/ctas-reutilizables.md. -->
 
-"Contanos tu proyecto" + beneficios de la demo (sin compromiso, 1 hora, te llevás un presupuesto) → botón **Agendar demo** + **WhatsApp directo**.
+"Contanos tu proyecto" + beneficios de la demo (sin compromiso, 30 minutos, te llevás un presupuesto) → botón **Agendar reunión** + **WhatsApp directo**.
 
 ## Footer
 

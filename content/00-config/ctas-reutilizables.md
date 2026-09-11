@@ -12,13 +12,18 @@
 **Botón corto (nav, hero, cierres de sección):** `Agendar demo`
 
 **Variante con calificación de rubro** (usar en páginas de vertical): `Agendar demo para [rubro]`
-<!-- GUÍA: al venir de una página de rubro, el formulario de /demo ya
-     "sabe" el rubro preseleccionado — menos fricción, mejor calificación
-     del lead para ventas. -->
+<!-- GUÍA: al venir de una página de rubro, el link de WhatsApp de /demo
+     ya arma el mensaje con el rubro mencionado — menos fricción, mejor
+     calificación del lead para ventas. -->
+
+**Botón de reserva en /demo:** `Agendar reunión`
+<!-- GUÍA: en /demo ya no hay formulario — el botón lleva directo al
+     calendario (Google Calendar), así que el label describe la acción
+     real ("reservar un horario"), no la genérica "Agendar demo" del nav. -->
 
 **Bloque largo (CTA final de página, ej. sección 08 del Home):**
 
-> Contanos tu proyecto. Una reunión de una hora, sin compromiso — te llevás un presupuesto igual.
+> Contanos tu proyecto. Una reunión de 30 minutos, sin compromiso — te llevás un presupuesto igual.
 
 ## CTA — WhatsApp directo
 
@@ -51,7 +56,10 @@
 - Complejidad de la migración
 - Integraciones a medida
 
-**Cierre:** `Cotización personalizada en 48hs, sin compromiso.`
+**Cierre:** `Cotización personalizada en la reunión, sin compromiso.`
+<!-- GUÍA: antes decía "en 48hs" porque la cotización llegaba por email
+     después de un formulario. Ahora se da en vivo durante la reunión
+     agendada, así que el texto ya no promete un plazo aparte. -->
 
 ## Dolor → alivio (banco de frases, Home sección 04)
 
