@@ -2,6 +2,8 @@
 import { getEntry } from 'astro:content';
 import PartnerBadge from '../shared/PartnerBadge.astro';
 import { withBase } from '../../lib/url';
+import { getPublished } from '../../lib/content';
+import { groupColorClass, sortGroups } from '../../lib/sectorGroups';
 
 const nav = await getEntry('navConfig', 'navegacion');
 const site = await getEntry('siteConfig', 'site');
@@ -12,6 +14,15 @@ const currentPath = Astro.url.pathname.slice(baseNoTrailingSlash.length) || '/';
 function isActive(url: string) {
   return url !== '/' && currentPath.startsWith(url);
 }
+
+const verticales = await getPublished('verticales');
+const sectorGroups = sortGroups(
+  [...new Set(verticales.map((v) => v.data.agrupador))].map((nombre) => ({
+    nombre,
+    colorClass: groupColorClass(nombre),
+    items: verticales.filter((v) => v.data.agrupador === nombre),
+  }))
+);
 ---
 
 <header class="site-nav sticky top-0 z-40 border-b bg-paper" style="border-color: var(--color-line)">
@@ -32,15 +43,46 @@ function isActive(url: string) {
       </span>
     </div>
 
-    <nav class="hidden items-center gap-7 lg:flex" aria-label="Principal">
+    <nav class="hidden items-center gap-1 lg:flex" aria-label="Principal">
+      <div class="nav-mega" data-mega>
+        <button
+          type="button"
+          class:list={['nav-link nav-mega-trigger', { 'text-purple': isActive('/sectores') }]}
+          aria-expanded="false"
+          aria-controls="mega-sectores"
+          data-mega-trigger
+        >
+          Sectores
+          <svg class="nav-mega-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+        <div class="nav-mega-collapse" id="mega-sectores" data-mega-collapse>
+          <div class="nav-mega-panel">
+            <div class="nav-mega-columns">
+              {sectorGroups.map((group) => (
+                <div class="nav-mega-column">
+                  <p class:list={['nav-mega-group', group.colorClass]}>{group.nombre}</p>
+                  <ul>
+                    {group.items.map((v) => (
+                      <li><a href={withBase(`/sectores/${v.data.slug}`)}>{v.data.title}</a></li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <div class="nav-mega-footer">
+              <a href={withBase('/sectores')} class="nav-mega-all">Ver todos los rubros <span class="arrow">→</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {
-        nav?.data.nav_principal.map((item) => (
+        nav?.data.nav_principal.filter((item) => item.etiqueta !== 'Sectores').map((item) => (
           <a
             href={withBase(item.url)}
-            class:list={[
-              'font-mono text-xs font-medium uppercase tracking-[0.1em] text-ink-soft hover:text-purple',
-              { 'text-purple': isActive(item.url) },
-            ]}
+            class:list={['nav-link', { 'text-purple': isActive(item.url) }]}
           >
             {item.etiqueta}
           </a>
@@ -70,9 +112,39 @@ function isActive(url: string) {
 
   <nav id="nav-mobile" class="hidden border-t lg:hidden" style="border-color: var(--color-line)" aria-label="Principal (móvil)">
     <div class="container-page flex flex-col gap-1 py-3">
+      <div class="nav-mega nav-mega-mobile" data-mega>
+        <button
+          type="button"
+          class:list={['nav-mobile-link nav-mega-trigger', { 'text-purple': isActive('/sectores') }]}
+          aria-expanded="false"
+          aria-controls="mega-sectores-mobile"
+          data-mega-trigger
+        >
+          Sectores
+          <svg class="nav-mega-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+        <div class="nav-mega-collapse" id="mega-sectores-mobile" data-mega-collapse>
+          <div class="nav-mega-panel-mobile">
+            {sectorGroups.map((group) => (
+              <div class="nav-mega-column">
+                <p class:list={['nav-mega-group', group.colorClass]}>{group.nombre}</p>
+                <ul>
+                  {group.items.map((v) => (
+                    <li><a href={withBase(`/sectores/${v.data.slug}`)}>{v.data.title}</a></li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+            <a href={withBase('/sectores')} class="nav-mega-all">Ver todos los rubros <span class="arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+
       {
-        nav?.data.nav_principal.map((item) => (
-          <a href={withBase(item.url)} class="px-2 py-2 font-mono text-xs font-medium uppercase tracking-[0.1em] text-ink-soft hover:text-purple">
+        nav?.data.nav_principal.filter((item) => item.etiqueta !== 'Sectores').map((item) => (
+          <a href={withBase(item.url)} class="nav-mobile-link">
             {item.etiqueta}
           </a>
         ))
@@ -94,5 +166,51 @@ function isActive(url: string) {
     menu?.classList.toggle('hidden');
     iconOpen?.classList.toggle('hidden');
     iconClose?.classList.toggle('hidden');
+    if (expanded) closeAllMegas();
+  });
+
+  // Expanding/collapsing mega-menus (desktop dropdown + mobile accordion):
+  // height is measured from scrollHeight so the reveal animates smoothly
+  // to its real content size, then closes back to 0 on a second click.
+  const megas = Array.from(document.querySelectorAll<HTMLElement>('[data-mega]'));
+
+  function setOpen(mega: HTMLElement, open: boolean) {
+    const trigger = mega.querySelector<HTMLButtonElement>('[data-mega-trigger]');
+    const collapse = mega.querySelector<HTMLElement>('[data-mega-collapse]');
+    if (!trigger || !collapse) return;
+    trigger.setAttribute('aria-expanded', String(open));
+    mega.classList.toggle('is-open', open);
+    collapse.style.maxHeight = open ? `${collapse.scrollHeight}px` : '0px';
+  }
+
+  function closeAllMegas(except?: HTMLElement) {
+    megas.forEach((mega) => {
+      if (mega !== except) setOpen(mega, false);
+    });
+  }
+
+  megas.forEach((mega) => {
+    const trigger = mega.querySelector<HTMLButtonElement>('[data-mega-trigger]');
+    trigger?.addEventListener('click', () => {
+      const willOpen = trigger.getAttribute('aria-expanded') !== 'true';
+      closeAllMegas(willOpen ? mega : undefined);
+      setOpen(mega, willOpen);
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    const target = event.target as Node;
+    const insideAnyMega = megas.some((mega) => mega.contains(target));
+    if (!insideAnyMega) closeAllMegas();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeAllMegas();
+  });
+
+  window.addEventListener('resize', () => {
+    megas.forEach((mega) => {
+      if (mega.classList.contains('is-open')) setOpen(mega, true);
+    });
   });
 </script>

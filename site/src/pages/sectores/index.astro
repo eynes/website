@@ -6,6 +6,7 @@ import CTASection from '../../components/cta/CTASection.astro';
 import { getPublished } from '../../lib/content';
 import { collectionPageSchema, breadcrumbListSchema } from '../../lib/schema';
 import { withBase } from '../../lib/url';
+import { groupColorClass, sortGroups } from '../../lib/sectorGroups';
 
 const hub = await getEntry('verticalesHub', 'verticales');
 const verticales = await getPublished('verticales');
@@ -26,12 +27,13 @@ const jsonLd = hub
     ]
   : [];
 
-const groups = [...new Set(verticales.map((v) => v.data.agrupador))].map((group) => ({
-  nombre: group,
-  items: verticales.filter((v) => v.data.agrupador === group),
-}));
-
-const colorClasses = ['text-teal', 'text-purple', 'text-silver', 'text-purple-light'];
+const groups = sortGroups(
+  [...new Set(verticales.map((v) => v.data.agrupador))].map((group) => ({
+    nombre: group,
+    colorClass: groupColorClass(group),
+    items: verticales.filter((v) => v.data.agrupador === group),
+  }))
+);
 ---
 
 <BaseLayout title={hub?.data.seo_title ?? ''} description={hub?.data.meta_description ?? ''} jsonLd={jsonLd}>
@@ -40,9 +42,9 @@ const colorClasses = ['text-teal', 'text-purple', 'text-silver', 'text-purple-li
   <section class="section sector-columns-section">
     <div class="container-page">
       <div class="sector-columns">
-        {groups.map((group, i) => (
+        {groups.map((group) => (
           <div class="sector-column">
-            <h2 class:list={['sector-column-title', colorClasses[i % colorClasses.length]]}>{group.nombre}</h2>
+            <h2 class:list={['sector-column-title', group.colorClass]}>{group.nombre}</h2>
             <ul>
               {group.items.map((v) => (
                 <li>

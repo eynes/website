@@ -1,0 +1,39 @@
+---
+interface Props {
+  slug: string;
+  index?: number;
+}
+
+const { slug, index = 0 } = Astro.props;
+const tone = index % 2 === 0 ? 'is-purple' : 'is-teal';
+---
+
+<span class:list={['module-icon', tone]} aria-hidden="true">
+  {slug === 'ventas-y-crm' && (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 19V9.5L12 4l8 5.5V19a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1Z" />
+    </svg>
+  )}
+  {slug === 'inventario' && (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.5 8 12 4l8.5 4-8.5 4-8.5-4Z" />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.5 8v8L12 20l8.5-4V8M12 12v8" />
+    </svg>
+  )}
+  {slug === 'contabilidad-y-finanzas' && (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 20V10M11 20V6M17 20v-7M4 20h16" />
+    </svg>
+  )}
+  {slug === 'compras' && (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 8h12l-1 12H7L6 8Z" />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 8V6a3 3 0 0 1 6 0v2" />
+    </svg>
+  )}
+  {!['ventas-y-crm', 'inventario', 'contabilidad-y-finanzas', 'compras'].includes(slug) && (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  )}
+</span>

@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/hero/Hero.astro';
 import ClientLogos from '../components/shared/ClientLogos.astro';
 import CTASection from '../components/cta/CTASection.astro';
+import ModuleIcon from '../components/shared/ModuleIcon.astro';
 import { getPublished } from '../lib/content';
 import { organizationSchema, websiteSchema } from '../lib/schema';
 import { withBase } from '../lib/url';
@@ -114,8 +115,11 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
     <div class="container-page reveal">
       <h2 class="mt-2 text-2xl sm:text-3xl">Todo lo que podés gestionar con Odoo</h2>
       <div class="module-grid mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {modulos.map((m) => (
-          <a href={withBase(`/modulos/${m.data.slug}`)} class="card block bg-paper text-center font-medium">{m.data.title}</a>
+        {modulos.map((m, i) => (
+          <a href={withBase(`/modulos/${m.data.slug}`)} class="card block bg-paper font-medium">
+            <ModuleIcon slug={m.data.slug} index={i} />
+            {m.data.title}
+          </a>
         ))}
       </div>
     </div>
