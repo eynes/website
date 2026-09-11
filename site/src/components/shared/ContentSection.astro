@@ -13,13 +13,15 @@ const { title, html, tone = 'light', narrow = false } = Astro.props;
 {
   html && (
     <section class:list={['section', tone === 'muted' && 'bg-paper-dim']}>
-      <div class:list={['container-page prose-content', narrow && 'max-w-3xl']}>
-        {title && (
-          <div class="mb-4 flex items-baseline gap-3">
-            <h2 class="text-2xl sm:text-3xl">{title}</h2>
-          </div>
-        )}
-        <div set:html={html} />
+      <div class="container-page">
+        <div class:list={['prose-content', narrow && 'max-w-3xl']}>
+          {title && (
+            <div class="mb-4 flex items-baseline gap-3">
+              <h2 class="text-2xl sm:text-3xl">{title}</h2>
+            </div>
+          )}
+          <div set:html={html} />
+        </div>
       </div>
     </section>
   )

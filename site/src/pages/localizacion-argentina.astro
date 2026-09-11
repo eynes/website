@@ -61,11 +61,13 @@ const jsonLd = page
   <Hero understated
     title={page?.data.title ?? ''}
     subtitle={subtitle}
-    primaryCta={{ label: 'Agendar demo', href: '/demo' }}
+    showPartnerBadge={false}
   />
 
   <section class="section">
-    <div class="container-page reveal prose-content max-w-3xl" set:html={problemHtml} />
+    <div class="container-page reveal">
+      <div class="prose-content max-w-3xl" set:html={problemHtml} />
+    </div>
   </section>
 
   {
@@ -95,11 +97,15 @@ const jsonLd = page
   }
 
   <section class="section">
-    <div class="container-page reveal prose-content max-w-3xl" set:html={circuitoHtml} />
+    <div class="container-page reveal">
+      <div class="prose-content max-w-3xl" set:html={circuitoHtml} />
+    </div>
   </section>
 
   <section class="section bg-paper-dim">
-    <div class="container-page reveal prose-content max-w-3xl" set:html={alcanceHtml} />
+    <div class="container-page reveal">
+      <div class="prose-content max-w-3xl" set:html={alcanceHtml} />
+    </div>
   </section>
 
   {

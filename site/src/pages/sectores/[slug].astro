@@ -24,10 +24,6 @@ const problemsHtml = await renderSection(sections, '02');
 const comparisonHtml = await renderFragment(stripLabeledLine(sections['02b']?.body, 'Título'));
 const testimonialHtml = await renderSection(sections, '05');
 
-const modulos = (
-  await Promise.all(entry.data.modulos_relevantes.map((slug: string) => resolvePublishedRelated('modulos', slug)))
-).filter(Boolean);
-
 const casos = (
   await Promise.all(entry.data.casos_relacionados.map((slug: string) => resolvePublishedRelated('casosDeExito', slug)))
 ).filter(Boolean);
@@ -51,45 +47,13 @@ const jsonLd = [
 
 <BaseLayout title={entry.data.seo_title} description={entry.data.meta_description} jsonLd={jsonLd}>
   <Breadcrumbs crumbs={crumbs} />
-  <Hero understated title={entry.data.title} subtitle={subtitle} primaryCta={{ label: `Agendar demo para ${entry.data.title}`, href: `/demo?rubro=${entry.data.slug}` }} />
+  <Hero understated title={entry.data.title} subtitle={subtitle} showPartnerBadge={false} />
 
   <ContentSection number="02" title="Problemas específicos del rubro" html={problemsHtml} narrow />
   <ContentSection number="02b" title="Odoo vs. las alternativas" html={comparisonHtml} tone="muted" />
 
   <ContentSection number="03" title="Módulos relevantes para este rubro" html={await renderSection(sections, '03')} narrow />
   <ContentSection number="03a" title="Integraciones del rubro" html={await renderSection(sections, '03a')} tone="muted" narrow />
-
-  {
-    modulos.length > 0 && (
-      <section class="section">
-        <div class="container-page reveal">
-          <h2 class="mt-2 text-2xl sm:text-3xl">Módulos relevantes para este rubro</h2>
-          <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {modulos.map((m) => (
-              <a href={withBase(`/modulos/${m!.data.slug}`)} class="card block">
-                <p class="font-semibold text-ink">{m!.data.title}</p>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-  {
-    entry.data.integraciones_destacadas.length > 0 && (
-      <section class="section bg-paper-dim">
-        <div class="container-page reveal">
-          <h2 class="mt-2 text-2xl sm:text-3xl">No tenés que abandonar tus herramientas</h2>
-          <div class="mt-6 flex flex-wrap gap-3">
-            {entry.data.integraciones_destacadas.map((i: string) => (
-              <span class="rounded-full border border-line bg-paper px-4 py-2 text-sm font-medium text-ink-soft">{i}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-    )
-  }
 
   {
     casos.length > 0 && (

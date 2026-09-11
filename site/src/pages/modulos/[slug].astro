@@ -49,7 +49,7 @@ const jsonLd = [
 
 <BaseLayout title={entry.data.seo_title} description={entry.data.meta_description} jsonLd={jsonLd}>
   <Breadcrumbs crumbs={crumbs} />
-  <Hero understated title={entry.data.title} subtitle={subtitle} primaryCta={{ label: 'Agendar demo', href: '/demo' }} />
+  <Hero understated title={entry.data.title} subtitle={subtitle} showPartnerBadge={false} />
 
   <ContentSection number="02" title="Features con impacto" html={featuresHtml} />
 
