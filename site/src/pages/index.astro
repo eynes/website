@@ -48,7 +48,7 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
             {site.data.prueba_social_home.empresas_clientes} · {site.data.prueba_social_home.anios_experiencia} · {site.data.prueba_social_home.paises}
           </p>
 
-          <ClientLogos fallbackNames={site.data.prueba_social_home.logos_clientes_destacados} />
+          <ClientLogos />
         </div>
       </section>
     )

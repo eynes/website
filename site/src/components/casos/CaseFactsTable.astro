@@ -10,10 +10,10 @@ const { rubro, pais, usuarios, modulos } = Astro.props;
 ---
 
 <dl class="case-facts">
-  <div>
+  {rubro && <div>
     <dt class="sr-only">Rubro</dt>
     <dd class="case-facts-value">{rubro.replace(/-/g, ' ')}</dd>
-  </div>
+  </div>}
   {pais && <div>
     <dt class="case-facts-label">País</dt>
     <dd class="case-facts-value">{pais}</dd>

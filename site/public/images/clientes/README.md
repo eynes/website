@@ -1,14 +1,7 @@
 # Logos de clientes
 
-Poné aquí los logos que quieras mostrar en el banner del home.
+La carpeta utilizada por el banner es `content/04-casos-de-exito/logos-clientes/`, en la raíz del repositorio.
 
-- Formatos: SVG, PNG, WebP, JPG o AVIF (extensiones en minúsculas).
-- Preferí SVG o imágenes con fondo transparente y poco margen alrededor.
-- Usá el nombre de la empresa como archivo: `Supply Parts.svg` o `supply-parts.svg`.
-  Ese nombre se usa como texto alternativo para accesibilidad.
-- Se muestran todos los archivos, ordenados alfabéticamente.
-- No hace falta modificar código. Volvé a compilar el sitio para actualizar la vista previa o la publicación.
-- Mientras la carpeta no tenga imágenes, se muestran los nombres de clientes ya configurados.
-
-El banner se pausa con el botón, al pasar el cursor y cuando recibe foco.
-Si el visitante prefiere movimiento reducido, se muestra una lista estática.
+Agregá los logos allí. Se incorporan automáticamente al compilar el sitio.
+El banner muestra únicamente imágenes, sin nombres en texto como reemplazo.
+Esta carpeta de `public` ya no se utiliza para el banner.

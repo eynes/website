@@ -390,3 +390,9 @@ main:has(.hero-understated) .prose-content h3 { font-size: 1.2rem; letter-spacin
   .case-list .card, .module-list .card { padding: 24px; }
   .about-timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* Keep client logos in a dedicated column, at their intrinsic proportions. */
+.case-card-heading { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 16px; min-height: 40px; }
+.case-card-heading .case-name { min-width: 0; overflow-wrap: anywhere; }
+.case-card-logo { display: flex; align-items: center; justify-content: flex-end; width: 80px; height: 40px; }
+.case-card-logo img { display: block; width: auto; height: auto; max-width: 80px; max-height: 40px; object-fit: contain; flex: none; }
