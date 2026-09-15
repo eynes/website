@@ -79,6 +79,20 @@ prueba_social_home:
     - "Ivess (El Jumillano)"
     - "La Guitarrita"
 
+# Slugs de content/04-casos-de-exito/*.md (el nombre del archivo, sin
+# ".md") a destacar — van primero en /casos y se muestran en el home.
+# Para sumar/sacar uno, editá esta lista; no hace falta tocar código.
+casos_destacados:
+  - "ypf"
+  # GUÍA: "rafaela-alimentos" se sacó de esta lista — el Excel fuente no
+  # tiene testimonio ni resultado cargado para ese cliente (solo el
+  # problema), así que su tarjeta salía vacía. Sumarla de nuevo cuando
+  # se cargue el testimonio real en el Excel.
+  - "argensun-s-a"
+  - "el-jumillano-s-a-ivess"
+  - "melisam-s-a"
+  - "la-guitarrita-s-a"
+
 oficinas:
   # GUÍA: cada oficina con dirección real habilita un Google Business Profile
   # propio → abre SEO local ("Odoo Mendoza", "implementación Odoo Uruguay").

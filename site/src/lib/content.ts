@@ -20,3 +20,16 @@ export async function getPublished<C extends CollectionKey>(
       : true
   );
 }
+
+/** Puts entries whose slug is in `destacados` first (in that order), then the rest unchanged. */
+export function sortDestacadosFirst<T extends { data: { slug: string } }>(
+  entries: T[],
+  destacados: string[]
+): T[] {
+  const destacadosSet = new Set(destacados);
+  const destacadosOrdenados = destacados
+    .map((slug) => entries.find((e) => e.data.slug === slug))
+    .filter((e): e is T => Boolean(e));
+  const resto = entries.filter((e) => !destacadosSet.has(e.data.slug));
+  return [...destacadosOrdenados, ...resto];
+}

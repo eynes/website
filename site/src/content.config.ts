@@ -177,6 +177,10 @@ const siteConfig = defineCollection({
       paises: z.string(),
       logos_clientes_destacados: z.array(z.string()),
     }),
+    // Slugs de content/04-casos-de-exito/*.md a destacar: van primero en
+    // /casos y se muestran en la sección "Casos de éxito destacados" del
+    // home. Curado a mano — no lo toca sync-portfolio.py.
+    casos_destacados: z.array(z.string()).default([]),
     // Real physical offices only — these get LocalBusiness schema /
     // Google Business Profile treatment. Today: Buenos Aires only.
     oficinas: z.array(

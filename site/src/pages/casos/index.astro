@@ -3,12 +3,14 @@ import { getEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/hero/Hero.astro';
 import CTASection from '../../components/cta/CTASection.astro';
-import { getPublished } from '../../lib/content';
+import { getPublished, sortDestacadosFirst } from '../../lib/content';
 import { collectionPageSchema, breadcrumbListSchema } from '../../lib/schema';
 import CaseCard from '../../components/casos/CaseCard.astro';
 
 const hub = await getEntry('casosHub', 'casos');
-const casos = await getPublished('casosDeExito');
+const site = await getEntry('siteConfig', 'site');
+const destacados = new Set(site?.data.casos_destacados ?? []);
+const casos = sortDestacadosFirst(await getPublished('casosDeExito'), site?.data.casos_destacados ?? []);
 
 const crumbs = [
   { name: 'Inicio', url: '/' },
@@ -34,7 +36,7 @@ const jsonLd = hub
     <div class="container-page case-list grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {
         casos.map((c) => (
-          <CaseCard entry={c} />
+          <CaseCard entry={c} destacado={destacados.has(c.data.slug)} />
         ))
       }
     </div>

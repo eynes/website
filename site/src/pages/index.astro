@@ -6,7 +6,7 @@ import ClientLogos from '../components/shared/ClientLogos.astro';
 import CTASection from '../components/cta/CTASection.astro';
 import ModuleIcon from '../components/shared/ModuleIcon.astro';
 import CaseCard from '../components/casos/CaseCard.astro';
-import { getPublished } from '../lib/content';
+import { getPublished, sortDestacadosFirst } from '../lib/content';
 import { organizationSchema, websiteSchema } from '../lib/schema';
 import { withBase } from '../lib/url';
 
@@ -14,9 +14,10 @@ const page = await getEntry('paginasUnicas', 'home');
 const site = await getEntry('siteConfig', 'site');
 
 const casos = await getPublished('casosDeExito');
-
-const featuredCase =
-  casos.find((c) => c.data.slug === 'supply-parts') ?? casos[0] ?? null;
+const destacadosSlugs = site?.data.casos_destacados ?? [];
+const casosDestacados = destacadosSlugs.length > 0
+  ? sortDestacadosFirst(casos, destacadosSlugs).slice(0, destacadosSlugs.length)
+  : casos.slice(0, 1);
 
 const modulos = await getPublished('modulos');
 
@@ -76,12 +77,16 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
   </section>
 
   {
-    featuredCase && (
+    casosDestacados.length > 0 && (
       <section class="section">
         <div class="container-page reveal">
-          <h2 class="mt-2 text-2xl sm:text-3xl">Caso de éxito destacado</h2>
-          <div class="mt-6 max-w-xl">
-            <CaseCard entry={featuredCase} />
+          <h2 class="mt-2 text-2xl sm:text-3xl">
+            {casosDestacados.length > 1 ? 'Casos de éxito destacados' : 'Caso de éxito destacado'}
+          </h2>
+          <div class:list={['mt-6 grid gap-5', casosDestacados.length === 1 ? 'max-w-xl' : 'sm:grid-cols-2 lg:grid-cols-3']}>
+            {casosDestacados.map((caso) => (
+              <CaseCard entry={caso} />
+            ))}
           </div>
         </div>
       </section>

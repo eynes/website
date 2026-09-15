@@ -4,8 +4,8 @@ import type { CollectionEntry } from 'astro:content';
 import clients from '../../../../content/04-casos-de-exito/clientes.json';
 import { withBase } from '../../lib/url';
 
-interface Props { entry: CollectionEntry<'casosDeExito'>; }
-const { entry } = Astro.props;
+interface Props { entry: CollectionEntry<'casosDeExito'>; destacado?: boolean; }
+const { entry, destacado = false } = Astro.props;
 const client = (clients as Record<string, { website: string; logo: string }>)[entry.data.slug];
 const images = import.meta.glob<{ default: ImageMetadata }>(
   '../../../../content/04-casos-de-exito/logos-clientes/*.{svg,png,webp,jpg,jpeg,avif}',
@@ -17,7 +17,14 @@ const domain = client?.website ? new URL(client.website).hostname.replace(/^www\
 
 <article class="card case-card">
   <div class="case-card-heading">
-    <h2 class="case-name"><a href={withBase(`/casos/${entry.data.slug}`)}>{entry.data.cliente}</a></h2>
+    <h2 class="case-name">
+      {destacado && (
+        <svg class="case-star" viewBox="0 0 20 20" aria-label="Caso destacado" role="img">
+          <path d="M10 1.5l2.35 5.06 5.4.6-4.02 3.78 1.1 5.36L10 13.6l-4.83 2.7 1.1-5.36-4.02-3.78 5.4-.6z" />
+        </svg>
+      )}
+      <a href={withBase(`/casos/${entry.data.slug}`)}>{entry.data.cliente}</a>
+    </h2>
     {logo && <div class="case-card-logo"><img src={logo.src} alt={`Logo de ${entry.data.cliente}`} width={logo.width} height={logo.height} loading="lazy" /></div>}
   </div>
   <p class="case-meta">{[entry.data.rubro, entry.data.pais, entry.data.usuarios && `${entry.data.usuarios} usuarios`].filter(Boolean).join(' · ')}</p>
@@ -30,6 +37,7 @@ const domain = client?.website ? new URL(client.website).hostname.replace(/^www\
 
 <style>
   .case-card { display: flex; flex-direction: column; gap: 0; }
+  .case-star { display: inline-block; width: 13px; height: 13px; margin-right: 6px; margin-bottom: -1px; fill: color-mix(in srgb, var(--color-teal) 55%, var(--color-silver)); }
   .case-card .case-name { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.025em; line-height: 1.5; margin: 0; text-wrap: initial; }
   .case-name a:hover { color: var(--color-purple); }
   .case-meta { font-size: 0.8125rem; line-height: 1.5; color: var(--color-ink-faint); margin-top: 6px; }
