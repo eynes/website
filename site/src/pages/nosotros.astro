@@ -60,25 +60,19 @@ const jsonLd = site
     </div>
   </section>
 
-  <section class="section bg-paper-dim" aria-labelledby="como-trabajamos">
-    <div class="container-page">
-      <h2 id="como-trabajamos">Cómo trabajamos</h2>
-      <div class="work-grid">
-        <div>
-          <h3>Entendemos tu operación</h3>
-          <p>Conversamos con tu equipo para conocer los procesos, las dificultades y lo que necesitás resolver con Odoo.</p>
+  {
+    site && (
+      <section class="section bg-paper-dim">
+        <div class="container-page reveal">
+          <h2 class="mt-2 text-2xl sm:text-3xl">Un equipo distribuido en dos países</h2>
+          <p class="mt-3 max-w-2xl text-ink-soft">La implementación y el soporte se construyen con personas que trabajan desde distintas provincias de Argentina y desde España.</p>
+          <div class="mt-8">
+            <CollaboratorMap ubicaciones={site.data.equipo.ubicaciones} cantidadPersonas={site.data.equipo.cantidad_personas} />
+          </div>
         </div>
-        <div>
-          <h3>Definimos e implementamos</h3>
-          <p>Acordamos el alcance y las prioridades del proyecto. Configuramos los módulos y trabajamos con tu equipo en la puesta en marcha.</p>
-        </div>
-        <div>
-          <h3>Te acompañamos</h3>
-          <p>Después de la implementación, seguimos cerca para resolver consultas y acompañar los cambios de tu operación.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
+    )
+  }
 
   {
     site && (
@@ -107,19 +101,25 @@ const jsonLd = site
     )
   }
 
-  {
-    site && (
-      <section class="section bg-paper-dim">
-        <div class="container-page reveal">
-          <h2 class="mt-2 text-2xl sm:text-3xl">Un equipo distribuido en dos países</h2>
-          <p class="mt-3 max-w-2xl text-ink-soft">La implementación y el soporte se construyen con personas que trabajan desde distintas provincias de Argentina y desde España.</p>
-          <div class="mt-8">
-            <CollaboratorMap ubicaciones={site.data.equipo.ubicaciones} cantidadPersonas={site.data.equipo.cantidad_personas} />
-          </div>
+  <section class="section bg-paper-dim" aria-labelledby="como-trabajamos">
+    <div class="container-page">
+      <h2 id="como-trabajamos">Cómo trabajamos</h2>
+      <div class="work-grid">
+        <div>
+          <h3>Entendemos tu operación</h3>
+          <p>Conversamos con tu equipo para conocer los procesos, las dificultades y lo que necesitás resolver con Odoo.</p>
         </div>
-      </section>
-    )
-  }
+        <div>
+          <h3>Definimos e implementamos</h3>
+          <p>Acordamos el alcance y las prioridades del proyecto. Configuramos los módulos y trabajamos con tu equipo en la puesta en marcha.</p>
+        </div>
+        <div>
+          <h3>Te acompañamos</h3>
+          <p>Después de la implementación, seguimos cerca para resolver consultas y acompañar los cambios de tu operación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="section join-team" aria-labelledby="forma-parte">
     <div class="container-page">

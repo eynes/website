@@ -7,12 +7,12 @@ interface Props {
   narrow?: boolean;
 }
 
-const { title, html, tone = 'light', narrow = false } = Astro.props;
+const { title, number, html, tone = 'light', narrow = false } = Astro.props;
 ---
 
 {
   html && (
-    <section class:list={['section', tone === 'muted' && 'bg-paper-dim']}>
+    <section class:list={['section', tone === 'muted' && 'bg-paper-dim']} data-section={number}>
       <div class="container-page">
         <div class:list={['prose-content', narrow && 'max-w-3xl']}>
           {title && (

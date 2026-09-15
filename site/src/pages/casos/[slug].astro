@@ -81,7 +81,7 @@ const jsonLd = [
   <ContentSection number="05" title={entry.data.portfolio ? "Testimonio" : "El resultado"} html={resultHtml} narrow />
 
   {['06', '07', '08', '09'].map(async (key) => (
-    <ContentSection title={sections[key]?.title} html={await renderSection(sections, key)} narrow />
+    <ContentSection number={key} title={sections[key]?.title} html={await renderSection(sections, key)} narrow />
   ))}
   <FAQAccordion faqs={entry.data.faqs} title="Preguntas frecuentes" />
   <div class="container-page pb-16 text-center">
