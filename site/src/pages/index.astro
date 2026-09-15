@@ -30,7 +30,7 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
 >
   <Hero
     title={page?.data.title ?? ''}
-    subtitle="Con Odoo, vendés, facturás con ARCA y controlás el stock desde un solo sistema — implementado por un equipo con 20+ años y soporte humano real, no un ticket genérico."
+    subtitle="Implementamos con relevamiento real, no una plantilla genérica, y nos quedamos después de que arranca — soporte humano real, no un ticket genérico."
     primaryCta={{ label: 'Agendar demo', href: '/demo' }}
     secondaryCta={{ label: 'Ver módulos', href: '/modulos' }}
     showPartnerBadge={false}
@@ -87,26 +87,6 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
       </section>
     )
   }
-
-  <section class="section bg-paper-dim">
-    <div class="container-page reveal">
-      <h2 class="mt-2 text-2xl sm:text-3xl">Por qué Eynes</h2>
-      <div class="reasons-grid mt-8 grid gap-5 sm:grid-cols-3">
-        <div class="card bg-paper">
-          <p class="font-semibold text-ink">20+ años y +150 clientes</p>
-          <p class="mt-2 text-sm text-ink-soft">Fundada en 2006, Silver Partner Oficial de Odoo — no un revendedor de un mes.</p>
-        </div>
-        <div class="card bg-paper">
-          <p class="font-semibold text-ink">Soporte humano, no ticket genérico</p>
-          <p class="mt-2 text-sm text-ink-soft">Hablás con la misma gente que te implementó el sistema.</p>
-        </div>
-        <div class="card bg-paper">
-          <p class="font-semibold text-ink">Presencia real en 5 ciudades</p>
-          <p class="mt-2 text-sm text-ink-soft">Oficina en Buenos Aires y atención local con teléfono dedicado en Santa Fe, Mendoza, Montevideo y Valencia/Castellón.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <CTASection
     heading="Contanos tu proyecto"

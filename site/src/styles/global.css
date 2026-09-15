@@ -436,11 +436,6 @@ a.flagship-card:hover { background-color: var(--color-dark-soft); transform: non
 .module-icon svg { width: 22px; height: 22px; }
 .module-icon.is-purple { background: color-mix(in srgb, var(--color-purple) 12%, white); color: var(--color-purple); }
 .module-icon.is-teal { background: color-mix(in srgb, var(--color-teal) 12%, white); color: var(--color-teal); }
-.reasons-grid { gap: 36px; }
-.reasons-grid .card { background: transparent; border: 0; border-top: 1px solid var(--color-line); border-radius: 0; padding: 28px 0 0; box-shadow: none; }
-.reasons-grid .card:hover { transform: none; }
-.reasons-grid .card > p:first-child { font-size: 1.125rem; font-weight: 500; line-height: 1.4; }
-.reasons-grid .card > p + p { margin-top: 16px; line-height: 1.8; }
 .contact-cta { position: relative; overflow: hidden; }
 .contact-cta::before {
   content: '';

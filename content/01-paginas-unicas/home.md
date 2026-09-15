@@ -1,5 +1,5 @@
 ---
-title: "¿Facturás en un sistema y vendés en otro?"
+title: "El problema nunca fue Odoo. Fue el partner."
 seo_title: "Odoo en Argentina | Implementación y Soporte Local — Eynes"
 meta_description: "Centralizá ventas, stock y facturación ARCA en un solo sistema. Implementación de Odoo con soporte humano real: +150 clientes, +20 años, 6 países."
 slug: "home"
@@ -16,19 +16,28 @@ No reordenar sin revisar el razonamiento de cada sección abajo. -->
 ## 01 — Hero
 
 <!-- GUÍA: el hero de la competencia (Adhoc) vende "el sistema que integra
-todo". Nosotros diferenciamos por el problema + el soporte humano, que es
-la ventaja competitiva real de Eynes frente a jugadores más grandes. El
-badge de Silver Partner va arriba del H1: es la señal de confianza más
-rápida de leer para alguien que no distingue un partner serio de uno
-improvisado (badge centralizado en 00-config/site.md). -->
+todo". Nosotros diferenciamos por el partner, no por el software — es la
+ventaja competitiva real de Eynes frente a jugadores más grandes. El badge
+de Silver Partner ya NO va en el hero (se sacó de acá y del footer): queda
+solo en la navbar, para no repetir la misma señal de confianza tres veces
+en la misma pantalla. -->
 
-- **Badge:** (tomado de `00-config/site.md → badge_partner`)
-- **H1:** ¿Facturás en un sistema y vendés en otro?
-<!-- GUÍA copy: H1 reformulado como pregunta retórica que usa la frase
-textual del banco de "dolor" ya validado en 00-config/ctas-reutilizables.md
-→ "Dolor → alivio". Lenguaje del cliente, no de la empresa: es más
-específico que una afirmación abstracta tipo "centralizá tu información". -->
-- **Subtítulo:** Con Odoo, vendés, facturás con ARCA y controlás el stock desde un solo sistema — implementado por un equipo con 20+ años y soporte humano real, no un ticket genérico.
+- **H1:** El problema nunca fue Odoo. Fue el partner.
+<!-- GUÍA copy: reemplaza la pregunta retórica original ("¿Facturás en un
+sistema y vendés en otro?", muy puntual a un solo dolor operativo) por un
+mensaje que diferencia a Eynes de otros partners de Odoo, no a Odoo de
+otro software. Insight real, no inventado: varios casos del Excel fuente
+(CIDEFAMA, La Guitarrita, Diesel Frenos) describen textualmente
+"experiencia fallida con otro partner de Odoo" como motivo de cambio, y
+la FAQ de gastronomia.md ya responde exactamente esta objeción
+("Ya intentamos implementar Odoo y no funcionó..."). Ataca el
+Fundamental Attribution Error del prospecto (culpar a Odoo cuando el
+problema fue el partner) y usa loss aversion (miedo a repetir una
+implementación fallida) en vez de solo vender features. -->
+- **Subtítulo:** Implementamos con relevamiento real, no una plantilla genérica, y nos quedamos después de que arranca — soporte humano real, no un ticket genérico.
+<!-- GUÍA: sin cifras acá a propósito — la franja de prueba social justo
+debajo ("+150 empresas · +20 años · 6 países") ya las dice; repetirlas en
+el subtítulo quedaba redundante en vez de reforzar. -->
 - **CTA primario:** Agendar demo → `/demo`
 - **CTA secundario:** Ver módulos → `/modulos`
 <!-- GUÍA: imagen/animación pendiente — dashboard real de Odoo en uso,
@@ -116,14 +125,13 @@ sync-portfolio.py). Si en el futuro se consigue una cifra real
 
 ## 07 — Por qué Eynes
 
-<!-- GUÍA: sección explícita de objeciones ("¿por qué Eynes y no otro
-partner de Odoo?"). La competencia no la tiene tan clara — es una
-oportunidad de diferenciación real, siempre que los tres puntos sean
-verificables (no marketing vacío). -->
-
-- **20+ años y +150 clientes.** Fundada en 2006, Silver Partner Oficial de Odoo — no un revendedor de un mes.
-- **Soporte humano, no ticket genérico.** Hablás con la misma gente que te implementó el sistema.
-- **Presencia real en 5 ciudades.** Oficina en Buenos Aires y atención local con teléfono dedicado en Santa Fe, Mendoza, Montevideo y Valencia/Castellón.
+<!-- GUÍA (actualizada): sección sacada del Home a pedido — el H1 nuevo
+("El problema nunca fue Odoo. Fue el partner.") ya carga la objeción
+"¿por qué Eynes y no otro partner?" de entrada, y "Soporte humano, no
+ticket genérico" quedó reflejado en el subtítulo del hero. Los otros dos
+puntos (20+ años/+150 clientes, presencia en 5 ciudades) se pueden
+recuperar de acá si en algún momento hace falta una sección de objeciones
+más explícita. -->
 
 ## 08 — CTA final
 
