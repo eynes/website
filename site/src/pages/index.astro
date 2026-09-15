@@ -9,32 +9,16 @@ import CaseCard from '../components/casos/CaseCard.astro';
 import { getPublished } from '../lib/content';
 import { organizationSchema, websiteSchema } from '../lib/schema';
 import { withBase } from '../lib/url';
-import { groupColorClass, sortGroups } from '../lib/sectorGroups';
 
 const page = await getEntry('paginasUnicas', 'home');
 const site = await getEntry('siteConfig', 'site');
 
-const verticales = await getPublished('verticales');
 const casos = await getPublished('casosDeExito');
 
 const featuredCase =
   casos.find((c) => c.data.slug === 'supply-parts') ?? casos[0] ?? null;
 
-const dolorAlivio = [
-  { dolor: '"Facturo en un sistema y vendo en otro"', alivio: 'Ventas + Facturación ARCA integradas', href: '/modulos/ventas-y-crm' },
-  { dolor: '"No sé qué stock tengo en tiempo real"', alivio: 'Inventario centralizado', href: '/modulos/inventario' },
-  { dolor: '"Mis reportes tardan días"', alivio: 'Reporting en vivo', href: '/modulos/contabilidad-y-finanzas' },
-];
-
 const modulos = await getPublished('modulos');
-
-const sectorGroups = sortGroups(
-  [...new Set(verticales.map((v) => v.data.agrupador))].map((group) => ({
-    nombre: group,
-    colorClass: groupColorClass(group),
-    items: verticales.filter((v) => v.data.agrupador === group),
-  }))
-);
 
 const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] : [];
 ---
@@ -49,6 +33,7 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
     subtitle="Con Odoo, vendés, facturás con ARCA y controlás el stock desde un solo sistema — implementado por un equipo con 20+ años y soporte humano real, no un ticket genérico."
     primaryCta={{ label: 'Agendar demo', href: '/demo' }}
     secondaryCta={{ label: 'Ver módulos', href: '/modulos' }}
+    showPartnerBadge={false}
   />
 
   {
@@ -64,59 +49,6 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
       </section>
     )
   }
-
-  <section class="section sector-columns-section">
-    <div class="container-page reveal">
-      <div class="flex flex-wrap items-baseline justify-between gap-4">
-        <h2 class="mt-2 text-2xl sm:text-3xl">Trabajamos con empresas como la tuya</h2>
-        <a href={withBase('/sectores')} class="text-sm font-semibold text-teal">
-          Ver todos los rubros <span class="arrow">→</span>
-        </a>
-      </div>
-      <div class="sector-columns mt-8">
-        {sectorGroups.map((group) => (
-          <div class="sector-column">
-            <h3 class:list={['sector-column-title', group.colorClass]}>{group.nombre}</h3>
-            <ul>
-              {group.items.map((v) => (
-                <li>
-                  <a href={withBase(`/sectores/${v.data.slug}`)}>{v.data.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="section bg-paper-dim">
-    <div class="container-page reveal">
-      <h2 class="mt-2 text-2xl sm:text-3xl">De la planilla al sistema, en un solo lugar</h2>
-      <div class="comparison-table mt-8 overflow-x-auto rounded-md border border-line">
-        <table class="w-full min-w-[480px] border-collapse bg-paper text-sm">
-          <thead>
-            <tr>
-              <th class="border-b border-line px-5 py-3 text-left font-mono text-xs font-semibold uppercase tracking-wide text-ink-soft">Hoy</th>
-              <th class="border-b border-line px-5 py-3 text-left font-mono text-xs font-semibold uppercase tracking-wide text-ink-soft">Con Odoo y Eynes</th>
-              <th class="border-b border-line px-5 py-3" />
-            </tr>
-          </thead>
-          <tbody>
-            {dolorAlivio.map((row) => (
-              <tr>
-                <td class="border-b border-line px-5 py-4 text-ink-soft">{row.dolor}</td>
-                <td class="border-b border-line px-5 py-4 font-medium text-ink">{row.alivio}</td>
-                <td class="border-b border-line px-5 py-4 text-right">
-                  <a href={withBase(row.href)} class="font-medium text-teal hover:underline">Ver módulo <span class="arrow">→</span></a>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
 
   <section class="section flagship-section">
     <div class="container-page reveal">

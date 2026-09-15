@@ -410,11 +410,6 @@ a.nav-mobile-link { justify-content: flex-start; }
 .trust-strip { background: var(--color-paper); padding-block: 32px; }
 .trust-strip > div { text-align: center; }
 .trust-strip p { font-size: 0.9375rem; font-weight: 500; }
-.comparison-table { border: 0; border-radius: 12px; }
-.comparison-table :is(th, td) { padding: 24px; }
-.comparison-table th { color: var(--color-ink-soft); font-weight: 500; }
-.comparison-table td:nth-child(2) { background: #eef4f2; }
-.comparison-table tbody tr:last-child td { border-bottom: 0; }
 .flagship-section { padding-block: 48px; }
 .flagship-card { position: relative; overflow: hidden; padding: clamp(28px, 5vw, 64px); border: none; border-radius: 16px; box-shadow: 0 24px 48px -20px color-mix(in srgb, var(--color-dark) 60%, transparent); }
 .flagship-card::before {
@@ -496,7 +491,6 @@ details[open] { background: var(--color-paper-dim); }
   .site-logo { width: 126px; }
   .hero-title { font-size: clamp(2.5rem, 10.8vw, 3.8rem); }
   .hero-bottom { margin-top: 24px; }
-  .comparison-table :is(th, td) { padding: 18px; }
   .site-footer > .container-page { gap: 32px; }
 }
 

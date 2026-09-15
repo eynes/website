@@ -1,6 +1,5 @@
 ---
 import { getEntry } from 'astro:content';
-import PartnerBadge from '../shared/PartnerBadge.astro';
 import { withBase } from '../../lib/url';
 
 const nav = await getEntry('navConfig', 'navegacion');
@@ -15,9 +14,6 @@ const year = new Date().getFullYear();
         <img src={withBase('/brand/eynes-logo.png')} alt={site?.data.nombre_comercial ?? 'Eynes'} class="footer-logo" width="174" height="60" />
       </div>
       <p class="mt-2 text-sm">{site?.data.tagline_corto}</p>
-      <div class="mt-5 inline-flex rounded-md bg-paper p-3">
-        <PartnerBadge size="sm" />
-      </div>
     </div>
 
     {
