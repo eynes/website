@@ -85,7 +85,7 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
           </h2>
           <div class:list={['mt-6 grid gap-5', casosDestacados.length === 1 ? 'max-w-xl' : 'sm:grid-cols-2 lg:grid-cols-3']}>
             {casosDestacados.map((caso) => (
-              <CaseCard entry={caso} />
+              <CaseCard entry={caso} compact />
             ))}
           </div>
         </div>

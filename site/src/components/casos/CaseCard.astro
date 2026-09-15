@@ -4,8 +4,8 @@ import type { CollectionEntry } from 'astro:content';
 import clients from '../../../../content/04-casos-de-exito/clientes.json';
 import { withBase } from '../../lib/url';
 
-interface Props { entry: CollectionEntry<'casosDeExito'>; destacado?: boolean; }
-const { entry, destacado = false } = Astro.props;
+interface Props { entry: CollectionEntry<'casosDeExito'>; destacado?: boolean; compact?: boolean; }
+const { entry, destacado = false, compact = false } = Astro.props;
 const client = (clients as Record<string, { website: string; logo: string }>)[entry.data.slug];
 const images = import.meta.glob<{ default: ImageMetadata }>(
   '../../../../content/04-casos-de-exito/logos-clientes/*.{svg,png,webp,jpg,jpeg,avif}',
@@ -13,27 +13,47 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 const logo = client?.logo ? images[`../../../../content/04-casos-de-exito/logos-clientes/${client.logo}`]?.default : undefined;
 const domain = client?.website ? new URL(client.website).hostname.replace(/^www\./, '') : '';
+const href = withBase(`/casos/${entry.data.slug}`);
+const meta = [entry.data.rubro, entry.data.pais, entry.data.usuarios && `${entry.data.usuarios} usuarios`].filter(Boolean).join(' · ');
 ---
 
-<article class="card case-card">
-  <div class="case-card-heading">
-    <h2 class="case-name">
-      {destacado && (
-        <svg class="case-star" viewBox="0 0 20 20" aria-label="Caso destacado" role="img">
-          <path d="M10 1.5l2.35 5.06 5.4.6-4.02 3.78 1.1 5.36L10 13.6l-4.83 2.7 1.1-5.36-4.02-3.78 5.4-.6z" />
-        </svg>
-      )}
-      <a href={withBase(`/casos/${entry.data.slug}`)}>{entry.data.cliente}</a>
-    </h2>
-    {logo && <div class="case-card-logo"><img src={logo.src} alt={`Logo de ${entry.data.cliente}`} width={logo.width} height={logo.height} loading="lazy" /></div>}
-  </div>
-  <p class="case-meta">{[entry.data.rubro, entry.data.pais, entry.data.usuarios && `${entry.data.usuarios} usuarios`].filter(Boolean).join(' · ')}</p>
-  <p class="case-result">{entry.data.resultado_clave}</p>
-  <div class="case-links">
-    <a href={withBase(`/casos/${entry.data.slug}`)} class="case-link">Ver caso <span aria-hidden="true">→</span></a>
-    {client?.website && <a href={client.website} target="_blank" rel="noopener noreferrer" class="client-link" aria-label={`Sitio web de ${entry.data.cliente}: ${domain} (abre en otra pestaña)`}>{domain} <span aria-hidden="true">↗</span></a>}
-  </div>
-</article>
+{compact ? (
+  <a href={href} class="card case-card case-card--compact block">
+    <div class="case-card-heading">
+      <h2 class="case-name">
+        {destacado && (
+          <svg class="case-star" viewBox="0 0 20 20" aria-label="Caso destacado" role="img">
+            <path d="M10 1.5l2.35 5.06 5.4.6-4.02 3.78 1.1 5.36L10 13.6l-4.83 2.7 1.1-5.36-4.02-3.78 5.4-.6z" />
+          </svg>
+        )}
+        {entry.data.cliente}
+      </h2>
+      {logo && <div class="case-card-logo"><img src={logo.src} alt={`Logo de ${entry.data.cliente}`} width={logo.width} height={logo.height} loading="lazy" /></div>}
+    </div>
+    <p class="case-meta">{meta}</p>
+    <span class="case-link">Ver caso <span class="arrow" aria-hidden="true">→</span></span>
+  </a>
+) : (
+  <article class="card case-card">
+    <div class="case-card-heading">
+      <h2 class="case-name">
+        {destacado && (
+          <svg class="case-star" viewBox="0 0 20 20" aria-label="Caso destacado" role="img">
+            <path d="M10 1.5l2.35 5.06 5.4.6-4.02 3.78 1.1 5.36L10 13.6l-4.83 2.7 1.1-5.36-4.02-3.78 5.4-.6z" />
+          </svg>
+        )}
+        <a href={href}>{entry.data.cliente}</a>
+      </h2>
+      {logo && <div class="case-card-logo"><img src={logo.src} alt={`Logo de ${entry.data.cliente}`} width={logo.width} height={logo.height} loading="lazy" /></div>}
+    </div>
+    <p class="case-meta">{meta}</p>
+    <p class="case-result">{entry.data.resultado_clave}</p>
+    <div class="case-links">
+      <a href={href} class="case-link">Ver caso <span aria-hidden="true">→</span></a>
+      {client?.website && <a href={client.website} target="_blank" rel="noopener noreferrer" class="client-link" aria-label={`Sitio web de ${entry.data.cliente}: ${domain} (abre en otra pestaña)`}>{domain} <span aria-hidden="true">↗</span></a>}
+    </div>
+  </article>
+)}
 
 <style>
   .case-card { display: flex; flex-direction: column; gap: 0; }
@@ -46,4 +66,6 @@ const domain = client?.website ? new URL(client.website).hostname.replace(/^www\
   .case-link { color: var(--color-teal); font-weight: 500; }
   .client-link { color: var(--color-ink-soft); overflow-wrap: anywhere; }
   .case-links a:hover { text-decoration: underline; }
+  .case-card--compact .case-link { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--color-line); }
+  .case-card--compact:hover .case-link { color: var(--color-purple); }
 </style>
