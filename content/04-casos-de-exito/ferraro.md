@@ -10,7 +10,7 @@ rubro: "Calzado / Marroquinería"
 pais: ""
 usuarios: ""
 modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
-resultado_clave: "Sabemos qué rota y qué no, y podemos mover mercadería entre locales antes de que se convierta en liquidación."
+resultado_clave: "El análisis por modelo, talle y color muestra qué rota y qué no, a tiempo para mover mercadería entre locales antes de que termine en liquidación de fin de temporada."
 agrupador: "AGROINDUSTRIA Y MANUFACTURA"
 portfolio: true
 faqs: [{"pregunta": "¿Cómo maneja Odoo los talles y colores?", "respuesta": "Con variantes: un modelo con sus atributos genera cada combinación como ítem con stock, código y precio propios, manteniendo el análisis a nivel modelo cuando conviene y a nivel variante cuando hace falta decidir la reposición."}, {"pregunta": "¿Puedo ver el resultado de cada local por separado?", "respuesta": "Sí. Cada punto de venta se analiza por ventas, margen y rotación, y también permite comparar qué producto funciona en un local y no en otro, que es la base para redistribuir en lugar de liquidar."}, {"pregunta": "¿Sirve para vender mayorista y minorista a la vez?", "respuesta": "Sí, con listas de precios y condiciones distintas por canal sobre un mismo catálogo y un mismo stock, incluyendo pedidos mayoristas por curva de talles."}, {"pregunta": "¿Puedo detectar el stock que no rota antes del cierre de temporada?", "respuesta": "Sí, con reportes de antigüedad y rotación por variante, que permiten actuar durante la temporada, cuando el producto todavía se vende a precio de lista."}]
@@ -22,11 +22,11 @@ Stock inmovilizado en depósitos y gestión de locales no integrada con la admin
 
 ## 04 — La implementación
 
-FERRARO. Situación inicial: stock inmovilizado en depósitos y gestión de locales desconectada de la administración central. Qué se hizo: implementación de Odoo unificando POS de locales, inventario por variante y administración central, con reportes de rotación por talle y color.
+Ferraro tenía stock inmovilizado en depósitos y una gestión de locales desconectada de la administración central. La implementación de Odoo unificó el POS de los locales, el inventario por variante y la administración central, y sumó reportes de rotación por talle y color.
 
 ## 05 — Testimonio
 
-[EL DESAFÍO
+EL DESAFÍO
 Teníamos plata quieta en el depósito y no terminábamos de ver dónde. Los locales manejaban su información por su lado y a la administración central le llegaba tarde.
 
 LA SOLUCIÓN

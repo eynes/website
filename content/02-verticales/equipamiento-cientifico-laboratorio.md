@@ -21,15 +21,15 @@ faqs: [{"pregunta": "¿Puedo controlar vencimientos y cadena de frío de reactiv
 
 ### Venta por licitación desconectada del servicio técnico
 
-La venta de instrumental se gana por licitación y compromete, además del equipo, instalación, capacitación, garantía y mantenimiento. Cuando el área comercial y el servicio técnico de campo trabajan en sistemas distintos, el compromiso asumido en el pliego no llega al técnico, no hay control de si se cumplió, y el post-venta, que es donde está el negocio recurrente, queda librado a la memoria de cada uno.
+Ganar una licitación de instrumental significa comprometerse a algo más que el equipo: instalación, capacitación, garantía, mantenimiento. Si comercial y el servicio técnico de campo trabajan en sistemas separados, lo que se prometió en el pliego nunca le llega bien al técnico, nadie controla si se cumplió, y el post-venta —que es justo donde está el negocio que se repite— queda a merced de que alguien se acuerde.
 
 ### Consumibles con cadena de frío y vencimientos estrictos
 
-Los reactivos tienen vencimientos cortos, condiciones de conservación exigentes y trazabilidad obligatoria por lote. Sin control automatizado, se pierde producto por vencimiento en depósito, se despacha con vida útil insuficiente para el cliente, y no hay registro demostrable de la cadena de frío ante un cuestionamiento de resultados.
+Los reactivos vencen rápido, exigen condiciones de conservación estrictas y necesitan trazabilidad obligatoria por lote. Sin control automatizado pasan tres cosas: se pierde producto vencido en depósito, se despacha con menos vida útil de la que el cliente necesita, y si alguna vez cuestionan un resultado, no hay cómo demostrar que la cadena de frío se respetó.
 
 ### Nacionalizaciones multimoneda e historiales de calibración
 
-El instrumental se importa: el costo real incluye flete, seguro, derechos y gastos de despacho, y se define en una moneda distinta a la de venta. Sin costeo en destino, el margen es una suposición. En paralelo, cada equipo instalado requiere calibraciones periódicas con certificado, y ese historial, que el cliente necesita para sus propias auditorías, suele vivir en planillas del área técnica.
+Este instrumental se importa, así que el costo real —flete, seguro, derechos, gastos de despacho— se define en una moneda distinta a la de venta. Sin costeo en destino, el margen es una suposición más que un número. Y cada equipo instalado necesita calibraciones periódicas con certificado; ese historial, que el cliente después va a necesitar para sus propias auditorías, suele terminar perdido en alguna planilla del área técnica.
 
 ## 03 — Módulos relevantes
 

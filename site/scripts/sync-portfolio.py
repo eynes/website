@@ -1,4 +1,10 @@
-"""Generate site content from the authoritative workbook using Python's standard library."""
+"""DEPRECATED (16/09/2026): no longer wired into predev/prebuild (see package.json).
+content/02-verticales and content/04-casos-de-exito are now hand-edited directly and
+are the source of truth. Do NOT run this script — it would overwrite that manual work
+with a stale snapshot of the Excel. Kept only as historical reference.
+
+Original docstring: Generate site content from the authoritative workbook using
+Python's standard library."""
 import json
 import re
 import unicodedata

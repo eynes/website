@@ -10,7 +10,7 @@ rubro: "Elaboración y distribución de agua"
 pais: ""
 usuarios: ""
 modulos_implementados: ["ventas-y-crm", "inventario", "contabilidad-y-finanzas"]
-resultado_clave: "Dejamos de depender de desarrollos que nadie podía tocar. Hoy la información está en un solo lugar, además optamos por la infraestructura de odoo.sh y fue todo un éxito."
+resultado_clave: "La empresa dejó de depender de aplicaciones a medida que nadie podía mantener — toda la información quedó en un solo lugar, corriendo sobre la infraestructura de odoo.sh."
 agrupador: "ALIMENTOS Y GASTRONOMÍA"
 portfolio: true
 faqs: [{"pregunta": "Tenemos varios desarrollos a medida funcionando. ¿Se pueden reemplazar?", "respuesta": "En general sí: buena parte de lo que resuelven esas aplicaciones ya está cubierto de forma estándar, y lo que es específico del negocio se contempla en la implementación. El objetivo es reducir la cantidad de piezas que hay que mantener, no sumar una más."}, {"pregunta": "¿Cómo se controlan los envases retornables?", "respuesta": "Como stock en poder del cliente: cada entrega y cada devolución mueve ese saldo, de modo que en cualquier momento se sabe cuántos envases tiene cada cliente sin depender de la memoria del repartidor."}, {"pregunta": "¿Se puede facturar y cobrar en el reparto?", "respuesta": "Sí, con la hoja de ruta cargada en el sistema y el registro de entrega, devolución y cobranza en el momento, lo que elimina la rendición manual al final del día."}, {"pregunta": "¿Puedo ver el resultado de cada unidad de negocio por separado y consolidado?", "respuesta": "Sí, con contabilidad analítica y estructura multi-compañía según cómo estén constituidas, obteniendo tanto el detalle por canal como la visión del grupo."}, {"pregunta": "Emitimos muchísimos comprobantes por mes. ¿Aguanta el volumen?", "respuesta": "Sí, con emisión masiva contra los servicios de ARCA. El punto a dimensionar en la implementación no es la emisión sino el circuito de cobranza e imputación asociado."}]
@@ -22,7 +22,7 @@ Gestión de la información descentralizada, aplicaciones satélite sin mantenim
 
 ## 04 — La implementación
 
-EL JUMILLANO S.A. (IVESS). Situación inicial: información descentralizada, aplicaciones satélite sin mantenimiento y unidades de negocio integradas de forma ineficiente. Qué se hizo: implementación de Odoo como sistema único, absorbiendo las funciones que cubrían las aplicaciones satélite e integrando las unidades de negocio sobre una misma base.
+El Jumillano (IVESS) tenía la información repartida entre el sistema central y un puñado de aplicaciones satélite que ya nadie mantenía, con las unidades de negocio integrándose entre sí de manera ineficiente. La implementación de Odoo pasó a funcionar como sistema único: absorbió lo que resolvían esas aplicaciones satélite y puso a todas las unidades de negocio sobre la misma base.
 
 ## 05 — Testimonio
 
@@ -51,9 +51,9 @@ Portal de clientes y pedidos. Autogestión del cliente para pedir, consultar su 
 
 ## 09 — Problemas específicos del rubro
 
-### Aplicaciones satélite sin mantenimiento, todas conectadas de forma distinta al sistema central, software de contabilidad aislado del resto de sistemas.
+### Aplicaciones satélite sin mantenimiento, cada una conectada a su manera
 
-El patrón típico: un sistema central que cubre parte del circuito y, alrededor, aplicaciones desarrolladas a medida en distintos momentos para tapar huecos. Con los años esas aplicaciones quedan sin mantenimiento y sin quien las conozca, pero la operación sigue dependiendo de ellas. Cada una guarda su propia versión del dato, y la información de la empresa deja de tener una única fuente confiable.
+El patrón típico: un sistema central que cubre parte del circuito y, alrededor, aplicaciones desarrolladas a medida en distintos momentos para tapar huecos — incluida la contabilidad, aislada del resto. Con los años esas aplicaciones quedan sin mantenimiento y sin quien las conozca, pero la operación sigue dependiendo de ellas. Cada una guarda su propia versión del dato, y la empresa deja de tener una única fuente confiable de información.
 
 ### Reparto, cobranza en la calle y envases retornables
 

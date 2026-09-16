@@ -79,13 +79,15 @@ Cada plantilla trae además sus propios campos específicos (ej. `rubro`, `usuar
 - El nombre del archivo (sin `.md`) es el `slug` por convención — si no coinciden, gana el campo `slug` del frontmatter.
 - Los archivos que empiezan con `_` (como `_hub.md` o `_PLANTILLA.md`) son estructurales/de referencia, no páginas de contenido — un build correcto los debe ignorar como página individual.
 
-## Portfolio actualizado: fuente de verdad
+## Portfolio: fuente de verdad (actualizado 16/09/2026 — Excel desconectado)
 
-`eynes_portfolio_rubros_consolidado.xlsx` es la fuente de verdad para las empresas y los rubros. Desde `site/`, `npm run sync:portfolio` regenera las fichas de `02-verticales` y `04-casos-de-exito`; también se ejecuta al iniciar desarrollo y antes de cada build. Requiere Python 3, sin paquetes adicionales.
+Las fichas de `02-verticales` y `04-casos-de-exito` ya **no** se generan desde `eynes_portfolio_rubros_consolidado.xlsx`. Desde ahora la fuente de verdad son directamente los `.md` de esas carpetas — se editan a mano, ahí, sin intermediarios.
 
-Las fichas con `portfolio: true` son generadas: sus correcciones deben hacerse en el Excel. Cada empresa conserva su problemática, caso propio, caso complementario, testimonio, módulos, integraciones y preguntas frecuentes. Los rubros reúnen sus empresas sin descartar variantes del contenido. Las páginas anteriores que no corresponden al nuevo portfolio quedan como borradores.
+`site/scripts/sync-portfolio.py` (el script que antes las regeneraba) sigue en el repo como referencia histórica, pero ya no corre en `predev` ni en `prebuild` (ver `site/package.json`) — correrlo ahora pisaría el trabajo hecho a mano en los `.md`, así que no se debe ejecutar.
 
-`portfolio-fuente.json` conserva los valores originales de las 19 columnas. `portfolio-revision.json` reúne las instrucciones `[REVISAR]`, que se excluyen de las páginas públicas hasta que se completen en el Excel. No se deducen métricas, países ni cantidades de usuarios ausentes de la fuente. Estos JSON son archivos editoriales y no se copian a la web pública.
+El campo `portfolio: true` en el frontmatter de una ficha ya no implica "generado, no tocar": ahora significa simplemente que esa ficha viene del portfolio original relevado en el Excel. Todas las fichas, tengan o no ese campo, se editan igual: a mano, en su `.md`.
+
+`eynes_portfolio_rubros_consolidado.xlsx`, `portfolio-fuente.json` y `portfolio-revision.json` quedan en el repo como archivo/registro histórico del relevamiento original, no como fuente activa.
 
 ## Documentación específica de localización argentina
 

@@ -19,17 +19,17 @@ faqs: [{"pregunta": "Tenemos varios desarrollos a medida funcionando. ¿Se puede
 
 ## 02 — Problemas específicos del rubro
 
-### Aplicaciones satélite sin mantenimiento, todas conectadas de forma distinta al sistema central, software de contabilidad aislado del resto de sistemas.
+### Aplicaciones satélite sin mantenimiento, cada una conectada a su manera al sistema central
 
-El patrón típico: un sistema central que cubre parte del circuito y, alrededor, aplicaciones desarrolladas a medida en distintos momentos para tapar huecos. Con los años esas aplicaciones quedan sin mantenimiento y sin quien las conozca, pero la operación sigue dependiendo de ellas. Cada una guarda su propia versión del dato, y la información de la empresa deja de tener una única fuente confiable.
+Es un patrón que se repite: un sistema central cubre parte del circuito, y alrededor van apareciendo aplicaciones hechas a medida en distintos momentos para tapar los huecos. Con los años, esas aplicaciones quedan sin nadie que las mantenga ni las entienda del todo, pero la operación sigue dependiendo de ellas igual. Cada una termina guardando su propia versión del dato, hasta que la empresa deja de tener una fuente de información en la que confiar.
 
 ### Reparto, cobranza en la calle y envases retornables
 
-La distribución domiciliaria tiene una lógica propia: repartidores con hoja de ruta, clientes con consumo recurrente, cobranza en la calle y, lo más difícil de controlar, envases retornables que salen y vuelven. Sin sistema, el saldo de envases por cliente es una estimación, la cobranza se rinde con demora y la conciliación entre lo cargado en el camión, lo entregado y lo cobrado se hace a mano todos los días.
+La distribución domiciliaria tiene su propia lógica: repartidores con hoja de ruta, clientes con consumo recurrente, cobranza en la calle y, lo más difícil de controlar de todo, envases retornables que salen y después vuelven (o no). Sin sistema, el saldo de envases por cliente es una estimación, la cobranza se rinde tarde y la conciliación entre lo que salió en el camión, lo que se entregó y lo que se cobró se arma a mano, todos los días.
 
 ### Unidades de negocio que no se integran entre sí
 
-Producción, distribución propia, franquicias o concesionarios y venta a comercios funcionan con reglas distintas y suelen resolverse por separado. El costo es que nadie ve el negocio completo: no se sabe qué canal deja margen real ni cómo se comporta el consumo consolidado, y cada integración entre unidades se resuelve con carga manual.
+Producción, distribución propia, franquicias o concesionarios y venta a comercios: cada una con sus reglas, cada una resuelta por separado. El costo de eso es que nadie termina viendo el negocio completo — no se sabe qué canal deja margen de verdad, ni cómo se comporta el consumo del conjunto, y cada vez que dos unidades necesitan cruzar datos, alguien lo hace a mano.
 
 ## 03 — Módulos relevantes
 

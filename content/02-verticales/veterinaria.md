@@ -37,8 +37,8 @@ Ventas · Inventario con lotes y caducidad · Compras · Gestión de laboratorio
 
 ## 03a — Integraciones
 
-Trazabilidad SENASA/ANMAT (Medicamentos veterinarios). Trazabilidad SENASA y ANMAT para medicamentos veterinarios, con carga obligatoria de lote y vencimiento y salida por método FEFO.
+Trazabilidad SENASA y ANMAT para medicamentos veterinarios, con carga obligatoria de lote y vencimiento y salida por método FEFO.
 
-WhatsApp / SMS (Recordatorios automáticos). WhatsApp y SMS para recordatorios automáticos de vacunación, desparasitación, laboratorios y turnos programados.
+WhatsApp y SMS para recordatorios automáticos de vacunación, desparasitación, laboratorios y turnos programados.
 
-ARCA. Facturación electrónica.
+ARCA para la facturación electrónica.

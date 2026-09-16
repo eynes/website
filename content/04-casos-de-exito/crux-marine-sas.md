@@ -10,7 +10,7 @@ rubro: "Sector Naval / Marítimo"
 pais: ""
 usuarios: ""
 modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
-resultado_clave: "Tenemos toda la operación en un solo lugar y, por primera vez, sabemos cuánto nos reporta cada trabajo. Nos ordenó para poder crecer."
+resultado_clave: "Toda la operación quedó centralizada en un solo lugar y, por primera vez, la empresa puede ver cuánto le deja cada trabajo — el orden que necesitaba para crecer."
 agrupador: "ENERGÍA Y SECTORES PESADOS"
 portfolio: true
 faqs: [{"pregunta": "No tenemos ningún sistema hoy. ¿Es más difícil implementar desde cero?", "respuesta": "Suele ser lo contrario. Sin un sistema previo no hay que desarmar configuraciones heredadas ni migrar años de datos con inconsistencias: se diseña el circuito como corresponde desde el inicio. El trabajo se concentra en relevar bien cómo opera la empresa y en la carga de información maestra."}, {"pregunta": "¿Puedo conocer la rentabilidad de cada servicio o cada proyecto?", "respuesta": "Sí. Con el proyecto como unidad analítica, los repuestos consumidos, las horas técnicas y los servicios de terceros se imputan al trabajo correspondiente, y se contrastan contra lo facturado. Permite responder qué tipo de servicio y qué cliente dejan margen real."}, {"pregunta": "Facturamos en dólares y compramos en el exterior. ¿Odoo lo maneja?", "respuesta": "Sí, opera en multimoneda con actualización de cotizaciones y valuación de saldos. La diferencia de cambio queda registrada como tal y separada del resultado operativo, que es la única forma de saber si un servicio fue rentable o si el número lo explica el tipo de cambio."}, {"pregunta": "¿Cómo controlo repuestos críticos e importados con plazos largos?", "respuesta": "Con stock mínimo y punto de pedido por artículo, historial de consumo y trazabilidad por número de serie. El costeo de importación incorpora fletes, seguros e impuestos al valor del repuesto, para que el costo del servicio refleje el costo real y no solo el precio de factura."}, {"pregunta": "¿Cuánto tarda una implementación en una empresa sin sistema previo?", "respuesta": "Aproximadamente entre 3 y 4 meses."}]
@@ -22,7 +22,7 @@ Ausencia de sistema de gestión
 
 ## 04 — La implementación
 
-CRUX MARINE SAS. Situación inicial: ausencia de sistema de gestión. Toda la información de la empresa (clientes, servicios, compras, stock, facturación y costos) vivía en planillas y en el conocimiento de las personas. No había forma de conocer la rentabilidad real de cada trabajo ni de crecer sin que la carga administrativa creciera al mismo ritmo. Qué se hizo: implementación de Odoo desde cero, diseñando el circuito completo e incorporando desde el inicio el costeo por proyecto. Resultado: toda la operación en un solo lugar y, por primera vez, visibilidad de cuánto reporta cada trabajo.
+Crux Marine no tenía sistema de gestión. Clientes, servicios, compras, stock, facturación y costos vivían repartidos entre planillas y la cabeza de las personas, sin forma de saber la rentabilidad real de cada trabajo ni de crecer sin que la carga administrativa creciera al mismo ritmo. La implementación arrancó de cero, lo que permitió diseñar el circuito completo sin arrastrar nada heredado, y el costeo por proyecto quedó incorporado desde el primer día. El resultado: toda la operación en un solo lugar y, por primera vez, visibilidad real de cuánto reporta cada trabajo.
 
 ## 05 — Testimonio
 

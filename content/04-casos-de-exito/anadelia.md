@@ -10,7 +10,7 @@ rubro: "Higiene Industrial y Sanidad"
 pais: ""
 usuarios: ""
 modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
-resultado_clave: "Dejamos de pelearnos con el sistema todos los meses. Los cambios impositivos ahora se aplican y se prueban antes de que nos impacten, no después."
+resultado_clave: "Las actualizaciones impositivas se prueban antes de aplicarse, no después de romper una factura — la empresa dejó de corregir comprobantes a mano cada mes."
 agrupador: "SALUD, CIENCIA Y CUIDADO ANIMAL"
 portfolio: true
 faqs: [{"pregunta": "¿Odoo se mantiene actualizado con los cambios impositivos de Argentina?", "respuesta": "Sí, la localización argentina se actualiza con los cambios normativos, y en una implementación acompañada esas actualizaciones se aplican y prueban antes de que impacten en la operación. La diferencia frente a un sistema cerrado o discontinuado es que no depende de que un único proveedor decida desarrollarlo."}, {"pregunta": "¿Puedo trazar un lote de producto terminado hasta la materia prima que lo originó?", "respuesta": "Sí. Inventario y Fabricación registran qué lote de cada insumo se consumió en cada orden de producción, y a qué clientes se despachó cada lote de producto terminado. Ante un desvío de calidad, permite identificar en minutos todos los lotes afectados por una misma partida de materia prima."}, {"pregunta": "¿Cómo manejo las distintas presentaciones del mismo producto?", "respuesta": "Se resuelve con variantes y unidades de medida: un mismo producto con presentaciones de distinto tamaño, cada una con su código, su precio por canal y su stock propio, pero con la misma fórmula y trazabilidad detrás."}, {"pregunta": "¿Puedo asociar fichas técnicas y hojas de seguridad a cada producto?", "respuesta": "Sí, la documentación queda vinculada al producto y accesible desde el sistema, tanto para el equipo comercial como para adjuntarla al despacho. Elimina la carpeta de red paralela."}, {"pregunta": "Vengo de un sistema viejo. ¿Se puede migrar la información histórica?", "respuesta": "Si, es posible, pueden migrarse datos históricos si el cliente lo solicita en la propuesta comercial."}]
@@ -22,7 +22,7 @@ Sistema de gestión obsoleto, demoras en el serivicio de soporte y actualizacion
 
 ## 04 — La implementación
 
-ANADELIA. Situación inicial: sistema de gestión obsoleto, con demoras en el servicio de soporte y actualizaciones fiscales erróneas. Las actualizaciones impositivas llegaban tarde o mal aplicadas, lo que obligaba a corregir facturas a mano, y la plataforma ya no acompañaba el crecimiento de la empresa. Qué se hizo: migración a Odoo con localización argentina resuelta desde el arranque, priorizando dejar la facturación y el circuito impositivo funcionando correctamente y mantenidos en el tiempo, e integrando comercial, stock y administración en un solo lugar. Resultado: los cambios impositivos se aplican y se prueban antes de impactar en la operación.
+Anadelia venía de un sistema de gestión que ya no acompañaba el crecimiento de la empresa, con demoras en el soporte y actualizaciones fiscales que llegaban tarde o mal aplicadas — lo que se traducía en facturas corregidas a mano, mes tras mes. La migración a Odoo puso la localización argentina como punto de partida, no como un ajuste posterior: la prioridad fue dejar la facturación y el circuito impositivo funcionando y sostenidos en el tiempo, integrando comercial, stock y administración en un solo lugar. Hoy los cambios impositivos se prueban antes de tocar la operación real.
 
 ## 05 — Testimonio
 
@@ -41,11 +41,11 @@ Inventario · Fabricación (MRP) · Contabilidad · Ventas · Compras · Documen
 
 ## 07 — Integraciones del rubro
 
-ARCA / ARBA / AGIP. Facturación electrónica y regímenes provinciales: padrones de IIBB, Convenio Multilateral, percepciones y retenciones por jurisdicción. En este rubro el punto crítico no es la conexión sino el mantenimiento, que las alícuotas se actualicen apenas cambian.
+**ARCA / ARBA / AGIP.** Facturación electrónica y regímenes provinciales: padrones de IIBB, Convenio Multilateral, percepciones y retenciones por jurisdicción. En este rubro el punto crítico no es la conexión sino el mantenimiento — que las alícuotas se actualicen apenas cambian.
 
-Bancos. Bancos: conciliación bancaria automática, cheques y e-cheq, y gestión de cuenta corriente de distribuidores y clientes institucionales con plazos largos.
+**Bancos.** Conciliación bancaria automática, cheques y e-cheq, y gestión de cuenta corriente de distribuidores y clientes institucionales con plazos largos.
 
-Canales de venta y catálogos. Canales de venta y catálogos: tienda propia o portal B2B para que distribuidores y veterinarias pidan online, con el catálogo de fichas técnicas asociado a cada producto.
+**Canales de venta y catálogos.** Tienda propia o portal B2B para que distribuidores y veterinarias pidan online, con el catálogo de fichas técnicas asociado a cada producto.
 
 ## 09 — Problemas específicos del rubro
 

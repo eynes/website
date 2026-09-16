@@ -10,7 +10,7 @@ rubro: "Frigorífico, alimentos y chacinados"
 pais: ""
 usuarios: ""
 modulos_implementados: ["ventas-y-crm", "inventario", "contabilidad-y-finanzas"]
-resultado_clave: "El cambio fue rotundo. Hoy trazamos la historia del producto desde que ingresa la media res hasta que el salame llega al supermercado. Sabemos exactamente cuánto rinde cada partida, cumplimos con SENASA sin estrés y, sobre todo, tenemos un equipo de soporte técnico que nos acompaña en el día a día."
+resultado_clave: "Hoy Las Dinas traza cada producto desde que entra la media res hasta que el salame sale al supermercado, conoce el rinde exacto de cada partida y encara las auditorías de SENASA sin el estrés de antes — con un soporte técnico que responde en el día a día, no en semanas."
 agrupador: "ALIMENTOS Y GASTRONOMÍA"
 portfolio: true
 faqs: [{"pregunta": "¿El sistema gestiona la trazabilidad requerida por SENASA?", "respuesta": "Sí, el módulo de inventario exige y rastrea números de lote, fechas de elaboración y vencimiento en toda la cadena: desde la recepción de la materia prima hasta la expedición del producto terminado, facilitando las auditorías."}, {"pregunta": "¿Puedo medir mermas y rinde en procesos de curado o desposte?", "respuesta": "Totalmente. A través de las órdenes de producción, podés registrar el peso inicial de la carne y el peso final tras el secado o desposte. El sistema calcula automáticamente la merma y ajusta los costos del producto terminado con precisión."}, {"pregunta": "¿Qué pasa si mi empresa crece y necesito más usuarios o asistencia?", "respuesta": "Nuestro modelo se basa en acompañar tu crecimiento. A diferencia de proveedores con tiempos de respuesta excesivos, contamos con un SLA estricto y soporte técnico dedicado, para que nunca te quedes con la producción o facturación frenada."}]
@@ -22,7 +22,7 @@ Soporte con tiempos de respuesta excesivos, falta de sistema productivo
 
 ## 04 — La implementación
 
-LAS DINAS. Situación inicial: soporte con tiempos de respuesta excesivos y falta de sistema productivo. La trazabilidad era manual e ineficiente, lo que representaba un riesgo crítico ante auditorías de SENASA en fechas de elaboración y vencimiento; era imposible calcular las mermas reales de la carne durante el desposte, el secado y el curado de los chacinados; y la empresa dependía de un proveedor de software que tardaba semanas en responder ante caídas del sistema o dudas operativas, frenando despachos. Qué se hizo: cambio a un sistema con módulo de Fabricación real, digitalización de las listas de materiales de cada embutido y puntos de control de calidad y trazabilidad por lotes en cada etapa del proceso. Resultado: se traza la historia del producto desde el ingreso de la media res hasta la llegada del producto al supermercado, se conoce el rinde exacto de cada partida, el cumplimiento con SENASA dejó de ser un problema y la empresa cuenta con soporte técnico que acompaña la operación diaria.
+Las Dinas hace chacinados, pero operaba con un sistema que no entendía nada de producción: la trazabilidad era manual, un riesgo serio frente a una auditoría de SENASA sobre fechas de elaboración y vencimiento, y era imposible calcular cuánto rendía realmente la carne durante el desposte, el secado y el curado. A eso se sumaba un proveedor de software que tardaba semanas en responder cuando el sistema se caía, frenando despachos en el peor momento. El cambio trajo un módulo de Fabricación real, con las listas de materiales de cada embutido digitalizadas y puntos de control de calidad y trazabilidad por lote en cada etapa. El resultado: la historia de cada producto queda trazada desde que entra la media res hasta que sale al supermercado, el rinde de cada partida se conoce con precisión, SENASA dejó de ser motivo de estrés y ahora hay un equipo de soporte que acompaña la operación día a día.
 
 ## 05 — Testimonio
 
@@ -41,13 +41,13 @@ Fabricación (MRP) · Calidad · Inventario con trazabilidad por lotes · Ventas
 
 ## 07 — Integraciones del rubro
 
-SENASA (Remitos cárnicos). SENASA para remitos cárnicos.
+SENASA. Emisión de remitos cárnicos conectada directo con el organismo.
 
-Balanzas industriales de producción. Balanzas industriales de producción, para capturar el peso real en planta y resolver el problema de la doble unidad de medida.
+Balanzas industriales de producción. Captura del peso real en planta, resolviendo el problema de la doble unidad de medida entre kilos de faena y unidades de venta.
 
-ARCA (Facturación electrónica). Facturación electrónica.
+ARCA (ex AFIP). Facturación electrónica desde el mismo sistema que gestiona la producción.
 
-Plataformas B2B. Plataformas B2B para el canal mayorista y distribuidor.
+Plataformas B2B. Conexión con el canal mayorista y distribuidor sin carga duplicada de pedidos.
 
 ## 08 — Otros casos del rubro
 

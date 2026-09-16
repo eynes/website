@@ -10,7 +10,7 @@ rubro: "Soluciones Electromecánicas"
 pais: ""
 usuarios: ""
 modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
-resultado_clave: "Sabemos en qué estado está cada equipo y qué lo está frenando. Los faltantes sorpresa dejaron de ser la norma."
+resultado_clave: "Cada equipo en el taller tiene su estado y su motivo de demora a la vista — los faltantes de repuestos dejaron de tomarlos por sorpresa."
 agrupador: "SERVICIOS E INSUMOS INDUSTRIALES"
 portfolio: true
 faqs: [{"pregunta": "¿Puedo ver el estado de todos los equipos que hay en el taller?", "respuesta": "Sí, con cada orden en su etapa y el motivo de detención visible, lo que permite atacar la espera (repuesto o aprobación) en lugar de asumir que el problema es capacidad."}, {"pregunta": "¿Cómo evito quedarme sin un repuesto crítico?", "respuesta": "Definiendo stock mínimo y punto de pedido por artículo sobre el historial real de consumo, para que la reposición se dispare sola antes de que el faltante frene un trabajo."}, {"pregunta": "¿El presupuesto se puede armar desde la orden de trabajo?", "respuesta": "Sí: los repuestos y las horas estimadas se cargan en la orden y el presupuesto se genera desde ahí con costos actualizados, se envía al cliente y queda registrada su aprobación."}, {"pregunta": "¿Se puede saber el margen real de cada reparación?", "respuesta": "Sí, imputando repuestos consumidos y horas de taller a la orden y comparándolos contra lo facturado."}]
@@ -22,7 +22,7 @@ faqs: [{"pregunta": "¿Puedo ver el estado de todos los equipos que hay en el ta
 
 ## 04 — La implementación
 
-IMOBERDOFF. Situación inicial: órdenes de trabajo demoradas en taller, faltantes sorpresa de repuestos clave y presupuestación lenta hacia el cliente. Qué se hizo: implementación de Odoo con órdenes de trabajo, control de repuestos por punto de pedido y presupuestación generada desde la propia orden.
+En Imoberdoff las órdenes de trabajo se estancaban en el taller sin que nadie supiera bien por qué, aparecían faltantes de repuestos clave justo cuando hacían falta, y armar un presupuesto para el cliente llevaba más tiempo del que debería. La implementación incorporó órdenes de trabajo con control de repuestos por punto de pedido, y dejó que el presupuesto salga directo de la propia orden, con costos actualizados.
 
 ## 05 — Testimonio
 
@@ -51,7 +51,7 @@ Bancos y cuenta corriente. Conciliación y seguimiento de saldos de clientes ind
 
 ## 08 — Otros casos del rubro
 
-TECNITOWER S.A. Situación inicial: producción desintegrada del stock y gestión administrativa deficiente. Qué se hizo: implementación de Odoo conectando fabricación con inventario y administración, con costeo por orden de producción.
+TECNITOWER S.A. La producción iba por un lado y el stock por otro, con una administración que corría siempre detrás de la operación. Se conectó fabricación con inventario y administración, con costeo por orden de producción.
 
 ## 09 — Problemas específicos del rubro
 

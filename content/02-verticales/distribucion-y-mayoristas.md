@@ -57,9 +57,9 @@ integraciones_destacadas:
 
 ## 02 — Problemas específicos del rubro
 
-- Vender sin saber el stock real disponible en depósito, y descubrir el faltante recién al momento de entregar.
-- Cargar la misma venta dos veces — una en el sistema de facturación y otra en una planilla de seguimiento de pedidos.
-- No tener visibilidad de márgenes por cliente o por lista de precios hasta cerrar el mes.
+- Vender sin saber cuánto stock hay realmente en depósito, y enterarse del faltante recién al momento de entregar.
+- Cargar la misma venta dos veces: una en el sistema de facturación, otra en la planilla donde se sigue el pedido.
+- No saber el margen por cliente o por lista de precios hasta que cierra el mes.
 
 ## 02b — Comparador directo
 

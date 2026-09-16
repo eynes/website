@@ -21,27 +21,27 @@ faqs: [{"pregunta": "¿El sistema gestiona la trazabilidad requerida por SENASA?
 
 ### Trazabilidad manual frente a las auditorías sanitarias
 
-Reconstruir a mano qué materia prima entró en cada lote y a qué clientes se despachó convierte cualquier pedido de trazabilidad en un trabajo de días, con incertidumbre sobre si el listado está completo. Ante una auditoría de SENASA, ese es el punto de mayor exposición del negocio.
+Reconstruir a mano qué materia prima entró en cada lote y a qué clientes se les despachó convierte cualquier pedido de trazabilidad en un trabajo de varios días, sin siquiera la certeza de que el listado quedó completo. Frente a una auditoría de SENASA, ese es el punto donde el negocio queda más expuesto.
 
 ### Mermas y rinde de producción imposibles de calcular
 
-El desposte, el secado y el curado generan merma real, y de un mismo insumo salen productos de valor muy distinto. Sin registrar consumo real contra teórico por orden de producción, el costo por producto es una estimación de escritorio y se fija precio sin conocer el margen verdadero de cada línea.
+Desposte, secado, curado: todos generan merma real, y de un mismo insumo salen productos que valen muy distinto entre sí. Si no se registra el consumo real contra el teórico por cada orden de producción, el costo por producto termina siendo una cuenta de escritorio, y el precio se fija sin saber cuál es el margen verdadero de cada línea.
 
 ### Soporte técnico con tiempos de respuesta excesivos
 
-Un soporte que tarda semanas en responder no es un problema de servicio: es un problema operativo. Cada bloqueo del sistema frena despachos, y la empresa queda sin margen de acción hasta que el proveedor decide atender.
+Un soporte que tarda semanas en responder deja de ser un tema de atención al cliente y pasa a ser un problema operativo directo: cada vez que el sistema se traba, se frenan los despachos, y la empresa queda esperando a que al proveedor le quede tiempo para atender.
 
 ### Compra de materia prima desconectada de la gestión de costos
 
-El precio de la hacienda en pie define el costo de todo lo que viene después, pero si el área de compras no está conectada con el costeo, ese dato entra al sistema tarde o transformado. El resultado es que se produce y se vende sobre un costo que no es el real, y el margen por línea de producto se conoce recién en el cierre.
+El precio de la hacienda en pie marca el costo de todo lo que viene después. Si compras no está conectado con el costeo, ese dato llega tarde al sistema, o llega distinto a como se pagó. El resultado: se produce y se vende sobre un costo que no es el real, y el margen por línea recién se conoce al cerrar el mes.
 
 ### Integración de múltiples webservices fiscales
 
-La operación de un frigorífico exige convivir con varios webservices a la vez: liquidación primaria, facturación electrónica y facturación de exportación. Cuando esa integración no está resuelta de forma nativa, cada uno se atiende con un desarrollo o un proceso aparte, y una caída de cualquiera de ellos frena despachos.
+Un frigorífico tiene que convivir a la vez con varios webservices: liquidación primaria, facturación electrónica, facturación de exportación. Si esa integración no viene resuelta de fábrica, cada uno termina atendido con un desarrollo aparte, y cuando cualquiera de ellos se cae, los despachos se frenan.
 
 ### Circuitos de compra con varios niveles de autorización
 
-La compra pasa por niveles de autorización que combinan rol, centro de costos y monto. Sin un circuito de aprobación configurado en el sistema, esas validaciones se resuelven por mail o verbalmente: no queda registro de quién autorizó qué, y la compra o se frena o avanza sin el visto bueno que correspondía.
+Cada compra pasa por niveles de autorización que combinan rol, centro de costos y monto. Sin un circuito armado en el sistema, esas aprobaciones se resuelven por mail o de palabra: no queda registro de quién autorizó qué, y la compra termina frenada o avanzando sin el visto bueno que le correspondía.
 
 ## 03 — Módulos relevantes
 

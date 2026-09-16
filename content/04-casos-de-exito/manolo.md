@@ -10,7 +10,7 @@ rubro: "Gastronomía"
 pais: ""
 usuarios: ""
 modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
-resultado_clave: "Logramos orden de punta a punta. Hoy la cocina central lanza órdenes de producción precisas, el stock de insumos se descuenta automáticamente con cada lote terminado de masa o rellenos, las sucursales se reabastecen desde el almacén central, y pagamos a los proveedores emitiendo el certificado de retención sin intervención manual."
+resultado_clave: "La cocina central de Manolo ahora lanza órdenes de producción precisas y descuenta insumos automáticamente lote por lote, las sucursales se reabastecen desde el almacén central, y los pagos a proveedores emiten su certificado de retención sin que nadie lo toque a mano."
 agrupador: "ALIMENTOS Y GASTRONOMÍA"
 portfolio: true
 faqs: [{"pregunta": "¿El sistema permite gestionar una cocina central y abastecer a varias sucursales?", "respuesta": "Sí, el módulo de fabricación te permite planificar la producción en tu cocina central basada en la demanda o los pedidos internos de tus sucursales, gestionando los envíos mediante documentos de transferencia internos."}, {"pregunta": "¿Calcula automáticamente las retenciones de ARCA e IIBB al pagar a proveedores de mercadería?", "respuesta": "El sistema se integra con los padrones de las diferentes entidades de control (ARCA, ARBA, AGIP, etc.). Al momento de emitir una orden de pago, calcula y contabiliza automáticamente las retenciones de Ganancias, IVA o Ingresos Brutos correspondientes al proveedor."}, {"pregunta": "¿Cómo controlo las mermas y el consumo de materia prima a granel (harina, aceite)?", "respuesta": "Mediante las recetas. Cuando la cocina finaliza una orden de producción (ej. 100 kg de masa), el sistema descuenta instantáneamente las cantidades teóricas de materia prima del almacén. Luego, podrás registrar las mermas reales para mantener el inventario siempre exacto."}, {"pregunta": "¿El sistema cuenta con herramientas para la atención en el salón y el envío de comandas a la cocina?", "respuesta": "Sí, el módulo de Restaurante (Punto de Venta) incluye un plano de mesas interactivo y totalmente personalizable. Los empleados pueden tomar el pedido directamente desde una tablet o dispositivo móvil junto a la mesa del cliente y enviarlo al instante a las impresoras o pantallas de la cocina (Kitchen Display System). Esto agiliza la atención, permite dividir cuentas fácilmente y evita errores en la preparación de los platos."}, {"pregunta": "¿Puedo configurar promociones automáticas como \"Happy Hour\" o programas de fidelidad para mis clientes?", "respuesta": "Absolutamente. El sistema te permite configurar programas de promociones muy avanzados. Podrás establecer listas de precios condicionales o reglas de \"Happy Hour\" (ej. 2x1 en pintas) que se activen solas en días y horarios específicos dentro del Punto de Venta. Además, podrás crear programas de puntos, tarjetas de regalo y cupones de descuento para fidelizar a tus clientes recurrentes sin depender de cálculos manuales en la caja."}]
@@ -22,7 +22,7 @@ Ausencia de sistema de producción y control de stock, fallas en el cálculo de 
 
 ## 04 — La implementación
 
-MANOLO. Situación inicial: ausencia de sistema de producción y control de stock, y fallas en el cálculo de retenciones automáticas a proveedores. La cocina central producía a ciegas, sin MRP, lo que generaba a la vez faltantes en los locales y exceso de desperdicio; el inventario de materias primas pesadas (harina, aceite, carnes) tenía inconsistencias graves porque la producción no descargaba los insumos utilizados; y los pagos a proveedores estaban expuestos a errores impositivos costosos porque el sistema no calculaba las retenciones de IIBB y Ganancias. Qué se hizo: implementación de Fabricación e Inventario completamente integrados con Contabilidad, automatización del cálculo de retenciones y estandarización de recetas y órdenes de producción. Resultado: la cocina central lanza órdenes de producción precisas, el stock de insumos se descuenta automáticamente con cada lote terminado, las sucursales se reabastecen desde el almacén central y los pagos a proveedores emiten el certificado de retención sin intervención manual.
+La cocina central de Manolo producía a ciegas, sin ningún sistema de planificación, y eso generaba faltantes en los locales y desperdicio al mismo tiempo. El inventario de materias primas pesadas —harina, aceite, carnes— arrastraba inconsistencias graves porque la producción nunca descargaba lo que realmente consumía, y los pagos a proveedores quedaban expuestos a errores impositivos costosos porque el sistema no calculaba las retenciones de IIBB y Ganancias. El trabajo integró Fabricación e Inventario con Contabilidad, automatizó el cálculo de retenciones y estandarizó recetas y órdenes de producción.
 
 ## 05 — Testimonio
 
@@ -43,11 +43,9 @@ Fabricación (Producción) · Compras · Contabilidad · Inventario. El diseño 
 
 ARCA. Facturación electrónica y cálculo automático de retenciones de Ganancias, IVA e Ingresos Brutos contra los padrones de los organismos de control.
 
-PedidosYa. PedidosYa: ingreso directo de pedidos al circuito de venta.
+PedidosYa y Rappi. Los pedidos de delivery entran directo al mismo circuito de venta, sin carga manual paralela.
 
-Rappi. Rappi: ingreso directo de pedidos al circuito de venta.
-
-Balanzas industriales de producción.. Balanzas industriales de producción, para el registro de pesos reales en la cocina central.
+Balanzas industriales de producción. Registro del peso real en la cocina central, para que el consumo de materia prima se descuente sobre lo que efectivamente se usó.
 
 ## 08 — Otros casos del rubro
 

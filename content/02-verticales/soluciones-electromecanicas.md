@@ -37,10 +37,10 @@ Reparación/Órdenes de trabajo (estado de cada equipo en taller, diagnóstico, 
 
 ## 03a — Integraciones
 
-Facturación electrónica. ARCA (ex AFIP), con la factura generada desde la orden de trabajo para que todo lo consumido llegue al comprobante.
+Facturación electrónica ARCA (ex AFIP), generada directo desde la orden de trabajo para que todo lo consumido llegue al comprobante.
 
-Compras e importación de repuestos. Circuito de aprovisionamiento con costeo en destino, para presupuestar sobre el costo real de reposición y no sobre el precio histórico.
+Compras e importación de repuestos, con costeo en destino, para presupuestar sobre el costo real de reposición y no sobre el precio histórico.
 
-Portal de clientes. Consulta del estado del equipo y aprobación de presupuestos en línea, que es lo que destraba las órdenes detenidas esperando un sí.
+Portal de clientes: consulta del estado del equipo y aprobación de presupuestos en línea — lo que destraba las órdenes que están frenadas esperando un sí.
 
-Bancos y cuenta corriente. Conciliación y seguimiento de saldos de clientes industriales.
+Bancos y cuenta corriente, con conciliación y seguimiento de saldos de clientes industriales.

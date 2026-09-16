@@ -10,7 +10,7 @@ rubro: "Electrónica y Automatización"
 pais: ""
 usuarios: ""
 modulos_implementados: ["ventas-y-crm", "inventario", "compras"]
-resultado_clave: "Sabemos en el momento dónde está cada equipo y si está en garantía o no. Los repuestos que se consumen ahora llegan a la factura."
+resultado_clave: "NP Electrónica sabe en el momento dónde está cada equipo y si sigue en garantía, y los repuestos que consume una reparación ahora terminan siempre en la factura."
 agrupador: "TECNOLOGÍA E INNOVACIÓN"
 portfolio: true
 faqs: [{"pregunta": "¿Puedo saber si un equipo está en garantía sin buscar el remito?", "respuesta": "Sí. El número de serie queda asociado al cliente, a la fecha de venta y a las condiciones de garantía, así que al ingresar el equipo el sistema indica su situación y todo su historial de intervenciones."}, {"pregunta": "¿Cómo controlo miles de componentes de bajo valor?", "respuesta": "Con stock mínimo y punto de pedido por artículo, historial de consumo y alertas de baja rotación, que es lo que permite detectar obsolescencia antes de que el componente ya no sirva para nada."}, {"pregunta": "¿El presupuesto de reparación puede salir del sistema?", "respuesta": "Sí: se arma sobre la orden de reparación con los repuestos y la mano de obra estimados, se envía para aprobación del cliente y, una vez aprobado, los consumos reales se registran contra esa misma orden."}, {"pregunta": "¿Se puede ver el estado de una reparación sin llamar?", "respuesta": "Sí, mediante el portal de clientes, donde el cliente consulta el estado, aprueba presupuestos y accede al historial de sus equipos."}, {"pregunta": "Compramos componentes importados. ¿Se refleja el costo real?", "respuesta": "Sí, el costeo en destino incorpora flete, seguro e impuestos al valor del componente, de modo que el margen de la reparación se calcule sobre el costo real y no sobre el precio de factura del proveedor."}]
@@ -22,7 +22,7 @@ Trazabilidad de garantías ineficiente, control de micro-componentes obsoletos y
 
 ## 04 — La implementación
 
-NP ELECTRÓNICA INDUSTRIAL. Situación inicial: trazabilidad de garantías ineficiente, dificultad para controlar micro-componentes y obsolescencia, y seguimiento de reparaciones en papel. Qué se hizo: implementación de Odoo con el módulo de Reparación y trazabilidad por número de serie, conectando el taller con el stock de componentes y con la facturación.
+En NP Electrónica Industrial las reparaciones se seguían en una hoja pegada al equipo, la garantía dependía de que alguien se acordara y los miles de micro-componentes del stock no tenían control real de obsolescencia. La implementación sumó el módulo de Reparación con trazabilidad por número de serie, conectando el taller con el stock de componentes y con la facturación.
 
 ## 05 — Testimonio
 
@@ -51,7 +51,7 @@ Bancos y cobranzas. Conciliación bancaria y gestión de cuenta corriente de cli
 
 ## 08 — Otros casos del rubro
 
-IMOBERDOFF. Situación inicial: órdenes de trabajo demoradas en taller, faltantes sorpresa de repuestos clave y presupuestación lenta hacia el cliente. Qué se hizo: implementación de Odoo con órdenes de trabajo, control de repuestos por punto de pedido y presupuestación generada desde la propia orden.
+IMOBERDOFF. Un taller electromecánico con el mismo dolor de fondo: órdenes de trabajo estancadas, faltantes de repuestos clave y presupuestos que tardaban demasiado en salir. Se resolvió igual, con órdenes de trabajo, punto de pedido por repuesto y presupuestación armada desde la propia orden.
 
 ## 09 — Problemas específicos del rubro
 

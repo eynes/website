@@ -10,7 +10,7 @@ rubro: "Repuestos y Autopartes"
 pais: ""
 usuarios: ""
 modulos_implementados: ["ventas-y-crm", "inventario", "compras"]
-resultado_clave: "El cambio fue rotundo: pasamos de tomar decisiones por instinto a basarnos 100% en datos. Podemos apelar a nuestra experiencia, pero hoy el sistema nos sugiere qué comprar, cuándo y en qué cantidad. Optimizamos nuestro nivel de inventario, redujimos las compras de urgencia y el capital de la empresa por fin está invertido en los repuestos que realmente nos dan ganancia."
+resultado_clave: "Las compras dejaron de decidirse a ojo: el sistema sugiere qué reponer, cuándo y en qué cantidad según el historial real de ventas. Bajaron las compras de urgencia y el capital quedó invertido en los repuestos que efectivamente dejan margen."
 agrupador: "AUTOMOTRIZ Y VEHÍCULOS"
 portfolio: true
 faqs: [{"pregunta": "¿El sistema me ayuda a calcular qué repuestos necesito comprar (Punto de pedido)?", "respuesta": "Sí. Podés configurar reglas de reabastecimiento y stock mínimo/máximo por artículo. El sistema analiza tu ritmo de ventas (actual e histórico) y te genera borradores de órdenes de compra automáticos para que nunca te quedes sin stock de las piezas que más rotan."}, {"pregunta": "¿Puedo analizar la rotación y rentabilidad de mi inventario?", "respuesta": "Absolutamente. La plataforma cuenta con tableros de control (dashboards) que te permiten visualizar qué líneas de repuestos tienen mayor margen, cuáles llevan meses sin moverse y cómo es el desempeño de ventas por marca o proveedor."}, {"pregunta": "¿Cómo gestiono los múltiples códigos equivalentes de un mismo repuesto?", "respuesta": "A través de nuestra gestión avanzada de artículos, podrás vincular un producto principal con múltiples códigos de barras, códigos de fabricante o cruces equivalentes. Si un cliente busca una pieza, el sistema te sugerirá automáticamente los reemplazos compatibles que tenés en stock."}]
@@ -22,7 +22,7 @@ Gestión de la información descentralizada, problemas continuos de stock, decis
 
 ## 04 — La implementación
 
-MACRO ARGENTINA. Situación inicial: información descentralizada, problemas continuos de stock y decisiones basadas en la experiencia de los usuarios. Las compras se hacían a ojo, apoyadas en la intuición de los empleados más antiguos, lo que generaba sobrestock de repuestos de baja rotación y, al mismo tiempo, quiebres recurrentes en piezas clave, con ventas perdidas y urgencias logísticas costosas. A eso se sumaban diferencias contables difíciles de abordar por la descentralización de la información. Qué se hizo: profesionalización de compras y logística con reglas de reabastecimiento automático basadas en el historial real de ventas, integración de tableros para analizar la rotación por producto y SKU, y control de los depósitos de sucursales sobre WMS. Resultado: se pasó de decidir por instinto a decidir sobre datos, con el sistema sugiriendo qué comprar, cuándo y en qué cantidad; se optimizó el nivel de inventario, se redujeron las compras de urgencia y el capital quedó invertido en los repuestos que efectivamente dan ganancia.
+En Macro Argentina las compras se hacían a ojo, apoyadas en la intuición de los empleados más antiguos: eso generaba sobrestock de repuestos de baja rotación y, al mismo tiempo, quiebres recurrentes en las piezas clave, con ventas perdidas y urgencias logísticas caras. La información repartida entre sucursales y depósitos tampoco ayudaba — las diferencias contables no tenían dónde investigarse. El trabajo profesionalizó compras y logística con reglas de reabastecimiento automático sobre el historial real de ventas, sumó tableros para analizar la rotación por producto y SKU, y puso los depósitos de sucursales bajo un WMS.
 
 ## 05 — Testimonio
 
@@ -41,13 +41,13 @@ Inventario · Compras con reglas de reabastecimiento · Ventas · Tableros de Co
 
 ## 07 — Integraciones del rubro
 
-WMS (Gestión avanzada de Almacenes). Gestión avanzada de almacenes (WMS) para el control de los depósitos de las sucursales.
+WMS. Gestión avanzada de almacenes para controlar los depósitos de cada sucursal desde un mismo lugar.
 
-Herramientas de Business Intelligence (BI). Herramientas de Business Intelligence para el análisis de rotación y rentabilidad del inventario.
+Business Intelligence. Tableros para analizar rotación y rentabilidad del inventario por línea, marca y proveedor.
 
-Catálogo de cruce de códigos. Catálogo de cruce de códigos: vinculación de un producto principal con múltiples códigos de barras, de fabricante y equivalencias, para sugerir reemplazos compatibles en stock.
+Catálogo de cruce de códigos. Un producto principal vinculado a sus múltiples códigos de barras, de fabricante y equivalencias, para sugerir reemplazos compatibles cuando el que se busca no está en stock.
 
-ARCA. Facturación electrónica.
+ARCA. Facturación electrónica desde el mismo sistema que gestiona compras e inventario.
 
 ## 08 — Otros casos del rubro
 

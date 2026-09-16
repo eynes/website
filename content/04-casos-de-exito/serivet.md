@@ -10,7 +10,7 @@ rubro: "Veterinaria"
 pais: ""
 usuarios: ""
 modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
-resultado_clave: "Ahora tenemos todo el historial en un solo lugar. Cuando atendemos a un paciente, veo sus vacunas previas, laboratorios, las prestaciones realizadas y los insumos usados, y eso impacta directo en caja. Además, el sistema nos avisa qué medicamentos están por vencer para darles prioridad, eliminando las pérdidas por caducidad."
+resultado_clave: "Serivet concentró todo el historial del paciente en un solo lugar — vacunas previas, laboratorios, prestaciones e insumos usados impactan directo en caja — y el sistema avisa qué medicamentos están por vencer antes de que se conviertan en pérdida."
 agrupador: "SALUD, CIENCIA Y CUIDADO ANIMAL"
 portfolio: true
 faqs: [{"pregunta": "¿El sistema permite unificar la historia clínica del animal con la facturación?", "respuesta": "Sí. Podés crear fichas detalladas por animal asociadas a la cuenta de su dueño. Al registrar una consulta clínica, podés imputar directamente los servicios y medicamentos utilizados, generando la factura sin doble carga manual."}, {"pregunta": "¿Puedo controlar el vencimiento de vacunas y medicamentos veterinarios?", "respuesta": "Totalmente. El módulo de inventario exige la carga de número de lote y fecha de vencimiento al ingresar mercadería (cumpliendo normas de SENASA/ANMAT). El sistema utiliza el método FEFO (Primero en vencer, primero en salir) y te alerta sobre productos próximos a caducar."}, {"pregunta": "¿Se pueden automatizar los recordatorios para los clientes?", "respuesta": "Sí. Al tener la base de datos centralizada, podés configurar envíos automáticos de correos o mensajes (vía integración con WhatsApp) para recordarle a los tutores sobre fechas de vacunación, laboratorios, desparasitación o turnos programados, aumentando la recurrencia."}]
@@ -22,7 +22,7 @@ Ausencia de sistema de gestión, solo utilizaban un sistema para facturación
 
 ## 04 — La implementación
 
-SERIVET. Situación inicial: ausencia de sistema de gestión; se usaba un sistema básico solo para emitir comprobantes fiscales, mientras la gestión real vivía en planillas y cuadernos. Los trabajos a campo se registraban de forma incompleta y se subfacturaban, no había control sobre insumos médicos, vacunas y alimentos, lo que generaba pérdidas por vencimiento, y no existía una base de datos que permitiera enviar recordatorios de desparasitación o vacunación, con la consiguiente pérdida de oportunidades de fidelización. Qué se hizo: implementación de Odoo unificando la ficha del animal con la cuenta de su dueño y pasando a controlar todo el stock de farmacia y alimentos por número de lote y fecha de vencimiento. Resultado: todo el historial en un solo lugar, con vacunas previas, laboratorios, prestaciones realizadas e insumos usados visibles al atender e impactando directo en caja; y alertas de productos próximos a vencer que eliminaron las pérdidas por caducidad.
+Serivet usaba un sistema básico solo para emitir comprobantes fiscales, mientras la gestión real vivía en planillas y cuadernos. Los trabajos a campo se registraban a medias y terminaban subfacturados, no había control real sobre insumos médicos, vacunas y alimentos —con las pérdidas por vencimiento que eso trae—, y sin una base de datos centralizada no había forma de recordarle a un cliente que era hora de la próxima vacuna. La implementación unificó la ficha del animal con la cuenta de su dueño y puso todo el stock de farmacia y alimentos bajo control de lote y fecha de vencimiento.
 
 ## 05 — Testimonio
 
@@ -41,9 +41,9 @@ Ventas · Inventario con lotes y caducidad · Compras · Gestión de laboratorio
 
 ## 07 — Integraciones del rubro
 
-Trazabilidad SENASA/ANMAT (Medicamentos veterinarios). Trazabilidad SENASA y ANMAT para medicamentos veterinarios, con carga obligatoria de lote y vencimiento y salida por método FEFO.
+Trazabilidad SENASA/ANMAT. Carga obligatoria de lote y vencimiento en medicamentos veterinarios, con salida por método FEFO.
 
-WhatsApp / SMS (Recordatorios automáticos). WhatsApp y SMS para recordatorios automáticos de vacunación, desparasitación, laboratorios y turnos programados.
+WhatsApp / SMS. Recordatorios automáticos de vacunación, desparasitación, laboratorios y turnos programados, sin depender de que alguien se acuerde de mandarlos.
 
 ARCA. Facturación electrónica.
 

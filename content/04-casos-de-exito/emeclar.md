@@ -22,7 +22,7 @@ Nula centralización de la información, trabajaban sobre un sistema administrat
 
 ## 04 — La implementación
 
-EMECLAR S.A. Situación inicial: nula centralización de la información. La empresa operaba sobre un sistema administrativo contable que resolvía la facturación y la registración, mientras toda la operación —seguimiento de importaciones, stock en la red de agentes y operadores logísticos, asistencia técnica y documentación del sistema de gestión de calidad— se llevaba en planillas de cálculo. Eso dejaba el costo real de cada nacionalización sin calcular, el stock distribuido sin control por lote y vencimiento, y un sistema de calidad certificado bajo ISO 9001 sostenido con registros manuales.
+Emeclar no tenía la información centralizada en ningún lado. La empresa operaba sobre un sistema administrativo-contable que resolvía la facturación y la registración, pero toda la operación real —seguimiento de importaciones, stock repartido en la red de agentes y operadores logísticos, asistencia técnica, documentación del sistema de gestión de calidad— se llevaba en planillas de cálculo. Eso dejaba el costo real de cada nacionalización sin calcular, el stock distribuido sin control por lote ni vencimiento, y un sistema de calidad certificado bajo ISO 9001 sostenido a pulso con registros manuales.
 
 ## 05 — Testimonio
 
@@ -35,7 +35,7 @@ Y hay algo que quizás desde afuera no se ve: nosotros estamos certificados bajo
 
 ## 06 — Módulos relevantes para el rubro
 
-Compras + Costeo en destino (desarrollo propiot · Inventario con lotes, números de serie, vencimientos y ubicaciones de terceros para el stock en consignación · Ventas y CRM para la red de agentes comerciales · Servicio de Campo para la asistencia técnica e instalación · Calidad para sostener los procedimientos del sistema de gestión certificado · Contabilidad + Localización Argentina con multimoneda y comercio exterior · Contabilidad Analítica para rentabilidad por línea representada · Documentos para registros ANMAT, certificados y documentación técnica.
+Compras con costeo en destino (desarrollo propio) · Inventario con lotes, números de serie, vencimientos y ubicaciones de terceros para el stock en consignación · Ventas y CRM para la red de agentes comerciales · Servicio de Campo para la asistencia técnica e instalación · Calidad para sostener los procedimientos del sistema de gestión certificado · Contabilidad + Localización Argentina con multimoneda y comercio exterior · Contabilidad Analítica para rentabilidad por línea representada · Documentos para registros ANMAT, certificados y documentación técnica.
 
 ## 07 — Integraciones del rubro
 
@@ -49,7 +49,7 @@ Operadores logísticos y agentes comerciales: portal o conexión que permita que
 
 ## 08 — Otros casos del rubro
 
-JENCK S.A. Situación inicial: desconexión entre la venta por licitaciones y el servicio técnico de campo; falta de trazabilidad automatizada en consumibles y reactivos con cadena de frío y vencimientos estrictos; y dificultad para costear nacionalizaciones de instrumental multimoneda y gestionar historiales de calibración de clientes. Qué se hizo: implementación de Odoo integrando el ciclo comercial con el servicio de campo, trazabilidad por lote y vencimiento en consumibles, costeo en destino de importaciones y planes de calibración por equipo instalado.
+JENCK S.A. (ver su ficha en este mismo portfolio). Mismo agrupador de salud y ciencia, con foco en integrar la venta por licitaciones con el servicio técnico de campo, trazabilidad de consumibles con cadena de frío y costeo de instrumental importado multimoneda.
 
 ## 09 — Problemas específicos del rubro
 

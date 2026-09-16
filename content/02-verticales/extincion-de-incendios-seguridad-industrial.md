@@ -21,26 +21,26 @@ faqs: [{"pregunta": "Hacemos instalaciones y obras de redes contra incendio en p
 
 ### Etapas de fabricación desconectadas y costo real perdido
 
-Cuando la fundición y el ensamblaje no conviven en el mismo sistema, el costo del producto terminado se arma por tramos y nunca cierra del todo. Sin listas de materiales multinivel, no hay forma de saber cuánta materia prima consumió realmente cada lote ni cuál fue su costo real.
+Si la fundición y el ensamblaje no viven en el mismo sistema, el costo del producto terminado se arma en pedazos y nunca termina de cerrar. Sin listas de materiales multinivel no hay manera de saber cuánta materia prima consumió cada lote en realidad, ni cuál fue su costo de verdad.
 
 ### Controles de calidad en papel frente a normas certificables
 
-Un control de calidad que vive en planillas de cálculo sirve para operar, pero no para certificar. Ante una inspección de cumplimiento de normas IRAM, la evidencia hay que reconstruirla, y la reconstrucción siempre deja huecos.
+Un control de calidad en planilla de cálculo alcanza para operar el día a día, pero no para certificar. Cuando llega una inspección de normas IRAM, hay que reconstruir la evidencia desde cero, y esa reconstrucción casi siempre deja algún hueco.
 
 ### Padrones impositivos sin actualización automática
 
-Los padrones de percepciones y retenciones cambian todos los meses. Si la actualización es manual, el equipo contable convive con dos riesgos permanentes: declarar con coeficientes viejos o no llegar a declarar en plazo.
+Los padrones de percepciones y retenciones cambian todos los meses. Si esa actualización es manual, el equipo contable vive entre dos riesgos: declarar con coeficientes que ya vencieron, o llegar tarde a la declaración.
 
 ## 03 — Módulos relevantes
 
-Fabricación Multinivel · Control de Calidad · Compras · Ventas · Contabilidad · Inventario · Proyectos. Las listas de materiales multinivel son el eje: unen fundición, cortes y mecanizado con el ensamblaje final, permitiendo seguir el costo y la trazabilidad de cada componente hasta el producto terminado. Proyectos cubre las obras de instalación de redes contra incendio, y Servicio de Campo el mantenimiento y la recarga en planta del cliente.
+Fabricación multinivel · Control de calidad · Compras · Ventas · Contabilidad · Inventario · Proyectos. El eje son las listas de materiales multinivel: conectan fundición, cortes y mecanizado con el ensamblaje final, y con eso se puede seguir el costo y la trazabilidad de cada pieza hasta el producto terminado. Proyectos cubre las obras de instalación de redes contra incendio, y Servicio de Campo el mantenimiento y la recarga en planta del cliente.
 
 ## 03a — Integraciones
 
-ARCA / ARBA / AGIP. Facturación electrónica y regímenes provinciales, con actualización automática de padrones de percepciones y retenciones.
+ARCA / ARBA / AGIP. Facturación electrónica y regímenes provinciales, con los padrones de percepciones y retenciones actualizándose solos.
 
-Portal de proveedores. Portal de proveedores.
+Portal de proveedores para gestionar pedidos y entregas sin ida y vuelta de mails.
 
-Sistemas SCADA. Sistemas SCADA de planta.
+Sistemas SCADA de planta, integrados al circuito de producción.
 
-Máquinas de mecanizado. Máquinas de mecanizado.
+Máquinas de mecanizado conectadas al sistema para capturar tiempos y consumos reales.

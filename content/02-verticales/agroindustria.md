@@ -21,48 +21,48 @@ faqs: [{"pregunta": "Tenemos varias unidades de negocio muy distintas. ¿Odoo la
 
 ### Unidades de negocio sin información consolidada
 
-Un grupo agroindustrial que opera genética, abastecimiento, B2B, canal digital y marcas de consumo masivo tiende a acumular un sistema o una planilla por unidad. Cada una funciona razonablemente hacia adentro y ninguna se consolida hacia arriba. La dirección termina tomando decisiones sobre reportes armados a mano, con criterios distintos por unidad y desfasados en el tiempo.
+Genética, abastecimiento, venta B2B, canal digital y marcas de consumo masivo: un grupo agroindustrial que maneja todo eso suele terminar con un sistema o una planilla distinta por unidad. Puertas adentro cada una funciona bien. El problema aparece arriba, cuando dirección tiene que decidir con reportes armados a mano, con criterios que no coinciden entre unidades y que ya llegan desactualizados.
 
 ### Trazabilidad cortada entre el campo y la góndola
 
-El origen del producto es un requisito comercial, no solo regulatorio: los clientes internacionales y las cadenas exigen poder reconstruir el recorrido completo desde el lote de campo hasta el envase en góndola. Cuando ese recorrido atraviesa acopio, industrialización, fraccionamiento y marca propia en sistemas separados, la cadena se corta en algún eslabón y la trazabilidad deja de ser demostrable.
+Hoy poder reconstruir el camino de un producto desde el lote de campo hasta el envase en góndola ya no es solo un tema regulatorio — los clientes internacionales y las grandes cadenas lo piden como condición comercial. El problema es que ese camino pasa por acopio, industrialización, fraccionamiento y marca propia, y si cada etapa vive en un sistema distinto, en algún punto la cadena se corta y la trazabilidad deja de poder demostrarse.
 
 ### Documentación de traslado del campo al acopio
 
-Mover granos desde el campo hasta los silos exige emitir carta de porte por cada viaje, con validación ante el organismo fiscal. Cuando esa emisión ocurre fuera del sistema de gestión —en un portal aparte, o peor, delegada en el transportista— pasan dos cosas. La primera es operativa: el documento se emite a destiempo o con datos que no coinciden con lo que después se recibe en el silo, y las diferencias entre lo despachado y lo recibido no se pueden atribuir. La segunda es de trazabilidad: el viaje es justamente el eslabón que conecta el lote de campo con el lote de acopio, así que si no queda registrado dentro del sistema, la cadena se corta ahí aunque las dos puntas estén bien registradas.
+Cada viaje de granos del campo al silo necesita su carta de porte, validada ante el organismo fiscal. Si esa emisión se hace afuera del sistema de gestión —en un portal aparte, o directamente a cargo del transportista— aparecen dos problemas. Uno operativo: el documento sale a destiempo o con datos que no coinciden con lo que después se recibe en el silo, sin forma de explicar la diferencia. Y uno de trazabilidad: el viaje es justo el eslabón que une el lote de campo con el lote de acopio, así que si no queda registrado en el sistema, la cadena se corta ahí aunque el resto esté impecable.
 
 ### Pesaje de camiones transcripto a mano desde el ticket de báscula
 
-El ticket de báscula impreso y transcripto a mano es el punto donde una operación de acopio pierde precisión de forma irreversible: un error de tipeo en kilos no se puede detectar después, porque el camión ya se fue y el único respaldo es el papel.
+Un ticket de báscula impreso y después tipeado a mano es donde una operación de acopio pierde precisión sin poder recuperarla: si alguien se equivoca al cargar los kilos, no hay forma de detectarlo después porque el camión ya se fue y lo único que queda es el papel.
 
 ### Liquidación a productores demorada por validaciones administrativas
 
-La liquidación al socio productor depende de que el peso esté validado. Cada demora administrativa en esa validación se traduce en un pago que llega tarde, y en una cooperativa eso no es un problema de proceso: es un problema de relación con el dueño del negocio.
+Pagarle al productor depende de que el peso recibido esté validado. Cada demora en esa validación es un pago que llega tarde, y en una cooperativa eso pesa distinto que en cualquier otro negocio: no es un problema de proceso, es un problema de confianza con el dueño de la mercadería.
 
 ### Control de calidad en recepción desconectado del inventario
 
-El parámetro de calidad medido en recepción (humedad, zaranda, pureza) es el que debería determinar la categoría del inventario y el descuento al productor. Si el laboratorio y el almacén no están conectados, la mercadería entra sin clasificar y el descuento se calcula aparte, sin respaldo trazable.
+Humedad, zaranda, pureza: esos parámetros medidos en recepción son los que deberían fijar la categoría del inventario y el descuento al productor. Cuando el laboratorio y el almacén no se hablan, la mercadería entra sin clasificar y el descuento se calcula por otro lado, sin nada que lo respalde.
 
 ## 03 — Módulos relevantes
 
-Módulo de gestión de cultivos desarrollado a medida por Eynes, que cubre el ciclo agrícola completo: genética de las semillas, servicios a campo, cosecha y emisión de cartas de porte contra el webservice de ARCA para el traslado del cultivo desde el campo hasta los silos de almacenamiento. Es la pieza que conecta el campo con el resto de la cadena.
+Un módulo de gestión de cultivos que Eynes desarrolló a medida cubre todo el tramo agrícola: genética de las semillas, servicios a campo, cosecha y emisión de cartas de porte contra el webservice de ARCA para mover el cultivo del campo a los silos. Es la pieza que faltaba para conectar el campo con el resto de la cadena.
 
-Inventario · Fabricación · Compras con liquidación a productores. El diseño se apoya en la conexión directa del hardware de planta con el sistema: las básculas y los sensores de calidad alimentan el documento de recepción, que a su vez determina la categoría del inventario y el importe a liquidar al socio productor.
+Inventario · Fabricación · Compras con liquidación a productores. Acá el diseño se apoya en conectar el hardware de planta directo al sistema: las básculas y los sensores de calidad alimentan el documento de recepción, y ese documento define tanto la categoría del inventario como el importe a liquidarle al productor.
 
 ## 03a — Integraciones
 
-Facturación electrónica y comercio exterior. ARCA (ex AFIP) para el mercado interno y circuito de facturación de exportación, con la documentación asociada a cada embarque.
+Facturación electrónica y comercio exterior. ARCA (ex AFIP) para el mercado interno, más el circuito de exportación con la documentación de cada embarque.
 
 Multimoneda y cobertura. Cotizaciones, valuación de saldos y contratos en moneda extranjera, con la diferencia de cambio separada del resultado operativo de cada unidad.
 
-Logística internacional. Coordinación de embarques, documentación por destino y seguimiento de contenedores, conectada con la disponibilidad real de producto en planta.
+Logística internacional. Coordinación de embarques y seguimiento de contenedores conectados con la disponibilidad real de producto en planta.
 
-Canales de consumo masivo. Portales o EDI de cadenas de supermercados y distribuidores, más el canal digital propio, alimentados por un mismo stock y un mismo catálogo.
+Canales de consumo masivo. Portales o EDI de supermercados y distribuidores, más el canal digital propio, todos contra el mismo stock y el mismo catálogo.
 
-Básculas electrónicas de camiones (Puerto Serie/TCP). Básculas electrónicas de camiones conectadas por puerto serie o TCP: el peso neto ingresa al sistema sin intervención humana.
+Básculas electrónicas de camiones (puerto serie/TCP). El peso neto entra al sistema directo desde la báscula, sin que nadie lo tipee.
 
-ARCA (Liquidación Primaria). Facturación electrónica y liquidación primaria.
+ARCA (liquidación primaria). Facturación electrónica y liquidación primaria en el mismo circuito.
 
-Periféricos de laboratorio (Humedímetros). Periféricos de laboratorio (humedímetros) que registran los parámetros de calidad en la recepción y determinan la clasificación del inventario y los descuentos aplicables.
+Periféricos de laboratorio (humedímetros). Los parámetros de calidad medidos en recepción entran directo al sistema y definen la clasificación del inventario y el descuento al productor.
 
-Portal de autogestión para socios/productores. Portal de autogestión para socios y productores.
+Portal de autogestión para socios y productores.

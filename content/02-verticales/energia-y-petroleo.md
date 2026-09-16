@@ -21,15 +21,15 @@ faqs: [{"pregunta": "¿El sistema permite auditar la trazabilidad completa desde
 
 ### Información fragmentada en operaciones asociadas con terceros
 
-Cuando la información del sistema no se considera confiable, el efecto no es que se use menos: es que se arma una capa paralela de planillas para validarla. En un negocio de extracción con inversiones compartidas, esa capa paralela es donde se pierden los costos que había que imputar al consorcio.
+Cuando nadie confía del todo en lo que dice el sistema, la reacción típica no es dejar de usarlo — es armar una planilla paralela para chequearlo. En un negocio de extracción con inversión compartida entre varias empresas, esa planilla paralela es exactamente donde se escapan los costos que había que cargarle al consorcio.
 
 ### Facturación a centros de costos sin trazabilidad auditable
 
-En una unión transitoria de empresas, cada peso facturado a un centro de costos tiene que poder justificarse ante los socios. Sin trazabilidad del gasto desde su origen hasta la liquidación cruzada, la conciliación con el consorcio se vuelve una negociación sobre números que nadie puede reconstruir del todo.
+En una unión transitoria de empresas, cada peso que se factura a un centro de costos tiene que poder explicarse ante los socios. Si no hay forma de rastrear el gasto desde que se generó hasta la liquidación cruzada, cada conciliación con el consorcio termina siendo una discusión sobre números que nadie puede reconstruir del todo.
 
 ### Alta carga administrativa para poder facturar
 
-Facturar exige recolectar información dispersa entre áreas, contratistas y planillas. Ese trabajo de recolección no agrega valor y sí agrega demora: cuanto más tarda, más tarde se detectan los sobrecostos de campo y más se atrasa la liquidación a los socios.
+Para facturar hay que juntar información que está repartida entre áreas, contratistas y planillas distintas. Ese trabajo de juntar datos no suma nada por sí mismo y sí suma demora — y cuanto más tarda, más tarde se detecta un sobrecosto en el campo y más se atrasa lo que hay que liquidarle a los socios.
 
 ## 03 — Módulos relevantes
 

@@ -57,14 +57,14 @@ prueba_social_home para no duplicarlos. -->
 
 ## 03 — Selector de verticales
 
-<!-- GUÍA: patrón central que también usa Adhoc y funciona porque el
-visitante se identifica con su industria antes que con un módulo técnico.
-Ya no es una selección manual de 3-4 rubros: los 23 rubros vienen del
-Excel fuente (content/eynes_portfolio_rubros_consolidado.xlsx) vía
-site/scripts/sync-portfolio.py, agrupados por "Agrupador principal" (10
-grupos) con el mismo color por grupo que usa el mega-menú y /sectores —
-ver site/src/lib/sectorGroups.ts. Sumar un rubro nuevo es agregar su fila
-al Excel, no editar esta página. -->
+<!-- GUÍA (actualizada — sección sacada del Home, ver commit "Simplifica
+la home"): esta sección ya no se renderiza — la navegación por rubro vive
+en el mega-menú del Nav y en /sectores, que ya cubren ese mismo patrón.
+Se deja el contenido acá documentado por si se decide reintroducir.
+Los 23 rubros viven a mano en content/02-verticales/*.md, agrupados por
+"Agrupador principal" (10 grupos) con el mismo color por grupo que usa el
+mega-menú y /sectores — ver site/src/lib/sectorGroups.ts. Sumar un rubro
+nuevo es crear su .md siguiendo _PLANTILLA.md. -->
 
 **Título de sección:** "Trabajamos con empresas como la tuya"
 
@@ -113,15 +113,15 @@ el caso de 04-casos-de-exito/ con mejor resultado cuantificado y
 mantenerlo actualizado; no dejar siempre el mismo caso "para siempre". -->
 
 - **Cliente destacado:** Supply Parts (`04-casos-de-exito/supply-parts`)
-- **Resumen:** "Repuestos y autopartes" (los campos `pais` y `usuarios` quedan vacíos hoy — el Excel fuente no trae esos dos datos por cliente; si se consiguen, se cargan en `eynes_portfolio_rubros_consolidado.xlsx` y se propagan solos vía `sync-portfolio.py`, no hace falta tocar el template).
+- **Resumen:** "Repuestos y autopartes" (los campos `pais` y `usuarios` quedan vacíos hoy — ese dato no se relevó para este cliente; si se consigue, se completa a mano en el frontmatter de `04-casos-de-exito/supply-parts.md`).
 - **Resultado cuantificado:** Sin cifra porcentual verificada por el cliente — el resultado real y documentado es cualitativo: "las cuentas corrientes y el cupo de crédito se liberan al instante cuando el distribuidor reporta su pago, sin carga manual" (antes tardaba días). No inventamos un % que el cliente no dijo.
 - Link: → Ver caso completo
 
-<!-- GUÍA cumplida: de los 29 casos del Excel fuente, ninguno trae un
-porcentaje de mejora dicho por el cliente — todos son resultados
-cualitativos verificados (`resultado_clave` en cada .md, generado por
-sync-portfolio.py). Si en el futuro se consigue una cifra real
-(ej. "reducimos X días a Y horas"), se carga en el Excel, no acá. -->
+<!-- GUÍA cumplida: de los 29 casos, ninguno trae un porcentaje de mejora
+dicho por el cliente — todos son resultados cualitativos verificados
+(`resultado_clave` en cada .md). Si en el futuro se consigue una cifra
+real (ej. "reducimos X días a Y horas"), se completa a mano en la ficha
+del cliente correspondiente. -->
 
 ## 07 — Por qué Eynes
 

@@ -10,7 +10,7 @@ rubro: "Refrigeración Industrial"
 pais: ""
 usuarios: ""
 modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
-resultado_clave: "El stock hoy refleja lo que hay. Y sabemos cuánto costó realmente cada equipo que fabricamos."
+resultado_clave: "El stock de Tecnitower refleja hoy lo que realmente hay en planta, y cada equipo fabricado tiene un costo real conocido, no estimado."
 agrupador: "SERVICIOS E INSUMOS INDUSTRIALES"
 portfolio: true
 faqs: [{"pregunta": "¿La producción descuenta el stock automáticamente?", "respuesta": "Sí. Cada orden de producción consume los materiales de su lista contra el inventario en el momento en que se ejecuta, y el sistema registra la diferencia entre consumo teórico y real."}, {"pregunta": "Fabricamos equipos a medida. ¿Se puede costear cada uno?", "respuesta": "Sí, tratando el equipo o el pedido como unidad analítica: materiales, horas de taller y servicios de terceros se imputan ahí y se comparan contra lo presupuestado."}, {"pregunta": "¿Puedo saber qué equipo tiene instalado cada cliente?", "respuesta": "Sí, con número de serie asociado al cliente y a la venta, más el historial de instalación, puesta en marcha y mantenimientos posteriores."}, {"pregunta": "¿Contempla el servicio post-venta y el mantenimiento?", "respuesta": "Sí, con planes de mantenimiento sobre el equipo instalado y órdenes de servicio en campo que registran repuestos y horas, quedando vinculadas al mismo activo."}]
@@ -22,7 +22,7 @@ Problemas en la integración de la producción con el stock y gestión administr
 
 ## 04 — La implementación
 
-TECNITOWER S.A. Situación inicial: producción desintegrada del stock y gestión administrativa deficiente. Qué se hizo: implementación de Odoo conectando fabricación con inventario y administración, con costeo por orden de producción.
+En Tecnitower la producción iba por un lado y el stock por otro: se compraban insumos que ya estaban en el depósito y se frenaban órdenes por componentes que el sistema decía tener, mientras la administración corría siempre detrás de la operación. La implementación conectó fabricación con inventario y administración, con costeo por orden de producción.
 
 ## 05 — Testimonio
 
@@ -51,7 +51,7 @@ Bancos y cuenta corriente. Conciliación bancaria y seguimiento de anticipos y s
 
 ## 08 — Otros casos del rubro
 
-IMOBERDOFF. Situación inicial: órdenes de trabajo demoradas en taller, faltantes sorpresa de repuestos clave y presupuestación lenta hacia el cliente. Qué se hizo: implementación de Odoo con órdenes de trabajo, control de repuestos por punto de pedido y presupuestación generada desde la propia orden.
+IMOBERDOFF. Taller electromecánico con un problema hermano: repuestos que faltaban justo cuando había que usarlos y presupuestos que tardaban en salir. La solución fue similar, con órdenes de trabajo, punto de pedido por repuesto y presupuesto armado desde la propia orden.
 
 ## 09 — Problemas específicos del rubro
 

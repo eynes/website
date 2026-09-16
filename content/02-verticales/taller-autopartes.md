@@ -37,10 +37,10 @@ Compras con acuerdos marco o blanket orders · Ventas con límite de crédito y 
 
 ## 03a — Integraciones
 
-COT de ARBA desde el remito. COT de ARBA emitido directamente desde el remito.
+COT de ARBA, emitido directamente desde el remito.
 
-WMS por API REST y JSON-RPC. Conexión con el sistema de depósito (WMS) vía API REST y JSON-RPC.
+Conexión con el sistema de depósito (WMS) vía API REST y JSON-RPC.
 
-Consultora logística coordinando ERP + WMS. Consultora logística externa coordinando la operación conjunta de ERP y WMS.
+Consultora logística externa coordinando la operación conjunta de ERP y WMS.
 
-Impresión directa a impresoras de red. Impresión directa a impresoras de red para documentación de depósito y expedición.
+Impresión directa a impresoras de red para la documentación de depósito y expedición.

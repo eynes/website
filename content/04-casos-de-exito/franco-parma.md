@@ -10,7 +10,7 @@ rubro: "Gastronomía"
 pais: ""
 usuarios: ""
 modulos_implementados: ["ventas-y-crm", "inventario", "contabilidad-y-finanzas"]
-resultado_clave: "El control ahora es total. Si se vende un sándwich en una sucursal, el sistema descuenta automáticamente los insumos del stock de ese local. Desde la oficina central, podemos ver la rentabilidad, los cierres de caja de cada turno y gestionar transferencias de mercadería sin perder trazabilidad."
+resultado_clave: "Cada venta descuenta automáticamente los insumos de la receta del stock de esa sucursal, y desde la oficina central ahora se ve la rentabilidad, los cierres de caja por turno y las transferencias entre locales sin perder trazabilidad."
 agrupador: "ALIMENTOS Y GASTRONOMÍA"
 portfolio: true
 faqs: [{"pregunta": "¿El sistema descuenta los ingredientes automáticamente al vender?", "respuesta": "Sí, mediante la carga de recetas de cada plato o producto. Al concretar una venta en el POS, el sistema descuenta automáticamente las porciones o gramos correspondientes de tu inventario."}, {"pregunta": "¿Puedo ver las ventas y auditar el stock de varias sucursales en tiempo real?", "respuesta": "Sí. Al ser un sistema en la nube y multi-sucursal, la administración central puede monitorear las cajas, las ventas por hora y los movimientos de mercadería entre depósitos desde una única pantalla, evitando diferencias."}, {"pregunta": "¿Se integra con aplicaciones de delivery para no cargar los pedidos a mano?", "respuesta": "Absolutamente. Los pedidos de plataformas externas (como PedidosYa o Rappi) ingresan directamente al sistema, centralizando la facturación y la comanda para la cocina sin tener que tipear el ticket nuevamente en el local."}]
@@ -22,7 +22,7 @@ Dificultad para auditar sucursales, control de stock impreciso y falta de consol
 
 ## 04 — La implementación
 
-FRANCO PARMA. Situación inicial: dificultad para auditar sucursales, control de stock impreciso y falta de consolidación de la información. Cada local operaba como una isla, con cierres de caja que a veces no cuadraban y sin posibilidad de auditarlos en tiempo real desde la casa central; no había recetas en el sistema, así que era imposible descontar ingredientes correctamente ni medir la rentabilidad por plato; y las mermas no registradas y las transferencias entre locales sin trazar generaban diferencias de inventario injustificables. Qué se hizo: implementación multi-sucursal con Punto de Venta integrado y módulo de producción, carga de las recetas de cada producto y unificación de la contabilidad y los almacenes de todos los locales en un solo tablero en la nube. Resultado: la venta de un producto descuenta automáticamente los insumos del stock de ese local, y desde la oficina central se ve la rentabilidad, los cierres de caja de cada turno y las transferencias de mercadería con trazabilidad completa.
+Cada local de Franco Parma operaba como una isla: los cierres de caja a veces no cuadraban y no había forma de auditarlos en tiempo real desde la casa central. Al no tener recetas cargadas en el sistema, era imposible descontar ingredientes correctamente o medir la rentabilidad por plato, y las mermas sin registrar sumadas a transferencias entre locales sin trazar generaban diferencias de inventario que nadie podía explicar. La implementación fue multi-sucursal, con Punto de Venta integrado y módulo de producción: se cargaron las recetas de cada producto y se unificó la contabilidad y los almacenes de todos los locales en un solo tablero en la nube. Hoy, vender un producto descuenta automáticamente los insumos del stock de ese local, y desde la oficina central se ve la rentabilidad, los cierres de caja de cada turno y las transferencias de mercadería con trazabilidad completa.
 
 ## 05 — Testimonio
 
@@ -41,13 +41,13 @@ Punto de Venta (POS) · Inventario · Fabricación (Recetas) · Contabilidad. La
 
 ## 07 — Integraciones del rubro
 
-ARCA. Facturación electrónica emitida en el momento del cobro en cada sucursal.
+**ARCA.** Facturación electrónica emitida en el momento del cobro en cada sucursal.
 
-Aplicaciones de Delivery (PedidosYa / Rappi).. Aplicaciones de delivery (PedidosYa, Rappi): los pedidos ingresan directamente al sistema, centralizando facturación y comanda de cocina sin volver a tipear el ticket en el local.
+**Aplicaciones de delivery (PedidosYa, Rappi).** Los pedidos ingresan directamente al sistema, centralizando facturación y comanda de cocina sin volver a tipear el ticket en el local.
 
-Terminales de pago integradas (Mercado Pago).. Terminales de pago integradas (Mercado Pago), con conciliación de las liquidaciones.
+**Terminales de pago integradas (Mercado Pago),** con conciliación automática de las liquidaciones.
 
-Balanzas electrónicas (para fiambres y venta al peso).. Balanzas electrónicas para fiambres y venta al peso.
+**Balanzas electrónicas,** para fiambres y venta al peso.
 
 ## 08 — Otros casos del rubro
 

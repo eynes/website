@@ -37,10 +37,10 @@ Proyecto (tareas, etapas, estimado vs. real, asignación del equipo) · Hojas de
 
 ## 03a — Integraciones
 
-Facturación electrónica y multimoneda. ARCA (ex AFIP), más facturación de exportación de servicios cuando hay clientes del exterior, con cotizaciones y diferencia de cambio separadas del margen operativo.
+ARCA (ex AFIP) más facturación de exportación de servicios cuando hay clientes del exterior, con cotizaciones y diferencia de cambio separadas del margen operativo.
 
-Canales de soporte. Entrada de tickets desde mail, formulario web o mensajería a una única cola con SLA, para que nada quede en la bandeja personal de alguien.
+Entrada de tickets desde mail, formulario web o mensajería a una única cola con SLA, para que nada quede en la bandeja personal de alguien.
 
-Herramientas del equipo técnico. Repositorios, tableros y calendarios sincronizados con las tareas del proyecto, para que el técnico no cargue dos veces lo mismo.
+Repositorios, tableros y calendarios sincronizados con las tareas del proyecto, para que el técnico no cargue dos veces lo mismo.
 
-Cobros recurrentes y bancos. Débito automático, pasarelas de pago para abonos y conciliación bancaria, que es donde se define la salud financiera de un modelo por suscripción.
+Débito automático, pasarelas de pago para abonos y conciliación bancaria — ahí se define la salud financiera de un modelo por suscripción.

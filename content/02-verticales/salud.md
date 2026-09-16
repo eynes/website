@@ -37,10 +37,10 @@ Facturación · Gestión de proveedores · Contabilidad. El circuito se completa
 
 ## 03a — Integraciones
 
-ARCA. Facturación electrónica y generación automática de los archivos de los regímenes informativos exigidos a prestadores de salud.
+ARCA para la facturación electrónica y la generación automática de los archivos de los regímenes informativos exigidos a prestadores de salud.
 
-Padrón de Obras Sociales.. Padrón de obras sociales, para reducir los rechazos de facturación originados en errores de carga manual.
+Padrón de obras sociales, para reducir los rechazos de facturación que se originan en errores de carga manual.
 
-Sistema de información hospitalario (HIS). Sistema de información hospitalario (HIS) vía API: cuando el área médica registra prácticas o insumos, la información viaja a Odoo para el descuento de stock, la facturación a la obra social y el asiento contable, sin doble carga.
+Sistema de información hospitalario (HIS) vía API: cuando el área médica registra prácticas o insumos, esa información viaja a Odoo para el descuento de stock, la facturación a la obra social y el asiento contable, sin doble carga.
 
-Control de acceso biométrico. Control de acceso biométrico.
+Control de acceso biométrico.

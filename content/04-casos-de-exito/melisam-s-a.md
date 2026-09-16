@@ -10,7 +10,7 @@ rubro: "Extinción de incendios / Seguridad Industrial"
 pais: ""
 usuarios: ""
 modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
-resultado_clave: "Controlamos toda la fábrica. Tenemos trazabilidad exacta de cada componente hasta los productos terminados que entregamos a nuestros clientes, las auditorías se aprueban con reportes digitales en minutos, y nuestro departamento de administración factura con la tranquilidad de que las percepciones se calculan solas y sin errores."
+resultado_clave: "Melisam sigue cada componente hasta el producto terminado que entrega, aprueba auditorías con reportes digitales en minutos y factura con las percepciones calculadas solas — sin el margen de error de antes."
 agrupador: "SERVICIOS E INSUMOS INDUSTRIALES"
 portfolio: true
 faqs: [{"pregunta": "Hacemos instalaciones y obras de redes contra incendio en plantas industriales. ¿El sistema permite gestionar proyectos?", "respuesta": "Sí, Odoo dispone de un módulo de Proyectos pensado para obras. Podés presupuestar la instalación completa (insumos, cañerías, bombas, rociadores, servicios), certificar los avances de obra por etapas y llevar un control exacto entre lo presupuestado vs. lo ejecutado. El sistema vincula automáticamente el consumo de materiales y las horas hombre trabajadas para que conozcas la rentabilidad real de cada instalación."}, {"pregunta": "¿Los técnicos o supervisores pueden reportar su trabajo directamente desde la industria del cliente?", "respuesta": "Totalmente. A través de nuestra aplicación móvil (Field Service), el personal que está en la planta instalando o haciendo mantenimiento puede ver sus tareas asignadas en el celular, registrar las horas trabajadas, descontar insumos utilizados y recolectar la firma digital del cliente al finalizar la obra. Todo esto impacta en tiempo real en la administración para su facturación."}, {"pregunta": "¿Puedo gestionar el servicio de postventa, como la revisión y recarga anual de extintores?", "respuesta": "Absolutamente. El sistema te permite generar contratos de mantenimiento preventivo. Es posible programar alertas automáticas de vencimientos anuales para el parque de extintores de tus clientes, creando automáticamente las órdenes de retiro, recarga de polvo químico y re-certificación sin depender de planillas de Excel que se olvidan."}, {"pregunta": "¿El sistema permite hacer seguimiento por número de serie único para cada equipo instalado?", "respuesta": "Sí. El control de inventario te exige y permite asignar números de serie únicos al finalizar el ensamblaje o al despachar un equipo. Esto es vital para las garantías y normativas de seguridad: si hay una falla, con solo escanear o tipear el número de serie sabrás a qué industria se le instaló, cuándo se hizo y qué lote de materia prima se utilizó."}, {"pregunta": "¿Cómo maneja el software la fluctuación constante de precios en metales (bronce, chapa) e insumos de obra?", "respuesta": "El sistema está preparado para contextos inflacionarios. Permite actualizar de forma masiva (vía Excel o integraciones) las listas de precios de tus proveedores. Además, al utilizar métodos de valoración de inventario dinámicos (como Costo Promedio o FIFO), te asegura que el costo de tus presupuestos de obra y de tus productos terminados siempre refleje los incrementos reales del mercado."}]
@@ -22,7 +22,7 @@ Desafíos para integrar la planificación de la producción (MRP) desde el abast
 
 ## 04 — La implementación
 
-MELISAM S.A. Situación inicial: desafíos para integrar la planificación de la producción (MRP) desde el abastecimiento de materias primas e insumos, complejidad en la trazabilidad directa e inversa con controles de calidad en planillas de cálculo, y problemas en la actualización de padrones de percepciones y retenciones. Concretamente: desconexión entre la fundición de metales (bronce y aluminio) y el ensamblaje de productos, con pérdida de vista del costo real y del consumo de materia prima por lote; procesos de calidad en papel que dificultaban certificar el cumplimiento de las normas IRAM ante inspecciones; y errores en declaraciones de impuestos por falta de actualización automática de padrones. Qué se hizo: solución integral con listas de materiales multinivel para unir fundición, cortes y mecanizados con el ensamblaje, digitalización de los controles de calidad en las rutas de producción y localización argentina de Eynes con actualización automática de padrones. Resultado: trazabilidad exacta de cada componente hasta el producto terminado entregado al cliente, auditorías que se aprueban con reportes digitales en minutos y facturación con percepciones calculadas automáticamente y sin errores.
+La fabricación de Melisam arranca en la fundición de bronce y aluminio y termina en el ensamblaje del extintor, pero esas etapas no convivían en el mismo sistema: se perdía de vista el costo real y el consumo de materia prima por lote. Los controles de calidad vivían en planillas de cálculo, lo que complicaba certificar las normas IRAM ante una inspección, y las declaraciones de impuestos arrastraban errores porque los padrones de percepciones y retenciones no se actualizaban solos. El trabajo unió fundición, cortes y mecanizado con el ensamblaje mediante listas de materiales multinivel, digitalizó los controles de calidad en cada ruta de producción y sumó la localización argentina de Eynes con actualización automática de padrones.
 
 ## 05 — Testimonio
 
@@ -43,11 +43,11 @@ Fabricación Multinivel · Control de Calidad · Compras · Ventas · Contabilid
 
 ARCA / ARBA / AGIP. Facturación electrónica y regímenes provinciales, con actualización automática de padrones de percepciones y retenciones.
 
-Portal de proveedores. Portal de proveedores.
+Portal de proveedores. Seguimiento de órdenes de compra y entregas sin depender del teléfono o el mail.
 
-Sistemas SCADA. Sistemas SCADA de planta.
+Sistemas SCADA. Datos de planta conectados con la producción registrada en el sistema.
 
-Máquinas de mecanizado. Máquinas de mecanizado.
+Máquinas de mecanizado. Captura del avance real de corte y mecanizado para imputarlo directo a la orden de producción.
 
 ## 09 — Problemas específicos del rubro
 

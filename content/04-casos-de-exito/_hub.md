@@ -20,19 +20,22 @@ Sin filtros implementados hoy.
 
 ## 02 — Grilla de casos
 
-<!-- GUÍA (actualizada): ya no hay una lista de "7 casos completos + 23
-pendientes" — los 29 clientes del Excel fuente
-(content/eynes_portfolio_rubros_consolidado.xlsx) tienen hoy su ficha
-completa (problema, solución, testimonio EL DESAFÍO/LA SOLUCIÓN/EL
-RESULTADO, módulos, FAQs), generada automáticamente por
-site/scripts/sync-portfolio.py. Sumar un cliente nuevo es agregar su fila
-al Excel y correr el sync — no crear un .md a mano ni editar esta lista,
-que quedaría desactualizada de nuevo. El listado real y sus datos por
-cliente viven en las 29 fichas de esta carpeta (una por `slug`), no acá.
+<!-- GUÍA (actualizada — el Excel ya no genera contenido): ya no hay una
+lista de "7 casos completos + 23 pendientes" — los 29 clientes tienen su
+ficha completa (problema, solución, testimonio EL DESAFÍO/LA SOLUCIÓN/EL
+RESULTADO, módulos, FAQs) en content/04-casos-de-exito/*.md, editada a
+mano. Sumar un cliente nuevo es crear su .md siguiendo _PLANTILLA.md — no
+tocar un Excel. El listado real y sus datos por cliente viven en las 29
+fichas de esta carpeta (una por `slug`), no acá.
 
-Los campos `pais` y `usuarios` quedan vacíos en todas las fichas porque
-el Excel fuente no trae esas dos columnas por cliente — si se consiguen,
-se cargan en el Excel y se propagan solas.
+Los campos `pais` y `usuarios` quedan vacíos en algunas fichas porque
+ese dato nunca se relevó para ese cliente — completar a mano en el
+frontmatter de la ficha correspondiente cuando se consiga.
+
+GUÍA — Excel desconectado (16/09/2026): content/eynes_portfolio_rubros_consolidado.xlsx
+ya NO alimenta el sitio. site/scripts/sync-portfolio.py sigue en el repo
+como referencia histórica pero no corre en predev/prebuild (ver
+site/package.json). -->
 
 Formato de ficha (rubro, país, usuarios, módulos y UN resultado
 cualitativo verificado — nunca un % que el cliente no dijo) sigue siendo

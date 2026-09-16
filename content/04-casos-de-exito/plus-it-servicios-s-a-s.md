@@ -10,7 +10,7 @@ rubro: "Tecnología (TI)"
 pais: ""
 usuarios: ""
 modulos_implementados: ["ventas-y-crm", "contabilidad-y-finanzas"]
-resultado_clave: "Hoy podemos mostrarle al cliente el cumplimiento real de su SLA. Y la facturación mensual dejó de ser una tarea manual."
+resultado_clave: "Plus-IT le muestra hoy a cada cliente el cumplimiento real de su SLA, y la facturación mensual de abonos dejó de ser trabajo manual."
 agrupador: "TECNOLOGÍA E INNOVACIÓN"
 portfolio: true
 faqs: [{"pregunta": "¿Cómo hago para que el equipo técnico cargue las horas?", "respuesta": "La clave es que la carga viva donde el técnico ya trabaja: desde la tarea, desde el ticket o desde el móvil, en segundos y sin abrir una planilla aparte. Cuando cargar la hora cuesta menos que evitarlo, el dato aparece."}, {"pregunta": "¿Puedo medir los SLA que firmo con mis clientes?", "respuesta": "Sí. Cada ticket toma la política de SLA del contrato del cliente, y el sistema mide tiempo de primera respuesta y de resolución, con alertas antes del vencimiento y reportes de cumplimiento por período."}, {"pregunta": "¿Se puede automatizar la facturación de abonos mensuales?", "respuesta": "Sí, con contratos de suscripción que generan la factura en la fecha correspondiente, contemplan altas, bajas y ajustes de precio, y permiten sumar los consumos por fuera del abono en el mismo comprobante."}, {"pregunta": "¿Puedo saber la rentabilidad real de cada proyecto y de cada cliente?", "respuesta": "Sí, imputando horas, gastos y compras al proyecto y contrastándolos contra lo facturado. Es la diferencia entre saber cuánto facturás y saber cuánto te queda."}, {"pregunta": "Facturamos a clientes del exterior. ¿Odoo lo contempla?", "respuesta": "Sí, opera en multimoneda con facturación de exportación de servicios y valuación de saldos, dejando la diferencia de cambio separada del resultado operativo."}]
@@ -22,7 +22,7 @@ Acuerdos de nivel de servicio (SLA) no medidos, facturación de abonos recurrent
 
 ## 04 — La implementación
 
-PLUS-IT SERVICIOS S.A.S. Situación inicial: SLA comprometidos pero no medidos, facturación de abonos recurrentes armada manualmente y tickets de soporte que se perdían entre canales. Qué se hizo: implementación de Odoo con Mesa de Ayuda y Suscripciones, unificando la entrada de tickets y automatizando la facturación recurrente.
+Plus-IT Servicios firmaba SLA con sus clientes pero no tenía forma de medirlos, los tickets de soporte entraban por distintos canales y algunos se perdían en el camino, y la facturación de los abonos se armaba a mano todos los meses. La implementación unificó la entrada de tickets en Mesa de Ayuda con SLA medido y automatizó la facturación recurrente con Suscripciones.
 
 ## 05 — Testimonio
 
@@ -51,7 +51,7 @@ Cobros recurrentes y bancos. Débito automático, pasarelas de pago para abonos 
 
 ## 08 — Otros casos del rubro
 
-MANAS-TI. Situación inicial: control impreciso de horas facturables, desvíos de tiempo en proyectos y administración desintegrada de la operación técnica. Qué se hizo: implementación de Odoo con Proyecto y Hojas de Horas como núcleo, conectando la ejecución técnica con la facturación y la administración.
+MANAS-TI. Otra empresa de TI, con un problema hermano: no sabía cuántas horas facturables se estaban consumiendo hasta que el proyecto ya había cerrado. Se puso Proyecto y Hojas de Horas en el centro, conectando la ejecución técnica directo con la facturación.
 
 ## 09 — Problemas específicos del rubro
 

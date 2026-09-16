@@ -10,7 +10,7 @@ rubro: "Mayorista de Ferretería y Bulonería"
 pais: ""
 usuarios: ""
 modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
-resultado_clave: "Logramos eliminar la doble carga de datos. Hoy el viajante registra el cobro en la calle y la cuenta corriente del cliente se actualiza de inmediato; administración simplemente controla contra el banco y emite el recibo definitivo. El sistema ahora determina el descuento por pronto pago y emite la nota de crédito con CAE en el mismo acto. Estandarizamos el cálculo de comisiones cumpliendo con la Ley 14.546, dejando de depender de procesos manuales. Centralizar nuestros 18.000 artículos, la logística de fletes y la gestión de cheques rechazados en una única plataforma nos permitió alcanzar una operación mucho más ágil y ordenada."
+resultado_clave: "RC Distribuciones eliminó la doble carga de la cobranza: el viajante registra el cobro en la calle y la cuenta corriente se actualiza al instante, mientras administración solo controla contra el banco. El descuento por pronto pago y la nota de crédito con CAE salen solos, y el cálculo de comisiones quedó estandarizado según la Ley 14.546 — los 18.000 artículos, los fletes y los cheques rechazados conviven ahora en una sola plataforma."
 agrupador: "COMERCIO MAYORISTA Y MINORISTA"
 portfolio: true
 faqs: [{"pregunta": "Mis viajantes cobran en la calle, ¿puedo dejar de cargar la cobranza dos veces?", "respuesta": "Sí. El vendedor carga el recibo provisorio con su medio de pago y su comprobante contra la cuenta corriente real del cliente; administración controla contra el banco y lo convierte en recibo definitivo. Se termina la planilla por mail y la recarga manual."}, {"pregunta": "Doy descuento por pronto pago, ¿el sistema lo calcula solo?", "respuesta": "Sí. Se configura la escala y el cálculo de días promedio ponderado por fecha e importe de cada valor; el sistema propone el descuento al registrar la cobranza y emite la nota de crédito con CAE en el mismo acto."}, {"pregunta": "Tengo dos listas, ofertas por depósito y descuento por bulto cerrado, ¿entra en Odoo?", "respuesta": "Sí, con configuración más desarrollo a medida. Las listas se calculan como costo más markup con moneda y tipo de cambio; la oferta se define a nivel de producto y sólo se aplica si el depósito de la cotización es el habilitado; el bulto cerrado se controla por producto y depósito. Si no coincide, el sistema avisa y sugiere cambiar de depósito en vez de facturar mal."}, {"pregunta": "¿Puedo pagar comisión distinta según el precio al que vendió cada línea?", "respuesta": "Sí. La comisión se calcula línea por línea según el precio efectivamente aplicado —lista plena, oferta o bulto cerrado—, no sobre el total del pedido, y sale el informe legal de comisiones de viajantes de la Ley 14.546."}, {"pregunta": "Tengo tres depósitos y estoy poniendo un WMS, ¿se pisan?", "respuesta": "No. El WMS maneja posiciones y movimientos físicos y es la fuente de verdad del stock; Odoo consolida venta, compra, facturación y contabilidad, y recibe las cantidades realmente preparadas y los datos de la guía de despacho."}]
@@ -22,7 +22,7 @@ Gestión de la información descentralizada, dependencia de un desarrollador loc
 
 ## 04 — La implementación
 
-RC DISTRIBUCIONES. Situación inicial: información descentralizada, dependencia de un desarrollador local y problemas continuos de stock. El circuito de cobranza de los viajantes obligaba a cargar todo dos veces, el descuento por pronto pago se calculaba a mano ponderando días e importes, y con 18.000 productos la actualización de precios y la liquidación de comisiones consumía días de trabajo. Qué se hizo: reemplazo del middleware por Odoo, conexión de la plataforma de catálogo de los viajantes al ERP, WMS como única fuente de verdad del stock, estructuración de 280 categorías, modelos de conciliación bancaria avanzada y parametrización del motor de reglas de descuentos y comisiones según depósito y nivel de precio. Resultado: se eliminó la doble carga; el viajante registra el cobro en la calle y la cuenta corriente se actualiza de inmediato; el sistema determina el descuento por pronto pago y emite la nota de crédito con CAE en el mismo acto; el cálculo de comisiones quedó estandarizado cumpliendo la Ley 14.546.
+RC Distribuciones dependía de un desarrollador local y de un middleware que dejaba la información repartida entre sistemas. El circuito de cobranza de los viajantes obligaba a cargar todo dos veces, el descuento por pronto pago se calculaba a mano ponderando días e importes, y con 18.000 productos la actualización de precios y la liquidación de comisiones se comía días enteros de trabajo. El cambio reemplazó el middleware por Odoo, conectó la plataforma de catálogo de los viajantes directo al ERP, puso un WMS como única fuente de verdad del stock, estructuró las 280 categorías, sumó conciliación bancaria avanzada y parametrizó el motor de reglas de descuentos y comisiones según depósito y nivel de precio.
 
 ## 05 — Testimonio
 
@@ -41,13 +41,13 @@ Ventas (con motor de reglas de descuentos por depósito y nivel de precio) · Co
 
 ## 07 — Integraciones del rubro
 
-ARCA/AFIP nativo, en reemplazo del middleware. Facturación electrónica nativa, en reemplazo del middleware que se usaba antes.
+ARCA (ex AFIP), nativo. Facturación electrónica directa, reemplazando el middleware que se usaba antes.
 
-WMS como única fuente de verdad del stock. Gestión avanzada de almacenes como única fuente de verdad del stock: maneja posiciones y movimientos físicos, y devuelve a Odoo las cantidades realmente preparadas y los datos de la guía de despacho.
+WMS. Gestión avanzada de almacenes como única fuente de verdad del stock: maneja posiciones y movimientos físicos, y le devuelve a Odoo las cantidades realmente preparadas junto con los datos de la guía de despacho.
 
-Plataforma de catálogo de los viajantes. Plataforma de catálogo de los viajantes conectada directamente al ERP, para que el pedido y la cobranza de la gira no se carguen dos veces.
+Plataforma de catálogo de los viajantes. Conectada directo al ERP, para que el pedido y la cobranza de la gira no se carguen dos veces.
 
-Extractos y modelos de conciliación bancaria. Extractos y modelos de conciliación bancaria, indispensables cuando en un mismo registro de cobranza conviven cheques, e-cheqs, transferencias, retenciones y gastos de gira.
+Extractos y conciliación bancaria avanzada. Imprescindible cuando en un mismo recibo de cobranza conviven cheques, e-cheqs, transferencias, retenciones y gastos de gira.
 
 ## 09 — Problemas específicos del rubro
 

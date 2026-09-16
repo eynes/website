@@ -21,15 +21,15 @@ faqs: [{"pregunta": "¿Puedo saber si un equipo está en garantía sin buscar el
 
 ### Garantías sin trazabilidad por número de serie
 
-Sin número de serie asociado al cliente, a la fecha de venta y a la orden de trabajo, la garantía se determina por memoria o por el remito que el cliente logre encontrar. El resultado es doble pérdida: reparaciones dentro de garantía que se cobran mal y generan conflicto, y reparaciones fuera de garantía que se terminan absorbiendo.
+Si el número de serie no queda asociado al cliente, a la fecha de venta y a la orden de trabajo, la garantía termina definiéndose de memoria o por el remito que el cliente logre encontrar. Y eso sale caro de las dos formas posibles: reparaciones que sí estaban en garantía pero se cobran igual, con el conflicto que eso genera, y reparaciones fuera de garantía que la empresa termina absorbiendo por no poder probarlo.
 
 ### Micro-componentes y obsolescencia sin control
 
-El stock electrónico está compuesto por miles de ítems de bajo valor unitario, alta variedad y ciclo de vida corto. Sin control por código, equivalencias y consumo histórico, conviven dos problemas opuestos: componentes obsoletos inmovilizados que ya no se van a usar, y faltantes de un integrado de bajo costo que frena una reparación completa.
+Miles de ítems de bajo valor unitario, mucha variedad, ciclo de vida corto: así es el stock electrónico. Sin control por código, equivalencias y consumo histórico, conviven dos problemas que parecen opuestos pero son la misma falla — componentes obsoletos que ya no se van a usar acumulándose en un estante, y faltantes de un integrado de dos pesos que frenan una reparación entera.
 
 ### Reparaciones seguidas en papel
 
-El equipo entra, se diagnostica, se presupuesta, se aprueba, se repara y se entrega, y cada etapa vive en una hoja pegada al aparato. Nadie puede responder rápido dónde está un equipo ni hace cuánto, los presupuestos aprobados verbalmente no dejan rastro, y los repuestos consumidos no siempre llegan a la factura.
+El equipo entra, se diagnostica, se presupuesta, se aprueba, se repara, se entrega — y cada uno de esos pasos vive en una hoja pegada al aparato. Nadie puede decir rápido dónde está un equipo ni hace cuánto llegó, los presupuestos que se aprobaron por teléfono no dejan rastro, y no siempre el repuesto que se usó termina reflejado en la factura.
 
 ## 03 — Módulos relevantes
 

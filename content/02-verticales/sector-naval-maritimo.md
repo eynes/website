@@ -37,10 +37,10 @@ Proyecto · Contabilidad Analítica · Hojas de Horas · Mantenimiento · Invent
 
 ## 03a — Integraciones
 
-Multimoneda y cotizaciones. Multimoneda y cotizaciones: actualización de tipos de cambio y valuación de saldos, con la diferencia de cambio separada del margen operativo.
+Multimoneda y cotizaciones, con actualización de tipos de cambio y valuación de saldos — la diferencia de cambio queda separada del margen operativo, no mezclada con él.
 
-ARCA / ARBA / AGIP. Facturación electrónica y regímenes provinciales, incluida la facturación de exportación de servicios.
+ARCA / ARBA / AGIP para la facturación electrónica y los regímenes provinciales, incluida la facturación de exportación de servicios.
 
-Portales de licitación. Portales de licitación y clientes institucionales.
+Portales de licitación y clientes institucionales.
 
-Bancos. Bancos: conciliación, pagos al exterior y seguimiento de cobranzas en moneda extranjera.
+Bancos: conciliación, pagos al exterior y seguimiento de cobranzas en moneda extranjera.

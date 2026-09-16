@@ -10,7 +10,7 @@ rubro: "Gastronomía"
 pais: ""
 usuarios: ""
 modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
-resultado_clave: "Hoy la merma se mide y se puede atacar. Y la diferencia con la experiencia anterior fue tener a alguien que entendía el negocio, no solo el software."
+resultado_clave: "La merma de cocina pasó de ser un número global a algo que se puede rastrear plato por plato, turno por turno. Lo que marcó la diferencia con el intento anterior fue tener enfrente a alguien que entendía el negocio gastronómico, no solo el software."
 agrupador: "ALIMENTOS Y GASTRONOMÍA"
 portfolio: true
 faqs: [{"pregunta": "¿Cómo se controla la merma de insumos?", "respuesta": "Cargando las recetas de cada plato: al venderse, el sistema descuenta los insumos teóricos. La diferencia contra el inventario físico es la merma real, y por primera vez se puede atribuir a un producto, un turno o un local en lugar de aparecer como un número global."}, {"pregunta": "¿Sirve para varios locales con administración centralizada?", "respuesta": "Sí. Cada local opera su POS y su stock, y la casa central ve todo consolidado, con comparación de resultado, consumo y merma entre sucursales."}, {"pregunta": "¿Los pedidos de las apps de delivery entran al sistema?", "respuesta": "Sí, integrados al mismo circuito de venta, de modo que descuentan insumos y se registran contablemente igual que una venta de salón, sin carga manual paralela."}, {"pregunta": "Ya intentamos implementar Odoo y no funcionó. ¿Por qué sería distinto?", "respuesta": "Las implementaciones fallidas casi nunca fallan por el software: fallan por relevamiento insuficiente, por configurar sin entender el proceso real o por falta de acompañamiento después del arranque."}, {"pregunta": "¿Puedo llevar los controles de calidad en el sistema?", "respuesta": "Sí, con puntos de control en recepción y en proceso, registrados en el momento y con historial consultable, lo que convierte la auditoría en una consulta y no en una reconstrucción."}]
@@ -22,7 +22,7 @@ Mermas de ingredientes no registradas, gestión de la administración ineficient
 
 ## 04 — La implementación
 
-LA GUITARRITA S.A. Situación inicial: mermas de ingredientes sin registrar, gestión administrativa ineficiente y auditorías de calidad poco fiables, con una experiencia previa fallida junto a otro partner de Odoo. Qué se hizo: implementación de Odoo con recetas y descuento automático de insumos, integración del POS de los locales con la administración central y registro de controles de calidad dentro del sistema.
+La Guitarrita sabía que perdía plata en la cocina pero no podía medir dónde, arrastraba una gestión administrativa ineficiente y sus auditorías de calidad no eran del todo confiables — y venía además de una implementación de Odoo fallida con otro partner, así que llegó con desconfianza. El trabajo consistió en cargar recetas para que cada plato vendido descuente sus insumos automáticamente, integrar el POS de los locales con la administración central, y llevar los controles de calidad adentro del sistema.
 
 ## 05 — Testimonio
 

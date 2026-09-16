@@ -21,15 +21,15 @@ faqs: [{"pregunta": "¿Odoo calcula el costo real de importación?", "respuesta"
 
 ### Costo real de importación desconocido al fijar precio
 
-El precio de factura del proveedor es una fracción del costo real. Flete internacional, seguro, derechos, tasas, gastos de despacho, almacenaje y honorarios se conocen en momentos distintos y a veces mucho después del ingreso de la mercadería. Cuando esos costos no se distribuyen sobre los productos de la operación, el costo unitario queda subestimado, el precio de venta se fija sobre un número equivocado y el margen aparente no es el real.
+Lo que factura el proveedor es apenas una parte del costo real. Flete internacional, seguro, derechos, tasas, despacho, almacenaje y honorarios van llegando en momentos distintos, a veces mucho después de que la mercadería ya entró. Si esos gastos no se reparten sobre los productos de la operación, el costo unitario queda subestimado, el precio de venta se calcula sobre un número que no es el correcto y el margen que se ve en pantalla no es el que hay en realidad.
 
 ### Planillas sueltas funcionando como sistema de gestión
 
-Cada operación de importación termina teniendo su propia planilla: una para el seguimiento del embarque, otra para los costos, otra para la relación con el despachante. Funcionan mientras la persona que las armó esté disponible. No consolidan, no dejan historial comparable, y cada consulta de dirección requiere que alguien vuelva a armar el número a mano.
+Cada importación termina con su propia planilla: una para seguir el embarque, otra para los costos, otra para la relación con el despachante. Funcionan mientras la persona que las armó siga ahí. No se consolidan entre sí, no dejan un historial comparable, y cada vez que dirección pregunta un número alguien tiene que volver a armarlo a mano.
 
 ### Operaciones de comercio exterior sin visibilidad de estado
 
-Una operación de comercio exterior atraviesa proveedor, embarque, arribo, despacho, liberación y entrega, con documentación y plazos en cada etapa. Sin un lugar donde ver el estado de todas las operaciones a la vez, las demoras se detectan tarde y se traducen en almacenaje, en incumplimiento con el cliente y en costos financieros que nadie presupuestó.
+Proveedor, embarque, arribo, despacho, liberación, entrega: cada etapa de una operación de comercio exterior trae su propia documentación y sus propios plazos. Sin un lugar único donde ver el estado de todas las operaciones juntas, las demoras se notan tarde — y se terminan pagando en almacenaje, en clientes esperando y en costos financieros que nadie tenía presupuestados.
 
 ## 03 — Módulos relevantes
 

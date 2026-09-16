@@ -21,15 +21,15 @@ faqs: [{"pregunta": "¿Puedo ver el margen de cada obra en tiempo real?", "respu
 
 ### Presupuesto contra gasto real conocido recién al cierre
 
-En construcción y dragado el margen no se pierde al final, se pierde de a poco y sin que nadie lo vea. El presupuesto se arma en una planilla, la obra ejecuta durante meses, y el gasto real se conoce recién cuando contabilidad cierra el período. Para entonces el desvío ya ocurrió y no hay nada que corregir. Sin un sistema que impute cada compra, cada hora de equipo y cada certificado de subcontratista a la obra correspondiente en el momento en que sucede, el control de costos es un análisis forense, no una herramienta de gestión.
+En construcción y dragado el margen no se pierde de golpe al final de la obra, se va perdiendo de a poco sin que nadie lo note. El presupuesto se arma en una planilla, la obra avanza durante meses, y el gasto real recién se conoce cuando contabilidad cierra el período — para ese momento el desvío ya pasó y no queda nada por corregir. Si nada imputa cada compra, cada hora de equipo y cada certificado de subcontratista a la obra en el momento en que ocurre, controlar costos deja de ser gestión y pasa a ser arqueología.
 
 ### Certificaciones y facturación por avance fuera del sistema
 
-La facturación no sigue una entrega puntual sino un avance certificado: metros cúbicos dragados, porcentaje de obra ejecutado, hitos contractuales. A eso se suman anticipos, fondos de reparo, redeterminaciones de precios y, en obra pública, requisitos formales específicos. Cuando esto se lleva por fuera del sistema, aparecen dos problemas simultáneos: certificados emitidos que nunca se facturaron, y una previsión de cobranza que nadie puede construir con confianza.
+Acá no se factura una entrega puntual, se factura avance certificado: metros cúbicos dragados, porcentaje de obra ejecutado, hitos del contrato. Sumale anticipos, fondos de reparo, redeterminaciones de precios y, si es obra pública, los requisitos formales de siempre. Cuando todo eso se maneja por fuera del sistema, aparecen dos problemas al mismo tiempo: certificados que se emitieron pero nunca se facturaron, y una previsión de cobranza que nadie puede armar con confianza.
 
 ### Equipos pesados y subcontratistas sin control de costo
 
-Dragas, embarcaciones, maquinaria y equipos son el principal activo y el principal costo. Hay que saber cuánto cuesta cada equipo por hora, cuánto consume, cuándo le toca mantenimiento y a qué obra está afectado, incluyendo los tiempos de movilización entre obras, que se facturan pocas veces y se pagan siempre. En paralelo, el subcontratista es una unidad de costo con su propio ciclo: contrato, avance, certificación, retenciones y garantías. Sin sistema, todo eso vive en acuerdos por mail y planillas del jefe de obra.
+Dragas, embarcaciones y maquinaria son el activo más grande y el gasto más grande. Hay que saber cuánto cuesta cada equipo por hora, cuánto consume, cuándo toca mantenimiento y en qué obra está trabajando — incluidos los traslados entre obras, que casi nunca se facturan pero siempre hay que pagar. El subcontratista tiene su propio ciclo de costo: contrato, avance, certificación, retenciones, garantías. Sin sistema, todo eso termina viviendo en mails sueltos y en la planilla del jefe de obra.
 
 ## 03 — Módulos relevantes
 

@@ -10,7 +10,7 @@ rubro: "Tecnología (TI)"
 pais: ""
 usuarios: ""
 modulos_implementados: ["ventas-y-crm", "contabilidad-y-finanzas"]
-resultado_clave: "Hoy sabemos qué proyecto va bien y cuál presenta dificultades mientras está en curso. Y facturamos lo que efectivamente se trabajó."
+resultado_clave: "Manas-ti ahora detecta un proyecto complicado mientras todavía está en curso, no al cierre — y factura exactamente lo que se trabajó, sin estimar."
 agrupador: "TECNOLOGÍA E INNOVACIÓN"
 portfolio: true
 faqs: [{"pregunta": "¿Cómo hago para que el equipo técnico cargue las horas?", "respuesta": "La clave es que la carga viva donde el técnico ya trabaja: desde la tarea, desde el ticket o desde el móvil, en segundos y sin abrir una planilla aparte. Cuando cargar la hora cuesta menos que evitarlo, el dato aparece."}, {"pregunta": "¿Puedo medir los SLA que firmo con mis clientes?", "respuesta": "Sí. Cada ticket toma la política de SLA del contrato del cliente, y el sistema mide tiempo de primera respuesta y de resolución, con alertas antes del vencimiento y reportes de cumplimiento por período."}, {"pregunta": "¿Se puede automatizar la facturación de abonos mensuales?", "respuesta": "Sí, con contratos de suscripción que generan la factura en la fecha correspondiente, contemplan altas, bajas y ajustes de precio, y permiten sumar los consumos por fuera del abono en el mismo comprobante."}, {"pregunta": "¿Puedo saber la rentabilidad real de cada proyecto y de cada cliente?", "respuesta": "Sí, imputando horas, gastos y compras al proyecto y contrastándolos contra lo facturado. Es la diferencia entre saber cuánto facturás y saber cuánto te queda."}, {"pregunta": "Facturamos a clientes del exterior. ¿Odoo lo contempla?", "respuesta": "Sí, opera en multimoneda con facturación de exportación de servicios y valuación de saldos, dejando la diferencia de cambio separada del resultado operativo."}]
@@ -22,7 +22,7 @@ Control de horas facturables impreciso, desvíos de tiempos en proyectos y gesti
 
 ## 04 — La implementación
 
-MANAS-TI. Situación inicial: control impreciso de horas facturables, desvíos de tiempo en proyectos y administración desintegrada de la operación técnica. Qué se hizo: implementación de Odoo con Proyecto y Hojas de Horas como núcleo, conectando la ejecución técnica con la facturación y la administración.
+Manas-ti vendía horas y proyectos sin una forma confiable de saber cuántas horas se habían consumido de verdad, ni cómo iba el proyecto contra lo estimado — los desvíos se descubrían recién al cierre, y la administración quedaba desconectada de lo que pasaba en la operación técnica. La implementación puso Proyecto y Hojas de Horas en el centro, conectando la ejecución técnica directamente con la facturación y la administración.
 
 ## 05 — Testimonio
 
@@ -51,7 +51,7 @@ Cobros recurrentes y bancos. Débito automático, pasarelas de pago para abonos 
 
 ## 08 — Otros casos del rubro
 
-PLUS-IT SERVICIOS S.A.S. Situación inicial: SLA comprometidos pero no medidos, facturación de abonos recurrentes armada manualmente y tickets de soporte que se perdían entre canales. Qué se hizo: implementación de Odoo con Mesa de Ayuda y Suscripciones, unificando la entrada de tickets y automatizando la facturación recurrente.
+PLUS-IT SERVICIOS S.A.S. Comprometía SLA que nunca medía, armaba a mano la facturación de sus abonos recurrentes y perdía tickets de soporte entre distintos canales. La solución unificó la entrada de tickets en Mesa de Ayuda y automatizó la facturación recurrente con Suscripciones.
 
 ## 09 — Problemas específicos del rubro
 

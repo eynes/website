@@ -21,15 +21,15 @@ faqs: [{"pregunta": "¿Cómo maneja Odoo los talles y colores?", "respuesta": "C
 
 ### Stock inmovilizado por falta de análisis por variante
 
-Un modelo se multiplica por talle y por color, y esa matriz es la que define si la temporada cierra bien. Sin visibilidad por variante, el análisis se hace por modelo y esconde el problema real: quedan los talles extremos y los colores que no salieron, inmovilizados en depósito, mientras se pierden ventas por faltante de las curvas centrales. Al cierre de temporada, ese stock solo se recupera con liquidación.
+Un modelo se multiplica por talle y por color, y esa matriz de variantes es la que termina definiendo si la temporada cierra bien o mal. Si el análisis se hace por modelo y no por variante, el problema queda escondido: los talles extremos y los colores que no salieron se acumulan en depósito, mientras se pierden ventas porque faltan justo las curvas centrales. Y al cierre de temporada, ese stock inmovilizado solo se recupera liquidando.
 
 ### Locales desconectados de la administración central
 
-Cuando cada local reporta ventas y stock por planilla o por mensaje, la casa central trabaja siempre con información de ayer. Eso impide reponer a tiempo, mover mercadería entre locales según lo que rota en cada uno, y conocer el resultado real por punto de venta.
+Si cada local manda sus ventas y su stock por planilla o por WhatsApp, la casa central siempre está mirando datos de ayer. Eso frena tres cosas al mismo tiempo: reponer a tiempo, mover mercadería entre locales según lo que rota en cada uno, y saber el resultado real de cada punto de venta.
 
 ### Compra y reposición por temporada sin historial confiable
 
-El calzado trabaja contra temporada, con decisiones de compra o producción tomadas con meses de anticipación y poco margen para corregir. Sin historial confiable de ventas por variante, la proyección se hace por intuición, y el error se paga dos veces: en quiebre durante el pico y en liquidación al final.
+El calzado se compra o se produce contra temporada, con meses de anticipación y casi nada de margen para corregir sobre la marcha. Sin un historial confiable de ventas por variante, esa proyección termina haciéndose a ojo, y el error se paga dos veces: primero en quiebre de stock durante el pico de ventas, después en liquidación al final de la temporada.
 
 ## 03 — Módulos relevantes
 

@@ -15,7 +15,7 @@ og_image: ""
 
 faqs:
   - pregunta: "¿Necesito otro módulo para que la contabilidad funcione?"
-    respuesta: "No es obligatorio, pero se potencia integrado con Ventas y Compras: las facturas, cobros y pagos se contabilizan automáticamente, sin doble carga de datos entre sistemas."
+    respuesta: "No es obligatorio, pero funciona mejor integrado con Ventas y Compras: las facturas, cobros y pagos se contabilizan solos, sin cargar los mismos datos dos veces."
   - pregunta: "¿Cuánto tarda el equipo contable en aprender a usarlo?"
     respuesta: "En base a nuestras implementaciones, el equipo contable ya opera de forma autónoma en alrededor de 30 días desde el arranque, con acompañamiento de Eynes durante ese período."
   - pregunta: "¿Se puede personalizar al plan de cuentas que ya usamos?"
