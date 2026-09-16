@@ -5,6 +5,7 @@ import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
 import ContentSection from '../../components/shared/ContentSection.astro';
 import FAQAccordion from '../../components/shared/FAQAccordion.astro';
 import CTASection from '../../components/cta/CTASection.astro';
+import ModuleIcon from '../../components/shared/ModuleIcon.astro';
 import { getPublished } from '../../lib/content';
 import { splitSections, renderSection, extractLabeled } from '../../lib/sections';
 import { resolvePublishedRelated } from '../../lib/related';
@@ -49,7 +50,11 @@ const jsonLd = [
 
 <BaseLayout title={entry.data.seo_title} description={entry.data.meta_description} jsonLd={jsonLd}>
   <Breadcrumbs crumbs={crumbs} />
-  <Hero understated title={entry.data.title} subtitle={subtitle} showPartnerBadge={false} />
+  <Hero understated title={entry.data.title} subtitle={subtitle} showPartnerBadge={false}>
+    <div slot="details" class="mb-2">
+      <ModuleIcon slug={entry.data.slug} />
+    </div>
+  </Hero>
 
   <ContentSection number="02" title="Features con impacto" html={featuresHtml} />
 

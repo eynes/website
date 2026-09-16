@@ -470,10 +470,8 @@ a.flagship-card:hover { background-color: var(--color-dark-soft); transform: non
 .module-list .card { display: flex; flex-direction: column; gap: 4px; }
 .module-list .card .module-icon { margin-bottom: 10px; }
 
-.module-icon { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; flex-shrink: 0; }
-.module-icon svg { width: 22px; height: 22px; }
-.module-icon.is-purple { background: color-mix(in srgb, var(--color-purple) 12%, white); color: var(--color-purple); }
-.module-icon.is-teal { background: color-mix(in srgb, var(--color-teal) 12%, white); color: var(--color-teal); }
+.module-icon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; flex-shrink: 0; background: var(--color-paper); border: 1px solid var(--color-line); }
+.module-icon img { width: 28px; height: 28px; }
 .contact-cta { position: relative; overflow: hidden; }
 .contact-cta::before {
   content: '';
