@@ -8,7 +8,7 @@ schema_type: "Article"
 cliente: "Supply Parts"
 rubro: "Repuestos y Autopartes"
 pais: ""
-usuarios: ""
+usuarios: 67
 modulos_implementados: ["ventas-y-crm", "inventario"]
 resultado_clave: "En Supply Parts el pago que un cliente reporta por el portal impacta su cuenta corriente y libera el cupo de crédito en el acto, sin que administración tenga que tocarlo — lo que antes frenaba ventas por puro trámite ahora escala en volumen sin sumar personal."
 agrupador: "AUTOMOTRIZ Y VEHÍCULOS"

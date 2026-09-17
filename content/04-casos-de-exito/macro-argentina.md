@@ -8,7 +8,7 @@ schema_type: "Article"
 cliente: "Macro Argentina"
 rubro: "Repuestos y Autopartes"
 pais: ""
-usuarios: ""
+usuarios: 30
 modulos_implementados: ["ventas-y-crm", "inventario", "compras"]
 resultado_clave: "Las compras dejaron de decidirse a ojo: el sistema sugiere qué reponer, cuándo y en qué cantidad según el historial real de ventas. Bajaron las compras de urgencia y el capital quedó invertido en los repuestos que efectivamente dejan margen."
 agrupador: "AUTOMOTRIZ Y VEHÍCULOS"

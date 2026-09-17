@@ -12,7 +12,7 @@ faqs:
   - pregunta: "¿Cómo se gestionan las ausencias, vacaciones y permisos del personal?"
     respuesta: "Cada empleado pide sus días libres (vacaciones, baja médica, asuntos personales) directamente desde la plataforma, y el sistema dispara un flujo de aprobación que notifica al supervisor correspondiente. Se integra con el calendario de la empresa, así que el equipo ve quién está disponible y evita pisarse en la planificación."
   - pregunta: "¿Se puede automatizar la liquidación de sueldos y conectarla con las horas trabajadas?"
-    respuesta: "Sí. La nómina se calcula de forma masiva o individual, y se integra con el control de asistencia para computar horas extra o comisiones según las reglas salariales que configuremos para tu convenio. Así lo implementamos para Rafaela Alimentos, con reglas propias del convenio de la industria de la carne y una dotación de más de 1.500 empleados."
+    respuesta: "Sí. La nómina se calcula de forma masiva o individual, y se integra con el control de asistencia para computar horas extra o comisiones según las reglas salariales que configuremos para tu convenio. Así lo implementamos para Rafaela Alimentos, con reglas propias del convenio de la industria de la carne y una dotación de más de 1.450 empleados."
   - pregunta: "¿Odoo sirve para el proceso de reclutamiento y selección?"
     respuesta: "Sí, el módulo de Recruitment centraliza toda la contratación: publicás la oferta en portales de empleo o en tu web y seguís a cada candidato en un tablero Kanban con etapas propias (nuevo, entrevista, prueba técnica, contratado), con envío de mails automatizado y entrevistas programadas desde ahí mismo."
 
@@ -21,7 +21,7 @@ modulos_integrados:
 
 caso_relacionado:
   slug: "rafaela-alimentos"
-  resultado: "Liquidación de sueldos masiva para +1.500 empleados y legajos digitales bajo el convenio de la industria de la carne"
+  resultado: "Liquidación de sueldos masiva para +1.450 empleados y legajos digitales bajo el convenio de la industria de la carne"
 ---
 
 ## 01 — Hero de módulo

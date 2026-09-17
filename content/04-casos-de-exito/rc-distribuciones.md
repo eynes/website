@@ -8,7 +8,7 @@ schema_type: "Article"
 cliente: "RC Distribuciones"
 rubro: "Mayorista de Ferretería y Bulonería"
 pais: ""
-usuarios: ""
+usuarios: 80
 modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "RC Distribuciones eliminó la doble carga de la cobranza: el viajante registra el cobro en la calle y la cuenta corriente se actualiza al instante, mientras administración solo controla contra el banco. El descuento por pronto pago y la nota de crédito con CAE salen solos, y el cálculo de comisiones quedó estandarizado según la Ley 14.546 — los 18.000 artículos, los fletes y los cheques rechazados conviven ahora en una sola plataforma."
 agrupador: "COMERCIO MAYORISTA Y MINORISTA"

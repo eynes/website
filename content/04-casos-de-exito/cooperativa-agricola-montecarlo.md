@@ -8,7 +8,7 @@ schema_type: "Article"
 cliente: "Cooperativa Agrícola Montecarlo"
 rubro: "Agroindustria"
 pais: ""
-usuarios: ""
+usuarios: 15
 modulos_implementados: ["ventas-y-crm", "inventario", "compras"]
 resultado_clave: "El peso del camión llega directo del sensor al sistema, sin transcripción manual ni margen de error, y eso permite liquidar a los socios productores de forma periódica en vez de con demoras."
 agrupador: "AGROINDUSTRIA Y MANUFACTURA"

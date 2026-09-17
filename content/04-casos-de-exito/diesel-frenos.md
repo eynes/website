@@ -8,7 +8,7 @@ schema_type: "Article"
 cliente: "Diesel frenos"
 rubro: "Taller / Autopartes"
 pais: ""
-usuarios: ""
+usuarios: 20
 modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "Un cambio de tipo de cambio o de proveedor recalcula automáticamente todos los productos afectados y etiqueta los presupuestos vencidos. Las importaciones son trazables por despacho aduanero con costo real, y las percepciones de las seis provincias, la cartera de cheques y el COT de ARBA dejaron de gestionarse a pulmón."
 agrupador: "AUTOMOTRIZ Y VEHÍCULOS"

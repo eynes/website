@@ -8,7 +8,7 @@ schema_type: "Article"
 cliente: "Clínica IMA S.A."
 rubro: "Salud"
 pais: ""
-usuarios: ""
+usuarios: 45
 modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "Los tiempos de auditoría del consumo de alimentos bajaron fuerte y las presentaciones ante ARCA, que antes tomaban días de carga manual, ahora se resuelven con algunos clics."
 agrupador: "SALUD, CIENCIA Y CUIDADO ANIMAL"

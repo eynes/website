@@ -8,7 +8,7 @@ schema_type: "Article"
 cliente: "YPF"
 rubro: "Energía y Petróleo"
 pais: ""
-usuarios: ""
+usuarios: 850
 modulos_implementados: ["compras", "contabilidad-y-finanzas"]
 resultado_clave: "YPF ganó visibilidad financiera transversal sobre sus consorcios: los socios auditan sus aportes de forma transparente, los sobrecostos de campo se detectan de inmediato y las liquidaciones cruzadas entre empresas se emiten solas, sin errores ni demoras."
 agrupador: "ENERGÍA Y SECTORES PESADOS"

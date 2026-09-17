@@ -8,7 +8,7 @@ schema_type: "Article"
 cliente: "Las Dinas"
 rubro: "Frigorífico, alimentos y chacinados"
 pais: ""
-usuarios: ""
+usuarios: 20
 modulos_implementados: ["ventas-y-crm", "inventario", "contabilidad-y-finanzas"]
 resultado_clave: "Hoy Las Dinas traza cada producto desde que entra la media res hasta que el salame sale al supermercado, conoce el rinde exacto de cada partida y encara las auditorías de SENASA sin el estrés de antes — con un soporte técnico que responde en el día a día, no en semanas."
 agrupador: "ALIMENTOS Y GASTRONOMÍA"

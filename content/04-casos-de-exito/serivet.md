@@ -8,7 +8,7 @@ schema_type: "Article"
 cliente: "Serivet"
 rubro: "Veterinaria"
 pais: ""
-usuarios: ""
+usuarios: 10
 modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
 resultado_clave: "Serivet concentró todo el historial del paciente en un solo lugar — vacunas previas, laboratorios, prestaciones e insumos usados impactan directo en caja — y el sistema avisa qué medicamentos están por vencer antes de que se conviertan en pérdida."
 agrupador: "SALUD, CIENCIA Y CUIDADO ANIMAL"
