@@ -102,18 +102,21 @@ const jsonLd = site
   }
 
   <section class="section bg-paper-dim" aria-labelledby="como-trabajamos">
-    <div class="container-page">
+    <div class="container-page reveal">
       <h2 id="como-trabajamos">Cómo trabajamos</h2>
       <div class="work-grid">
         <div>
+          <span class="work-step" aria-hidden="true">1</span>
           <h3>Entendemos tu operación</h3>
           <p>Conversamos con tu equipo para conocer los procesos, las dificultades y lo que necesitás resolver con Odoo.</p>
         </div>
         <div>
+          <span class="work-step" aria-hidden="true">2</span>
           <h3>Definimos e implementamos</h3>
           <p>Acordamos el alcance y las prioridades del proyecto. Configuramos los módulos y trabajamos con tu equipo en la puesta en marcha.</p>
         </div>
         <div>
+          <span class="work-step" aria-hidden="true">3</span>
           <h3>Te acompañamos</h3>
           <p>Después de la implementación, seguimos cerca para resolver consultas y acompañar los cambios de tu operación.</p>
         </div>
@@ -122,7 +125,7 @@ const jsonLd = site
   </section>
 
   <section class="section join-team" aria-labelledby="forma-parte">
-    <div class="container-page">
+    <div class="container-page reveal">
       <h2 id="forma-parte">Forma parte</h2>
       <ol class="join-steps">
         <li>
@@ -148,10 +151,36 @@ const jsonLd = site
 </BaseLayout>
 
 <style>
-  .work-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 28px; }
+  .work-grid { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 32px; }
+  .work-grid > div { position: relative; padding-top: 8px; }
+  .work-grid > div:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 26px;
+    left: 100%;
+    width: 32px;
+    height: 1.5px;
+    background: var(--color-line);
+  }
+  .work-step {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 20px;
+    border-radius: var(--radius-pill);
+    background: var(--color-dark);
+    color: var(--color-paper);
+    font-family: var(--font-mono);
+    font-size: 1.0625rem;
+    font-weight: 600;
+  }
   .work-grid h3 { font-size: 1.125rem; font-weight: 500; line-height: 1.4; letter-spacing: -0.02em; }
   .work-grid p { margin-top: 12px; font-size: 0.9375rem; line-height: 1.75; color: var(--color-ink-soft); }
-  @media (max-width: 639px) { .work-grid { grid-template-columns: 1fr; gap: 24px; } }
+  @media (max-width: 639px) {
+    .work-grid { grid-template-columns: 1fr; gap: 28px; }
+    .work-grid > div::after { display: none; }
+  }
 
   .join-steps {
     display: grid;
@@ -162,7 +191,7 @@ const jsonLd = site
     padding: 0;
   }
   .join-steps li { border-top: 1px solid var(--color-line); padding-top: 20px; }
-  .join-step { display: block; margin-bottom: 16px; font-size: 0.875rem; color: var(--color-teal); }
+  .join-step { display: block; margin-bottom: 16px; font-family: var(--font-mono); font-size: 0.875rem; color: var(--color-teal); }
   .join-steps h3 { font-size: 1.0625rem; font-weight: 500; line-height: 1.5; letter-spacing: -0.015em; text-wrap: initial; }
   .join-steps a { display: inline-block; margin-top: 8px; font-size: 0.875rem; color: var(--color-purple); overflow-wrap: anywhere; }
   .join-steps a:hover { text-decoration: underline; }

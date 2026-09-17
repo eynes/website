@@ -80,6 +80,19 @@
     color: var(--color-ink);
   }
 
+  /* Fixed, pointer-events-none grain layer (see BaseLayout) — never on a
+     scrolling container, so it costs one paint instead of continuous
+     repaints on scroll. */
+  .grain-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.025;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
   p {
     line-height: 1.7;
   }
@@ -462,6 +475,60 @@ a.nav-mobile-link { justify-content: flex-start; }
 .hero-actions { flex-shrink: 0; padding-bottom: 5px; }
 .hero-compact .hero-layout { padding-block: clamp(3rem, 6vw, 5.5rem); }
 .hero-compact .hero-title { max-width: 1000px; font-size: clamp(2.5rem, 4.8vw, 4.25rem); }
+
+/* Icon collage: the hero's visual half. Real Odoo app icons (the same
+   ones and accent colors used everywhere else on the site) scattered in
+   an asymmetric cluster instead of a stock photo or a fake screenshot —
+   the actual product, not a stand-in for it. Positions are per-tile
+   (nth-child) so the cluster reads as composed, not a repeated grid. */
+.icon-collage {
+  position: relative;
+  aspect-ratio: 5 / 4;
+  min-height: 320px;
+}
+.icon-collage::before {
+  content: '';
+  position: absolute;
+  inset: -6% -10%;
+  background:
+    radial-gradient(ellipse 60% 55% at 30% 25%, color-mix(in srgb, var(--color-purple) 16%, transparent), transparent 70%),
+    radial-gradient(ellipse 55% 50% at 78% 78%, color-mix(in srgb, var(--color-teal) 15%, transparent), transparent 70%);
+  pointer-events: none;
+}
+.icon-collage-tile {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  border-radius: var(--radius-card);
+  background: color-mix(in srgb, var(--accent) 10%, white);
+  border: 1px solid color-mix(in srgb, var(--accent) 26%, var(--color-line));
+  box-shadow: 0 16px 32px -16px color-mix(in srgb, var(--accent) 45%, transparent);
+  animation: icon-float 7s ease-in-out infinite;
+}
+.icon-collage-tile img { width: 46px; height: 46px; }
+.icon-collage-tile:nth-child(1) { top: 4%; left: 8%; width: 108px; height: 108px; animation-delay: 0s; }
+.icon-collage-tile:nth-child(1) img { width: 58px; height: 58px; }
+.icon-collage-tile:nth-child(2) { top: 2%; left: 58%; width: 76px; height: 76px; animation-delay: 0.7s; }
+.icon-collage-tile:nth-child(3) { top: 30%; left: 32%; width: 92px; height: 92px; animation-delay: 1.4s; }
+.icon-collage-tile:nth-child(4) { top: 20%; left: 78%; width: 92px; height: 92px; animation-delay: 2.1s; }
+.icon-collage-tile:nth-child(5) { top: 54%; left: 4%; width: 78px; height: 78px; animation-delay: 2.8s; }
+.icon-collage-tile:nth-child(6) { top: 58%; left: 52%; width: 116px; height: 116px; animation-delay: 3.5s; }
+.icon-collage-tile:nth-child(6) img { width: 62px; height: 62px; }
+.icon-collage-tile:nth-child(7) { top: 40%; left: 0%; width: 64px; height: 64px; animation-delay: 4.2s; }
+.icon-collage-tile:nth-child(8) { top: 78%; left: 34%; width: 80px; height: 80px; animation-delay: 4.9s; }
+@keyframes icon-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@media (max-width: 1023px) {
+  .icon-collage { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .icon-collage-tile { animation: none; }
+}
+
 .trust-strip { background: var(--color-paper); padding-block: 32px; }
 .trust-strip > div { text-align: center; }
 .trust-strip p { font-size: 0.9375rem; font-weight: 500; }
@@ -651,6 +718,19 @@ main:has(.hero-understated) .hero-understated + .section { padding-top: 12px; }
 main:has(.hero-understated) .collection-section + .collection-section { padding-top: 12px; }
 main:has(.hero-understated) .prose-content h2 { font-size: clamp(1.5rem, 2vw, 1.875rem); }
 main:has(.hero-understated) .prose-content h3 { font-size: 1.2rem; letter-spacing: -0.02em; }
+/* Featured-first bento: only for the counts that tile with zero empty
+   cells in a 3-col grid (first tile spans 2, so 3 or 5 items fill exactly
+   1 or 2 full rows). Any other count keeps the plain uniform grid. */
+@media (min-width: 1024px) {
+  .case-bento[data-count='3'] > :first-child,
+  .case-bento[data-count='5'] > :first-child {
+    grid-column: span 2;
+  }
+  .case-bento[data-count='3'] > :first-child .case-result,
+  .case-bento[data-count='5'] > :first-child .case-result {
+    max-width: 60ch;
+  }
+}
 .case-list .card { padding: 28px; border-color: #e9e6e9; display: flex; flex-direction: column; }
 .case-list .card > p:first-child, .module-list .card > p:first-child { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.025em; }
 .case-list .card > p:nth-child(2) { font-size: 0.8125rem; line-height: 1.5; margin-top: 6px; }

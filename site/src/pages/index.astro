@@ -8,7 +8,7 @@ import CaseCard from '../components/casos/CaseCard.astro';
 import { getPublished, sortDestacadosFirst } from '../lib/content';
 import { organizationSchema, websiteSchema } from '../lib/schema';
 import { withBase } from '../lib/url';
-import { getModuleIcon } from '../lib/moduleIcons';
+import { getModuleIcon, MODULE_ICONS } from '../lib/moduleIcons';
 
 const page = await getEntry('paginasUnicas', 'home');
 const site = await getEntry('siteConfig', 'site');
@@ -35,7 +35,15 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
     primaryCta={{ label: 'Agendar demo', href: '/demo' }}
     secondaryCta={{ label: 'Ver módulos', href: '/modulos' }}
     showPartnerBadge={false}
-  />
+  >
+    <div slot="visual" class="icon-collage" aria-hidden="true">
+      {Object.values(MODULE_ICONS).map(({ file, accent }) => (
+        <span class="icon-collage-tile" style={`--accent: ${accent}`}>
+          <img src={withBase(`/icons/odoo/${file}.svg`)} alt="" width="46" height="46" loading="eager" />
+        </span>
+      ))}
+    </div>
+  </Hero>
 
   {
     site && (
@@ -92,7 +100,10 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
           <h2 class="mt-2 text-2xl sm:text-3xl">
             {casosDestacados.length > 1 ? 'Casos de éxito destacados' : 'Caso de éxito destacado'}
           </h2>
-          <div class:list={['mt-6 grid gap-5', casosDestacados.length === 1 ? 'max-w-xl' : 'sm:grid-cols-2 lg:grid-cols-3']}>
+          <div
+            class:list={['mt-6 grid gap-5', casosDestacados.length === 1 ? 'max-w-xl' : 'case-bento sm:grid-cols-2 lg:grid-cols-3']}
+            data-count={casosDestacados.length}
+          >
             {casosDestacados.map((caso) => (
               <CaseCard entry={caso} compact />
             ))}

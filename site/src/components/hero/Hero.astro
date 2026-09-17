@@ -30,13 +30,14 @@ const {
 } = Astro.props;
 
 const isExternalLink = (href: string) => /^[a-z][a-z0-9+.-]*:/i.test(href);
+const hasVisual = Astro.slots.has('visual') || Boolean(imagePlaceholder);
 ---
 
 <section class:list={['hero relative border-b border-line', compact && 'hero-compact', understated && 'hero-understated']}>
   <div
     class:list={[
       'hero-layout container-page relative grid items-end gap-10',
-      imagePlaceholder ? 'lg:grid-cols-[1.1fr_0.9fr]' : '',
+      hasVisual ? 'lg:grid-cols-[1.1fr_0.9fr]' : '',
     ]}
   >
     <div>
@@ -45,7 +46,12 @@ const isExternalLink = (href: string) => /^[a-z][a-z0-9+.-]*:/i.test(href);
           <PartnerBadge />
         </div>
       )}
-      <h1 class:list={['hero-title enter enter-2', showPartnerBadge && 'mt-8']}>
+      {Astro.slots.has('eyebrow') && (
+        <div class="enter enter-1">
+          <slot name="eyebrow" />
+        </div>
+      )}
+      <h1 class:list={['hero-title enter enter-2', (showPartnerBadge || Astro.slots.has('eyebrow')) && 'mt-3']}>
         {title}
       </h1>
       <slot name="details" />
@@ -82,10 +88,16 @@ const isExternalLink = (href: string) => /^[a-z][a-z0-9+.-]*:/i.test(href);
       </div>}
     </div>
     {
-      imagePlaceholder && (
-        <div class="enter enter-3 flex aspect-[4/3] items-center justify-center border p-6 text-center font-mono text-xs uppercase tracking-wide text-ink-faint" style="border-color: var(--color-line)">
-          {imagePlaceholder}
+      Astro.slots.has('visual') ? (
+        <div class="enter enter-3">
+          <slot name="visual" />
         </div>
+      ) : (
+        imagePlaceholder && (
+          <div class="enter enter-3 flex aspect-[4/3] items-center justify-center border p-6 text-center font-mono text-xs uppercase tracking-wide text-ink-faint" style="border-color: var(--color-line)">
+            {imagePlaceholder}
+          </div>
+        )
       )
     }
   </div>

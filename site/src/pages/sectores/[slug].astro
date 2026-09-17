@@ -10,6 +10,7 @@ import { splitSections, renderSection, renderFragment, extractLabeled, stripLabe
 import { resolvePublishedRelated } from '../../lib/related';
 import { serviceSchema, faqPageSchema, breadcrumbListSchema } from '../../lib/schema';
 import { withBase } from '../../lib/url';
+import { groupColorClass } from '../../lib/sectorGroups';
 
 export async function getStaticPaths() {
   const verticales = await getPublished('verticales');
@@ -47,7 +48,9 @@ const jsonLd = [
 
 <BaseLayout title={entry.data.seo_title} description={entry.data.meta_description} jsonLd={jsonLd}>
   <Breadcrumbs crumbs={crumbs} />
-  <Hero understated title={entry.data.title} subtitle={subtitle} showPartnerBadge={false} />
+  <Hero understated title={entry.data.title} subtitle={subtitle} showPartnerBadge={false}>
+    <p slot="eyebrow" class:list={['kicker', groupColorClass(entry.data.agrupador)]}>{entry.data.agrupador}</p>
+  </Hero>
 
   <ContentSection number="02" title="Problemas específicos del rubro" html={problemsHtml} />
   <ContentSection number="02b" title="Odoo vs. las alternativas" html={comparisonHtml} tone="muted" />

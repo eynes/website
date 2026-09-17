@@ -14,6 +14,21 @@ import { withBase } from '../lib/url';
 const page = await getEntry('paginasUnicas', 'localizacion-argentina');
 const sections = page ? splitSections(page.body ?? '') : {};
 
+// Fiscal/contable icons (real Odoo app icons, same convention as the
+// module accent system) standing in for this page's own visual — this is
+// a cross-cutting capability, not one module, so the accent rotates
+// across the three brand colors instead of a single module hex.
+const localizacionIcons = [
+  { file: 'account_accountant', accent: '#017e84' },
+  { file: 'account_check_printing', accent: '#714b67' },
+  { file: 'account_batch_payment', accent: '#5b899e' },
+  { file: 'account_iso20022', accent: '#017e84' },
+  { file: 'account_bank_statement_import_ofx', accent: '#714b67' },
+  { file: 'account_asset', accent: '#5b899e' },
+  { file: 'account_transfer', accent: '#017e84' },
+  { file: 'certification_organism', accent: '#714b67' },
+];
+
 const subtitle = extractLabeled(sections['01']?.body, 'Subtítulo');
 const problemHtml = await renderSection(sections, '02');
 const circuitoHtml = await renderSection(sections, '04');
@@ -58,11 +73,20 @@ const jsonLd = page
 
 <BaseLayout title={page?.data.seo_title ?? ''} description={page?.data.meta_description ?? ''} jsonLd={jsonLd as Record<string, unknown>[]}>
   <Breadcrumbs crumbs={crumbs} />
-  <Hero understated
+  <Hero
     title={page?.data.title ?? ''}
     subtitle={subtitle}
     showPartnerBadge={false}
-  />
+  >
+    <p slot="eyebrow" class="kicker">Módulo insignia</p>
+    <div slot="visual" class="icon-collage" aria-hidden="true">
+      {localizacionIcons.map(({ file, accent }) => (
+        <span class="icon-collage-tile" style={`--accent: ${accent}`}>
+          <img src={withBase(`/icons/odoo/${file}.svg`)} alt="" width="46" height="46" loading="lazy" />
+        </span>
+      ))}
+    </div>
+  </Hero>
 
   <section class="section">
     <div class="container-page reveal">
