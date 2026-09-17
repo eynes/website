@@ -4,12 +4,30 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/hero/Hero.astro';
 import CTASection from '../../components/cta/CTASection.astro';
 import { getPublished } from '../../lib/content';
+import { splitSections, extractLabeled } from '../../lib/sections';
 import { collectionPageSchema, breadcrumbListSchema } from '../../lib/schema';
 import { withBase } from '../../lib/url';
-import ModuleIcon from '../../components/shared/ModuleIcon.astro';
+import { getModuleIcon } from '../../lib/moduleIcons';
 
 const hub = await getEntry('modulosHub', 'modulos');
 const modulos = await getPublished('modulos');
+
+// Los 4 módulos que cualquier implementación usa desde el día uno —
+// el resto son especializaciones que se suman según el negocio.
+const CORE_SLUGS = ['ventas-y-crm', 'inventario', 'compras', 'contabilidad-y-finanzas'];
+
+const cards = modulos.map((m) => {
+  const sections = splitSections(m.body ?? '');
+  const subtitle = extractLabeled(sections['01']?.body, 'Subtítulo') || m.data.meta_description;
+  return { entry: m, subtitle, ...getModuleIcon(m.data.slug) };
+});
+
+// Orden fijo (no alfabético) para que dos acentos del mismo palo de color
+// (RRHH y Punto de Venta son ambos violetas) no queden pegados en la grilla.
+const SPECIALIZED_ORDER = ['comercio-exterior', 'rrhh', 'importaciones', 'punto-de-venta'];
+
+const core = CORE_SLUGS.map((slug) => cards.find((c) => c.entry.data.slug === slug)).filter(Boolean) as typeof cards;
+const specialized = SPECIALIZED_ORDER.map((slug) => cards.find((c) => c.entry.data.slug === slug)).filter(Boolean) as typeof cards;
 
 const crumbs = [
   { name: 'Inicio', url: '/' },
@@ -29,20 +47,61 @@ const jsonLd = hub
 ---
 
 <BaseLayout title={hub?.data.seo_title ?? ''} description={hub?.data.meta_description ?? ''} jsonLd={jsonLd}>
-  <Hero understated title="Módulos" showPartnerBadge={false} compact />
+  <Hero
+    understated
+    compact
+    title="Módulos"
+    subtitle="Ventas, compras, inventario y contabilidad para empezar — RRHH, comercio exterior, importaciones y punto de venta cuando el negocio lo pide. Cada uno se implementa solo o conectado con los demás."
+    showPartnerBadge={false}
+  />
 
-  <section class="section collection-section">
-    <div class="container-page module-list grid gap-5 sm:grid-cols-2">
-      {
-        modulos.map((m, i) => (
-          <a href={withBase(`/modulos/${m.data.slug}`)} class="card block">
-            <ModuleIcon slug={m.data.slug} index={i} />
-            <p class="font-semibold text-ink">{m.data.title}</p>
-            <p class="mt-2 text-sm text-ink-soft">{m.data.meta_description}</p>
-            <span class="mt-4 inline-block text-sm font-medium text-teal">Ver módulo <span class="arrow">→</span></span>
-          </a>
-        ))
-      }
+  <section class="section collection-section modules-section">
+    <div class="container-page reveal">
+      <p class="module-group-label">Los 4 pilares de cualquier operación</p>
+      <div class="modules-grid mt-5">
+        {
+          core.map((c) => (
+            <a
+              href={withBase(`/modulos/${c.entry.data.slug}`)}
+              class="module-tile"
+              style={`--accent: ${c.accent}`}
+            >
+              <span class="module-tile-bar" />
+              <span class="module-tile-body">
+                <span class="module-tile-icon">
+                  <img src={withBase(`/icons/odoo/${c.file}.svg`)} alt="" width="32" height="32" loading="lazy" />
+                </span>
+                <h3 class="module-tile-title">{c.entry.data.title}</h3>
+                <p class="module-tile-desc">{c.subtitle}</p>
+                <span class="module-tile-link">Ver módulo <span class="arrow" aria-hidden="true">→</span></span>
+              </span>
+            </a>
+          ))
+        }
+      </div>
+
+      <p class="module-group-label mt-12">Para necesidades más específicas</p>
+      <div class="modules-grid mt-5">
+        {
+          specialized.map((c) => (
+            <a
+              href={withBase(`/modulos/${c.entry.data.slug}`)}
+              class="module-tile"
+              style={`--accent: ${c.accent}`}
+            >
+              <span class="module-tile-bar" />
+              <span class="module-tile-body">
+                <span class="module-tile-icon">
+                  <img src={withBase(`/icons/odoo/${c.file}.svg`)} alt="" width="32" height="32" loading="lazy" />
+                </span>
+                <h3 class="module-tile-title">{c.entry.data.title}</h3>
+                <p class="module-tile-desc">{c.subtitle}</p>
+                <span class="module-tile-link">Ver módulo <span class="arrow" aria-hidden="true">→</span></span>
+              </span>
+            </a>
+          ))
+        }
+      </div>
     </div>
   </section>
 

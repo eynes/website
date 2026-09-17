@@ -34,9 +34,9 @@ caso_relacionado:
 
 | Feature | Beneficio |
 |---|---|
-| Cálculo automático de retenciones a proveedores | → Sin errores manuales que te expongan a multas |
-| Liquidación automática a proveedores/productores | → Pagos ágiles, sin planillas sueltas |
-| Reglas de reabastecimiento conectadas a Inventario | → Comprás lo que realmente rota, no lo que "parece que se vende" |
+| Cálculo automático de retenciones a proveedores | Sin errores manuales que te expongan a multas |
+| Liquidación automática a proveedores/productores | Pagos ágiles, sin planillas sueltas |
+| Reglas de reabastecimiento conectadas a Inventario | Comprás lo que realmente rota, no lo que "parece que se vende" |
 
 ## 03 — Captura / demo visual
 

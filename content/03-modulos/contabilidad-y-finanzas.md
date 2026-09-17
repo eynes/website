@@ -43,9 +43,9 @@ caso_relacionado:
 
 | Feature | Beneficio |
 |---|---|
-| Integración ARCA/AFIP | → Facturás sin planillas paralelas ni carga manual |
-| Conciliación bancaria | → Cerrás el mes sin cruzar extractos a mano |
-| Reportes en tiempo real | → Decidís con datos de hoy, no del mes pasado |
+| Integración ARCA/AFIP | Facturás sin planillas paralelas ni carga manual |
+| Conciliación bancaria | Cerrás el mes sin cruzar extractos a mano |
+| Reportes en tiempo real | Decidís con datos de hoy, no del mes pasado |
 
 > "Mirá el resultado real de [cliente] con este módulo →" (link al caso en `caso_relacionado`)
 

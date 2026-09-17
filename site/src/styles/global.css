@@ -472,6 +472,85 @@ a.flagship-card:hover { background-color: var(--color-dark-soft); transform: non
 
 .module-icon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; flex-shrink: 0; background: var(--color-paper); border: 1px solid var(--color-line); }
 .module-icon img { width: 28px; height: 28px; }
+
+/* Módulos: grilla con acento propio por tarjeta (color real tomado del
+   ícono oficial de Odoo de ese módulo, no un color decorativo inventado). */
+.module-group-label { font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.01em; color: var(--color-ink); }
+.modules-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+@media (min-width: 640px) { .modules-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .modules-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.module-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border-radius: 16px;
+  border: 1px solid var(--color-line);
+  background: var(--color-paper);
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(32, 24, 32, 0.04);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+.module-tile-bar { display: block; width: 100%; height: 6px; flex-shrink: 0; background: var(--accent); transition: height 200ms ease; }
+.module-tile-body { display: flex; flex-direction: column; align-items: start; flex-grow: 1; padding: 24px 22px 22px; }
+.module-tile:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--color-line));
+  box-shadow: 0 22px 36px -20px color-mix(in srgb, var(--accent) 40%, transparent), 0 4px 10px -4px rgba(40, 28, 32, 0.07);
+}
+.module-tile:hover .module-tile-bar { height: 10px; }
+.module-tile-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 13px;
+  background: color-mix(in srgb, var(--accent) 9%, white);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--color-line));
+  margin-bottom: 16px;
+  transition: transform 220ms ease;
+}
+.module-tile-icon img { width: 30px; height: 30px; }
+.module-tile:hover .module-tile-icon { transform: scale(1.07); }
+.module-tile-title { font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.02em; color: var(--color-ink); }
+.module-tile-desc { margin-top: 8px; font-size: 0.8125rem; line-height: 1.6; color: var(--color-ink-soft); flex-grow: 1; }
+.module-tile-link { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--color-line); font-size: 0.8125rem; font-weight: 500; color: var(--accent); width: 100%; transition: color 220ms ease; }
+.module-tile:hover .module-tile-link { color: color-mix(in srgb, var(--accent) 80%, black 8%); }
+@media (prefers-reduced-motion: reduce) {
+  .module-tile, .module-tile-bar, .module-tile-icon, .module-tile-link { transition: none; }
+  .module-tile:hover { transform: none; }
+  .module-tile:hover .module-tile-icon { transform: none; }
+  .module-tile:hover .module-tile-bar { height: 6px; }
+}
+
+/* Página de módulo individual: mismo lenguaje de acento por módulo que la
+   grilla de /modulos (--accent viene inline desde moduleIcons.ts). */
+.module-hero-icon .module-icon {
+  width: 58px;
+  height: 58px;
+  background: color-mix(in srgb, var(--accent) 9%, white);
+  border-color: color-mix(in srgb, var(--accent) 28%, var(--color-line));
+}
+.module-hero-icon .module-icon img { width: 34px; height: 34px; }
+
+.module-page .prose-content table { border: none; border-collapse: separate; border-spacing: 0; }
+.module-page .prose-content thead { display: none; }
+.module-page .prose-content tbody tr { border-bottom: 1px solid var(--color-line); }
+.module-page .prose-content tbody tr:last-child { border-bottom: none; }
+.module-page .prose-content td { border: none; padding: 20px 4px; vertical-align: top; }
+.module-page .prose-content td:first-child { width: 34%; font-weight: 600; color: var(--color-ink); padding-right: 24px; }
+.module-page .prose-content td:last-child { color: var(--color-ink-soft); }
+.module-page .prose-content td:last-child::before { content: '→'; display: inline-block; margin-right: 8px; color: var(--accent); font-weight: 700; }
+@media (max-width: 640px) {
+  .module-page .prose-content tbody tr { display: flex; flex-direction: column; gap: 4px; padding-block: 16px; }
+  .module-page .prose-content td:first-child { width: auto; padding-right: 0; padding-bottom: 0; }
+}
+
+.module-pill { position: relative; display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-paper); padding: 8px 18px; font-size: 0.875rem; font-weight: 500; color: var(--color-ink-soft); transition: border-color 200ms ease, color 200ms ease, background-color 200ms ease; }
+.module-pill:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--color-line)); color: var(--color-ink); background: color-mix(in srgb, var(--accent) 6%, white); }
+
+.module-result-card { border-left: 3px solid var(--accent); }
+
 .contact-cta { position: relative; overflow: hidden; }
 .contact-cta::before {
   content: '';

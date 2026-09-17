@@ -34,9 +34,9 @@ caso_relacionado:
 
 | Feature | Beneficio |
 |---|---|
-| Portal de clientes con autogestión de pagos | → Tus clientes suben su comprobante y liberan su propio cupo, sin esperar a un administrativo |
-| Integración nativa con Mercado Libre | → Precios y stock sincronizados en tiempo real, sin cargar la venta dos veces |
-| Límite de crédito automático por cliente | → Se actualiza solo con cada pago — no más bloqueos injustos a quien ya pagó |
+| Portal de clientes con autogestión de pagos | Tus clientes suben su comprobante y liberan su propio cupo, sin esperar a un administrativo |
+| Integración nativa con Mercado Libre | Precios y stock sincronizados en tiempo real, sin cargar la venta dos veces |
+| Límite de crédito automático por cliente | Se actualiza solo con cada pago — no más bloqueos injustos a quien ya pagó |
 
 ## 03 — Captura / demo visual
 

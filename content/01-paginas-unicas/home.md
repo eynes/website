@@ -93,10 +93,13 @@ antes de entrar a la grilla genérica de módulos. -->
 
 ## 05 — Grilla completa de módulos (resumen)
 
-<!-- GUÍA: resumen visual, no el contenido principal — cada card linkea a
-su página de módulo propia (fuente: content/03-modulos/_hub.md). Hoy solo
-hay 4 módulos con página propia; no listar acá Marketing, Manufactura,
-Punto de venta ni RRHH hasta que tengan su .md real en 03-modulos/ (evita
+<!-- GUÍA (actualizada 17/09/2026): resumen visual, no el contenido
+principal — el grid en index.astro lee `getPublished('modulos')`
+directo, así que lista TODOS los módulos con `estado: publicado` en
+03-modulos/ automáticamente; sumar un módulo nuevo con su .md ya alcanza,
+no hay lista hardcodeada para tocar en código. Ahora son 8: los 4
+originales más RRHH, Comercio Exterior, Importaciones y Punto de Venta.
+No listar Marketing ni Manufactura hasta que tengan su .md real (evita
 un link roto). Localización queda afuera de esta grilla porque ya tiene
 su banner propio arriba (04b). -->
 
@@ -104,6 +107,10 @@ su banner propio arriba (04b). -->
 - Contabilidad y finanzas
 - Inventario
 - Compras
+- RRHH
+- Comercio Exterior
+- Importaciones
+- Punto de Venta
 
 ## 06 — Caso de éxito destacado
 

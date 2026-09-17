@@ -34,9 +34,9 @@ caso_relacionado:
 
 | Feature | Beneficio |
 |---|---|
-| Reglas de reabastecimiento automático | → Comprás según tu historial real de ventas, no según la memoria del equipo |
-| Trazabilidad por lote y vencimiento (FEFO) | → Cero pérdidas por productos vencidos sin detectar |
-| Integración con básculas y periféricos de planta | → El peso o la medición entra sola al sistema, sin tipeo ni errores |
+| Reglas de reabastecimiento automático | Comprás según tu historial real de ventas, no según la memoria del equipo |
+| Trazabilidad por lote y vencimiento (FEFO) | Cero pérdidas por productos vencidos sin detectar |
+| Integración con básculas y periféricos de planta | El peso o la medición entra sola al sistema, sin tipeo ni errores |
 
 ## 03 — Captura / demo visual
 

@@ -1,5 +1,6 @@
 ---
 import { withBase } from '../../lib/url';
+import { getModuleIcon } from '../../lib/moduleIcons';
 
 interface Props {
   slug: string;
@@ -7,15 +8,7 @@ interface Props {
 }
 
 const { slug } = Astro.props;
-
-const ICONS: Record<string, string> = {
-  'ventas-y-crm': 'crm',
-  inventario: 'stock',
-  compras: 'purchase',
-  'contabilidad-y-finanzas': 'account_accountant',
-};
-
-const file = ICONS[slug] ?? 'base';
+const { file } = getModuleIcon(slug);
 ---
 
 <span class="module-icon">
