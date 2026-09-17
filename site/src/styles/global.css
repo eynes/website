@@ -32,7 +32,14 @@
   --color-silver: #5b899e;
 
   --color-line: #e2dee1;
-  --color-whatsapp: #25d366;
+  --color-whatsapp: #147d53;
+
+  /* One radius scale, four roles, used everywhere instead of one-off
+     pixel values per component. */
+  --radius-pill: 999px; /* buttons, nav links, badges/pills */
+  --radius-card: 16px; /* cards, tiles, panels */
+  --radius-icon: 12px; /* icon squares, small logo wraps */
+  --radius-input: 10px; /* form fields */
 }
 
 @layer base {
@@ -96,9 +103,10 @@
     @apply py-12 sm:py-16 lg:py-20;
   }
 
-  /* Quiet section labels retain the original wording. */
+  /* Quiet section labels retain the original wording. Set in the mono
+     stack so the token loaded for it (IBM Plex Mono) has an actual job. */
   .kicker {
-    @apply inline-flex items-center gap-2 text-sm font-medium tracking-normal text-teal;
+    @apply inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-wider text-teal;
   }
 
 
@@ -108,7 +116,8 @@
   .btn-secondary,
   .btn-outline,
   .btn-whatsapp {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-medium transition-[transform,box-shadow,background-color,border-color,color] duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium transition-[transform,box-shadow,background-color,border-color,color] duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple;
+    border-radius: var(--radius-pill);
   }
 
   .btn-primary {
@@ -133,7 +142,7 @@
 
   .btn-whatsapp {
     @apply text-white;
-    background-color: #147d53;
+    background-color: var(--color-whatsapp);
   }
 
   .btn-whatsapp:hover {
@@ -142,7 +151,8 @@
 
   /* Neutral surfaces for supporting content. */
   .card {
-    @apply relative rounded-xl border bg-paper p-7 transition-[transform,box-shadow,border-color,background-color] duration-200;
+    @apply relative border bg-paper p-7 transition-[transform,box-shadow,border-color,background-color] duration-200;
+    border-radius: var(--radius-card);
     border-color: var(--color-line);
     box-shadow: 0 1px 2px rgba(32, 24, 32, 0.04);
   }
@@ -214,9 +224,18 @@
     @apply absolute left-4 top-[-100px] z-50 rounded-md bg-ink px-4 py-2 text-paper transition-all focus:top-4;
   }
 
-  /* Content remains visible without JavaScript. */
+  /* Content remains fully visible without JavaScript. Only once the page
+     confirms JS + motion are available (.js-motion on <html>, set by the
+     inline script in BaseLayout) do sections start hidden and animate in
+     on scroll via the IntersectionObserver there. */
   .reveal {
     opacity: 1;
+  }
+
+  .js-motion .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
   }
 
   .reveal.is-visible {
@@ -309,8 +328,6 @@
     columns: 2;
   }
 }
-/* Existing metadata uses the same sans family as navigation and body. */
-.font-mono { font-family: var(--font-sans); letter-spacing: 0; text-transform: none; }
 .site-nav { background: rgb(255 255 255 / 96%); backdrop-filter: blur(16px); }
 .site-nav > .container-page { min-height: 80px; }
 .site-logo { display: block; width: 232px; height: auto; }
@@ -363,7 +380,7 @@
   margin-top: 10px;
   width: min(860px, 90vw);
   border: 1px solid var(--color-line);
-  border-radius: 20px;
+  border-radius: var(--radius-card);
   background: var(--color-paper);
   box-shadow: 0 28px 56px -20px rgba(40, 30, 40, 0.22), 0 6px 16px -6px rgba(40, 30, 40, 0.08);
   padding: 30px 32px 22px;
@@ -405,7 +422,7 @@
   gap: 8px;
   width: 100%;
   padding: 11px 10px;
-  border-radius: 10px;
+  border-radius: var(--radius-pill);
   font-family: inherit;
   font-size: 0.9375rem;
   font-weight: 500;
@@ -424,7 +441,7 @@ a.nav-mobile-link { justify-content: flex-start; }
 .nav-mega-panel-mobile .nav-mega-column a { display: block; padding: 3px 0; }
 .nav-mega-panel-mobile .nav-mega-all { display: inline-block; margin-top: 2px; }
 .site-brand-divider { width: 1px; height: 64px; background: var(--color-line); }
-.footer-logo-wrap { display: inline-flex; padding: 8px 12px; border-radius: 8px; background: white; }
+.footer-logo-wrap { display: inline-flex; padding: 8px 12px; border-radius: var(--radius-icon); background: white; }
 .footer-logo { display: block; width: 150px; height: auto; }
 .hero { position: relative; overflow: hidden; background: var(--color-paper); }
 .hero:not(.hero-understated)::before {
@@ -449,7 +466,7 @@ a.nav-mobile-link { justify-content: flex-start; }
 .trust-strip > div { text-align: center; }
 .trust-strip p { font-size: 0.9375rem; font-weight: 500; }
 .flagship-section { padding-block: 48px; }
-.flagship-card { position: relative; overflow: hidden; padding: clamp(28px, 5vw, 64px); border: none; border-radius: 16px; box-shadow: 0 24px 48px -20px color-mix(in srgb, var(--color-dark) 60%, transparent); }
+.flagship-card { position: relative; overflow: hidden; padding: clamp(28px, 5vw, 64px); border: none; border-radius: var(--radius-card); box-shadow: 0 24px 48px -20px color-mix(in srgb, var(--color-dark) 60%, transparent); }
 .flagship-card::before {
   content: '';
   position: absolute;
@@ -470,7 +487,7 @@ a.flagship-card:hover { background-color: var(--color-dark-soft); transform: non
 .module-list .card { display: flex; flex-direction: column; gap: 4px; }
 .module-list .card .module-icon { margin-bottom: 10px; }
 
-.module-icon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; flex-shrink: 0; background: var(--color-paper); border: 1px solid var(--color-line); }
+.module-icon { width: 44px; height: 44px; border-radius: var(--radius-icon); display: grid; place-items: center; flex-shrink: 0; background: var(--color-paper); border: 1px solid var(--color-line); }
 .module-icon img { width: 28px; height: 28px; }
 
 /* Módulos: grilla con acento propio por tarjeta (color real tomado del
@@ -484,7 +501,7 @@ a.flagship-card:hover { background-color: var(--color-dark-soft); transform: non
   display: flex;
   flex-direction: column;
   align-items: start;
-  border-radius: 16px;
+  border-radius: var(--radius-card);
   border: 1px solid var(--color-line);
   background: var(--color-paper);
   overflow: hidden;
@@ -504,7 +521,7 @@ a.flagship-card:hover { background-color: var(--color-dark-soft); transform: non
   place-items: center;
   width: 52px;
   height: 52px;
-  border-radius: 13px;
+  border-radius: var(--radius-icon);
   background: color-mix(in srgb, var(--accent) 9%, white);
   border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--color-line));
   margin-bottom: 16px;
@@ -582,7 +599,7 @@ a.flagship-card:hover { background-color: var(--color-dark-soft); transform: non
 .site-footer li { line-height: 1.65; }
 .site-footer a { overflow-wrap: anywhere; }
 #contact-form { padding: clamp(24px, 4vw, 48px); gap: 24px; }
-#contact-form :is(input:not([type=hidden]):not([type=checkbox]), select, textarea) { background: var(--color-paper-dim); min-height: 48px; border-radius: 8px; }
+#contact-form :is(input:not([type=hidden]):not([type=checkbox]), select, textarea) { background: var(--color-paper-dim); min-height: 48px; border-radius: var(--radius-input); }
 details { padding-block: 24px; }
 details[open] { background: var(--color-paper-dim); }
 .team-grid .card { padding: 0 0 24px; overflow: hidden; border: none; background: transparent; text-align: left; box-shadow: none; }

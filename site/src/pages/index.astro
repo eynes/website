@@ -4,11 +4,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/hero/Hero.astro';
 import ClientLogos from '../components/shared/ClientLogos.astro';
 import CTASection from '../components/cta/CTASection.astro';
-import ModuleIcon from '../components/shared/ModuleIcon.astro';
 import CaseCard from '../components/casos/CaseCard.astro';
 import { getPublished, sortDestacadosFirst } from '../lib/content';
 import { organizationSchema, websiteSchema } from '../lib/schema';
 import { withBase } from '../lib/url';
+import { getModuleIcon } from '../lib/moduleIcons';
 
 const page = await getEntry('paginasUnicas', 'home');
 const site = await getEntry('siteConfig', 'site');
@@ -65,13 +65,22 @@ const jsonLd = site ? [organizationSchema(site.data), websiteSchema(site.data)] 
   <section class="section bg-paper-dim">
     <div class="container-page reveal">
       <h2 class="mt-2 text-2xl sm:text-3xl">Todo lo que podés gestionar con Odoo</h2>
-      <div class="module-grid mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {modulos.map((m, i) => (
-          <a href={withBase(`/modulos/${m.data.slug}`)} class="card block bg-paper font-medium">
-            <ModuleIcon slug={m.data.slug} index={i} />
-            {m.data.title}
-          </a>
-        ))}
+      <div class="modules-grid mt-8">
+        {modulos.map((m) => {
+          const { file, accent } = getModuleIcon(m.data.slug);
+          return (
+            <a href={withBase(`/modulos/${m.data.slug}`)} class="module-tile" style={`--accent: ${accent}`}>
+              <span class="module-tile-bar" />
+              <span class="module-tile-body">
+                <span class="module-tile-icon">
+                  <img src={withBase(`/icons/odoo/${file}.svg`)} alt="" width="28" height="28" loading="lazy" />
+                </span>
+                <h3 class="module-tile-title">{m.data.title}</h3>
+                <span class="module-tile-link">Ver módulo <span class="arrow" aria-hidden="true">→</span></span>
+              </span>
+            </a>
+          );
+        })}
       </div>
     </div>
   </section>
