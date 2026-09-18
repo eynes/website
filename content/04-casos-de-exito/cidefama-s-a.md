@@ -9,7 +9,7 @@ cliente: "CIDEFAMA S.A."
 rubro: "Comercio Internacional"
 pais: ""
 usuarios: ""
-modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas"]
+modulos_implementados: ["ventas-y-crm", "inventario", "compras", "contabilidad-y-finanzas", "importaciones"]
 resultado_clave: "El costeo en destino saca el precio de venta de la adivinanza: hoy se fija sobre lo que realmente cuesta traer cada producto, no sobre el valor de factura del proveedor."
 agrupador: "SERVICIOS EMPRESARIALES"
 portfolio: true
